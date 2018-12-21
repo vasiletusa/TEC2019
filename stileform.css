@@ -1,4 +1,4 @@
- /* Style inputs, select elements and textareas */
+ /* stili input, elementi , area di testo */
 
 input[type=text], select, textarea{
   width: 100%;
@@ -9,13 +9,13 @@ input[type=text], select, textarea{
   resize: vertical;
 }
 
-/* Style the label to display next to the inputs */
+/* label a fianco a input */
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
 
-/* Style the submit button */
+/* stile del bottone submit */
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
@@ -26,7 +26,7 @@ input[type=submit] {
   float: right;
 }
 
-/* Style the container */
+/* stile container */
 .container {
   margin-top:100px;
   border-radius: 5px;
@@ -34,14 +34,14 @@ input[type=submit] {
   padding: 20px;
 }
 
-/* Floating column for labels: 25% width */
+/* colonne label: 25% width */
 .col-25 {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
 
-/* Floating column for inputs: 75% width */
+/* colonne input: 75% width */
 .col-75 {
   float: left;
   width: 75%;
