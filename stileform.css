@@ -55,7 +55,7 @@ input[type=submit] {
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout -quando lo schermo ha larghezza<600px, le due colonne stackano una sopra l'altra*/
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
