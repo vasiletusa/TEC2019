@@ -6,38 +6,41 @@
 	<link rel="stylesheet" href="stile.css">
 </head>
 <body>
-	<header id="header-section">
-	 <div class="nav-header">
-	   
-	   <h1> <p class="logo"> TECWEB</p></h1>
-	  <div id="menu-superiore">
-	   <nav>
-	    <ul id="menu">
-	     <li class="active"><a href="#">Home</a></li>
-	     <li><a href="#">News</a></li>
-	     <li><a href="#">Più votati</a></li>
-	     <li><a href="#">Scrivi</a></li>
-	     <li><a href="#">Login</a></li>
-	    </ul>
-	   </nav>
-	  </div>
-         </div>
-    </header>
-	<section>
-		<div id="riga1">
-			<img src="padova1.jpg" alt="foto della città di padova"> 
-			<img src="venezia.jpg" alt="foto della città di venezia">
-			<img src="treviso.jpg" alt="foto della città di treviso">
-			<img src="vicenza.jpg" alt="foto della città di vicenza">
-
+	
+	<div class="container">
+	<h1>Flexbox Slideshow</h1>
+    <div class="flexbox-slideshow">
+		<ul class="slideshow">
+			<li class="placeholder">
+			  <img src="http://www.html.it/wp-content/uploads/2016/10/slide_flexbox_placeholder.jpg">
+			</li>
+			<li class="slide active" id="slide-1"><img src="padova1.jpg" alt="foto della città di padova"></li>
+			<li class="slide" id="slide-2"><img src="venezia.jpg" alt="foto della città di venezia"></li>
+			<li class="slide" id="slide-3"><img src="treviso.jpg" alt="foto della città di treviso"></li>
+			<li class="slide" id="slide-4"><img src="vicenza.jpg" alt="foto della città di vicenza"></li>
+			<li class="slide" id="slide-5"><img src="belluno.jpg" alt="foto della città di belluno"></li>
+			<li class="slide" id="slide-6"><img src="verona.jpg" alt="foto della città di verona"></li>
+			<li class="slide" id="slide-7"><img src="rovigo.jpg" alt="foto della città di rovigo"></li>
+		</ul>
+		<ul class="dotnav">
+			<li class="dotnav-item active" onclick="changeOrder(this, 1)"><span></span></li>
+			<li class="dotnav-item" onclick="changeOrder(this, 2)"><span></span></li>
+			<li class="dotnav-item" onclick="changeOrder(this, 3)"><span></span></li>
+			<li class="dotnav-item" onclick="changeOrder(this, 4)"><span></span></li>
+			<li class="dotnav-item" onclick="changeOrder(this, 5)"><span></span></li>
+		</ul>
+	</div>
+ </div>
+ <li class="slide active" id="slide-1">
+	<img src="http://www.html.it/wp-content/uploads/2016/10/slide_flexbox_moon-1.jpg">
+	<div class="caption-container">
+		<div class="caption caption-title">
+			<h2></h2>
 		</div>
-		<div id="riga2">
-			<img src="belluno.jpg" alt="foto della città di belluno">
-			<img src="verona.jpg" alt="foto della città di verona">
-			<img src="rovigo.jpg" alt="foto della città di rovigo">
-
+		<div class="caption caption-author">
+			<span class="author"></span>
 		</div>
-	</section>
-
+	</div>
+</li>
 </body>
 </html>
