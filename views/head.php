@@ -14,7 +14,7 @@ if(!)
 	<header id="header-section">
 	 <div class="nav-header">
 	   
-	  	<class="logo"><img src="logoT.png">
+	  	<class="logo"><a href="#"><img src="logoT.png" alt="Veneto on Tour"></a>
 	  	<div id="menu-superiore">
 	   	<nav>
 	    	<ul id="menu">
