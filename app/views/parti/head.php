@@ -7,7 +7,7 @@ if(!)
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>TecWeb</title>
-	<link rel="stylesheet" href="stile.css">
+	<link rel="stylesheet" href="css/stile.css">
 </head>
 
 <body>
