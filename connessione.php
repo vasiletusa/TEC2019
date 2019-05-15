@@ -23,17 +23,13 @@ try {
   */
   // notifica in caso di connessione effettuata
   echo "Connessione a MySQL tramite PDO effettuata.";
- return $connessione;
+  return $connessione;
 }
 catch(PDOException $e)
 {
   // notifica in caso di errore nel tentativo di connessione
   echo $e->getMessage();
 }
-
-
-
-
 
 
 ?>
