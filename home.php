@@ -1,12 +1,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Home</title>
-	<link rel="stylesheet" href="css/stile.css">
-</head>
-<body>
-	<div id="riga1">
+<?php include('/opt/lampp/htdocs/progtec/TEC2019/parti/head.php') ?>
+
+<div id="riga1">
 		<ul>
 			<li><a href="Citta/Padova.html"><img src="img/padova.jpg" alt="foto della città di Padova"></a></li>
 			<li><a href="Citta/Venezia.html"><img src="img/venezia.jpg" alt="foto della città di Venezia"></a></li>
@@ -21,5 +17,5 @@
 			<li><a href="Citta/Treviso.html"><img src="img/treviso.jpg" alt="foto della città di Treviso"></a></li>
 		</ul>		
 	</div>
-</body>
-</html>
+
+<?php include('/opt/lampp/htdocs/progtec/TEC2019/parti/footer.php') ?>
