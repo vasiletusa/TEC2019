@@ -3,7 +3,7 @@
 <?php include('head.php') ?>
 <?php
 include_once 'server.php'?>
-<form method="post" action="register.php" class="col-9 col-sm-5 col-esm-5">						
+<form method="post" action="registrazione_utente.php" class="col-9 col-sm-5 col-esm-5">						
 						</div>
 						<div class="1">
 							<label for="Nome" class="label nome">Nome</label>
@@ -32,10 +32,10 @@ include_once 'server.php'?>
 							
 						</div>
 						<div class="5">
-							<label for="passwordR" class="label passwordR">Repeat Password</label>
+							<label for="passwordR" class="label passwordR">Ripeti Password</label>
 							<input id="passwordR" type="password" name="passwordR" class="input passwordR" placeholder="********">
 							
 						</div>
-						<button type="submit" class="button" name="registrazione_utente">Sign Up</button>
+						<button type="submit" class="button" name="registrazione_utente">Registrati</button>
 					</form>
 					<?php include('footer.php') ?>

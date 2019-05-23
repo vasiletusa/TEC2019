@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-<?php include('/opt/lampp/htdocs/progtec/TEC2019/parti/head.php') ?>
+<?php include('head.php') ?>
 
 <div id="riga1">
 		<ul>
@@ -18,4 +18,4 @@
 		</ul>		
 	</div>
 
-<?php include('/opt/lampp/htdocs/progtec/TEC2019/parti/footer.php') ?>
+<?php include('footer.php') ?>

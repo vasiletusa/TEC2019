@@ -6,7 +6,7 @@ $username = "";
 $email    = "";
 $nome    = "";
 $errors = array(); 
-echo '$server';
+
 // connect to the database
 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
 
@@ -28,5 +28,23 @@ if (isset($_POST['registrazione_utente'])) {
   echo "$nome";
   	mysqli_query($db, $query);
   	
+  }
+
+  //LOGIN
+  
+  if(isset($_POST['login_utente'])){
+    $username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
+    $query= "SELECT * FROM utenti WHERE username=$username AND password=$password";
+    $ris=mysqli_query($db, $query);
+
+    
+    if (mysqli_num_rows($ris) == 1){
+      echo "loggato";}
+    else{
+    echo "errore";
+    echo "$username";
+    echo "$password";}
+
   }
   ?>
