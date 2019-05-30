@@ -36,27 +36,26 @@ if (isset($_POST['registrazione_utente'])) {
   }
 
   //LOGIN
-  
-  // If form submitted, insert values into the database.
+   
 if (isset($_POST['username'])){
-        // removes backslashes
+     
   $username = stripslashes($_REQUEST['username']);
-        //escapes special characters in a string
+        
   $username = mysqli_real_escape_string($db,$username);
   $password = stripslashes($_REQUEST['password']);
   $password = mysqli_real_escape_string($db,$password);
-  //Checking is user existing in the database or not
+  
         $query = "SELECT * FROM `utenti` WHERE Username='$username' and Password='$password'";
   $result = mysqli_query($db,$query) or die(mysql_error());
   $rows = mysqli_num_rows($result);
         if($rows==1){
       $_SESSION['username'] = $username;
-            // Redirect user to index.php
+            //Reindirizzamento 
       header("Location: area_riservata.php");
          }else{
   echo "<div class='form'>
 <h3>Username o password sbagliato.</h3>
-<br/>Click qui per<a href='login.php'>Login</a></div>";
+<br/>Clicca qui per<a href='login.php'>Login</a></div>";
   }
 }
   ?>
