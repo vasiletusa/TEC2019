@@ -17,11 +17,11 @@
 	   	<nav>
 	    	<ul id="menu">
 	     	<li><a href="home.php">Home</a></li>
-	     	<li><a href="#">Tour</a></li>
+	     	<li><a href="tour.php">Tour</a></li>
 	     	<li><a href="#">Organizza</a></li>
 	     	<li><a href="login.php">Login</a></li>
 	     	<li><a href="registrazione_utente.php">Registrazione</a></li>
-	     	<li><a href="area_riservata.php">Area riservata</a></li>
+	     	
 
 	    	</ul>
 	   	</nav>
