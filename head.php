@@ -21,6 +21,8 @@
 	     	<li><a href="#">Organizza</a></li>
 	     	<li><a href="login.php">Login</a></li>
 	     	<li><a href="registrazione_utente.php">Registrazione</a></li>
+	     	<li><a href="area_riservata.php">Area riservata</a></li>
+
 	    	</ul>
 	   	</nav>
 	  	</div>

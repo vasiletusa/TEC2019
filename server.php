@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 // initializing variables
 $username = "";
@@ -9,7 +9,12 @@ $errors = array();
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
-
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+  session_start();
 //REGISTRAZIONE
 if (isset($_POST['registrazione_utente'])) {
   // receive all input values from the form
@@ -32,19 +37,26 @@ if (isset($_POST['registrazione_utente'])) {
 
   //LOGIN
   
-  if(isset($_POST['login_utente'])){
-    $username = mysqli_real_escape_string($db, $_POST['username']);
-    $password = mysqli_real_escape_string($db, $_POST['password']);
-    $query= "SELECT * FROM utenti WHERE username=$username AND password=$password";
-    $ris=mysqli_query($db, $query);
-
-    
-    if (mysqli_num_rows($ris) == 1){
-      echo "loggato";}
-    else{
-    echo "errore";
-    echo "$username";
-    echo "$password";}
-
+  // If form submitted, insert values into the database.
+if (isset($_POST['username'])){
+        // removes backslashes
+  $username = stripslashes($_REQUEST['username']);
+        //escapes special characters in a string
+  $username = mysqli_real_escape_string($db,$username);
+  $password = stripslashes($_REQUEST['password']);
+  $password = mysqli_real_escape_string($db,$password);
+  //Checking is user existing in the database or not
+        $query = "SELECT * FROM `utenti` WHERE Username='$username' and Password='$password'";
+  $result = mysqli_query($db,$query) or die(mysql_error());
+  $rows = mysqli_num_rows($result);
+        if($rows==1){
+      $_SESSION['username'] = $username;
+            // Redirect user to index.php
+      header("Location: area_riservata.php");
+         }else{
+  echo "<div class='form'>
+<h3>Username o password sbagliato.</h3>
+<br/>Click qui per<a href='login.php'>Login</a></div>";
   }
+}
   ?>
