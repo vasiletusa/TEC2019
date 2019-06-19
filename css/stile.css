@@ -1,5 +1,3 @@
-
-
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
@@ -10,10 +8,35 @@ body {
   overflow-x: hidden;
 }
 
-img{
-	width:15.0em;
-	height:20.0em;
+/*homepage*/
+
+div.container{
+	padding: 10%;
 }
+
+div.gallery {
+  margin: 1%;
+  /*border: 1em solid #ccc;*/
+  float: left;
+  width: 10em;
+}
+
+/*div.gallery:hover {
+  border: 0.2em solid #777;
+}*/
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 5%;
+  text-align: center;
+  text-decoration-color: #0000FF;
+}
+
+/*end homepage*/
 
 #header-section img{
   width: 5.5em;
@@ -32,7 +55,6 @@ img{
   border-bottom: 0.0625em solid rgba(255, 255, 255, 0.2);
 }
 
-
 .nav-header{
   width:100%;
   padding: 0.3em;
@@ -40,7 +62,7 @@ img{
 
 .logo{
     position: relative;
-	  float:left;
+	float:left;
     font-family: Verdana, sans-serif;
     margin:0.125em;
     max-width:12.5em;
@@ -50,7 +72,7 @@ img{
 
 #menu-superiore{
     position: relative;
-	  float:right;
+	float:right;
     display: flex;
     padding: 0.3em;
 }
@@ -70,7 +92,7 @@ img{
     display: block;
     width: 6.25em;
     height: 2.5em;
-	  margin:0.125em;
+	margin:0.125em;
     
     float: left; /* elementi su singola riga */
 }
@@ -92,10 +114,8 @@ img{
 
 
 #footer {
-    
     background-color: black;
     font-color: white;
-  
 }
 
 
