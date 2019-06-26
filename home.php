@@ -4,7 +4,7 @@
 
 <?php include('head.php') ?>
 
-
+<div id="box">
 
 <div class="riga">
 <div class="pic">
@@ -44,6 +44,6 @@
 </div>
 </div>
 
-
+</div>
 
 <?php include('footer.php') ?>
