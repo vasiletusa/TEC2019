@@ -4,37 +4,46 @@
 
 <?php include('head.php') ?>
 
-<div class="container">
-<div class="gallery">
-	<a href="Citta/Padova.html"><img src="img/padova.jpg" alt="foto della città di Padova"></a>
-	<div class="desc">PADOVA<a href="Citta/Padova.html"></a></div>
-</div>			
-<div class="gallery">			
-	<a href="Citta/Venezia.html"><img src="img/venezia.jpg" alt="foto della città di Venezia"></a>
-	<div class="desc">VENEZIA<a href="Citta/Venezia.html"></a></div>
+
+
+<div class="riga">
+<div class="pic">
+	<img src="img/padova.jpg" alt="foto della città di Padova">
+	<div class="link"><a href="Citta/Padova.html">PADOVA</a></div>
 </div>
-<div class="gallery">			
-	<a href="Citta/Rovigo.html"><img src="img/rovigo.jpg" alt="foto della città di Rovigo"></a>
-	<div class="desc">ROVIGO<a href="Citta/Rovigo.html"></a></div>
+
+<div class="pic">			
+	<img src="img/venezia.jpg" alt="foto della città di Venezia">
+	<div class="link"><a href="Citta/Venezia.html">VENEZIA</a></div>
 </div>
-</div>
-<div class="container">	
-<div class="gallery">	
-	<a href="Citta/Belluno.html"><img src="img/belluno.jpg" alt="foto della città di Belluno"></a>
-	<div class="desc">BELLUNO<a href="Citta/Belluno.html"></a></div>
-</div>
-<div class="gallery">
-	<a href="Citta/Vicenza.html"><img src="img/vicenza.jpg" alt="foto della città di Vicenza"></a>
-	<div class="desc">VICENZA<a href="Citta/Vicenza.html"></a></div>
-</div>
-<div class="gallery">
-	<a href="Citta/Verona.html"><img src="img/verona.jpg" alt="foto della città di Verona"></a>
-	<div class="desc">VERONA<a href="Citta/Verona.html"></a></div>
-</div>
-<div class="gallery">			
-	<a href="Citta/Treviso.html"><img src="img/treviso.jpg" alt="foto della città di Treviso"></a>
-	<div class="desc">TREVISO<a href="Citta/Treviso.html"></a></div>
+<div class="pic">			
+	<img src="img/rovigo.jpg" alt="foto della città di Rovigo">
+	<div class="link"><a href="Citta/Rovigo.html">ROVIGO</a></div>
 </div>
 </div>
+
+<div class="riga">
+<div class="pic">
+<img src="img/belluno.jpg" alt="foto della città di Belluno">
+	<div class="link"><a href="Citta/Belluno.html">BELLUNO</a></div>
+</div>
+</div>
+
+<div class="riga">
+<div class="pic">
+	<img src="img/vicenza.jpg" alt="foto della città di Vicenza">
+	<div class="link"><a href="Citta/Vicenza.html">VICENZA</a></div>
+</div>
+<div class="pic">
+	<img src="img/verona.jpg" alt="foto della città di Verona">
+	<div class="link"><a href="Citta/Verona.html">VERONA</a></div>
+</div>
+<div class="pic">			
+	<img src="img/treviso.jpg" alt="foto della città di Treviso">
+	<div class="link"><a href="Citta/Treviso.html">TREVISO</a></div>
+</div>
+</div>
+
+
 
 <?php include('footer.php') ?>
