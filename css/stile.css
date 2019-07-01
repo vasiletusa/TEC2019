@@ -15,23 +15,34 @@ a:link {
 /*homepage*/
 
 #box{
-	width: 50em;    
+	width: 70em;    
+	height: 35em;
 	top: 50%;
 	left: 50%;
-	margin-top: -25em;
-	margin-left: -25em;
+	right:50%;
+	margin-top: -35em;
+	margin-left: -35em;
 	margin:auto;
 }
 
+
 div.riga{
 	float:left;
-	margin:1em;
+	padding-left:10%;
+	padding-right:10%;
+	margin:2em;
+}
+
+div.riga0{
+	float:left;
+	margin:2em;
 }
 
 div.pic{
 	float:left;
-	margin:2em;
+	margin:1em;
 }
+
 
 div.link{
 	text-align: center;
@@ -41,7 +52,7 @@ div.pic img{
   	margin-left: auto;
   	margin-right: auto;
   	width: 10em;
-  	height: auto;
+  	height: 5em;
 }
 
 /*end homepage*/
