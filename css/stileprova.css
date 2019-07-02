@@ -72,7 +72,7 @@ label {
 }
 
 label.active {
-  transform:translateY(50px);
+ 
   left:2px;
   font-size:14px;
   .req {
@@ -84,7 +84,7 @@ label.highlight {
 	color:$white;
 }
 
-input, textarea {
+input, text {
   font-size:22px;
   display:block;
   width:100%;
@@ -107,17 +107,7 @@ textarea {
   resize: vertical;
 }
 
-.field-wrap {
-  position:relative;
-  margin-bottom:40px;
-}
 
-.top-row {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
   > div {
     float:left;
@@ -147,12 +137,3 @@ textarea {
   }
 }
 
-.button-block {
-  display:block;
-  width:100%;
-}
-
-.forgot {
-  margin-top:-20px;
-  text-align:right;
-}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="css/stileprova.css">
+	<link rel="stylesheet" href="css/stile.css">
 </head>
 <?php
 include_once('server.php');
@@ -21,7 +21,7 @@ include_once('server.php');
 							
 	</div>
 
-<input class="button" name="submit" type="button" value="Login" />
+<input class="button" name="submit" type="submit" value="Login" />
 </form>
 <p id="notRegistered">Non ancora registrato?<a href='registrazione_utente.php'>Registrati qui</a></p>
 </div>
