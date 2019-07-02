@@ -3,8 +3,9 @@
 <?php include('head.php') ?>
 <?php
 include_once 'server.php'?>
-<form method="post" action="registrazione_utente.php" class="col-9 col-sm-5 col-esm-5">						
-						</div>
+<div class="container box" id="boxlogin">
+<form method="post" action="registrazione_utente.php" >						
+						
 						<div class="1">
 							<label for="Nome" class="label nome">Nome</label>
 							<input id="Nome" type="text" name="nome" class="input nome" placeholder="Nome">
@@ -38,4 +39,5 @@ include_once 'server.php'?>
 						</div>
 						<button type="submit" class="button" name="registrazione_utente">Registrati</button>
 					</form>
+</div>
 					<?php include('footer.php') ?>
