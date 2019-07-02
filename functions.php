@@ -23,14 +23,14 @@ echo"
 	   	<nav>
 	    	<ul id=\"menu\">
 	     	<li ";if($current=="Home"){echo"class=\"active\"";}echo"><a href=\"home.php\">Home</a></li>
-	     	<li><a href=\"tour.php\">Tour</a></li>
-	     	<li><a href=\"registra_tour.php\">Organizza</a></li>";
+	     	<li ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a></li>
+	     	<li";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a></li>";
 	     	if(isset($_SESSION['isLogged'])){
-	     		echo"
+	     		echo"<li><a href=\"area_riservata.php\">Area personale</a></li>
 	     	
 	     	<li><a href=\"logout.php\">Logout</a></li>";}
 	     	elseif($current=="Login"){
-	     		echo"<li><a href=\"registrazione_utente.php\">Registrati</a></li>";}
+	     		echo"<li";if($current=="Registrati"){echo"class=\"active\"";}echo"><a href=\"registrazione_utente.php\">Registrati</a></li>";}
 	     		else{
 	     		echo"
 	     	

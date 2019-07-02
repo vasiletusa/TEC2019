@@ -8,10 +8,10 @@
      ?>        
   </head>
 
-<?php getMenu("registratour");?>
+<?php getMenu("RegistraTour");?>
 <?php getBreadcumbs("Organizza tour");?>
 
-<form method="post" action="registra_tour.php" class="col-9 col-sm-5 col-esm-5">						
+<form method="post" action="registra_tour.php" >						
 						
 						<div class="2">
 							<label for="Data" class="label data">Data</label>

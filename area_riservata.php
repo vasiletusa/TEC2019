@@ -8,7 +8,7 @@ include("auth.php");
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Area Riservata");
+	    getHead("AreaRiservata");
      ?>        
   </head>
 
