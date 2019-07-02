@@ -5,6 +5,13 @@
   --menu-footer-color:black;
 
 }
+
+#contenitore{
+	width:auto;
+	height:auto;
+	resize: both;
+}
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
@@ -12,6 +19,8 @@ body {
   background: #fff;
   color: #848484;
   overflow-x: hidden;
+
+	
 }
 
 a:link {
@@ -19,8 +28,8 @@ a:link {
 	color:#0000FF;
 }
 /*footer*/
-
 .footer {
+
   clear: both;
   position: relative;
   height: auto;
@@ -70,6 +79,9 @@ input, text {
   transition:border-color .25s ease, box-shadow .25s ease;
 
 }
+
+
+
 /*bottoni*/
 .button {
   border:1;
@@ -105,7 +117,7 @@ input, text {
 /*homepage*/
 
 #box{
-	width: 70em;    
+	width: 100%;    
 	height: 35em;
 	top: 50%;
 	left: 50%;
@@ -113,6 +125,7 @@ input, text {
 	margin-top: -35em;
 	margin-left: -35em;
 	margin:auto;
+
 }
 
 
