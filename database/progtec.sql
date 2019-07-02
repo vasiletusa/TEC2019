@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Creato il: Mar 05, 2019 alle 14:15
--- Versione del server: 10.1.37-MariaDB
--- Versione PHP: 7.3.1
+-- Host: 127.0.0.1
+-- Creato il: Lug 02, 2019 alle 14:24
+-- Versione del server: 10.1.39-MariaDB
+-- Versione PHP: 7.1.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `Commenti`
+-- Struttura della tabella `commenti`
 --
 
-CREATE TABLE `Commenti` (
+CREATE TABLE `commenti` (
   `IdComm` int(11) NOT NULL,
   `IdTour` int(11) NOT NULL,
   `UserUtente` varchar(20) NOT NULL,
@@ -38,10 +38,10 @@ CREATE TABLE `Commenti` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `Partecipa`
+-- Struttura della tabella `partecipa`
 --
 
-CREATE TABLE `Partecipa` (
+CREATE TABLE `partecipa` (
   `IdTour` int(11) NOT NULL,
   `Username` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -49,10 +49,10 @@ CREATE TABLE `Partecipa` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `Ruoli`
+-- Struttura della tabella `ruoli`
 --
 
-CREATE TABLE `Ruoli` (
+CREATE TABLE `ruoli` (
   `User` varchar(20) NOT NULL,
   `Ruolo` enum('Admin','Normale','Moderatore','Guida') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -60,17 +60,24 @@ CREATE TABLE `Ruoli` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `Tour`
+-- Struttura della tabella `tour`
 --
 
-CREATE TABLE `Tour` (
+CREATE TABLE `tour` (
   `Id` int(11) NOT NULL,
   `Data` date NOT NULL,
   `Organizzatore` varchar(20) NOT NULL,
   `Citta` enum('Padova','Vicenza','Verona','Rovigo','Belluno','Treviso','Venezia') NOT NULL,
-  `Guida` varchar(20) NOT NULL,
+  `Titolo` text NOT NULL,
   `Descrizione` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `tour`
+--
+
+INSERT INTO `tour` (`Id`, `Data`, `Organizzatore`, `Citta`, `Titolo`, `Descrizione`) VALUES
+(1, '2019-06-03', 'rizzo', 'Padova', 'sss', 'aaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -86,13 +93,25 @@ CREATE TABLE `utenti` (
   `Email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `utenti`
+--
+
+INSERT INTO `utenti` (`Nome`, `Cognome`, `Username`, `Password`, `Email`) VALUES
+('', '', '', '', ''),
+('dio', 'cane', 'dio', 'porco', 'cane'),
+('', 'Rizzo', 'ilarya9531', 'aaa', 'ilarya9531@gmail.com'),
+('ilaria', 'porcoddue', 'rizzo', 'qoqoqo', 'qopqoqo'),
+('sara', 'romito', 'sasa', 'aaa', 'sararomito'),
+('vasile', '', 'ss', '6uB3trKX', '');
+
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `Valutazioni`
+-- Struttura della tabella `valutazioni`
 --
 
-CREATE TABLE `Valutazioni` (
+CREATE TABLE `valutazioni` (
   `Recensore` varchar(20) NOT NULL,
   `Guida` varchar(20) NOT NULL,
   `Voto` enum('1','2','3','4','5') NOT NULL
@@ -103,32 +122,31 @@ CREATE TABLE `Valutazioni` (
 --
 
 --
--- Indici per le tabelle `Commenti`
+-- Indici per le tabelle `commenti`
 --
-ALTER TABLE `Commenti`
+ALTER TABLE `commenti`
   ADD PRIMARY KEY (`IdComm`),
   ADD KEY `UserUtente` (`UserUtente`),
   ADD KEY `IdTour` (`IdTour`);
 
 --
--- Indici per le tabelle `Partecipa`
+-- Indici per le tabelle `partecipa`
 --
-ALTER TABLE `Partecipa`
+ALTER TABLE `partecipa`
   ADD PRIMARY KEY (`IdTour`,`Username`),
   ADD KEY `Username` (`Username`);
 
 --
--- Indici per le tabelle `Ruoli`
+-- Indici per le tabelle `ruoli`
 --
-ALTER TABLE `Ruoli`
+ALTER TABLE `ruoli`
   ADD PRIMARY KEY (`User`);
 
 --
--- Indici per le tabelle `Tour`
+-- Indici per le tabelle `tour`
 --
-ALTER TABLE `Tour`
+ALTER TABLE `tour`
   ADD PRIMARY KEY (`Id`),
-  ADD KEY `Guida` (`Guida`),
   ADD KEY `Organizzatore` (`Organizzatore`);
 
 --
@@ -138,9 +156,9 @@ ALTER TABLE `utenti`
   ADD PRIMARY KEY (`Username`);
 
 --
--- Indici per le tabelle `Valutazioni`
+-- Indici per le tabelle `valutazioni`
 --
-ALTER TABLE `Valutazioni`
+ALTER TABLE `valutazioni`
   ADD PRIMARY KEY (`Recensore`,`Guida`),
   ADD KEY `Guida` (`Guida`);
 
@@ -149,52 +167,51 @@ ALTER TABLE `Valutazioni`
 --
 
 --
--- AUTO_INCREMENT per la tabella `Commenti`
+-- AUTO_INCREMENT per la tabella `commenti`
 --
-ALTER TABLE `Commenti`
+ALTER TABLE `commenti`
   MODIFY `IdComm` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la tabella `Tour`
+-- AUTO_INCREMENT per la tabella `tour`
 --
-ALTER TABLE `Tour`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tour`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Limiti per le tabelle scaricate
 --
 
 --
--- Limiti per la tabella `Commenti`
+-- Limiti per la tabella `commenti`
 --
-ALTER TABLE `Commenti`
+ALTER TABLE `commenti`
   ADD CONSTRAINT `Commenti_ibfk_1` FOREIGN KEY (`UserUtente`) REFERENCES `utenti` (`Username`),
-  ADD CONSTRAINT `Commenti_ibfk_2` FOREIGN KEY (`IdTour`) REFERENCES `Tour` (`Id`);
+  ADD CONSTRAINT `Commenti_ibfk_2` FOREIGN KEY (`IdTour`) REFERENCES `tour` (`Id`);
 
 --
--- Limiti per la tabella `Partecipa`
+-- Limiti per la tabella `partecipa`
 --
-ALTER TABLE `Partecipa`
-  ADD CONSTRAINT `Partecipa_ibfk_1` FOREIGN KEY (`IdTour`) REFERENCES `Tour` (`Id`),
+ALTER TABLE `partecipa`
+  ADD CONSTRAINT `Partecipa_ibfk_1` FOREIGN KEY (`IdTour`) REFERENCES `tour` (`Id`),
   ADD CONSTRAINT `Partecipa_ibfk_2` FOREIGN KEY (`Username`) REFERENCES `utenti` (`Username`);
 
 --
--- Limiti per la tabella `Ruoli`
+-- Limiti per la tabella `ruoli`
 --
-ALTER TABLE `Ruoli`
+ALTER TABLE `ruoli`
   ADD CONSTRAINT `Ruoli_ibfk_1` FOREIGN KEY (`User`) REFERENCES `utenti` (`Username`);
 
 --
--- Limiti per la tabella `Tour`
+-- Limiti per la tabella `tour`
 --
-ALTER TABLE `Tour`
-  ADD CONSTRAINT `Tour_ibfk_1` FOREIGN KEY (`Guida`) REFERENCES `utenti` (`Username`),
+ALTER TABLE `tour`
   ADD CONSTRAINT `Tour_ibfk_2` FOREIGN KEY (`Organizzatore`) REFERENCES `utenti` (`Username`);
 
 --
--- Limiti per la tabella `Valutazioni`
+-- Limiti per la tabella `valutazioni`
 --
-ALTER TABLE `Valutazioni`
+ALTER TABLE `valutazioni`
   ADD CONSTRAINT `Valutazioni_ibfk_1` FOREIGN KEY (`Recensore`) REFERENCES `utenti` (`Username`),
   ADD CONSTRAINT `Valutazioni_ibfk_2` FOREIGN KEY (`Guida`) REFERENCES `utenti` (`Username`);
 COMMIT;

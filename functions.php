@@ -22,7 +22,7 @@ echo"
 	  	<div id=\"menu-superiore\">
 	   	<nav>
 	    	<ul id=\"menu\">
-	     	<li><a href=\"home.php\">Home</a></li>
+	     	<li ";if($current=="Home"){echo"class=\"active\"";}echo"><a href=\"home.php\">Home</a></li>
 	     	<li><a href=\"tour.php\">Tour</a></li>
 	     	<li><a href=\"registra_tour.php\">Organizza</a></li>";
 	     	if(isset($_SESSION['isLogged'])){
