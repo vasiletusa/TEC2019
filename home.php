@@ -9,6 +9,7 @@
   </head>
 
 <?php getMenu("Home");?>
+<?php getBreadcumbs("Home");?>
 <div id="box">
 
 <div class="riga">

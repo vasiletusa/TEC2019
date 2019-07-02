@@ -8,11 +8,13 @@ include("auth.php");
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Home");
+	    getHead("Area Riservata");
      ?>        
   </head>
 
 <?php getMenu("areariservata");?>
+<?php getBreadcumbs("areariservata");?>
+
 <div class="form">
 <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
 

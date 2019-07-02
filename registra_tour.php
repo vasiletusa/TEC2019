@@ -6,11 +6,13 @@ include("auth.php");
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Home");
+	    getHead("Organizza");
      ?>        
   </head>
 
 <?php getMenu("registratour");?>
+<?php getBreadcumbs("Organizza tour");?>
+
 <form method="post" action="registra_tour.php" class="col-9 col-sm-5 col-esm-5">						
 						
 						<div class="2">

@@ -46,7 +46,10 @@ echo"
       </header>";
 
 }
-function breadCumb($current){
-
+function getBreadcumbs($current){
+echo "<div class=\"content\">
+			<p id=\"breadcumb\" class=\"col-10 col-sm-5 col-esm-5 dark-theme\">Sei in :".$current."</p>
+        </div>
+  ";
 }
 ?>

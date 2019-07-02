@@ -3,11 +3,13 @@
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Home");
+	    getHead("Login");
      ?>        
   </head>
 
 <?php getMenu("Login");?>
+<?php getBreadcumbs("Login");?>
+
 <div class="container box" id="boxlogin">
 	<h1 id="login">Log In</h1>
 <form action="" method="post" name="login">
