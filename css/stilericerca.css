@@ -1,6 +1,6 @@
 .structural {
 position:absolute;
-left:-9999px;
+left:-624.9375em;
 }
 
 #bar{
@@ -11,25 +11,29 @@ left:-9999px;
 
 #search {
 	width: 80%;
-	height: 3%;
-	-moz-border-radius: 14px;
-	-webkit-border-radius: 14px;
-	border-radius: 14px;
-	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
-	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
-	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+	height: 0 auto;
+	font-size: 1.5em;
+	-moz-border-radius: 0.875em;
+	-webkit-border-radius: 0.875em;
+	border-radius: 0.875em;
+	-moz-box-shadow: 0.0625em 0.0625em 0.125em rgba(0, 0, 0, 0.75) inset;
+	-webkit-box-shadow: 0.0625em 0.0625em 0.125em rgba(0, 0, 0, 0.75) inset;
+	box-shadow: 0.0625em 0.0625em 0.125em rgba(0, 0, 0, 0.75) inset;
+
 }
 
 #bottone {
 	width: 10%;
-	height: 3%;
+	height: 0 auto;
 	margin-right:2%;
-	-moz-border-radius: 14px;
-	-webkit-border-radius: 14px;
-	border-radius: 14px;
-	background-color: orange;
-}
+	font-size:1em;
+	text-align: center;
+	-moz-border-radius: 0.875em;
+	-webkit-border-radius: 0.875em;
+	border-radius: 0.875em;
+	background-color: #409fff;
 
+}
 
 
 /*snippet disabilito formattazione webkit*/
