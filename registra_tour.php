@@ -1,9 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-<?php include('head.php') ?>
-<?php include('auth.php')?>
-<?php
-include_once 'server.php'?>
+<head>
+	<?php 
+        include_once 'functions.php'; 
+        setOrganizza();
+	    getHead("Organizza");
+     ?>        
+  </head>
+
+<?php getMenu("registratour");?>
+<?php getBreadcumbs("Organizza tour");?>
+
 <form method="post" action="registra_tour.php" class="col-9 col-sm-5 col-esm-5">						
 						
 						<div class="2">

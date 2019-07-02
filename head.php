@@ -14,7 +14,7 @@
 	<header id="header-section">
 	 <div class="nav-header">
 	   
-	  	<class="logo"><a href="#"><img src="img/logoT.png" alt="Veneto on Tour"></a>
+	  	<class="logo"><a href="home.php"><img src="img/logoT.png" alt="Veneto on Tour"></a>
 	  	<div id="menu-superiore">
 	   	<nav>
 	    	<ul id="menu">
@@ -22,7 +22,7 @@
 	     	<li><a href="tour.php">Tour</a></li>
 	     	<li><a href="registra_tour.php">Organizza</a></li>
 	     	<li><a href="login.php">Login</a></li>
-	     	<li><a href="registrazione_utente.php">Registrazione</a></li>
+	     	
 	     	
 
 	    	</ul>

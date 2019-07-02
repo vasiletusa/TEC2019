@@ -50,6 +50,7 @@ if (isset($_POST['username'])){
   $rows = mysqli_num_rows($result);
         if($rows==1){
       $_SESSION['username'] = $username;
+      $_SESSION['isLogged']= true;
             //Reindirizzamento 
       header("Location: area_riservata.php");
          }else{

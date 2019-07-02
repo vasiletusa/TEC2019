@@ -18,6 +18,15 @@ a:link {
 	text-decoration: underline;
 	color:#0000FF;
 }
+/*messaggi*/
+#messaggioOrg{
+	font: Open Sans;
+	font-size:1em;
+text-align: center;
+color: white;
+
+}
+#messaggioOrg>a{color: white;}
 /*footer*/
 
 .footer {
@@ -172,7 +181,6 @@ div.pic img{
 
 .nav-header{
   width:100%;
-  padding: 0.10em;
   margin-right: 30%;
 }
 
@@ -209,7 +217,7 @@ div.pic img{
     width: 6.25em;
     height: 2.5em;
 	margin:0.125em;
-    
+    margin-bottom: 5em;
     float: left; /* elementi su singola riga */
 }
 #menu li a {
