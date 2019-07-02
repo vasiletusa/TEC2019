@@ -1,9 +1,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<link rel="stylesheet" href="stile.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<?php include('head.php') ?>
 
+<head>
+	<?php 
+        include_once 'functions.php'; 
+	    getHead("Home");
+     ?>        
+  </head>
+
+<?php getMenu("Home");?>
 <div id="box">
 
 <div class="riga">

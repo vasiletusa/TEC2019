@@ -2,14 +2,17 @@
 //include auth.php file on all secure pages
 include("auth.php");
 ?>
-<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+
 <head>
-<meta charset="utf-8">
-<title>Area riservata</title>
-<link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+	<?php 
+        include_once 'functions.php'; 
+	    getHead("Home");
+     ?>        
+  </head>
+
+<?php getMenu("areariservata");?>
 <div class="form">
 <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
 

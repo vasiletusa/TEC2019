@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-<?php require('head.php');?>
-<?php
-include_once('server.php');
+<head>
+	<?php 
+        include_once 'functions.php'; 
+	    getHead("Home");
+     ?>        
+  </head>
 
-    
-?>
-<div class="container" id="boxlogin">
+<?php getMenu("Login");?>
+<div class="container box" id="boxlogin">
 	<h1 id="login">Log In</h1>
 <form action="" method="post" name="login">
 	
@@ -23,7 +25,7 @@ include_once('server.php');
 	</div>
 <input class="button" name="submit" type="submit" value="Login" />
 </form>
-<p id="notRegistered">Non ancora registrato?<a href='registrazione_utente.php'>Registrati qui</a></p>
+<p id="notRegistered">Non ancora registrato?  <a href='registrazione_utente.php'>Registrati qui</a></p>
 </div>
 
 

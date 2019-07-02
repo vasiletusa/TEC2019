@@ -5,7 +5,7 @@
 include_once 'server.php'?>
 <div class="container box" id="boxlogin">
 <form method="post" action="registrazione_utente.php" >						
-						
+						<h1> Registrati </h1>
 						<div class="1">
 							<label for="Nome" class="label nome">Nome</label>
 							<input id="Nome" type="text" name="nome" class="input nome" placeholder="Nome">
@@ -38,6 +38,8 @@ include_once 'server.php'?>
 							
 						</div>
 						<button type="submit" class="button" name="registrazione_utente">Registrati</button>
+
 					</form>
+					<p> Gia registrato?  <a href="login.php">LogIn</a></p>
 </div>
 					<?php include('footer.php') ?>

@@ -1,9 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-
-<?php include('head.php') ?>
-<?php include('auth.php')?>
 <?php
-include_once 'server.php'?>
+//include auth.php file on all secure pages
+include("auth.php");
+?>
+<head>
+	<?php 
+        include_once 'functions.php'; 
+	    getHead("Home");
+     ?>        
+  </head>
+
+<?php getMenu("registratour");?>
 <form method="post" action="registra_tour.php" class="col-9 col-sm-5 col-esm-5">						
 						
 						<div class="2">
