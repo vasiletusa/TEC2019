@@ -29,7 +29,7 @@ echo"
 	     		echo"
 	     	
 	     	<li><a href=\"logout.php\">Logout</a></li>";}
-	     	elseif($current="Login"){
+	     	elseif($current=="Login"){
 	     		echo"<li><a href=\"registrazione_utente.php\">Registrati</a></li>";}
 	     		else{
 	     		echo"
@@ -47,9 +47,23 @@ echo"
 
 }
 function getBreadcumbs($current){
-echo "<div class=\"content\">
-			<p id=\"breadcumb\" class=\"col-10 col-sm-5 col-esm-5 dark-theme\">Sei in :".$current."</p>
+echo "<div class=\"contenitore\">
+			<p id=\"breadcumb\" class=\"breadcumb\">Sei in :".$current."</p>
         </div>
   ";
 }
+function setOrganizza(){
+		if(!isset($_SESSION["username"])){
+		header("Location: login.php");
+		$_SESSION['isOrganize']=true;
+		exit();}
+	}
+function getMessage(){
+	if($_SESSION['isOrganize']==true){
+		echo "
+		<p id=\"messaggioOrg\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi <a href=\"registrazione_utente\">registrati</a href></p>";
+		$_SESSION['isOrganize']=false;
+	}
+}
+	
 ?>

@@ -18,6 +18,15 @@ a:link {
 	text-decoration: underline;
 	color:#0000FF;
 }
+/*messaggi*/
+#messaggioOrg{
+	font: Open Sans;
+	font-size:1em;
+text-align: center;
+color: white;
+
+}
+#messaggioOrg>a{color: white;}
 /*footer*/
 .footer {
   left: 0;

@@ -16,7 +16,7 @@ include("auth.php");
 <?php getBreadcumbs("areariservata");?>
 
 <div class="form">
-<p>Welcome <?php echo $_SESSION['username']; ?>!</p>
+<p>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</p>
 
 <a href="logout.php">Logout</a>
 </div>

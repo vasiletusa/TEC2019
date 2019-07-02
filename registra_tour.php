@@ -1,11 +1,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
-<?php
-//include auth.php file on all secure pages
-include("auth.php");
-?>
+
 <head>
 	<?php 
         include_once 'functions.php'; 
+        setOrganizza();
 	    getHead("Organizza");
      ?>        
   </head>

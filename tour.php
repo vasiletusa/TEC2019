@@ -1,15 +1,14 @@
-<?php
-require('server.php');
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-?>
-<!DOCTYPE html>
-<html>
 <head>
-<meta charset="utf-8">
-<title>View Records</title>
-<link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+	<?php 
+        include_once 'functions.php'; 
+	    getHead("Tour");
+     ?>        
+  </head>
+
+<?php getMenu("Tour");?>
+<?php getBreadcumbs("Tour");?>
 
 <h2>Tour disponibili</h2>
 
