@@ -12,8 +12,8 @@ include("auth.php");
      ?>        
   </head>
 
-<?php getMenu("areariservata");?>
-<?php getBreadcumbs("areariservata");?>
+<?php getMenu("AreaRiservata");?>
+<?php getBreadcumbs("Area personale");?>
 
 <div class="form">
 <p>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</p>

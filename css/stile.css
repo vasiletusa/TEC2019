@@ -2,7 +2,7 @@
   --primary-color: #009688;
   --primary-light:#52c7b8;
   --primary-dark:#00675b;
-  --menu-footer-color:black;
+  --menu-footer-color:#fff;
 
 }
 body {
@@ -169,7 +169,7 @@ div.pic img{
  }
 
 #header-section {
-  background: #000;
+  background: var(--menu-footer-color);
   padding: 0.3em;
   position: relative;
   top: 0;
@@ -211,8 +211,8 @@ div.pic img{
     float: right;
 }
 #menu li {
-    background-color: #000;
-    border-bottom: 0.125em solid #54BAE2;
+    background-color: var(--menu-footer-color);
+   
     display: block;
     width: 6.25em;
     height: 2.5em;
@@ -222,7 +222,7 @@ div.pic img{
 }
 #menu li a {
     padding-top: 0.625em;
-    color: #fff;
+    color: #000;
     display: block;
     font-weight: bold;
     line-height: 1.8em;
@@ -233,7 +233,7 @@ div.pic img{
 }
 #menu li.active, #menu li:hover {
     
-    border-bottom: 0.125em solid #fff;
+    border-bottom: 0.225em solid var(--primary-light);
 }
 
 li {

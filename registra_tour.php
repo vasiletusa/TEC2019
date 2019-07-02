@@ -11,7 +11,7 @@
 <?php getMenu("RegistraTour");?>
 <?php getBreadcumbs("Organizza tour");?>
 
-<form method="post" action="registra_tour.php" >						
+<form method="post" action="registra_tour.php">						
 						
 						<div class="2">
 							<label for="Data" class="label data">Data</label>
