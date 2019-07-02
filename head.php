@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>TecWeb</title>
 	<link rel="stylesheet" href="css/stile.css"/>
-	<link rel="stylesheet" href="css/stileform.css">
+	
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 	    	<ul id="menu">
 	     	<li><a href="home.php">Home</a></li>
 	     	<li><a href="tour.php">Tour</a></li>
-	     	<li><a href="#">Organizza</a></li>
+	     	<li><a href="registra_tour.php">Organizza</a></li>
 	     	<li><a href="login.php">Login</a></li>
 	     	<li><a href="registrazione_utente.php">Registrazione</a></li>
 	     	
