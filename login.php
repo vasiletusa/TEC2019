@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="css/stile.css">
-</head>
+<?php require('head.php');?>
 <?php
 include_once('server.php');
 
