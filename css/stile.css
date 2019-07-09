@@ -126,11 +126,11 @@ input, text {
 	float:left;
 	background-color: #e5e5e5;
 	width: 25%;
-	height: 80%;
+	height: 90%;
 	text-align: center;
 	word-wrap: break-word;
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
 .left h2{
@@ -146,20 +146,20 @@ input, text {
 #mid{
 	float:left;
 	width: 50%;
-	height: 80%;
-	margin-top: 10%;
-	margin-bottom:10%;
+	height: 90%;
+	margin-top: 5%;
+	margin-bottom:5%;
 }
 
 .right{
 	float:right;
 	background-color: #e5e5e5;
 	width: 25%;
-	height: auto;
+	height: 90%;
 	text-align: center;
 	word-wrap: break-word;
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
 .right h2{
