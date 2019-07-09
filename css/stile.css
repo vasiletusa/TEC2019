@@ -69,6 +69,36 @@ div.pic img{
   	height: 5em;
 }
 
+#titolo{
+	text-align:center;
+	color: black;
+}
+
+.sfondo{
+	background: var(--primary-light);
+	margin:3em auto;
+	max-width:80%;
+	padding: 5em;
+
+	color: black;
+	
+}
+
+
+
+.destra{
+	float:right;
+}
+
+.sinistra{
+	float:left;
+}
+
+#testo{
+	text-align:center;
+}
+
+
 /*end homepage*/
 
 #header-section img{
