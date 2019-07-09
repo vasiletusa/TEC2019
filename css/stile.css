@@ -203,6 +203,37 @@ div.pic img{
 	
 }
 
+#titolo{
+	text-align:center;
+	color: black;
+}
+
+.sfondo{
+	background: var(--primary-light);
+	margin:3em auto;
+	max-width:80%;
+	padding: 5em;
+
+	color: black;
+	
+}
+
+
+
+.destra{
+	float:right;
+}
+
+.sinistra{
+	float:left;
+}
+
+#testo{
+	text-align:center;
+}
+
+
+
 #menu-superiore{
     position: relative;
 	float:right;
