@@ -122,50 +122,58 @@ input, text {
 }
 /*homepage*/
 
-#box{
-	width: 70em;    
-	height: 35em;
-	top: 50%;
-	left: 50%;
-	right:50%;
-	margin-top: -35em;
-	margin-left: -35em;
-	margin:auto;
-}
-
-
-div.riga{
+.left{
 	float:left;
-	margin:2em;
-	margin-left: 20%;
-  	margin-right: 20%;
-	
+	background-color: #e5e5e5;
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	word-wrap: break-word;
 }
 
-div.riga0{
+.left h2{
+	position:relative;
+	font-size: 2em;
+}
+
+.left p{
+	padding:0.1em;
+	font-size: 1em;
+}
+
+#mid{
 	float:left;
-	margin:2em;
-	margin-left: 10%;
-  	margin-right: auto;
-	
+	width: 50%;
+	height: 100%;
 }
 
-div.pic{
-	float:left;
-	margin:1em;
+.right{
+	float:right;
+	background-color: #e5e5e5;
+	width: 25%;
+	height: auto;
+	text-align: center;
+	word-wrap: break-word;
 }
 
+.right h2{
+	font-size: 2em;
+}
 
+.right p{
+	padding:0.4em;
+	font-size: 1em;
+}
 div.link{
 	text-align: center;
 }
 
-
-
 div.pic img{
-	display:block;
-  	width: 15em;
-  	height: 10em;
+  	display:block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 10em;
+  	height: 5em;
 }
 
 
