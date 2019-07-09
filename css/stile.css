@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #009688;
+  --primary-light:#52c7b8;
+  --primary-dark:#00675b;
+  --menu-footer-color:#fff;
+
+}
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
@@ -11,91 +18,154 @@ a:link {
 	text-decoration: underline;
 	color:#0000FF;
 }
+/*messaggi*/
+#messaggioOrg{
+	font: Open Sans;
+	font-size:1em;
+text-align: center;
+color: white;
+
+}
+#messaggioOrg>a{color: white;}
+/*footer*/
+
+.footer {
+  clear: both;
+  position: relative;
+<<<<<<< HEAD
+  left: 0;
+  bottom: 0;
+=======
+  height: auto;
+  margin-top: -2em;
+>>>>>>> 42791d2d5fd38a6dc63b66eb8400cb2286a8cfb2
+  width: 100%;
+  height: auto;
+  background-color: var(--menu-footer-color);
+  color: white;
+  text-align: center;
+}
 
 
+
+/*form*/
+form {
+  background:var(--primary-color);
+  padding: 2em;
+  max-width:50em;
+  margin:2em auto;
+}
+
+/*label*/
+label {
+width:100%;
+display:inline-block;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+  color:white;
+  transition:all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size:20px;
+  
+-align: center;
+  width: 100%;
+  
+}
+
+/*input*/
+input, text {
+  font-size:22px;
+  display:block;
+  width:100%;
+  
+  background:white;
+  background-image:none;
+  border:1px solid black;
+  color:black;
+  text-align: center;
+  border-radius:0;
+  transition:border-color .25s ease, box-shadow .25s ease;
+
+}
+/*bottoni*/
+.button {
+  border:1;
+  outline:none;
+  border-radius:0.9;
+  margin-top:1em;
+  font-size:2rem;
+  font-weight:bold;
+  width: 100%;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background:var(--primary-light);
+  color:black;
+  transition:all.5s ease;
+  -webkit-appearance: none;
+  &:hover, &:focus {
+    background:$main-dark;
+  }
+}
+/*login*/
+#boxlogin{
+	padding: 5em;
+  max-width:600px;
+  margin:5em auto;
+	background:var(--primary-color);
+
+	text-align: center;
+	color: white;
+}
+#notRegistered>a{
+	color: white;
+}
 /*homepage*/
 
-.left{
+#box{
+	width: 70em;    
+	height: 35em;
+	top: 50%;
+	left: 50%;
+	right:50%;
+	margin-top: -35em;
+	margin-left: -35em;
+	margin:auto;
+}
+
+
+div.riga{
 	float:left;
-	background-color: #e5e5e5;
-	width: 25%;
-	height: 100%;
-	text-align: center;
-	word-wrap: break-word;
+	margin:2em;
+	margin-left: 20%;
+  	margin-right: 20%;
+	
 }
 
-.left h2{
-	position:relative;
-	font-size: 2em;
-}
-
-.left p{
-	padding:0.1em;
-	font-size: 1em;
-}
-
-#mid{
+div.riga0{
 	float:left;
-	width: 50%;
-	height: 100%;
+	margin:2em;
+	margin-left: 10%;
+  	margin-right: auto;
+	
 }
 
-.right{
-	float:right;
-	background-color: #e5e5e5;
-	width: 25%;
-	height: auto;
-	text-align: center;
-	word-wrap: break-word;
+div.pic{
+	float:left;
+	margin:1em;
 }
 
-.right h2{
-	font-size: 2em;
-}
 
-.right p{
-	padding:0.4em;
-	font-size: 1em;
-}
 div.link{
 	text-align: center;
 }
 
+
+
 div.pic img{
-  	display:block;
-  	margin-left: auto;
-  	margin-right: auto;
-  	width: 10em;
-  	height: 5em;
-}
-
-#titolo{
-	text-align:center;
-	color: black;
-}
-
-.sfondo{
-	background: var(--primary-light);
-	margin:3em auto;
-	max-width:80%;
-	padding: 5em;
-
-	color: black;
-	
-}
-
-
-
-.destra{
-	float:right;
-}
-
-.sinistra{
-	float:left;
-}
-
-#testo{
-	text-align:center;
+	display:block;
+  	width: 15em;
+  	height: 10em;
 }
 
 
@@ -104,12 +174,13 @@ div.pic img{
 #header-section img{
   	width: 5.5em;
   	height: 2.5em;
+  	margin-right: 5em;
  }
 
 #header-section {
-  background: #000;
+  background: var(--menu-footer-color);
   padding: 0.3em;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -119,7 +190,7 @@ div.pic img{
 
 .nav-header{
   width:100%;
-  padding: 0.3em;
+  margin-right: 30%;
 }
 
 .logo{
@@ -136,7 +207,7 @@ div.pic img{
     position: relative;
 	float:right;
     display: flex;
-    padding: 0.3em;
+    margin: 0.7em;
 }
 
     
@@ -149,18 +220,18 @@ div.pic img{
     float: right;
 }
 #menu li {
-    background-color: #000;
-    border-bottom: 0.125em solid #54BAE2;
+    background-color: var(--menu-footer-color);
+   
     display: block;
     width: 6.25em;
     height: 2.5em;
 	margin:0.125em;
-    
+    margin-bottom: 5em;
     float: left; /* elementi su singola riga */
 }
 #menu li a {
     padding-top: 0.625em;
-    color: #fff;
+    color: #000;
     display: block;
     font-weight: bold;
     line-height: 1.8em;
@@ -171,7 +242,7 @@ div.pic img{
 }
 #menu li.active, #menu li:hover {
     
-    border-bottom: 0.125em solid #fff;
+    border-bottom: 0.225em solid var(--primary-light);
 }
 
 li {
