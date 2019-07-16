@@ -9,16 +9,28 @@ include("auth.php");
 	<?php 
         include_once 'functions.php'; 
 	    getHead("AreaRiservata");
+	    $_SESSION['area']=true;
      ?>        
   </head>
-
 <?php getMenu("AreaRiservata");?>
 <?php getBreadcumbs("Area personale");?>
 
-<div class="form">
-<p>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</p>
+<div class="box">
+<h1>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</h1>
 
-<a href="logout.php">Logout</a>
+</div>
+<div class="container-area">
+	<div class="container-tour sinistra">
+		<div class="item-tour"> <?php getTuoiTour($tuoitour);?></div>
+
+
+
+	</div>
+	<div class="container-prenotazioni destra">
+		<div class="item-prenotazioni">3</div>
+		<div class="item-prenotazioni">4</div>
+	</div>
+
 </div>
 </body>
 </html>

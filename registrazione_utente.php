@@ -6,7 +6,6 @@
 	    getHead("Registrati");
      ?>        
   </head>
-
 <?php getMenu("Registrati");?>
 <?php getBreadcumbs("Registrati");?>
 <div class="container box" id="boxlogin">

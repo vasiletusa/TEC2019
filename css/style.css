@@ -5,7 +5,16 @@
   --menu-footer-color:#fff;
 
 }
+/*area personale*/
+.container-tour{
+  
+}
+.container-prenotazioni{
 
+}
+.container-area{
+  margin:5em;
+}
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
