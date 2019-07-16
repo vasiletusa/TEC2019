@@ -5,6 +5,10 @@
   --menu-footer-color:#fff;
 
 }
+#erroreUser{
+	color: red;
+	text-align: center;
+}
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;

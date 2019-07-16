@@ -10,6 +10,7 @@ include_once 'server.php'?>
 	</div>
 	<div class="destra">
 		ORGANIZZATO DA :<label for="organiz">organizzatore </label>
+		
 	</div>
 	
 	<div id="testo">

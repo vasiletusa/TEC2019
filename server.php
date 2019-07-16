@@ -54,9 +54,9 @@ if (isset($_POST['username'])){
             //Reindirizzamento 
       header("Location: area_riservata.php");
          }else{
-  echo "<div class='form'>
-<h3>Username o password sbagliato.</h3>
-<br/>Clicca qui per<a href='login.php'>Login</a></div>";
+  echo "
+  <div  class=\"erroreUser\">
+<h3>Username o password sbagliato.</h3></div>";
   }
 }
   
