@@ -25,10 +25,10 @@ a:link {
 	font: Open Sans;
 	font-size:1em;
 text-align: center;
-color: white;
+color: red;
 
 }
-#messaggio>a{color: white;}
+#messaggio>a{color: red;}
 /*footer*/
 
 .footer {
@@ -105,9 +105,7 @@ input, text {
   color:black;
   transition:all.5s ease;
   -webkit-appearance: none;
-  &:hover, &:focus {
-    background:$main-dark;
-  }
+  
 }
 /*login*/
 #boxlogin{
@@ -115,12 +113,11 @@ input, text {
   max-width:600px;
   margin:5em auto;
 	background:var(--primary-color);
-
+color:red;
 	text-align: center;
-	color: white;
 }
 #notRegistered>a{
-	color: white;
+	color: blue;
 }
 
 .error{

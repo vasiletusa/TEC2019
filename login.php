@@ -5,7 +5,8 @@
 	<?php 
         include_once 'functions.php'; 
 	    getHead("Login");
-     ?>        
+     ?>   
+          
   </head>
 
 <?php getMenu("Login");?>
