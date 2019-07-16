@@ -12,13 +12,11 @@ body {
   font-size: 1.0em;
   background: #fff;
   color: #848484;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
+  overflow: auto;
 }
 
-a:link {
-  text-decoration: underline;
-  color:#0000FF;
-}
+
 /*messaggi*/
 
 #messaggio{
@@ -43,8 +41,8 @@ color: white;
 
   width: 100%;
   height: auto;
-  background-color: var(--menu-footer-color);
-  color: white;
+  background-color: var(--primary-light);
+  color: black;
   text-align: center;
 }
 
@@ -138,20 +136,19 @@ color: #b71c1c;
   float:left;
   background-color: #e5e5e5;
   width: 25%;
-  height: 90%;
+  height: 70em;
   text-align: center;
   word-wrap: break-word;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 1%;
+
 }
 
 .left h2{
-  position:relative;
   font-size: 2em;
 }
 
 .left p{
-  padding:0.1em;
+  /*padding:0.1em;*/
   font-size: 1em;
 }
 
@@ -160,7 +157,7 @@ color: #b71c1c;
   width: 50%;
   height: 90%;
   margin-top: 5%;
-  margin-bottom:5%;
+  margin-bottom:10%;
 }
 
 .right{
@@ -170,8 +167,6 @@ color: #b71c1c;
   height: 90%;
   text-align: center;
   word-wrap: break-word;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .right h2{
@@ -182,7 +177,23 @@ color: #b71c1c;
   padding:0.4em;
   font-size: 1em;
 }
-div.link{
+
+.link{
+  border:1;
+  border-color: white;
+  border-style: solid;
+  border-radius:0.5em;
+  font-size:1em;
+  font-weight:bold;
+  width: auto;
+  height: 2em;
+  background:var(--primary-light);
+  cursor:pointer;
+  margin-top: 0.3em;
+}
+
+a:link {
+  color:white;
   text-align: center;
 }
 
@@ -190,9 +201,24 @@ div.pic img{
     display:block;
     margin-left: auto;
     margin-right: auto;
-    width: 10em;
-    height: 5em;
+    width: 20em;
+    height: 10em;
+    margin-bottom:5%;
 }
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 5em;
+  grid-template-columns: auto auto;
+  padding: 11%;
+  padding-top: 0em;
+  width: auto;
+  height: auto;
+  /*capire se piace il rimpicciolimento così*/
+ grid-auto-rows: minmax(auto, auto);
+}
+
+
 
 
 /*end homepage*/
@@ -221,13 +247,14 @@ div.pic img{
 
 .logo{
     position: relative;
-  float:left;
+    float:left;
     font-family: Verdana, sans-serif;
-    margin:0.125em;
+    margin:0.175em;
     max-width:12.5em;
     display: flex;
-  
 }
+
+
 
 #titolo{
   text-align:center;
@@ -239,7 +266,6 @@ div.pic img{
   margin:3em auto;
   max-width:80%;
   padding: 5em;
-
   color: black;
   
 }
@@ -253,6 +279,11 @@ div.pic img{
 .sinistra{
   float:left;
 }
+
+.centro{
+  float:center;
+}
+
 
 #testo{
   text-align:center;

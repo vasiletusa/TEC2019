@@ -21,9 +21,8 @@ function getMenu($current){
 echo"
 <body>
 	<header id=\"header-section\">
-	 <div class=\"nav-header\">
-	   
-	  	<class=\"logo\"><a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
+	 <div class=\"nav-header\"class=\"logo\">
+	 	<a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
 	  	<div id=\"menu-superiore\">
 	   	<nav>
 	    	<ul id=\"menu\">
