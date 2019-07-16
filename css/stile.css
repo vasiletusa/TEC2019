@@ -107,15 +107,15 @@ input, text {
   -webkit-appearance: none;
   
 }
-/*login*/
+/*login
 #boxlogin{
 	padding: 5em;
-  max-width:600px;
-  margin:5em auto;
+  	max-width:600px;
+  	margin:5em auto;
 	background:var(--primary-color);
-color:red;
+	color:red;
 	text-align: center;
-}
+}*/
 #notRegistered>a{
 	color: blue;
 }
@@ -302,7 +302,7 @@ li {
 }
 
 
-/*SLIDESHOW START*/
+/*SLIDESHOW START
 
 .q-slider {
 	display: inline-block;
@@ -417,9 +417,9 @@ li {
 .q-slider > #q-pa-2:checked ~ .q-arrn > label.n-0 {
 	opacity: 1;
 	z-index: 5;
-}
+}*/
 
-/* calculate autoplay */
+/* calculate autoplay 
 @-webkit-keyframes arrow {
 	0%, 33.32333333333334% { opacity: 1; z-index: 5; }
 	33.333333333333336%, 100% { opacity: 0; z-index: -1; }
@@ -449,9 +449,9 @@ li {
 	-webkit-animation: arrow 12300ms infinite 7200ms;
 	-moz-animation: arrow 12300ms infinite 7200ms;
 	animation: arrow 12300ms infinite 7200ms;
-}
+}*/
 
-/* stop */
+/* stop 
 .q-slider > .sl:checked ~ .q-arrp > label,
 .q-slider > .sl:checked ~ .q-arrn > label,
 .q-slider > .pa:checked ~ .q-arrp > label,
@@ -461,9 +461,9 @@ li {
 	-ms-animation: none;
 	-o-animation: none;
 	animation: none;
-}
+}*/
 
-/* calcola autoplay */
+/* calcola autoplay 
 .q-slider > .q-bu {
 	position: absolute;
 	left: 0;
@@ -594,9 +594,9 @@ li {
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	transform: scale(1);
-}
+}*/
 
-/* calcola autoplay */
+/* calcola autoplay 
 @-webkit-keyframes slide {
 	0%, 25.203252032520325% { -webkit-transform: translateX(0%); }
 	33.333333333333336%, 58.53658536585366% { -webkit-transform: translateX(-100%); }
@@ -623,9 +623,9 @@ li {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-}
+}*/
 
-/* calcola autoplay */
+/* calcola autoplay 
 .q-slider > .q-arrp,
 .q-slider > .q-arrn {
 	top: 0;
@@ -724,9 +724,9 @@ li {
 .q-slider > #q-sl-2:checked ~ .q-bu > label.n-2,
 .q-slider > #q-pa-2:checked ~ .q-bu > label.n-2 {
 	background: #fff;
-}
+}*/
 
-/* calcola autoplay */
+/* calcola autoplay 
 @-webkit-keyframes bullet {
 	0%, 33.32333333333334% {
 		background: #fff;
@@ -774,9 +774,9 @@ li {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-}
+}*/
 
-/* stop */
+/* stop 
 .q-slider > .sl:checked ~ .q-bu > label > .q-po,
 .q-slider > .pa:checked ~ .q-bu > label > .q-po {
 	-webkit-animation: none;
@@ -784,9 +784,9 @@ li {
 	-ms-animation: none;
 	-o-animation: none;
 	animation: none;
-}
+}*/
 
-/* calcola autoplay */
+/* calcola autoplay 
 .q-slider > .q-de > label {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 12pt;
@@ -841,7 +841,7 @@ li {
 	transition: opacity .4s, visibility .4s;
 }
 
-/* calcola autoplay */
+/* calcola autoplay 
 @-webkit-keyframes q-ti {
 	4.065040650406504%, 33.333333333333336% { opacity: 1; z-index: 2; visibility: visible;}
 	37.39837398373984% { opacity: 0; z-index: 2; visibility: hidden;}
@@ -897,7 +897,7 @@ li {
 
 }
 
-/* stop */
+/* stop 
 .q-slider > .sl:checked ~ .q-de > label,
 .q-slider > .pa:checked ~ .q-de > label {
 	-webkit-animation: none;
@@ -908,7 +908,7 @@ li {
 }
 
 /* calcola autoplay */
-/* nelle versioni mobile si nascondono i pallini e le descrizioni */
+/* nelle versioni mobile si nascondono i pallini e le descrizioni 
 @media
 only screen and (max-width: 480px),
 only screen and (-webkit-max-device-pixel-ratio: 2) and (max-width: 480px),
@@ -921,6 +921,6 @@ only screen and (max-resolution: 2dppx)             and (max-width: 480px) {
 	.q-slider > .q-bu {
 		display: none;
 	}
-}
+}*/
 
 /*SLIDESHOW END*/
