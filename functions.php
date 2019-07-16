@@ -56,19 +56,23 @@ function setOrganizza(){
 		exit();}
 	}
 function getMessage(){
-	if($_SESSION['isOrganize']==true){
+	if(isset($_SESSION['isOrganize'])){
 		echo "
 		<p id=\"messaggio\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi <a href=\"registrazione_utente\">registrati</a href></p>";
 	}
 }
 
 function getError(){
-	if($_SESSION['errore']=="password"){
+	if(isset($_SESSION['errPassword'])){
 			echo "<p id=\"errore\"> Password errata</p>";
-			$_SESSION['errore']="";}
-	elseif($_SESSION['errore']=="username"){
+			$_SESSION['errPassword']=false;}
+	elseif(isset($_SESSION['errUsername'])){
 			echo "<p id=\"errore\"> Username non disponibile</p>";
-			$_SESSION['errore']="";}
+			$_SESSION['errUsername']=false;}
+	elseif(isset($_SESSION['errLogin'])){
+			echo "<p id=\"errore\"> Username o password errato</p>";
+			$_SESSION['errLogin']=false;}
+
 }
 
 

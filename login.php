@@ -14,6 +14,7 @@
 
 <div class="container box" id="boxlogin">
 	<?php getMessage();?>
+	<?php getError();?>
 	<h1 id="login">Log In</h1>
 <form action="login.php" method="post" name="login">
 	
@@ -28,7 +29,7 @@
 							<input id="Password" type="password" name="password" class="input password" placeholder="********">
 							
 	</div>
-<input class="button" name="submit" type="submit" value="Login" />
+						<button type="submit" class="button" name="Login">Login</button>
 </form>
 <p id="notRegistered">Non ancora registrato?  <a href='registrazione_utente.php'>Registrati qui</a></p>
 </div>

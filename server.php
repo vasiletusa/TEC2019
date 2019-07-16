@@ -25,11 +25,11 @@ if (isset($_POST['registrazione_utente'])) {
   $password = mysqli_real_escape_string($db, $_POST['password']);
   $password_2 = mysqli_real_escape_string($db, $_POST['passwordR']);
   //controllo se esiste già uno username uguale
-          $controllo = "SELECT * FROM `utenti` WHERE Username='$username' ";
+         $controllo = "SELECT * FROM `utenti` WHERE Username='$username' ";
           $result = mysqli_query($db,$controllo) or die(mysql_error());
   $rows = mysqli_num_rows($result);
   if($rows==1){
-    $_SESSION['errore']="username";
+    $_SESSION['errUsername']=true;
   }
 
   elseif($password==$password_2){
@@ -43,13 +43,13 @@ if (isset($_POST['registrazione_utente'])) {
             header("Location: area_riservata.php");
 
   }else
-        $_SESSION['errore']="password";
+        $_SESSION['errPassword']=true;
   	
   }
 
   //LOGIN
    
-if (isset($_POST['username'])){
+if (isset($_POST['Login'])){
      
   $username = stripslashes($_REQUEST['username']);
         
@@ -70,8 +70,7 @@ if (isset($_POST['username'])){
             else{
             header("Location: area_riservata.php");}
           }else{
-            echo "<div  class=\"errore\"> <h3>Username o password sbagliato.</h3></div>";
-            }
+            $_SESSION['errLogin']=true;}
 }
   
 
