@@ -2,7 +2,15 @@
 <link rel="stylesheet" href="stile.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<?php include('head.php') ?>
+<head>
+	<?php 
+        include_once 'functions.php'; 
+	    getHead("Login");
+     ?>        
+  </head>
+
+<?php getMenu("Home");?>
+<?php getBreadcumbs("Home");?>
 
 <body>
 

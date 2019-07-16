@@ -24,22 +24,19 @@ echo"
 	    	<ul id=\"menu\">
 	     	<li ";if($current=="Home"){echo"class=\"active\"";}echo"><a href=\"home.php\">Home</a></li>
 	     	<li ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a></li>
-	     	<li ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a></li>";
+	     	<li ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a></li>
+	     	<li "; if($current=="Registrati"){echo"class=\"active\"";}echo"><a href=\"registrazione_utente.php\">Registrati</a></li>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		echo"<li ";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"><a href=\"area_riservata.php\">Area personale</a></li>
+	     			<li><a href=\"logout.php\">Logout</a></li>";}
+	     	else{
+	     		
+	     		
 	     	
-	     	<li><a href=\"logout.php\">Logout</a></li>";}
-	     	elseif($current=="Login"){
-	     		echo"<li";if($current=="Registrati"){echo"class=\"active\"";}echo"><a href=\"registrazione_utente.php\">Registrati</a></li>";}
-	     		else{
-	     		echo"
-	     	
-	     	<li><a href=\"login.php\">Login</a></li>";}
-	     	echo"
-	     	
-	     	
+	     	echo "<li "; if($current=="Login"){echo"class=\"active\"";}echo"><a href=\"login.php\">Login</a></li>";}
 
-	    	</ul>
+	     	echo"
+	     	</ul>
 	   	</nav>
 	  	</div>
       	</div>
@@ -61,9 +58,18 @@ function setOrganizza(){
 function getMessage(){
 	if($_SESSION['isOrganize']==true){
 		echo "
-		<p id=\"messaggioOrg\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi <a href=\"registrazione_utente\">registrati</a href></p>";
-		$_SESSION['isOrganize']=false;
+		<p id=\"messaggio\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi <a href=\"registrazione_utente\">registrati</a href></p>";
 	}
 }
-	
+
+function getError(){
+	if($_SESSION['errore']=="password"){
+			echo "<p id=\"errore\"> Password errata</p>";
+			$_SESSION['errore']="";}
+	elseif($_SESSION['errore']=="username"){
+			echo "<p id=\"errore\"> Username non disponibile</p>";
+			$_SESSION['errore']="";}
+}
+
+
 ?>

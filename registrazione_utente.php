@@ -1,9 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-<?php include('head.php') ?>
-<?php
-include_once 'server.php'?>
+<head>
+	<?php 
+        include_once 'functions.php'; 
+	    getHead("Login");
+     ?>        
+  </head>
+
+<?php getMenu("Registrati");?>
+<?php getBreadcumbs("Registrati");?>
 <div class="container box" id="boxlogin">
+	<?php getError();?>
 <form method="post" action="registrazione_utente.php" >						
 						<h1> Registrati </h1>
 						<div class="1">

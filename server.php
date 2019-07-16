@@ -24,14 +24,26 @@ if (isset($_POST['registrazione_utente'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
   $password_2 = mysqli_real_escape_string($db, $_POST['passwordR']);
-  $query = "INSERT INTO utenti ( nome, cognome, username, email, password) 
-  			  VALUES('$nome','$cognome','$username', '$email', '$password')";
-  echo "$username";
-  echo "$email";
-  echo "$password";
-  echo "$password_2";
-  echo "$nome";
-  	mysqli_query($db, $query);
+  //controllo se esiste già uno username uguale
+          $controllo = "SELECT * FROM `utenti` WHERE Username='$username' ";
+          $result = mysqli_query($db,$controllo) or die(mysql_error());
+  $rows = mysqli_num_rows($result);
+  if($rows==1){
+    $_SESSION['errore']="username";
+  }
+
+  elseif($password==$password_2){
+          $query = "INSERT INTO utenti ( nome, cognome, username, email, password) 
+          			  VALUES('$nome','$cognome','$username', '$email', '$password')";
+          	mysqli_query($db, $query);
+            $_SESSION['username']=$username;
+            $_SESSION['isLogged']=true;
+            //reindirizzamento
+
+            header("Location: area_riservata.php");
+
+  }else
+        $_SESSION['errore']="password";
   	
   }
 
@@ -49,25 +61,20 @@ if (isset($_POST['username'])){
   $result = mysqli_query($db,$query) or die(mysql_error());
   $rows = mysqli_num_rows($result);
         if($rows==1){
-      $_SESSION['username'] = $username;
-      $_SESSION['isLogged']= true;
-            //Reindirizzamento 
-      header("Location: area_riservata.php");
-         }else{
-  echo "
-  <div  class=\"erroreUser\">
-<h3>Username o password sbagliato.</h3></div>";
-  }
+          $_SESSION['username'] = $username;
+          $_SESSION['isLogged']= true;
+                //Reindirizzamento 
+          if($_SESSION['isOrganize']==true){
+            header("Location: registra_tour.php");
+            $SESSION['isOrganize']=false;}
+            else{
+            header("Location: area_riservata.php");}
+          }else{
+            echo "<div  class=\"errore\"> <h3>Username o password sbagliato.</h3></div>";
+            }
 }
   
 
 
 
-
-
-
-
-
-
-
-  ?>
+?>

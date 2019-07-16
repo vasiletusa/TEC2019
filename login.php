@@ -15,7 +15,7 @@
 <div class="container box" id="boxlogin">
 	<?php getMessage();?>
 	<h1 id="login">Log In</h1>
-<form action="" method="post" name="login">
+<form action="login.php" method="post" name="login">
 	
 		
 

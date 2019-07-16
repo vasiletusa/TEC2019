@@ -5,10 +5,7 @@
   --menu-footer-color:#fff;
 
 }
-#erroreUser{
-	color: red;
-	text-align: center;
-}
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
@@ -23,26 +20,27 @@ a:link {
 	color:#0000FF;
 }
 /*messaggi*/
-#messaggioOrg{
+
+#messaggio{
 	font: Open Sans;
 	font-size:1em;
 text-align: center;
 color: white;
 
 }
-#messaggioOrg>a{color: white;}
+#messaggio>a{color: white;}
 /*footer*/
 
 .footer {
   clear: both;
   position: relative;
-<<<<<<< HEAD
+
   left: 0;
   bottom: 0;
-=======
+
   height: auto;
   margin-top: -2em;
->>>>>>> 42791d2d5fd38a6dc63b66eb8400cb2286a8cfb2
+
   width: 100%;
   height: auto;
   background-color: var(--menu-footer-color);
@@ -123,6 +121,14 @@ input, text {
 }
 #notRegistered>a{
 	color: white;
+}
+
+#errore{
+	font: Open Sans;
+	font-size:1em;
+text-align: center;
+color: red;
+
 }
 /*homepage*/
 
