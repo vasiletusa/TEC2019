@@ -6,7 +6,7 @@ echo"
 
 	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
 	<title>$current</title>
-	<link rel=\"stylesheet\" href=\"css/stile.css\"/>
+	<link rel=\"stylesheet\" href=\"css/style.css\"/>
 	<link rel=\"icon\" 
       type=\"image/png\" 
       href=\"img/destination.png\">
@@ -52,12 +52,7 @@ echo "<div class=\"contenitore\">
         </div>
   ";
 }
-function setOrganizza(){
-		if(!isset($_SESSION["username"])){
-		header("Location: login.php");
-		$_SESSION['isOrganize']=true;
-		exit();}
-	}
+
 function getMessage(){
 	if(isset($_SESSION['isOrganize'])){
 		echo "

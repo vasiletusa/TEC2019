@@ -6,6 +6,7 @@ $username = "";
 $email    = "";
 $nome    = "";
 $errors = array(); 
+$isOrganize=false;
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
@@ -89,15 +90,28 @@ if (isset($_POST['Login'])){
                 $_SESSION['username'] = $username;
                 $_SESSION['isLogged']= true;
                       //Reindirizzamento 
-                if($_SESSION['isOrganize']==true){
+                if($isOrganize==true){
                   header("Location: registra_tour.php");
-                  $SESSION['isOrganize']=false;}
+                 $isOrganize=false;}
                   else{
                   header("Location: area_riservata.php");}
               }      }
   
 
 }
+function setOrganizza(){
+    if(!isset($_SESSION["username"])){
+      $isOrganize=true;
+    header("Location: login.php");
+    
+    exit();}
+    else    $isOrganize=false;
+
+  }
+  function setOrganizzaFalse(){
+    if($isOrganize==true)
+      $isOrganize=false;
+  }
 
 
 function getUsernameError($errors) { 
