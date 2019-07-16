@@ -5,7 +5,8 @@
 $username = "";
 $email    = "";
 $nome    = "";
-$errors = array(); 
+$errors = array();
+$tuoitour=array(); 
 $isOrganize=false;
 
 // connect to the database
@@ -99,6 +100,29 @@ if (isset($_POST['Login'])){
   
 
 }
+if(isset($_SESSION['area'])){
+  $username=$_SESSION['username'];
+  $query = "SELECT * FROM `tour` WHERE Organizzatore='$username' ";
+        $result = mysqli_query($db,$query) or die(mysql_error());
+        $rows = mysqli_num_rows($result);
+
+              if($rows==0){
+                $tuoitour['vuoto']="Non hai ancora organizzato tour";
+               }
+                else{
+                  $count=1;
+                  while($row = mysqli_fetch_assoc($result)) { 
+
+                   echo " <p><a href=\"#\" align=\"center\"><".$row['Descrizione']."></a>";
+                  $count++; }
+                }
+
+
+      
+
+}
+
+
 function setOrganizza(){
     if(!isset($_SESSION["username"])){
       $isOrganize=true;
@@ -109,7 +133,11 @@ function setOrganizza(){
 
   }
 
+function getTuoiTour($tuoitour){
+  if(isset($tuoitour['vuoto']))
+    echo $tuoitour['vuoto'];
 
+}
 function getUsernameError($errors) { 
   if(isset($errors['username'])){
       echo $errors['username'];
