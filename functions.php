@@ -7,6 +7,9 @@ echo"
 	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
 	<title>$current</title>
 	<link rel=\"stylesheet\" href=\"css/stile.css\"/>
+	<link rel=\"icon\" 
+      type=\"image/png\" 
+      href=\"img/destination.png\">
 	
 
 
