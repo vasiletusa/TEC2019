@@ -8,7 +8,8 @@
 	    getHead("Login");
      ?>        
   </head>
-
+  
+<?php setOrganizzaFalse(); ?>
 <?php getMenu("Home");?>
 <?php getBreadcumbs("Home");?>
 

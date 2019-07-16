@@ -11,7 +11,7 @@ include("auth.php");
 	    getHead("AreaRiservata");
      ?>        
   </head>
-
+<?php setOrganizzaFalse(); ?>
 <?php getMenu("AreaRiservata");?>
 <?php getBreadcumbs("Area personale");?>
 

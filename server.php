@@ -108,10 +108,6 @@ function setOrganizza(){
     else    $isOrganize=false;
 
   }
-  function setOrganizzaFalse(){
-    if($isOrganize==true)
-      $isOrganize=false;
-  }
 
 
 function getUsernameError($errors) { 

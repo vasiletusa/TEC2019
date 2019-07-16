@@ -6,7 +6,7 @@
 	    getHead("Registrati");
      ?>        
   </head>
-
+<?php setOrganizzaFalse(); ?>
 <?php getMenu("Registrati");?>
 <?php getBreadcumbs("Registrati");?>
 <div class="container box" id="boxlogin">
