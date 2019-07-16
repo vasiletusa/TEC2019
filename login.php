@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<?php 
         include_once 'functions.php'; 
 	    getHead("Login");
@@ -14,7 +15,7 @@
 
 <div class="container box" id="boxlogin">
 	<?php getMessage();?>
-	<?php getError();?>
+	
 	<h1 id="login">Log In</h1>
 <form action="login.php" method="post" name="login">
 	
@@ -23,6 +24,7 @@
 		<div class="input">
 							<label for="Username" class="label username">Username</label>
 							<input id="Username" type="text" name="username" class="input username" placeholder="Inserisci username">
+							<p class="error"><?php getUsernameError($errors); ?></p>
 		</div>
 	<div class="input password">
 							<label for="Password" class="label password"> Password</label>

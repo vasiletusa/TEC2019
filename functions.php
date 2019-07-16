@@ -7,6 +7,11 @@ echo"
 	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
 	<title> $current</title>
 	<link rel=\"stylesheet\" href=\"css/stile.css\"/>
+
+	<link rel=\"icon\" 
+      type=\"image/png\" 
+      href=\"img/destination.png\">
+	
 ";
 }
 
@@ -60,18 +65,7 @@ function getMessage(){
 	}
 }
 
-function getError(){
-	if(isset($_SESSION['errPassword'])){
-			echo "<p id=\"errore\"> Password errata</p>";
-			$_SESSION['errPassword']=false;}
-	elseif(isset($_SESSION['errUsername'])){
-			echo "<p id=\"errore\"> Username non disponibile</p>";
-			$_SESSION['errUsername']=false;}
-	elseif(isset($_SESSION['errLogin'])){
-			echo "<p id=\"errore\"> Username o password errato</p>";
-			$_SESSION['errLogin']=false;}
 
-}
 
 
 ?>

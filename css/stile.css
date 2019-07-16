@@ -121,7 +121,7 @@ input, text {
 	color: white;
 }
 
-#errore{
+.error{
 	font: Open Sans;
 	font-size:1em;
 text-align: center;
