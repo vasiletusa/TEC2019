@@ -6,10 +6,18 @@
 	<?php 
         include_once 'functions.php'; 
 	    getHead("Login");
+<<<<<<< HEAD
      ?>        
   </head>
   
 <?php setOrganizzaFalse(); ?>
+=======
+     ?>  
+
+	<link rel="stylesheet" href="stile.css">      
+</head>
+
+>>>>>>> master
 <?php getMenu("Home");?>
 <?php getBreadcumbs("Home");?>
 

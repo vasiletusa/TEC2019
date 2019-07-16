@@ -8,11 +8,9 @@
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  line-height: 1.6;
   font-size: 1.0em;
   background: #fff;
   color: #848484;
-  overflow-x: hidden;
 }
 
 a:link {
@@ -44,7 +42,7 @@ color: red;
   width: 100%;
   height: auto;
   background-color: var(--menu-footer-color);
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -131,17 +129,13 @@ color: red;
 
 .left{
 	float:left;
-	background-color: #e5e5e5;
-	width: 25%;
-	height: 90%;
-	text-align: center;
+	background-color: #D3D3D3;
+	width: 15em;
+	height: 10em;
 	word-wrap: break-word;
-	margin-top: 5%;
-	margin-bottom: 5%;
 }
 
 .left h2{
-	position:relative;
 	font-size: 2em;
 }
 
@@ -201,7 +195,6 @@ div.pic img{
 #header-section {
   background: var(--menu-footer-color);
   padding: 0.3em;
-  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -249,7 +242,7 @@ div.pic img{
 	float:left;
 }
 
-#testo{
+.testo{
 	text-align:center;
 }
 
