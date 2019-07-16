@@ -117,7 +117,7 @@ input, text {
 	background:var(--primary-color);
 
 	text-align: center;
-	color: white;
+	color: black;
 }
 #notRegistered>a{
 	color: white;
