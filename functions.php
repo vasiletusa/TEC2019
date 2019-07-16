@@ -5,13 +5,11 @@ function getHead($current){
 echo"
 
 	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
-	<title>$current</title>
+	<title> $current</title>
 	<link rel=\"stylesheet\" href=\"css/stile.css\"/>
-	
-
-
 ";
 }
+
 function getMenu($current){
 echo"
 <body>

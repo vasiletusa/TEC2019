@@ -6,8 +6,10 @@
 	<?php 
         include_once 'functions.php'; 
 	    getHead("Login");
-     ?>        
-  </head>
+     ?>  
+
+	<link rel="stylesheet" href="stile.css">      
+</head>
 
 <?php getMenu("Home");?>
 <?php getBreadcumbs("Home");?>
