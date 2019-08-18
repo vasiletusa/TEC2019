@@ -15,6 +15,13 @@
 .container-area{
   margin:5em;
 }
+
+
+#breadcumb{
+   font-style: italic;
+   color: var(--primary-dark); 
+}
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6;
@@ -31,10 +38,10 @@ body {
 #messaggio{
   font: Open Sans;
   font-size:1em;
-text-align: center;
-color: white;
-
+  text-align: center;
+  color: white;
 }
+
 #messaggio>a{color: white;}
 /*footer*/
 
@@ -135,21 +142,14 @@ input, text {
 .error{
   font: Open Sans;
   font-size:1em;
-text-align: center;
-color: #b71c1c;
+  text-align: center;
+  color: #b71c1c;
 
 }
 /*homepage*/
 
 .left{
-  float:left;
   background-color: #e5e5e5;
-  width: 25%;
-  height: 70em;
-  text-align: center;
-  word-wrap: break-word;
-  margin-top: 1%;
-
 }
 
 .left h2{
@@ -160,7 +160,7 @@ color: #b71c1c;
   /*padding:0.1em;*/
   font-size: 1em;
 }
-
+ 
 #mid{
   float:left;
   width: 50%;
@@ -169,28 +169,8 @@ color: #b71c1c;
   margin-bottom:10%;
 }
 
-.right{
-  float:right;
-  background-color: #e5e5e5;
-  width: 25%;
-  height: 90%;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-.right h2{
-  font-size: 2em;
-}
-
-.right p{
-  padding:0.4em;
-  font-size: 1em;
-}
 
 .link{
-  border:1;
-  border-color: white;
-  border-style: solid;
   border-radius:0.5em;
   font-size:1em;
   font-weight:bold;
@@ -198,21 +178,24 @@ color: #b71c1c;
   height: 2em;
   background:var(--primary-light);
   cursor:pointer;
-  margin-top: 0.3em;
+  margin-top: 0.1em;
+  text-align:center;
+
 }
 
-a:link {
+a{
   color:white;
-  text-align: center;
 }
+
 
 div.pic img{
     display:block;
     margin-left: auto;
     margin-right: auto;
-    width: 20em;
-    height: 10em;
-    margin-bottom:5%;
+    width: 30em;
+    height: 15em;
+    margin-bottom:1%;
+    margin-top:3%;
 }
 
 .grid-container {
@@ -227,8 +210,14 @@ div.pic img{
  grid-auto-rows: minmax(auto, auto);
 }
 
-
-
+.container-box1 {
+  display: grid;
+  grid-template-columns:30% auto;
+  
+  /* extra styles */
+  grid-gap: 2em;
+}
+  
 
 /*end homepage*/
 
@@ -294,7 +283,7 @@ div.pic img{
 }
 
 
-#testo{
+.testo{
   text-align:center;
 }
 
@@ -302,7 +291,7 @@ div.pic img{
 
 #menu-superiore{
     position: relative;
-  float:right;
+    float:right;
     display: flex;
     margin: 0.7em;
 }

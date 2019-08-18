@@ -48,7 +48,7 @@ echo"
 }
 function getBreadcumbs($current){
 echo "<div class=\"contenitore\">
-			<p id=\"breadcumb\" class=\"breadcumb\">Sei in :".$current."</p>
+			<p id=\"breadcumb\">Sei in :".$current."</p>
         </div>
   ";
 }
@@ -59,8 +59,5 @@ function getMessage(){
 		<p id=\"messaggio\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi <a href=\"registrazione_utente\">registrati</a href></p>";
 	}
 }
-
-
-
 
 ?>

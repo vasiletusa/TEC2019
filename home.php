@@ -13,13 +13,14 @@
 
 
 
-<div>
+<div class="container-box1">
 
 	<div class="left">
-		<h2>VENETOTOUR</h2>
-		<div class="testo" >
+		<h2 class="testo">VENETOTOUR</h2>
+		<div>
 		<p>Venetetour si prepone di offrire un servizio interattivo con la possibilità da parte degli utenti di creare e proporre tour turistici nella Regione Veneto e avvalersi della preparazione di una delle guide a noi affigliate.<br>
-		Che aspetti? Mettiti in marcia.
+		<p class="testo">Che aspetti? Mettiti in marcia.</p>
+		<br>
 		</p>
 		</div>
 	</div>	
