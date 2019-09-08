@@ -1,26 +1,30 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Creato il: Lug 02, 2019 alle 14:24
--- Versione del server: 10.1.39-MariaDB
--- Versione PHP: 7.1.29
+-- Host: localhost
+-- Creato il: Set 08, 2019 alle 16:06
+-- Versione del server: 5.6.38
+-- Versione PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `progtec`
 --
+
+DELIMITER $$
+--
+-- Funzioni
+--
+CREATE DEFINER=`root`@`localhost` FUNCTION `checkUser` (`userin` VARCHAR(20)) RETURNS INT(10) BEGIN
+DECLARE num INT(10);
+SET num = (SELECT ruoli.User FROM ruoli WHERE ruoli.User=userin AND ((ruoli.Ruolo = "Admin") OR (ruoli.Ruolo = "Guida")));
+RETURN num;  
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -99,11 +103,13 @@ CREATE TABLE `utenti` (
 
 INSERT INTO `utenti` (`Nome`, `Cognome`, `Username`, `Password`, `Email`) VALUES
 ('', '', '', '', ''),
-('dio', 'cane', 'dio', 'porco', 'cane'),
+('admin', 'admin', 'admin', 'admin', 'admin@admin.it'),
+('asdfasf', 'asdfasdf', 'asdfasf', '44444', 'asdfasf@asdfasdf'),
+('edoardo', 'caregnato', 'Ettoardo', 'aaa', 'caregnatoedoardo@ts-auto.it'),
 ('', 'Rizzo', 'ilarya9531', 'aaa', 'ilarya9531@gmail.com'),
-('ilaria', 'porcoddue', 'rizzo', 'qoqoqo', 'qopqoqo'),
+('ilaria', 'unodue', 'rizzo', 'qoqoqo', 'qopqoqo'),
 ('sara', 'romito', 'sasa', 'aaa', 'sararomito'),
-('vasile', '', 'ss', '6uB3trKX', '');
+('vasile', 'tusa', 'vasiletusa', 'user', 'vasiletusa95@yahoo.it');
 
 -- --------------------------------------------------------
 
@@ -214,8 +220,3 @@ ALTER TABLE `tour`
 ALTER TABLE `valutazioni`
   ADD CONSTRAINT `Valutazioni_ibfk_1` FOREIGN KEY (`Recensore`) REFERENCES `utenti` (`Username`),
   ADD CONSTRAINT `Valutazioni_ibfk_2` FOREIGN KEY (`Guida`) REFERENCES `utenti` (`Username`);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
