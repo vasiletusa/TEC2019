@@ -43,7 +43,19 @@ if (isset($_POST['registrazione_utente'])) {
   }
   if(empty($nome)){
     $errors['password2']="Conferma password";
-  }else{
+  }
+  if($password != $password_2){
+    $errors['password']="Le password non corrispondono";
+    $errors['password2']="Le password non corrispondono";
+  }
+  if(strpos($email,'@') == false){
+    $errors['email']="Fornire una mail valida";
+  }
+  if(strlen($password)<4){
+    $errors['password']="La password NON deve essere minore di 4 caratteri";
+  }
+  
+    else{
 
         //controllo se esiste già uno username uguale
                $controllo = "SELECT * FROM `utenti` WHERE Username='$username' ";
@@ -116,10 +128,6 @@ if(isset($_SESSION['area'])){
                    echo " <p><a href=\"#\" align=\"center\"><".$row['Descrizione']."></a>";
                   $count++; }
                 }
-
-
-      
-
 }
 
 
@@ -136,7 +144,6 @@ function setOrganizza(){
 function getTuoiTour($tuoitour){
   if(isset($tuoitour['vuoto']))
     echo $tuoitour['vuoto'];
-
 }
 function getUsernameError($errors) { 
   if(isset($errors['username'])){
