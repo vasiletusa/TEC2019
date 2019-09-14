@@ -13,21 +13,34 @@
 
 
 <h2>Tour disponibili</h2>
+<div>
+    <?php
+        require_once('functions.php');
+        $output=getTour();
+        $outCat="";
+        foreach ($output as $elem) {
+            if($elem){
+                $outCat.=   "<div class='cardTour'>
+                            
+
+                            <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
+                           
+                            <p class='descrizione'>".$elem['Descrizione']."</a></p>
+
+                            <p class='descrizione'>".$elem['Citta']."</a></p>
+                            <p class='descrizione'>".$elem['Data']."</a></p>
+                            <p class='descrizione'>".$elem['Organizzatore']."</a></p>
+                            
+                            
+                            </div>";
+            }
+        }
+        echo $outCat;
+        unset($outCat);
+    ?>
+</div>
 
 
-
-<?php
-$count=1;
-$sel_query="Select * from tour";
-$result = mysqli_query($db,$sel_query);
-while($row = mysqli_fetch_assoc($result)) { ?>
-<p> <h1><?echo $row["Organizzatore"];?></h1></p>
-<p><a href="#" align="center"><?php echo $row["Descrizione"]; ?></a>
-<a href="#" align ="center"><?php echo $row["Data"]; ?></a></p>
-
-
-
-<?php $count++; } ?>
 
 
 </div>

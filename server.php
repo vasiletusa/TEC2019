@@ -141,6 +141,9 @@ function setOrganizza(){
 
   }
 
+
+
+
 function getTuoiTour($tuoitour){
   if(isset($tuoitour['vuoto']))
     echo $tuoitour['vuoto'];
