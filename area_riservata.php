@@ -19,17 +19,65 @@ include("auth.php");
 <h1>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</h1>
 
 </div>
-<div class="container-area">
-	<div class="container-tour sinistra">
-		<div class="item-tour"> <?php getTuoiTour($tuoitour);?></div>
+<div>
+	<h1>I tour che hai organizzato<h2>
+    <?php
+        require_once('functions.php');
+        $output=getTuoiTourOrganizzati();
+        $outCat="";
+        if($_SESSION['tuoiTour']==true){
+        foreach ($output as $elem) {
+            if($elem){
+                $outCat.=   "<div class='cardTour'>
+                            
 
+                            <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
+                           
+                            <p class='descrizione'>".$elem['Descrizione']."</a></p>
 
+                            <p class='descrizione'>".$elem['Citta']."</a></p>
+                            <p class='descrizione'>".$elem['Data']."</a></p>
+                            <p class='descrizione'>".$elem['Organizzatore']."</a></p>
+                            
+                            
+                            </div>";
+            }
+        }}
+        else{$outCat.= "<p><h2> Non hai ancora organizzato tour.</h2></p>";}
+        echo $outCat;
+        unset($outCat);
+    ?>
+</div>
+<div>
+	<h1>I tour a cui sei iscritto<h2>
+    <?php
+        require_once('functions.php');
+        $tuoiTour=getTuoiTourPartecipi();
+        $tour=getTour();
+        $outCat="";
+        if($_SESSION['tuoiTour']==true){
+        foreach ($tour as $key) {
+        	foreach ($tuoiTour as $elem) {
+        		echo "a  ";
+        		if($elem['IdTour']==$key['Id']){
+        			echo "conta";
+                $outCat.=   "<div class='cardTour'>
+                            
 
-	</div>
-	<div class="container-prenotazioni destra">
-		<div class="item-prenotazioni">3</div>
-		<div class="item-prenotazioni">4</div>
-	</div>
+                            <p class='titolo'>".$key['Id']."</a></p>
+                           
+                            <p class='descrizione'>".$key['Titolo']."</a></p>
+
+                            
+                            
+                            </div>";
+            }
+        }}}
+        else{$outCat.= "<p><h2> Non ci sono tour a cui partecipi</h2></p>";}
+        echo $outCat;
+        unset($outCat);
+    ?>
+</div>
 
 </div>
 </body>

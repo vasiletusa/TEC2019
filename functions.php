@@ -59,9 +59,9 @@ function getMessage(){
 	}
 }
 
-  function getTour(){
+   function getTour(){
     $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
-    $sql = 'SELECT * FROM `tour`';
+    $sql = "SELECT * FROM `tour` WHERE Stato='Approvato'";
     $ris = mysqli_query($db,$sql);
     $errore = array();
     if(mysqli_num_rows($ris)==0){
@@ -72,6 +72,41 @@ function getMessage(){
         array_push($output,$row);
     }
     array_push($output,$errore);
+    return $output;
+}
+  function getTuoiTourOrganizzati(){
+  	$username=$_SESSION['username'];
+    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $sql = "SELECT * FROM `tour` WHERE Organizzatore='$username' ";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+    	$_SESSION['tuoiTour']=false;
+        //array_push($errore,"Errore della query: " . $sql);
+    }else {$_SESSION['tuoiTour']=true;}
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
+}
+ function getTuoiTourPartecipi(){
+  	$username=$_SESSION['username'];
+    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $sql = "SELECT * FROM `partecipa` WHERE Username='$username' ";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+    	$_SESSION['tuoiTour']=false;
+        //array_push($errore,"Errore della query: " . $sql);
+    }else {$_SESSION['tuoiTour']=true;
+	    $output = array();
+	    while ($row = mysqli_fetch_assoc($ris)) {
+	        array_push($output,$row);
+	    }
+		  
+		 }
     return $output;
 }
 

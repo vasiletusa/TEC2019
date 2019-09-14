@@ -144,10 +144,7 @@ function setOrganizza(){
 
 
 
-function getTuoiTour($tuoitour){
-  if(isset($tuoitour['vuoto']))
-    echo $tuoitour['vuoto'];
-}
+
 function getUsernameError($errors) { 
   if(isset($errors['username'])){
       echo $errors['username'];
