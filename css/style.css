@@ -373,19 +373,23 @@ li {
 .marginPrincipale{
   margin-top: 5%;
   margin-left:5%;
+  margin-right: 5%;
 }
 
+.dim{
+  width: 30%
+}
 
 .detourimg{
-   width:40%; 
+   width:30em; 
   /* da mettere auto */
-  height: 20em;
+  height: 15em;
   border-radius:0.5em;
 }
 
 .sfondo{
   background: var(--primary-light);
-  width:50%; 
+  width:70%; 
   /* da mettere auto */
   height: 20em;
   color: white;

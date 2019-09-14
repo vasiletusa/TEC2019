@@ -15,7 +15,7 @@
 
 <div class="marginPrincipale" >
 	<h1> Nome Tour </h1> 
-	<div class="sinistra">
+	<div class=" dim sinistra">
 		<img src="img/padova.jpg" alt="foto della città di Padova" class="detourimg" />
 		<p>DATA: <label for="data"></label></p>
 		<p>ORGANIZZATO DA :<label for="organiz"> </label></p>
