@@ -58,15 +58,13 @@ include("auth.php");
         if($_SESSION['tuoiTour']==true){
         foreach ($tour as $key) {
         	foreach ($tuoiTour as $elem) {
-        		echo "a  ";
         		if($elem['IdTour']==$key['Id']){
-        			echo "conta";
                 $outCat.=   "<div class='cardTour'>
                             
 
-                            <p class='titolo'>".$key['Id']."</a></p>
+                            <p class='titolo'>".$key['Titolo']."</a></p>
                            
-                            <p class='descrizione'>".$key['Titolo']."</a></p>
+                            <p class='data'>".$key['Data']."</a></p>
 
                             
                             
