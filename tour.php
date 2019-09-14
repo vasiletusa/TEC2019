@@ -20,17 +20,19 @@
         $outCat="";
         foreach ($output as $elem) {
             if($elem){
-                $outCat.=   "<div class='cardTour'>
+                $outCat.=   "<div class='cardTour sfondotour'>
                             
+                                <div class='container-box2'> 
+                                    <div> <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour' / class='imgTour'> </div>
+                                    <div id='descrTour'>
+                                        <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
+                                        <p class='descrizione'>".$elem['Citta']."</a></p>
+                                        <p class='descrizione'>".$elem['Data']."</a></p>
+                                        <p class='descrizione'>".$elem['Organizzatore']."</a></p>
+                                    </div>
+                                </div>
 
-                            <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
-                           
-                            <p class='descrizione'>".$elem['Descrizione']."</a></p>
-
-                            <p class='descrizione'>".$elem['Citta']."</a></p>
-                            <p class='descrizione'>".$elem['Data']."</a></p>
-                            <p class='descrizione'>".$elem['Organizzatore']."</a></p>
-                            
+                                <input class='buttonDettagli' name='DETTAGLI' type='submit' value='DETTAGLI' />
                             
                             </div>";
             }
