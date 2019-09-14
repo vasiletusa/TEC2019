@@ -59,4 +59,20 @@ function getMessage(){
 	}
 }
 
+  function getTour(){
+    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $sql = 'SELECT * FROM `tour`';
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+        array_push($errore,"Errore della query: " . $sql);
+    }
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
+}
+
 ?>
