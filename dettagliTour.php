@@ -1,23 +1,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
-<?php include('head.php') ?>
-<?php
-include_once 'server.php'?>
-<div  class="sfondo">
-	<h1 id="titolo"> Titolo </h1> 
-	<div class="sinistra">
-		DATA: <label for="data">0000-00-00</label>
+<?php include_once 'server.php'?>
+
+<head>
+	<?php 
+        include_once 'functions.php'; 
+	    getHead("Login");
+    ?>      
+</head>
+
+<?php getMenu("");?>
+<?php getBreadcumbs("Dettagli Tour");?>
+
+<div class="container-box2">
+	<div>
+		<h1> Nome Tour </h1> 
+		<img src="img/padova.jpg" alt="foto della città di Padova"/>
+		<div>
+		DATA: <label for="data"></label>
+		ORGANIZZATO DA :<label for="organiz"> </label>
+		CITTA' :<label for="citta" ></label> 
+		</div>
 	</div>
-	<div class="destra">
-		ORGANIZZATO DA :<label for="organiz">organizzatore </label>
+
+
+	<div class="sfondo">
+		<div id="descrTour">  Descrizione del Tour </div>
+		<p>  <label for="Descrizione" id="labelTour">Il tour jhsaj</label> <p>
 		
 	</div>
-	
-	<div id="testo">
-		<div> <label for="citta" >CITTA</label> </div>
-		<div> <p> descrizione </p> </div>
-		<div> <input class="button" name="iscrizione" type="submit" value="ISCRIVITI" /></div>
-	</div>
+
 </div>
+
+<div> 
+		<input class="buttonIscrizione" name="iscrizione" type="submit" value="ISCRIVITI" />
+</div>
+
+</body>
 
 <?php include('footer.php') ?>
