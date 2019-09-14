@@ -133,7 +133,7 @@ if(isset($_SESSION['area'])){
 
 function setOrganizza(){
     if(!isset($_SESSION["username"])){
-      $isOrganize=true;
+     $_SESSION['isOrganize']=true;
     header("Location: login.php");
     
     exit();}

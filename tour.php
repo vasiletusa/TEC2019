@@ -18,16 +18,16 @@
 
 <?php
 $count=1;
-$sel_query="Select * from tour ;";
+$sel_query="Select * from tour";
 $result = mysqli_query($db,$sel_query);
 while($row = mysqli_fetch_assoc($result)) { ?>
-
+<p> <h1><?echo $row["Organizzatore"];?></h1></p>
 <p><a href="#" align="center"><?php echo $row["Descrizione"]; ?></a>
 <a href="#" align ="center"><?php echo $row["Data"]; ?></a></p>
 
 
 
-<php $count++; } >
+<?php $count++; } ?>
 
 
 </div>
