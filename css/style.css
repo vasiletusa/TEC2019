@@ -333,15 +333,6 @@ li {
 }
 
 
-.container-box2 {
-  display: grid;
-  grid-template-columns:60% auto;
-  
-  /* extra styles */
-  grid-gap: 4em;
-  margin-left: 10%;
-}
-
 .buttonIscrizione {
   border:1;
   border-color: var(--primary-dark) ;
@@ -377,4 +368,39 @@ li {
 #labelTour{
   font-size: 1em;
   text-align: left;
+}
+
+.marginPrincipale{
+  margin-top: 5%;
+  margin-left:5%;
+}
+
+
+.detourimg{
+   width:40%; 
+  /* da mettere auto */
+  height: 20em;
+  border-radius:0.5em;
+}
+
+.sfondo{
+  background: var(--primary-light);
+  width:50%; 
+  /* da mettere auto */
+  height: 20em;
+  color: white;
+  border-radius:0.5em;
+  margin-bottom: 5%;
+
+}
+
+.sinistra{
+  float: left;
+  /* height: : 40%;*/
+}
+
+.marginSecondario{
+  clear: left;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }

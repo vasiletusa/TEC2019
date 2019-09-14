@@ -12,29 +12,32 @@
 <?php getMenu("");?>
 <?php getBreadcumbs("Dettagli Tour");?>
 
-<div class="container-box2">
-	<div>
-		<h1> Nome Tour </h1> 
-		<img src="img/padova.jpg" alt="foto della città di Padova"/>
-		<div>
-		DATA: <label for="data"></label>
-		ORGANIZZATO DA :<label for="organiz"> </label>
-		CITTA' :<label for="citta" ></label> 
-		</div>
-	</div>
 
-
-	<div class="sfondo">
-		<div id="descrTour">  Descrizione del Tour </div>
-		<p>  <label for="Descrizione" id="labelTour">Il tour jhsaj</label> <p>
+<div class="marginPrincipale" >
+	<h1> Nome Tour </h1> 
+	<div class="sinistra">
+		<img src="img/padova.jpg" alt="foto della città di Padova" class="detourimg" />
+		<p>DATA: <label for="data"></label></p>
+		<p>ORGANIZZATO DA :<label for="organiz"> </label></p>
+		<p>CITTA' :<label for="citta" ></label> </p>
 		
+	</div>	
+
+	<div class="sfondo sinistra">
+		<div id="descrTour">  Descrizione del Tour </div>
+		<p>  <label for="Descrizione" id="labelTour">Il tour jhsaj</label> </p>
+			
 	</div>
 
 </div>
 
-<div> 
-		<input class="buttonIscrizione" name="iscrizione" type="submit" value="ISCRIVITI" />
+<div class="marginSecondario"> 
+	<input class="buttonIscrizione" name="iscrizione" type="submit" value="ISCRIVITI" />
 </div>
+
+
+
+
 
 </body>
 
