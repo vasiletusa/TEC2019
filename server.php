@@ -80,6 +80,33 @@ if (isset($_POST['registrazione_utente'])) {
   }
 }
 
+//REGISTRAZIONE TOUR
+
+if (isset($_POST['registra_tour'])) {
+  // receive all input values from the form
+  $data = mysqli_real_escape_string($db, $_POST['data']);
+  $citta = mysqli_real_escape_string($db, $_POST['citta']);
+  $titolo = mysqli_real_escape_string($db, $_POST['titolo']);
+  $descrizione = mysqli_real_escape_string($db, $_POST['descrizione']);
+  if(empty($data)){
+    $errors['data']="Data richiesta";
+  }
+  if(empty($citta)){
+    $errors['citta']="Citta' richiesta";
+  }
+  if(empty($titolo)){
+    $errors['titolo']="Titolo richiesto";
+  }
+  if(empty($descrizione)){
+    $errors['descrizione']="Descrizione richiesta";
+
+    //inserimento del tour nel DB
+  $organizzatore=$_SESSION['username'];
+    $query = "INSERT INTO tour ( data, organizzatore, citta, titolo, descrizione, stato) 
+                      			  VALUES('$data','$organizzatore', $citta','$titolo', '$descrizione', '$stato')";
+                      	mysqli_query($db, $query);
+                        
+  }
   //LOGIN
    
 if (isset($_POST['Login'])){
