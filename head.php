@@ -22,10 +22,7 @@
 	     	<li><a href="tour.php">Tour</a></li>
 	     	<li><a href="registra_tour.php">Organizza</a></li>
 	     	<li><a href="login.php">Login</a></li>
-	     	
-	     	
-
-	    	</ul>
+	     	</ul>
 	   	</nav>
 	  	</div>
       	</div>
