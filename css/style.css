@@ -410,8 +410,9 @@ li {
   background: var(--primary-light);
   margin-left: 20%;
   width:60%; 
-  /* da mettere auto */
-  height: 14em;
+  /* da mettere auto 
+  height: 14em;*/
+  height: auto;
   color: white;
   border-radius:1em;
   margin-bottom: 3%;
@@ -443,7 +444,7 @@ li {
   /* -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;*/
   cursor:pointer;
-  margin-left: 70%;
+  margin-left: 50%;
   /* intanto così poi togliere questo e 
   mettere sul footer position relative;*/
   margin-top: 80%;
@@ -452,7 +453,7 @@ li {
 }
 
 .sinScritta{
-  margin-left: 50%;
+  margin-left: 30%;
 }
 
 
@@ -466,4 +467,10 @@ li {
   
   //extra styles 
   grid-gap: 2em;*/
+}
+
+.disponibilita{
+  float:center;
+  font-size: 5em;
+  color:var(--primary-light);
 }
