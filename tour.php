@@ -39,7 +39,7 @@
                             </div>";
             }
         }}
-                else{$outCat.= "<h2 > Non ci sono tour al momento</h2>";}
+            else{ $outCat.= "<h2 class='disponibilita'> Non ci sono tour al momento</h2>";}
         echo $outCat;
         unset($outCat);
     ?>
