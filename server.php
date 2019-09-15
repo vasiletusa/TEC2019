@@ -17,6 +17,13 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
   session_start();
+
+//ACCETTAZIONE TOUR
+if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['rifiuta']))
+    {
+        rifiuta();
+    }
+    
 //REGISTRAZIONE
 if (isset($_POST['registrazione_utente'])) {
   // receive all input values from the form
@@ -217,4 +224,17 @@ function getNoPasswordError($errors) {
       echo $errors['noPassword'];
     }
 }
+function rifiuta()
+    {
+
+
+      $id=$_SESSION['idTour'];
+      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+
+        $sql= " UPDATE `tour` SET Stato='Rifiutato' WHERE Id='$id'";
+      
+        $result = mysqli_query($db,$sql) or die(mysqli_error($db));
+    
+
+    }
 ?>

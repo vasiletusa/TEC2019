@@ -36,7 +36,8 @@ echo"
 	 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
     $sql = "SELECT Ruolo FROM `utenti` WHERE Username='$username'";
     $ris = mysqli_query($db,$sql);
-	     		echo"<li ";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"><a href=";if($ris=="User"){echo"\"area_riservata.php\"";} else {echo"\"area_admin.php\"";}echo">Area personale</a></li>
+    $output = mysqli_fetch_assoc($ris);
+	     		echo"<li ";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"><a href=";if($output['Ruolo']=="User"){echo"\"area_riservata.php\"";} else {echo"\"area_admin.php\"";}echo">Area personale</a></li>
 	     			<li><a href=\"logout.php\">Logout</a></li>";}
 	     	else{
 	     		
@@ -75,7 +76,7 @@ function tourDaId($id){
 }
 function getTourInAttesa(){
     $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
-    $sql = "SELECT * FROM `tour` WHERE Stato='In Attesa'";
+    $sql = "SELECT * FROM `tour` WHERE Stato='In attesa'";
     $ris = mysqli_query($db,$sql);
     $errore = array();
     if(mysqli_num_rows($ris)==0){
