@@ -18,6 +18,7 @@ echo"
 }
 
 function getMenu($current){
+	  	
 echo"
 <body>
 	<header id=\"header-section\">
@@ -30,7 +31,12 @@ echo"
 	     	<li ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a></li>
 	     	<li ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a></li>";
 	     	if(isset($_SESSION['isLogged'])){
-	     		echo"<li ";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"><a href=\"area_riservata.php\">Area personale</a></li>
+	     		$username=$_SESSION['username'];
+
+	 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $sql = "SELECT Ruolo FROM `utenti` WHERE Username='$username'";
+    $ris = mysqli_query($db,$sql);
+	     		echo"<li ";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"><a href=";if($ris=="User"){echo"\"area_riservata.php\"";} else {echo"\"area_admin.php\"";}echo">Area personale</a></li>
 	     			<li><a href=\"logout.php\">Logout</a></li>";}
 	     	else{
 	     		
