@@ -13,31 +13,29 @@
 <?php getBreadcumbs("Dettagli Tour");?>
 
 <?php
-        require_once('../../models/funzioni.php');
+        require_once('functions.php');
         $tour=tourDaId($_GET['id']);
         
-        echo   "<h1>".$tour['Titolo']"</h1>\n
-              
-    ?>
-
-
-<div class="marginPrincipale" >
-	<h1> Nome Tour </h1> 
-	<div class="sinistra">
-		<img src="img/padova.jpg" alt="foto della città di Padova" class="detourimg" />
-		<p>DATA: <label for="data"></label></p>
-		<p>ORGANIZZATO DA :<label for="organiz"> </label></p>
-		<p>CITTA' :<label for="citta" ></label> </p>
+        echo   "<div class=\"marginPrincipale\" >
+	<h1>".$tour['Titolo']."</h1> 
+	<div class=\"sinistra\">
+		<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
+		<p>DATA: <label for=\"data\">".$tour['Data']."</label></p>
+		<p>ORGANIZZATO DA :<label for=\"organiz\">".$tour['Organizzatore']."</label></p>
+		<p>CITTA' :<label for=\"citta\">".$tour['Citta']."</label> </p>
 		
 	</div>	
 
-	<div class="sfondo sinistra">
-		<div id="descrTour">  Descrizione del Tour </div>
-		<p>  <label for="Descrizione" id="labelTour">Il tour jhsaj</label> </p>
+	<div class=\"sfondo sinistra\">
+		<div id=\"descrTour\">  Descrizione del Tour </div>
+		<p>  <label for=\"Descrizione\" id=\"labelTour\">".$tour['Descrizione']."</label> </p>
 			
 	</div>
 
-</div>
+"              
+    ?>
+
+
 
 <div class="marginSecondario"> 
 	<input class="buttonIscrizione" name="iscrizione" type="submit" value="ISCRIVITI" />
