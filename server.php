@@ -107,6 +107,7 @@ if (isset($_POST['registra_tour'])) {
                       	mysqli_query($db, $query);
                         
   }
+}
   //LOGIN
    
 if (isset($_POST['Login'])){
