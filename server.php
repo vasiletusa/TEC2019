@@ -52,9 +52,8 @@ if (isset($_POST['registrazione_utente'])) {
     $errors['email']="Fornire una mail valida";
   }
   if(strlen($password)<4){
-    $errors['password']="La password NON deve essere minore di 4 caratteri";
+    $errors['password']="La password deve contenere almeno 4 caratteri";
   }
-  
     else{
 
         //controllo se esiste già uno username uguale
@@ -64,8 +63,6 @@ if (isset($_POST['registrazione_utente'])) {
               if($rows==1){
                   $errors['esistente']="Username non disponibile";
               }
-
-
               elseif($password==$password_2){
                       $query = "INSERT INTO utenti ( nome, cognome, username, email, password) 
                       			  VALUES('$nome','$cognome','$username', '$email', '$password')";
@@ -74,7 +71,6 @@ if (isset($_POST['registrazione_utente'])) {
                         $_SESSION['isLogged']=true;
                         //reindirizzamento
                         header("Location: area_riservata.php");
-
               }else
             $errors['noPassword']="Le password non coincidono";  	
   }
@@ -84,10 +80,12 @@ if (isset($_POST['registrazione_utente'])) {
 
 if (isset($_POST['registra_tour'])) {
   // receive all input values from the form
+  
   $data = mysqli_real_escape_string($db, $_POST['data']);
   $citta = mysqli_real_escape_string($db, $_POST['citta']);
   $titolo = mysqli_real_escape_string($db, $_POST['titolo']);
   $descrizione = mysqli_real_escape_string($db, $_POST['descrizione']);
+  
   if(empty($data)){
     $errors['data']="Data richiesta";
   }
@@ -102,8 +100,8 @@ if (isset($_POST['registra_tour'])) {
 
     //inserimento del tour nel DB
   $organizzatore=$_SESSION['username'];
-    $query = "INSERT INTO tour ( data, organizzatore, citta, titolo, descrizione, stato) 
-                      			  VALUES('$data','$organizzatore', $citta','$titolo', '$descrizione', '$stato')";
+    $query = "INSERT INTO tour ( data, organizzatore, citta, titolo, descrizione) 
+                      			  VALUES('$data','$organizzatore', '$citta','$titolo', '$descrizione')";
                       	mysqli_query($db, $query);
                         
   }
@@ -122,7 +120,8 @@ if (isset($_POST['Login'])){
   }
   if (empty($password)) {
     $errors['password']="Password richiesta";
-  }if (count($errors) == 0) {
+  }
+  if (count($errors) == 0) {
         $query = "SELECT * FROM `utenti` WHERE Username='$username' and Password='$password'";
         $result = mysqli_query($db,$query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
@@ -136,8 +135,8 @@ if (isset($_POST['Login'])){
                  $isOrganize=false;}
                   else{
                   header("Location: area_riservata.php");}
-              }      }
-  
+              }      
+  }
 
 }
 if(isset($_SESSION['area'])){
