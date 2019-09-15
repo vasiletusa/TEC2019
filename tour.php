@@ -27,7 +27,7 @@
                                
                                     <div class='sinistratour'> <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour' / class='imgTour'> </div>
                                     <div id='descrTour' class='sinistratour sinScritta'>
-                                        <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
+                                        <p class='titolo'><a href='dettagliTour.php?id=".$elem['Id']."'>".$elem['Titolo']."</a></p>
                                         <p class='descrizione'>".$elem['Citta']."</a></p>
                                         <p class='descrizione'>".$elem['Data']."</a></p>
                                         <p class='descrizione'>".$elem['Organizzatore']."</a></p>
