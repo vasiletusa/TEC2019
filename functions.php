@@ -54,7 +54,7 @@ echo"
 }
 function getBreadcumbs($current){
 echo "<div class=\"contenitore\">
-			<p id=\"breadcumb\">Sei in :".$current."</p>
+			<p id=\"breadcumb\">Sei in : ".$current."</p>
         </div>
   ";
 }
@@ -65,7 +65,31 @@ function getMessage(){
 		<p id=\"messaggio\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\">registrati</a href></p>";
 	}
 }
+function tourDaId($id){
+    $con=openCon();
+    $sql = 'SELECT * FROM `tour` WHERE `Id`="'.$id.'"';
+    $ris = mysqli_query($con,$sql)or DIE("tourDaId: ".mysqli_error($con));
+    $output = mysqli_fetch_assoc($ris);
+    closeCon($con);
+    return $output;
+}
+function getTourInAttesa(){
+    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $sql = "SELECT * FROM `tour` WHERE Stato='In Attesa'";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+       $_SESSION['tourInAttesa']=false;
 
+        //array_push($errore,"Errore della query: " . $sql);
+    }else{$_SESSION['tourInAttesa']=true;}
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
+}
    function getTour(){
     $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
     $sql = "SELECT * FROM `tour` WHERE Stato='Approvato'";
@@ -109,13 +133,13 @@ function getMessage(){
     if(mysqli_num_rows($ris)==0){
     	$_SESSION['tuoiTour']=false;
         //array_push($errore,"Errore della query: " . $sql);
-    }else {$_SESSION['tuoiTour']=true;
+    }else {$_SESSION['tuoiTour']=true;}
 	    $output = array();
 	    while ($row = mysqli_fetch_assoc($ris)) {
 	        array_push($output,$row);
 	    }
 		  
-		 }
+		 
     return $output;
 }
 

@@ -64,8 +64,8 @@ if (isset($_POST['registrazione_utente'])) {
                   $errors['esistente']="Username non disponibile";
               }
               elseif($password==$password_2){
-                      $query = "INSERT INTO utenti ( nome, cognome, username, email, password) 
-                      			  VALUES('$nome','$cognome','$username', '$email', '$password')";
+                      $query = "INSERT INTO utenti ( nome, cognome, username, email, password, ruolo) 
+                      			  VALUES('$nome','$cognome','$username', '$email', '$password', 'User')";
                       	mysqli_query($db, $query);
                         $_SESSION['username']=$username;
                         $_SESSION['isLogged']=true;
@@ -125,7 +125,8 @@ if (isset($_POST['Login'])){
         $query = "SELECT * FROM `utenti` WHERE Username='$username' and Password='$password'";
         $result = mysqli_query($db,$query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
-
+        $app= "SELECT 'Ruolo' FROM 'utenti' WHERE Username='$username' ";
+        $ruolo=mysqli_query($db, $app);
               if($rows==1){
                 $_SESSION['username'] = $username;
                 $_SESSION['isLogged']= true;
@@ -134,7 +135,11 @@ if (isset($_POST['Login'])){
                   header("Location: registra_tour.php");
                  $isOrganize=false;}
                   else{
-                  header("Location: area_riservata.php");}
+                    if($ruolo=='User')
+                        header("Location: area_riservata.php");
+                      else 
+                        header("Location: area_admin.php");
+                      }
               }      
   }
 
@@ -148,13 +153,13 @@ if(isset($_SESSION['area'])){
               if($rows==0){
                 $tuoitour['vuoto']="Non hai ancora organizzato tour";
                }
-                else{
+                /*else{
                   $count=1;
                   while($row = mysqli_fetch_assoc($result)) { 
 
                    echo " <p><a href=\"#\" align=\"center\"><".$row['Descrizione']."></a>";
                   $count++; }
-                }
+                }*/
 }
 
 
