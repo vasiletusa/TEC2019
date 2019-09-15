@@ -66,11 +66,11 @@ function getMessage(){
 	}
 }
 function tourDaId($id){
-    $con=openCon();
+      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+
     $sql = 'SELECT * FROM `tour` WHERE `Id`="'.$id.'"';
-    $ris = mysqli_query($con,$sql)or DIE("tourDaId: ".mysqli_error($con));
+    $ris = mysqli_query($db,$sql)or DIE("tourDaId: ".mysqli_error($con));
     $output = mysqli_fetch_assoc($ris);
-    closeCon($con);
     return $output;
 }
 function getTourInAttesa(){
