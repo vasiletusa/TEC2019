@@ -31,14 +31,19 @@
                                         <p class='descrizione'>".$elem['Data']."</a></p>
                                         <p class='descrizione'>".$elem['Organizzatore']."</a></p>
                                     </div>
+<<<<<<< HEAD
+                                    <div class='sinistratour '><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div>
+                                
+=======
                                     <div class='sinistratour2'> <input class='buttonDettagli' name='DETTAGLI' type='submit' value='DETTAGLI' /> </div>
                                 <div class='end'/>
+>>>>>>> master
 
                             
                             </div>";
             }
         }}
-            else{ $outCat.= "<h2 class='disponibilita'> Non ci sono tour al momento</h2>";}
+            else{ $outCat.= "<h2 class=\"disponibilita\"> Non ci sono tour al momento</h2>";}
         echo $outCat;
         unset($outCat);
     ?>

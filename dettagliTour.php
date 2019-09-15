@@ -5,7 +5,7 @@
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Login");
+	    getHead("dettagliTour");
     ?>      
 </head>
 
