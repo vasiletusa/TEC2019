@@ -69,7 +69,7 @@ function getMessage(){
        $_SESSION['tour']=false;
 
         //array_push($errore,"Errore della query: " . $sql);
-    }else{$_SESSION['tour']=true;
+    }else{$_SESSION['tour']=true;}
     $output = array();
     while ($row = mysqli_fetch_assoc($ris)) {
         array_push($output,$row);
