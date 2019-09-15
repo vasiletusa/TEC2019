@@ -15,7 +15,7 @@
 						
 						<div class="2">
 							<label for="Data" class="label data">Data</label>
-							<input id="Data" type="text" name="data" class="input data" placeholder="gg/mm/aaaa">
+							<input id="Data" type="date" name="data" class="input data" placeholder="gg/mm/aaaa">
                             <p class="error"><?php getDataError($errors); ?></p>
 						
 						</div>
