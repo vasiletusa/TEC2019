@@ -14,7 +14,7 @@
 	<header id="header-section">
 	 <div class="nav-header">
 	   
-	  	<class="logo"><a href="home.php"><img src="img/logoT.png" alt="Veneto on Tour"></a>
+	  	<a href="home.php" class="logo"><img src="img/logoT.png" alt="Veneto on Tour"></a>
 	  	<div id="menu-superiore">
 	   	<nav>
 	    	<ul id="menu">
