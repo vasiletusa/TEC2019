@@ -12,6 +12,14 @@
 <?php getMenu("");?>
 <?php getBreadcumbs("Dettagli Tour");?>
 
+<?php
+        require_once('../../models/funzioni.php');
+        $tour=tourDaId($_GET['id']);
+        
+        echo   "<h1>".$tour['Titolo']"</h1>\n
+              
+    ?>
+
 
 <div class="marginPrincipale" >
 	<h1> Nome Tour </h1> 
