@@ -58,6 +58,7 @@ include("auth.php");
         if($_SESSION['tuoiTour']==true){
         foreach ($tour as $key) {
         	foreach ($tuoiTour as $elem) {
+                if($key){
         		if($elem['IdTour']==$key['Id']){
                 $outCat.=   "<div class='cardTour'>
                             
@@ -69,7 +70,7 @@ include("auth.php");
                             
                             
                             </div>";
-            }
+            }}
         }}}
         else{$outCat.= "<p><h2> Non ci sono tour a cui partecipi</h2></p>";}
         echo $outCat;
