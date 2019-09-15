@@ -1,6 +1,7 @@
 <?php
 include_once 'server.php';
 
+
 function getHead($current){
 echo"
 
@@ -55,7 +56,7 @@ echo "<div class=\"contenitore\">
 function getMessage(){
 	if(isset($_SESSION['isOrganize'])){
 		echo "
-		<p id=\"messaggio\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente\">registrati</a href></p>";
+		<p id=\"messaggio\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\">registrati</a href></p>";
 	}
 }
 
@@ -65,8 +66,10 @@ function getMessage(){
     $ris = mysqli_query($db,$sql);
     $errore = array();
     if(mysqli_num_rows($ris)==0){
-        array_push($errore,"Errore della query: " . $sql);
-    }
+       $_SESSION['tour']=false;
+
+        //array_push($errore,"Errore della query: " . $sql);
+    }else{$_SESSION['tour']=true;
     $output = array();
     while ($row = mysqli_fetch_assoc($ris)) {
         array_push($output,$row);
