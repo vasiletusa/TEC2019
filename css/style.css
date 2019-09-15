@@ -269,8 +269,6 @@ div.pic img{
   text-align:center;
 }
 
-
-
 #menu-superiore{
     position: relative;
     float:right;
@@ -360,20 +358,26 @@ li {
 }
 
 #labelTour{
-  font-size: 1em;
+  font-size: 5em;
   text-align: left;
 }
 
 .marginPrincipale{
-  margin-top: 5%;
-  margin-left:5%;
+	width:80%:
+	height:90%; 
+	margin-top: 5%;
+	padding:5% 5% 5%;
 }
 
+.coloret{
+	font-size: 1em;
+	color: var(--primary-dark);
+}
 
 .detourimg{
-   width:40%; 
+   width:60%; 
   /* da mettere auto */
-  height: 20em;
+  height: 40%;
   border-radius:0.5em;
 }
 
@@ -389,42 +393,45 @@ li {
 }
 
 .sinistra{
-  float: left;
-  /* height: : 40%;*/
-}
+  float: left;}
 
 .marginSecondario{
   clear: left;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 
-.sinistratour{
-  float: left;
-  margin-top: 2em ;
-  margin-bottom: 2em;
+
+.sinistratour{float: left; width: 33%;}
+
+
+
+div.end {
+    clear:both;
 }
 
 .sfondotour{
   background: var(--primary-light);
   margin-left: 20%;
+  margin-top: 5%;
   width:60%; 
+
+ padding: 2% 5% 2%;
   /* da mettere auto 
   height: 14em;*/
   height: auto;
   color: white;
   border-radius:1em;
-  margin-bottom: 3%;
+  /*margin-bottom: 3%;*/
 
 }
 
 
 .imgTour{
-  margin-left: 20%;
-  width:15em; 
-  /* da mettere auto */
-  height: 10em;
+  /* width:15em; 
+  da mettere auto */
+  width: 80%;
   border-radius:0.5em;
 }
 
@@ -441,20 +448,17 @@ li {
   letter-spacing:.0.5em;
   background:var(--primary-light);
   color:white;
-  /* -webkit-transition-duration: 0.4s; 
-  transition-duration: 0.4s;*/
   cursor:pointer;
-  margin-left: 50%;
-  /* intanto così poi togliere questo e 
-  mettere sul footer position relative;*/
-  margin-top: 80%;
+  /* -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;---
+  margin-left: 80%;
+  --intanto così poi togliere questo e 
+  mettere sul footer position relative;--
+  margin-top: 80%;*/
 
   
 }
 
-.sinScritta{
-  margin-left: 30%;
-}
 
 
 .buttonDettagli :hover {
@@ -466,11 +470,15 @@ li {
   grid-template-columns: auto auto auto;
   
   //extra styles 
-  grid-gap: 2em;*/
-}
+  grid-gap: 2em;
+}*/
 
 .disponibilita{
   float:center;
   font-size: 5em;
   color:var(--primary-light);
+}
+
+p{
+	line-height: 0.4em;
 }

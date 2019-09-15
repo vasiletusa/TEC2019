@@ -22,18 +22,22 @@
 
         foreach ($output as $elem) {
             if($elem){
-                $outCat.=   "<div class='cardTour sfondotour'>
+                $outCat.=  "<div class='sfondotour'>
                             
-                               
-                                    <div class='sinistratour'> <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour' / class='imgTour'> </div>
-                                    <div id='descrTour' class='sinistratour sinScritta'>
-                                        <p class='titolo'><a href='dettagliTour.php?id=".$elem['Id']."'>".$elem['Titolo']."</a></p>
+                                    <div class=' sinistratour'> <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour' / class='imgTour'> </div>
+                                    <div id='descrTour' class='sinistratour'>
+                                        <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
                                         <p class='descrizione'>".$elem['Citta']."</a></p>
                                         <p class='descrizione'>".$elem['Data']."</a></p>
                                         <p class='descrizione'>".$elem['Organizzatore']."</a></p>
                                     </div>
+<<<<<<< HEAD
                                     <div class='sinistratour '><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div>
                                 
+=======
+                                    <div class='sinistratour2'> <input class='buttonDettagli' name='DETTAGLI' type='submit' value='DETTAGLI' /> </div>
+                                <div class='end'/>
+>>>>>>> master
 
                             
                             </div>";
@@ -44,8 +48,6 @@
         unset($outCat);
     ?>
 </div>
-
-
 
 
 </div>
