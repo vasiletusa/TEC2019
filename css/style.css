@@ -358,20 +358,26 @@ li {
 }
 
 #labelTour{
-  font-size: 1em;
+  font-size: 5em;
   text-align: left;
 }
 
 .marginPrincipale{
-  margin-top: 5%;
-  margin-left:5%;
+	width:80%:
+	height:90%; 
+	margin-top: 5%;
+	padding:5% 5% 5%;
 }
 
+.coloret{
+	font-size: 1em;
+	color: var(--primary-dark);
+}
 
 .detourimg{
-   width:40%; 
+   width:60%; 
   /* da mettere auto */
-  height: 20em;
+  height: 40%;
   border-radius:0.5em;
 }
 
@@ -387,9 +393,7 @@ li {
 }
 
 .sinistra{
-  float: left;
-  /* height: : 40%;*/
-}
+  float: left;}
 
 .marginSecondario{
   clear: left;
