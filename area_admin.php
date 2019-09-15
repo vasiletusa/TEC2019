@@ -9,7 +9,7 @@ include("auth.php");
 	<?php 
         include_once 'functions.php'; 
 	    getHead("AreaRiservata");
-	    $_SESSION['areaAdmin']=true;
+	    $_SESSION['area']=true;
      ?>        
   </head>
 <?php getMenu("AreaRiservata");?>
@@ -40,7 +40,7 @@ include("auth.php");
                             <p class='descrizione'>".$elem['Data']."</a></p>
                             <p class='descrizione'>".$elem['Organizzatore']."</a></p>
                             
-                                                                                                   <div class='sinistratour '><input type=\"button\" onclick=\"window.location.href = 'accettazione_tour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div>
+                                                                                                   <div class='sinistratour '> <input class='buttonDettagli' name='DETTAGLI' type='submit' value='DETTAGLI' /> </div>
 
 
 
