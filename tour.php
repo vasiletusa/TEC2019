@@ -18,6 +18,8 @@
         require_once('functions.php');
         $output=getTour();
         $outCat="";
+                if($_SESSION['tour']==true){
+
         foreach ($output as $elem) {
             if($elem){
                 $outCat.=   "<div class='cardTour sfondotour'>
@@ -36,7 +38,8 @@
                             
                             </div>";
             }
-        }
+        }}
+                else{$outCat.= "<p><h2> Non ci sono tour al momento.</h2></p>";}
         echo $outCat;
         unset($outCat);
     ?>
