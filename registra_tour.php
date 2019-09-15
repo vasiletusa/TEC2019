@@ -16,21 +16,25 @@
 						<div class="2">
 							<label for="Data" class="label data">Data</label>
 							<input id="Data" type="text" name="data" class="input data" placeholder="Inserisci data">
+                            <p class="error"><?php getDataError($errors); ?></p>
 						
 						</div>
 						<div class="3">
 							<label for="Citta" class="label citta">Citta</label>
 							<input id="Citta" type="text" name="citta" class="input citta" placeholder="Scegli città">
+                            <p class="error"><?php getCittaError($errors); ?></p>
 						
 						</div>
 						<div class="3">
 							<label for="Titolo" class="label titolo">Titolo</label>
 							<input id="Titolo" type="text" name="titolo" class="input titolo" placeholder="Inserisci Titolo">
+                            <p class="error"><?php getTitoloError($errors); ?></p>
 						
 						</div>
 						<div class="4">
 							<label for="Descrizione" class="label descrizione">Descrizione</label>
 							<input id="Descrizione" type="text" name="descrizione" class="input descrizione" placeholder="Inserisci descrizione">
+                            <p class="error"><?php getDescrizioneError($errors); ?></p>
 					
 							
 						</div>
