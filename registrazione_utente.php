@@ -27,7 +27,7 @@
 						</div>
 						<div class="3">
 							<label for="email" class="label email">E-Mail</label>
-							<input id="email" type="text" name="email" class="input email" placeholder="E-mail">
+							<input id="email" type="email" required name="email" class="input email" placeholder="E-mail">
 							<p class="error"><?php getEmailError($errors); ?></p>
 
 						
