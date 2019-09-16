@@ -37,11 +37,11 @@ body {
 }
 
 #messaggio>a{color: white;}
-/*footer*/
 
+/*footer*/
 .footer {
+	position:relative;
   clear: both;
-  margin-bottom: 0%;
   width: 100%;
   height: auto;
   background-color: var(--primary-light);
@@ -51,31 +51,22 @@ body {
 
 
 
-/*form*
-form {
-  background:var(--primary-light);
-  padding: 2em;
-  max-width:50em;
-  margin:2em auto;
-  }*/
-
-
-
 label {
 	width:60%;
 	display:inline-block;
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
-  color:white;
-  transition:all 0.25s ease;
-  -webkit-backface-visibility: hidden;
-  pointer-events: none;
-  font-size:20px;
+  	color:white;
+  	transition:all 0.25s ease;
+  	-webkit-backface-visibility: hidden;
+  	pointer-events: none;
+  	
 	text-align: center;
-  width: 100%;
-  border-radius:1em;
+  	width: 100%;
+  	border-radius:1em;
 
 }
+
 /*box*/
 .box{
 	margin:5em auto ; 
@@ -96,7 +87,6 @@ label {
 
 /*input*/
 input, text {
-  font-size:22px;
   display:block;
   width:100%;
   background:white;
@@ -116,7 +106,6 @@ input, text {
   /*outline:none;*/
   border-radius:0.5em;
   margin-top:1em;
-  font-size:1.5em;
   font-weight:bold;
   width: 50%;
   height: 2em;
@@ -144,7 +133,64 @@ input, text {
 }
 /*homepage*/
 
+.link{
+  border-radius:0.5em;
+  font-weight:bold;
+  width: auto;
+  height: 2em;
+  background:var(--primary-light);
+  cursor:pointer;
+  margin-top: 0.1em;
+  text-align:center;
+}
+
+.link a{
+  color:white;
+}
+
+.footer a{
+  color:white;
+}
+
+.pic img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    height: 15em;
+    margin-bottom:1%;
+    margin-top:3%;
+}
+
+<<<<<<< HEAD
+@media (max-width: 1000px) {
+	.grid-container {
+	  display: grid;
+	  grid-row-gap: 10%;
+	  grid-column-gap: 20%;
+	  grid-template-columns: 20% auto;
+	  padding-top: 5%;
+	  padding-left: 50%;
+	  padding-right: 50%;
+	  padding-bottom: 5%;
+	  /*capire se piace il rimpicciolimento così*/
+	}
+}
+
+.container-box1 {
+  display: grid;
+  grid-template-columns:20% auto;
+  
+  /* extra styles */
+  grid-gap: 2em;
+}
+  
+
+
 .left{
+  width: 100%;
+  padding-right:25%;
+  padding-left:25%;
   background-color: #e5e5e5;
 }
 
@@ -158,64 +204,11 @@ input, text {
   font-size: 1em;
   word-wrap: break-word;
 }
- 
-#mid{
-  float:left;
-  width: 50%;
-  height: 90%;
-  margin-top: 5%;
-  margin-bottom:10%;
+
+*{
+  box-sizing: border-box;
 }
 
-
-.link{
-  border-radius:0.5em;
-  font-size:1em;
-  font-weight:bold;
-  width: auto;
-  height: 2em;
-  background:var(--primary-light);
-  cursor:pointer;
-  margin-top: 0.1em;
-  text-align:center;
-
-}
-
-a{
-  color:white;
-}
-
-
-div.pic img{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30em;
-    height: 15em;
-    margin-bottom:1%;
-    margin-top:3%;
-}
-
-.grid-container {
-  display: grid;
-  grid-column-gap: 5em;
-  grid-template-columns: auto auto;
-  padding: 11%;
-  padding-top: 0em;
-  width: auto;
-  height: auto;
-  /*capire se piace il rimpicciolimento così*/
- grid-auto-rows: minmax(auto, auto);
-}
-
-.container-box1 {
-  display: grid;
-  grid-template-columns:30% auto;
-  
-  /* extra styles */
-  grid-gap: 2em;
-}
-  
 
 /*end homepage*/
 
@@ -237,14 +230,6 @@ div.pic img{
 .testo{
   text-align:center;
 }
-
-#menu-superiore{
-    position: relative;
-    float:right;
-    display: flex;
-    margin: 0.7em;
-}
-
 
 h1{
 color: var(--primary-dark);
@@ -389,10 +374,12 @@ h2{
   text-align: left;
 }
 
+@media (max-width: 1000px) {
 .marginPrincipale{
 	width:80%:
 	height:90%; 
 	padding:5% 5% 5%;
+}
 }
 
 .coloret{
@@ -419,6 +406,11 @@ h2{
   border-radius:0.5em;
   margin-bottom: 5%;
 
+}
+.imgCitta{
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
 }
 
 .sinistra{
@@ -532,8 +524,8 @@ div.end {
 	line-height: 0.4em;
 }
 
-body{
-  margin:0;
+html,body{
+	height: 100%;
 }
 
 .header img{
@@ -597,8 +589,28 @@ body{
   }
 }
 
-@media(max-width:850px){
-	.grid-container{
+@media(max-width:1200px){
+  .pic img{
+    width: 15em;
+    height: 7.5em;
+  }
 
-	}
 }  
+
+@media(max-width: 600px){
+  
+  
+  .pic img{
+    width:7.5em;
+    height: 3.75em;
+  }
+}
+
+@media(max-width: 400px){
+  
+
+  pic img{
+    width: 1.875em;
+    height: 0.9em;
+  }
+}
