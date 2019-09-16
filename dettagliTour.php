@@ -26,7 +26,7 @@
 						
 					</div>	
 
-					<div class=\"sfondo destra\">
+					<div class=\"sfondo sinistra\">
 						<div id=\"descrTour\">  Descrizione del Tour </div>
 						<p>  <label for=\"Descrizione\" id=\"labelTour\">".$tour['Descrizione']."</label> </p>
 							
