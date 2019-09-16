@@ -150,11 +150,13 @@ input, text {
 
 .left h2{
   font-size: 2em;
+  word-wrap: break-word;
 }
 
 .left p{
   /*padding:0.1em;*/
   font-size: 1em;
+  word-wrap: break-word;
 }
  
 #mid{
@@ -221,9 +223,6 @@ div.pic img{
   text-align:center;
   color: black;
 }
-
-
-
 
 .destra{
   float:right;
@@ -634,4 +633,8 @@ body{
   .header-right{
   	float:none;
   }
+}
+
+@media(max-width:850px){
+
 }  
