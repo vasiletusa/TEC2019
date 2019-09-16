@@ -8,6 +8,7 @@ $nome    = "";
 $errors = array();
 $tuoitour=array(); 
 $isOrganize=false;
+$_SESSION['isLogged']=NULL;
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
@@ -16,7 +17,9 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-  session_start();
+ if(!isset($_SESSION)) {
+     session_start();
+}
 
 //ACCETTAZIONE TOUR
   if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['accetta']))
@@ -32,6 +35,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['rifiuta']))
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['iscriviti']))
     {
         iscriviti();
+    }
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['disiscriviti']))
+    {
+        disiscriviti();
     }
     
 //REGISTRAZIONE DEGLI UTENTI
@@ -153,8 +160,7 @@ if(isset($_SESSION['area'])){
 
 
 
-//REGISTRAZIONE TOUR (ancora non funziona)
-
+//REGISTRAZIONE TOUR
 if (isset($_POST['registrazione_tour'])) {
   // receive all input values from the form
   
@@ -185,6 +191,7 @@ if (isset($_POST['registrazione_tour'])) {
         $query = "INSERT INTO tour (data, organizzatore, citta, titolo, descrizione, stato) 
                                 VALUES('$data','$organizzatore', '$citta','$titolo', '$descrizione','In attesa')";
                                 $result = mysqli_query($db,$query) or die(mysql_error());
+    header("Location: area_riservata.php");
   }
 }
 

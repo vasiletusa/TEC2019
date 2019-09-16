@@ -25,12 +25,17 @@
 					
 						<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
 						<div>
-						<div class='sinistra'><p class='coloret parag'><label for=\"data\" class='coloret'>DATA:</label></p></div>
-						 <div class='sinistra'><p class='coloret parag'>".$tour['Data']."</p></div>
+						<div class='sinistraparag'><p class='coloret parag'><label for=\"data\" class='coloret'>DATA:</label></p></div>
+						 <div class='sinistraparag'><p class='coloret parag'>".$tour['Data']."</p></div>
 						 </div>
 
-						<p class='coloret parag'>ORGANIZZATO DA :<label for=\"organiz\" class='coloret'>".$tour['Organizzatore']."</label></p>
-						<p class='coloret parag'>CITTA' :<label for=\"citta\" class='coloret'>".$tour['Citta']."</label> </p>
+						<div class='sinistraparag'>
+                          <p class='coloret parag'>ORGANIZZATO DA :<label for=\"organiz\"class='coloret'>".$tour['Organizzatore']."</label>
+                          </p>
+                        </div>
+						<div class='sinistraparag'>
+                          <p class='coloret parag'>CITTA' :<label for=\"citta\" class='coloret'>".$tour['Citta']."</label> </p>
+                        </div>
 						
 					</div>	
 

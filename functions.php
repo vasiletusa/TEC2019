@@ -9,6 +9,8 @@ echo"
 	
 
 	<title>$current</title>
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+
 	<link rel=\"stylesheet\" href=\"css/style.css\"/>
 	<link rel=\"icon\" 
       type=\"image/png\" 
@@ -34,12 +36,12 @@ echo"
 	     	<li ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a></li>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+                $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
 
-	 $query = "SELECT * FROM `utenti` WHERE Username='$username'";
-        $result = mysqli_query($db,$query) or die(mysql_error());      
-        $ris=mysqli_fetch_assoc($result);
-        $ruolo=$ris['Ruolo'];
+        	   $query = "SELECT * FROM `utenti` WHERE Username='$username'";
+                $result = mysqli_query($db,$query) or die(mysql_error());      
+                $ris=mysqli_fetch_assoc($result);
+                $ruolo=$ris['Ruolo'];
 	     		echo"<li ";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"><a href=";if($ruolo=="User"){echo"\"area_riservata.php\"";} else {echo"\"area_admin.php\"";}echo">Area personale</a></li>
 	     			<li><a href=\"logout.php\">Logout</a></li>";}
 	     	else{
@@ -149,7 +151,7 @@ function getTourInAttesa(){
 
 function setIscrivitiButton(){
     $idTour= $_SESSION['idTour'];
-    if(isset($_SESSION['isLogged'])){
+    if(($_SESSION['isLogged']===true)){
         $username= $_SESSION['username'];
             $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
     
