@@ -58,11 +58,11 @@ include("auth.php");
             $tuoiTour=getTuoiTourPartecipi();
             $tour=getTour();
             $outCat="";
-            if($_SESSION['tour']===true){
+            if($_SESSION['tuoiTour']===true){
 
             foreach ($tuoiTour as $elem) {
               
-                if($_SESSION['tuoiTour']===true){
+                if($_SESSION['tour']===true){
             	foreach ($tour as $key) {
                     
                     if($key&&$elem){
