@@ -20,13 +20,13 @@
 					<h1>".$tour['Titolo']."</h1> 
 					<div class=\"sinistra\">
 						<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
-						<p class='coloret'>DATA: <label for=\"data\" class='coloret'>".$tour['Data']."</label></p>
-						<p class='coloret'>ORGANIZZATO DA :<label for=\"organiz\" class='coloret'>".$tour['Organizzatore']."</label></p>
-						<p class='coloret'>CITTA' :<label for=\"citta\" class='coloret'>".$tour['Citta']."</label> </p>
+						<p class='coloret parag'>DATA: <label for=\"data\" class='coloret'>".$tour['Data']."</label></p>
+						<p class='coloret parag'>ORGANIZZATO DA :<label for=\"organiz\" class='coloret'>".$tour['Organizzatore']."</label></p>
+						<p class='coloret parag'>CITTA' :<label for=\"citta\" class='coloret'>".$tour['Citta']."</label> </p>
 						
 					</div>	
 
-					<div class=\"sfondo destra\">
+					<div class=\"sfondo sinistra\">
 						<div id=\"descrTour\">  Descrizione del Tour </div>
 						<p>  <label for=\"Descrizione\" id=\"labelTour\">".$tour['Descrizione']."</label> </p>
 							
