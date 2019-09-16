@@ -24,16 +24,15 @@ function getMenu($current){
 echo"
 <body>
 	<header id=\"header-section\">
-	 <div class=\"nav-header\"class=\"logo\">
-	 	<a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
-	  	<div id=\"menu-superiore\">
-	   	<nav>
-	    	<ul id=\"menu\">
-	     	<li ";if($current=="Home"){echo"class=\"active\"";}echo"><a href=\"home.php\">Home</a></li>
-            <li ";if($current=="Info"){echo"class=\"active\"";}echo"><a href=\"info.php\">Come funziona</a></li>
+     <div class=\"header\"class=\"logo\">
+        <a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
+        <div class=\"header-right\">
+        
+            <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo" >Home</a>
+            <a ";if($current=="Info"){echo"class=\"active\"";}echo"><a href=\"info.php\">Come funziona</a>
 
-	     	<li ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a></li>
-	     	<li ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a></li>";
+            <a ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a>
+            <a ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
                 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
@@ -158,7 +157,7 @@ function setIscrivitiButton(){
             $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
     
 
-    $sql = "SELECT * FROM `partecipa` WHERE idTour='$idTour' ";
+    $sql = "SELECT * FROM `partecipa` WHERE idTour='$idTour' AND Username='$username' ";
 
     $ris= mysqli_query($db, $sql);
     

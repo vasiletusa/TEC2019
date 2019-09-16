@@ -310,4 +310,15 @@ function rifiuta()
     
 
   }
+  function disiscriviti(){
+
+      $id=$_SESSION['idTour'];
+      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+      $username=$_SESSION['username'];
+      
+        $query = "DELETE FROM `partecipa`WHERE idTour='$id' AND Username='$username'";
+        $result = mysqli_query($db,$query) or die(mysql_error());
+    
+
+  }
 ?>
