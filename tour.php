@@ -33,7 +33,7 @@
                                             \t<p class='descrizione parag'>".$elem['Organizzatore']."</p>\n
                                     \t</div>
 
-                                   \t <div class='sinistratour'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
+                                  <div class='sinistratour '><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div> 
                                                 </div> <div class='end'/>\n
                                       </div>
                                 </div>";

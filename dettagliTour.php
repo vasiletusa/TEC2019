@@ -15,7 +15,9 @@
 <?php
         require_once('functions.php');
         $tour=tourDaId($_GET['id']);
-        $_SESSION['idTour']= $_GET['id'];
+        $_SESSION['idTour']=$_GET['id'];
+        echo $_SESSION['username'];
+        //echo $_SESSION['id'];
         echo   "<div class=\"marginPrincipale\" >
 					<h1>".$tour['Titolo']."</h1> 
 					<div class=\"sinistratour\">
