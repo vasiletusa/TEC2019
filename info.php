@@ -13,10 +13,11 @@
 <?php getBreadcumbs("Come funziona");?>
 
 <div>
-  <div tit><h1> VenetoTour ti porta alla scoperta del Veneto</h1></div>
-  <div sub><h2>Offriamo un servizio pieno di emozioni con viaggi turistici nelle citt&agrave; del Veneto.</h2></div>
-  <div id="testoinfo"><p>
-    VenetoTour si prepone di offrire un servizio interattivo con la possibilit&agrave; da parte degli utenti di creare e proporre percorsi turistici nella Regione Veneto.<br>
+  <div><h1> Veneto Tour ti porta alla scoperta del Veneto</h1></div>
+  <div><h2>Offriamo un servizio pieno di emozioni con viaggi turistici nelle citt&#192; del Veneto.</h2></div>
+  <div><p class="testo altezza">
+    VenetoTour si prepone di offrire un servizio interattivo con la possibilit&#192; da parte degli utenti di creare e proporre tour turistici nella Regione Veneto.<br>
+
     Ogni settimana nuovi tour disponbili in tutto il Veneto: Padova, Verona, Vicenza, Venezia, Treviso, Belluno, Rovigo.<br>
     Scegli la citt&agrave; di tuo interesse, scegli fra i numerosi tour disponibili per ogni citt&agrave;, il percorso più interessante.<br>
     Con un semplice click ti iscrivi e sei pronto a partire all'avventura.<br>
