@@ -10,7 +10,7 @@
 
 <?php getMenu("RegistraTour");?>
 <?php getBreadcumbs("Organizza tour");?>
-
+<div class="container box" id="boxlogin">
 <form method="post" action="registra_tour.php">						
 						
 						<div class="2">
@@ -40,5 +40,5 @@
 						</div>
 						
 						<button type="submit" class="button" name="registrazione_tour">Invia</button>
-					</form>
+					</form></div>
 					<?php include('footer.php') ?>

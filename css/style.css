@@ -214,39 +214,6 @@ div.pic img{
 
 /*end homepage*/
 
-#header-section img{
-    width: 5.5em;
-    height: 2.5em;
-    margin-right: 5em;
- }
-
-#header-section {
-  background: var(--menu-footer-color);
-  padding: 0.3em;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-  border-bottom: 0.0625em solid rgba(255, 255, 255, 0.2);
-}
-
-.nav-header{
-  width:100%;
-  margin-right: 30%;
-}
-
-.logo{
-    position: relative;
-    float:left;
-    font-family: Verdana, sans-serif;
-    margin:0.175em;
-    max-width:12.5em;
-    display: flex;
-}
-
-
-
 #titolo{
   text-align:center;
   color: black;
@@ -540,3 +507,51 @@ div.end {
 .parag{
 	line-height: 0.4em;
 }
+
+body{
+  margin:0;
+}
+
+.logo img{
+  max-height: 2em;
+}
+
+.header {
+  font-family: Verdana, sans-serif;
+  overflow: hidden;
+  
+  padding: 1.11em 0.56em;
+}
+
+.header a {
+  background-color: var(--menu-footer-color);
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 0.66em;
+  text-decoration: none;
+  font-size: 0.9em; 
+  line-height: 1.38;
+  border-radius: 0.2em;
+}
+
+.header a:hover {
+  border-bottom: 0.225em
+  solid var(--primary-light);
+}
+
+.header a.active {
+  border-bottom: 0.225em
+  solid var(--primary-light);
+}
+
+.header-right {
+  float: right;
+}
+
+@media(max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
