@@ -206,16 +206,15 @@ function getTourDaCitta($citta){
     $sql = "SELECT * FROM `tour` WHERE Stato='Approvato'";
     $ris = mysqli_query($db,$sql);
     $errore = array();
-    if(mysqli_num_rows($ris)==0){
-       $_SESSION['tour']=false;
-
-        //array_push($errore,"Errore della query: " . $sql);
-    }else{$_SESSION['tour']=true;}
+    $_SESSION['tourD']=false;
     $output = array();
     while ($row = mysqli_fetch_assoc($ris)) {
-        if($row['Citta']==$citta)
+        if($row['Citta']==$citta){
+                $_SESSION['tourD']=true;
                 array_push($output,$row);
+        }
     }
+ 
     array_push($output,$errore);
     return $output;
 }
