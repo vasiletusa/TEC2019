@@ -50,7 +50,7 @@ echo"
            <a href=\"registra_tour.php\"  ";if($current=="RegistraTour"){echo"class=\"active\"";}echo">Organizza</a>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
-                $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+                $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
         	   $query = "SELECT * FROM `utenti` WHERE Username='$username'";
                 $result = mysqli_query($db,$query) or die(mysql_error());      
@@ -89,7 +89,7 @@ function getMessage(){
 	}
 }
 function tourDaId($id){
-      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
     $sql = "SELECT * FROM `tour` WHERE Id='$id'";
     $ris = mysqli_query($db,$sql)or DIE("tourDaId: ".mysqli_error($db));
@@ -97,7 +97,7 @@ function tourDaId($id){
     return $output;
 }
 function getTourInAttesa(){
-    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `tour` WHERE Stato='In Attesa'";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -114,7 +114,7 @@ function getTourInAttesa(){
     return $output;
 }
    function getTour(){
-    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `tour` WHERE Stato='Approvato'";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -132,7 +132,7 @@ function getTourInAttesa(){
 }
   function getTuoiTourOrganizzati(){
   	$username=$_SESSION['username'];
-    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `tour` WHERE Organizzatore='$username' ";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -149,7 +149,7 @@ function getTourInAttesa(){
 }
  function getTuoiTourPartecipi(){
   	$username=$_SESSION['username'];
-    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `partecipa` WHERE Username='$username' ";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -170,7 +170,7 @@ function setIscrivitiButton(){
     $idTour= $_SESSION['idTour'];
     if(isset($_SESSION['isLogged'])){
         $username= $_SESSION['username'];
-            $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+            $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
     $sql = "SELECT * FROM `partecipa` WHERE idTour='$idTour' AND Username='$username' ";
@@ -210,7 +210,7 @@ function findImg($nome, $directory){
     return "./".$directory."/default.png";
 }
 function cittaDaNome($nome){
-      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
     $sql = "SELECT * FROM `citta` WHERE Nome='$nome'";
     $ris = mysqli_query($db,$sql)or DIE("cittaDaNome: ".mysqli_error($db));
@@ -219,7 +219,7 @@ function cittaDaNome($nome){
 }
 
 function getTourDaCitta($citta){
-    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `tour` WHERE Stato='Approvato'";
     $ris = mysqli_query($db,$sql);
     $errore = array();
