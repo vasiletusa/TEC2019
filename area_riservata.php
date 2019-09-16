@@ -26,7 +26,7 @@ include("auth.php");
             require_once('functions.php');
             $output=getTuoiTourOrganizzati();
             $outCat="";
-            if($_SESSION['tuoiTour']==true){
+            if($_SESSION['tuoiTour']===true){
             foreach ($output as $elem) {
                 if($elem){
                     $outCat.=   "<div class='sfondoAP'>
@@ -58,11 +58,16 @@ include("auth.php");
             $tuoiTour=getTuoiTourPartecipi();
             $tour=getTour();
             $outCat="";
-            if($_SESSION['tuoiTour']==true){
-            foreach ($tour as $key) {
-            	foreach ($tuoiTour as $elem) {
-                    if($key){
+            if($_SESSION['tour']===true){
+
+            foreach ($tuoiTour as $elem) {
+              
+                if($_SESSION['tuoiTour']===true){
+            	foreach ($tour as $key) {
+                    
+                    if($key&&$elem){
             		if($elem['IdTour']==$key['Id']){
+                       
                     $outCat.=   "<div class='sfondoAP'>
                                 
                                     <div class='sinpersarea'>
@@ -70,13 +75,15 @@ include("auth.php");
                                        
                                         <p class=' parag' class='data'>".$key['Data']."</a></p>
                                     </div>
-                                    <div class='sinpersarea'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/> </div>
+                                    <div class='sinpersarea'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$key['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/> </div>
                                     <div class='end'> </div>
                                 
                                 </div>";
+                                break;
                 }}
-            
-        }}}
+             
+        }}
+    }}
         else{$outCat.= "<p><h2> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h2></p>";}
         echo $outCat;
         unset($outCat);
