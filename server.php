@@ -16,7 +16,10 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-  session_start();
+ if(!isset($_SESSION)) {
+  $_SESSION['isLogged']=NULL;
+     session_start();
+}
 
 //ACCETTAZIONE TOUR
   if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['accetta']))
@@ -32,6 +35,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['rifiuta']))
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['iscriviti']))
     {
         iscriviti();
+    }
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['disiscriviti']))
+    {
+        disiscriviti();
     }
     
 //REGISTRAZIONE DEGLI UTENTI

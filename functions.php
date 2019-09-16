@@ -9,6 +9,8 @@ echo"
 	
 
 	<title>$current</title>
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+
 	<link rel=\"stylesheet\" href=\"css/style.css\"/>
 	<link rel=\"icon\" 
       type=\"image/png\" 
@@ -32,7 +34,7 @@ echo"
 
 	     	<li ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a></li>
 	     	<li ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a></li>";
-	     	if(($_SESSION['isLogged']===true)){
+	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
                 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
 
@@ -53,7 +55,9 @@ echo"
 	   	</nav>
 	  	</div>
       	</div>
-      </header>";
+      </header>
+
+";
 
 }
 function getBreadcumbs($current){
