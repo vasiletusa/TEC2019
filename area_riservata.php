@@ -96,4 +96,4 @@ include("auth.php");
 </div>
 
 </body>
-<?php include('footer.php') ?>
+<?php getFooter() ?>

@@ -17,6 +17,24 @@ echo"
       href=\"img/destination.png\">
 	
 ";
+}function getFooter(){echo"
+<footer id=\"footer\" class=\"footer\">
+    <div class=\"container\">     
+        <div>&copy; 2019 <span lang=\"en\">Veneto-on-Tour</span> | Via Dante Alighieri 123 - 30035 Mirano (<span lang=\"en\">Italy</span>)
+        </div>
+        <div> email: venetontour@gmail.com </div>
+        <div> tel: +39 04145678910 </div>
+
+        <div class=\"back-up\">   
+        <a href=\"#\">TORNA SU</a>
+        </div>
+    </div>  
+</footer></div>
+
+
+
+</body>
+</html>";
 }
 
 function getMenu($current){
@@ -28,9 +46,9 @@ echo"
         <a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
         <div class=\"header-right\">
         
-           <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo">Home</a>
+           <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>
            <a href=\"info.php\"  ";if($current=="Info"){echo"class=\"active\"";}echo">Come Funziona</a>
-           <a href=\"tour.php\"  ";if($current=="Tour"){echo"class=\"active\"";}echo">Tour</a>
+           <a href=\"tour.php\"  ";if(($current=="Tour")||($current=="Dettagli Tour")){echo"class=\"active\"";}echo">Tour</a>
            <a href=\"registra_tour.php\"  ";if($current=="RegistraTour"){echo"class=\"active\"";}echo">Organizza</a>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
@@ -46,13 +64,14 @@ echo"
 	     		
 	     		
 	     	
-	     	echo "<li "; if($current=="Login"){echo"class=\"active\"";}echo"><a href=\"login.php\">Login</a></li>";}
+	     	echo "<a href=\"login.php\"  ";if($current=="Login"){echo"class=\"active\"";}echo">Login</a>";}
 
 	     	echo"
 	     	</ul>
 	   	</nav>
 	  	</div>
       	</div>
+        <div id='contPrincipale'>
       </header>
 
 ";
@@ -74,8 +93,8 @@ function getMessage(){
 function tourDaId($id){
       $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
 
-    $sql = 'SELECT * FROM `tour` WHERE `Id`="'.$id.'"';
-    $ris = mysqli_query($db,$sql)or DIE("tourDaId: ".mysqli_error($con));
+    $sql = "SELECT * FROM `tour` WHERE Id='$id'";
+    $ris = mysqli_query($db,$sql)or DIE("tourDaId: ".mysqli_error($db));
     $output = mysqli_fetch_assoc($ris);
     return $output;
 }
@@ -151,7 +170,7 @@ function getTourInAttesa(){
 
 function setIscrivitiButton(){
     $idTour= $_SESSION['idTour'];
-    if(($_SESSION['isLogged']===true)){
+    if(isset($_SESSION['isLogged'])){
         $username= $_SESSION['username'];
             $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
     
@@ -191,5 +210,31 @@ function findImg($nome, $directory){
     }
     chdir($dir);
     return "./".$directory."/default.png";
+}
+function cittaDaNome($nome){
+      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+
+    $sql = "SELECT * FROM `citta` WHERE Nome='$nome'";
+    $ris = mysqli_query($db,$sql)or DIE("cittaDaNome: ".mysqli_error($db));
+    $output = mysqli_fetch_assoc($ris);
+    return $output;
+}
+
+function getTourDaCitta($citta){
+    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $sql = "SELECT * FROM `tour` WHERE Stato='Approvato'";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    $_SESSION['tourD']=false;
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        if($row['Citta']==$citta){
+                $_SESSION['tourD']=true;
+                array_push($output,$row);
+        }
+    }
+ 
+    array_push($output,$errore);
+    return $output;
 }
 ?>
