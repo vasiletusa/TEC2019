@@ -145,4 +145,24 @@ function getTourInAttesa(){
     return $output;
 }
 
+function setIscrivitiButton(){
+    $idTour= $_SESSION['idTour'];
+  $username= $_SESSION['username'];
+            $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+
+    $sql = "SELECT * FROM `partecipa` WHERE idTour='$idTour' ";
+
+    $ris= mysqli_query($db, $sql);
+    
+    if(mysqli_num_rows($ris)==0){
+        $output= "<form action='tour.php' method='post'>
+                                    <input type='submit' name='iscriviti' value='ISCRIVITI'  class='buttonIscrizione' />
+
+                        </form>";
+                       }
+        else{
+            $output="<p class='coloret parag'>Iscritto</p>";
+        }
+        return  $output;
+}
 ?>

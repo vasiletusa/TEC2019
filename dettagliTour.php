@@ -16,13 +16,19 @@
         require_once('functions.php');
         $tour=tourDaId($_GET['id']);
         $_SESSION['idTour']=$_GET['id'];
-        echo $_SESSION['username'];
+        
+        $controllo= setIscrivitiButton();
         //echo $_SESSION['id'];
         echo   "<div class=\"marginPrincipale\" >
 					<h1>".$tour['Titolo']."</h1> 
 					<div class=\"sinistratour\">
+					
 						<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
-						<p class='coloret parag'>DATA: <label for=\"data\" class='coloret'>".$tour['Data']."</label></p>
+						<div>
+						<div class='sinistra'><p class='coloret parag'><label for=\"data\" class='coloret'>DATA:</label></p></div>
+						 <div class='sinistra'><p class='coloret parag'>".$tour['Data']."</p></div>
+						 </div>
+
 						<p class='coloret parag'>ORGANIZZATO DA :<label for=\"organiz\" class='coloret'>".$tour['Organizzatore']."</label></p>
 						<p class='coloret parag'>CITTA' :<label for=\"citta\" class='coloret'>".$tour['Citta']."</label> </p>
 						
@@ -36,12 +42,9 @@
 
 					<div class='end'/>
 
-					<div > 
+					<div > ".$controllo."
 
-						<form action='tour.php' method='post'>
-							    	<input type='submit' name='iscriviti' value='ISCRIVITI'  class='buttonIscrizione' />
-
-						</form>
+						
 					</div>
 				</div>"              
     ?>
