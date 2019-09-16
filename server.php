@@ -153,8 +153,7 @@ if(isset($_SESSION['area'])){
 
 
 
-//REGISTRAZIONE TOUR (ancora non funziona)
-
+//REGISTRAZIONE TOUR
 if (isset($_POST['registrazione_tour'])) {
   // receive all input values from the form
   
@@ -185,6 +184,7 @@ if (isset($_POST['registrazione_tour'])) {
         $query = "INSERT INTO tour (data, organizzatore, citta, titolo, descrizione, stato) 
                                 VALUES('$data','$organizzatore', '$citta','$titolo', '$descrizione','In attesa')";
                                 $result = mysqli_query($db,$query) or die(mysql_error());
+    header("Location: area_riservata.php");
   }
 }
 
