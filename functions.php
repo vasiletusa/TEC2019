@@ -55,7 +55,9 @@ echo"
 	   	</nav>
 	  	</div>
       	</div>
-      </header>";
+      </header>
+
+";
 
 }
 function getBreadcumbs($current){
