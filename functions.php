@@ -158,7 +158,7 @@ function setIscrivitiButton(){
             $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
     
 
-    $sql = "SELECT * FROM `partecipa` WHERE idTour='$idTour' ";
+    $sql = "SELECT * FROM `partecipa` WHERE idTour='$idTour' AND Username='$username' ";
 
     $ris= mysqli_query($db, $sql);
     
