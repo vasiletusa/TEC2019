@@ -42,7 +42,7 @@
       
         }}
 
-            else{ $outCat.= "<h2 class=\"disponibilita\"> Non ci sono tour al momento <a href=\"registra_tour.php class=\"messageTour\"> Organizzane</a> uno tu!</h2>";}
+            else{ $outCat.= "<h2 class=\"disponibilita\"> Non ci sono tour al momento <a href=\"registra_tour.php\" class=\"messageTour\"> Organizzane</a> uno tu!</h2>";}
        echo $outCat;
 
         unset($outCat);

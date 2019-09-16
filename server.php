@@ -10,7 +10,7 @@ $tuoitour=array();
 $isOrganize=false;
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+$db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 // Check connection
 if (mysqli_connect_errno())
   {
@@ -278,7 +278,7 @@ function getDescrizioneError($errors) {
 function rifiuta()
     {
       $id=$_SESSION['idTour'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
         $sql= " UPDATE `tour` SET Stato='Rifiutato' WHERE Id='$id'";
       
@@ -290,7 +290,7 @@ function rifiuta()
   function accetta(){
 
       $id=$_SESSION['idTour'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
         $sql= " UPDATE `tour` SET Stato='Approvato' WHERE Id='$id'";
       
@@ -301,7 +301,7 @@ function rifiuta()
     function iscriviti(){
 
       $id=$_SESSION['idTour'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
       $username=$_SESSION['username'];
       
         $query = "INSERT INTO partecipa (idTour, Username) 
@@ -313,7 +313,7 @@ function rifiuta()
   function disiscriviti(){
 
       $id=$_SESSION['idTour'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
       $username=$_SESSION['username'];
       
         $query = "DELETE FROM `partecipa`WHERE idTour='$id' AND Username='$username'";
