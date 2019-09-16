@@ -46,7 +46,7 @@ echo"
 	     		
 	     		
 	     	
-	     	echo "<li "; if($current=="Login"){echo"class=\"active\"";}echo"><a href=\"login.php\">Login</a></li>";}
+	     	echo "<a href=\"login.php\"  ";if($current=="Login"){echo"class=\"active\"";}echo">Login</a>";}
 
 	     	echo"
 	     	</ul>
