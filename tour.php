@@ -24,7 +24,7 @@
             if($elem){
                 $outCat.=       "<div class='sfondotour'>\n
                             
-                                    \t<div class=' sinistratour'>\t\t <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour'> \t</div>
+                                    \t<div class=' sinistratour'>\t\t <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour'/> \t</div>
                                         
                                         \t<div id='descrTour' class='sinistratour'>\n
                                             \t<p class='titolo parag'>".$elem['Titolo']."</p>\n
@@ -33,10 +33,9 @@
                                             \t<p class='descrizione parag'>".$elem['Organizzatore']."</p>\n
                                         \t</div>
 
-                                        <div class='sinistratour '><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div> 
-
-                                </div> 
-                                <div class='end'/>\n";
+                                        <div class='sinistratour '><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div> 
+                                        <div class='end'></div>\n
+                                </div> ";
 
             }
              $tab=8;
@@ -50,6 +49,5 @@
     ?>
 </div>
 
-</div>
 </body>
-</html>
+<?php include('footer.php') ?>

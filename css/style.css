@@ -445,7 +445,7 @@ div.end {
   background: var(--primary-light);
   margin-left: 15%;
   margin-top: 5%;
-  margin-bottom: 
+  margin-bottom: 5%;
   width:60%; 
 
  padding: 2% 5% 2%;
@@ -480,6 +480,7 @@ div.end {
   background:var(--primary-light);
   color:white;
   cursor:pointer;
+  margin-top:40%;
   /* -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;---
   margin-left: 80%;
