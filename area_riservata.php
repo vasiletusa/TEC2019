@@ -85,9 +85,9 @@ include("auth.php");
                 }}
              
         }}
-        else{$outCat.= "<div class='sinpersarea'><h2> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h2></div>";}
+        
 
-    }}
+    }}  else{$outCat.= "<div><h2> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h2></div>";}
         echo $outCat;
         unset($outCat);
     ?>

@@ -23,7 +23,7 @@
 		<br>
 		</p>
 		</div>
-	</div>	
+	</div>
 
 	<div class="grid-container">
 
