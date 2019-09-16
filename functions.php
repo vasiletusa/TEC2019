@@ -28,11 +28,10 @@ echo"
         <a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
         <div class=\"header-right\">
         
-            <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo" >Home</a>
-            <a ";if($current=="Info"){echo"class=\"active\"";}echo"><a href=\"info.php\">Come funziona</a>
-
-            <a ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a>
-            <a ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a>";
+           <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo">Home</a>
+           <a href=\"info.php\"  ";if($current=="Info"){echo"class=\"active\"";}echo" >Come Funziona</a>
+           <a href=\"tour.php\"  ";if($current=="Tour"){echo"class=\"active\"";}echo" >Tour</a>
+           <a href=\"registra_tour.php\"  ";if($current=="RegistraTour"){echo"class=\"active\"";}echo" >Organizza</a>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
                 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
