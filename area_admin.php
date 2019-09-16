@@ -21,7 +21,7 @@ include("auth.php");
 </div>
 
 <div>
-	<h1>Tour in attesa di conferma<h2>
+	<h1>Tour in attesa di conferma</h1>
     <?php
         require_once('functions.php');
         $output=getTourInAttesa();
@@ -30,17 +30,23 @@ include("auth.php");
         foreach ($output as $elem) {
             if($elem){
 
-                $outCat.=   "<div class='cardTour'>
+                $outCat.=   "<div class='sfondotour'>
                             
+                                <div class='sinistra'>
 
-                            <p class='titolo'>".$elem['Titolo']."</p>
-                           
-                            <p class='descrizione'>".$elem['Descrizione']."</p>
+                                    <p class='titolo'>".$elem['Titolo']."</p>
+                                   
+                                    <p class='coloret parag' class='descrizione'>".$elem['Descrizione']."</p>
 
-                            <p class='descrizione'>".$elem['Citta']."</p>
-                            <p class='descrizione'>".$elem['Data']."</p>
-                            <p class='descrizione'>".$elem['Organizzatore']."</p>
-                                <div class='sinistratour '><input type=\"button\" onclick=\"window.location.href = 'accettazione_tour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div>
+                                    <p  class='coloret parag' class='descrizione'>".$elem['Citta']."</p>
+                                    <p  class='coloret parag' class='descrizione'>".$elem['Data']."</p>
+                                
+                                    <p class='coloret parag' class='descrizione'>".$elem['Organizzatore']."</p>
+                                </div>
+
+                                <div class='sinistra '><input type=\"button\" onclick=\"window.location.href = 'accettazione_tour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
+                                </div>
+                                <div class='end'/>
 
 
                             </div>";
@@ -51,3 +57,5 @@ include("auth.php");
         unset($outCat);
     ?>
 </div>
+</body>
+<?php include('footer.php') ?>
