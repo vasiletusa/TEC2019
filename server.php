@@ -113,8 +113,9 @@ if (isset($_POST['Login'])){
         $query = "SELECT * FROM `utenti` WHERE Username='$username' and Password='$password'";
         $result = mysqli_query($db,$query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
-        $app= "SELECT 'Ruolo' FROM 'utenti' WHERE Username='$username' ";
-        $ruolo=mysqli_query($db, $app);
+       
+        $ris=mysqli_fetch_assoc($result);
+        $ruolo=$ris['Ruolo'];
               if($rows==1){
                 $_SESSION['username'] = $username;
                 $_SESSION['isLogged']= true;
@@ -295,8 +296,7 @@ function rifiuta()
       $id=$_SESSION['idTour'];
       $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
       $username=$_SESSION['username'];
-      echo $id;
-      echo $username;
+      
         $query = "INSERT INTO partecipa (idTour, Username) 
                                 VALUES('$id','$username')";
         $result = mysqli_query($db,$query) or die(mysql_error());
