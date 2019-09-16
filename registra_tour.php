@@ -41,4 +41,4 @@
 						
 						<button type="submit" class="button" name="registrazione_tour">Invia</button>
 					</form></div>
-					<?php include('footer.php') ?>
+					<?php getfooter() ?>

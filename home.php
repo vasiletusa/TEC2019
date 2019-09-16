@@ -64,4 +64,4 @@
 
 </body>
 
-<?php include('footer.php') ?>    
+<?php getFooter() ?>    
