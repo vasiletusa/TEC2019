@@ -8,7 +8,6 @@ $nome    = "";
 $errors = array();
 $tuoitour=array(); 
 $isOrganize=false;
-$_SESSION['isLogged']=NULL;
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
@@ -18,6 +17,7 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
  if(!isset($_SESSION)) {
+  $_SESSION['isLogged']=NULL;
      session_start();
 }
 

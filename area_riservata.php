@@ -44,7 +44,7 @@ include("auth.php");
                             </div>";
             }
         }}
-        else{$outCat.= "<p><h2> Non hai ancora organizzato tour.</h2></p>";}
+        else{$outCat.= "<p><h2> Non hai ancora organizzato tour. <a href='registra_tour.php' class='messageTour'> Organizza </a>il tuo primo tour!</h2></p>";}
         echo $outCat;
         unset($outCat);
     ?>
@@ -73,7 +73,7 @@ include("auth.php");
                             </div>";
             }}
         }}}
-        else{$outCat.= "<p><h2> Non ci sono tour a cui partecipi</h2></p>";}
+        else{$outCat.= "<p><h2> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h2></p>";}
         echo $outCat;
         unset($outCat);
     ?>
