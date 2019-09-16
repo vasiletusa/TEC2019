@@ -16,7 +16,7 @@
 	<div class="left">
 		<h2 class="testo">VENETOTOUR</h2>
 		<div>
-		<p>VenetoTour si prepone di offrire un servizio interattivo con la possibilità da parte degli utenti di creare e proporre tour turistici nella Regione Veneto e avvalersi della preparazione di una delle guide a noi affigliate.<br>
+		<p>VenetoTour si prepone di offrire un servizio interattivo con la possibilità da parte degli utenti di creare e proporre percorsi turistici nella Regione Veneto e avvalersi della preparazione di una delle guide a noi affiliate.<br>
 		<p class="testo">Che aspetti? Mettiti in marcia.</p>
 		<br>
 		</p>

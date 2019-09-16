@@ -12,7 +12,7 @@
   
 <header id=header-section>
 <div class="header">
-  <a href="home.php" class="logo"><img src="logoT.png" alt="Veneto on Tour"></a>
+  <a href="home.php" class="logo"><img src="img/logot.png" alt="VenetoTour"></a>
   <div class="header-right">
     <a href="home.php">Home</a>
     <a href="info.php">Come Funziona</a>
