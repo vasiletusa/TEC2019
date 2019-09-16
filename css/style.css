@@ -550,6 +550,10 @@ body{
   float: right;
 }
 
+.sinistraparag{
+	float:left;
+}
+
 @media(max-width: 500px) {
   .header a {
     float: none;
