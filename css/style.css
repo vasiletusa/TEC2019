@@ -57,13 +57,13 @@ body {
 
 
 
-/*form*/
+/*form
 form {
   background:var(--primary-light);
   padding: 2em;
   max-width:50em;
   margin:2em auto;
-}
+}*/
 
 /*label*/
 label {
@@ -341,6 +341,7 @@ li {
   /* -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;*/
   cursor:pointer;
+  margin-bottom: 5%;
   margin-left: 40%;
   
   /* intanto così poi togliere questo e 
@@ -367,7 +368,7 @@ li {
 	width:80%:
 	height:90%; 
 
-	padding:5% 10% 5%;
+	padding:5% 5% 5%;
 }
 
 .coloret{
@@ -376,9 +377,9 @@ li {
 }
 
 .detourimg{
-   width:60%; 
+   width:80%; 
   /* da mettere auto */
-  height: 40%;
+  height: 50%;
   border-radius:0.5em;
 }
 
@@ -397,12 +398,8 @@ li {
 }
 
 .sinistra{
-  float: left;}
-
-.marginSecondario{
-  clear: left;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  float: left;
+  width: 60%;
 }
 
 
@@ -469,13 +466,7 @@ div.end {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-/*.container-box2 {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  
-  //extra styles 
-  grid-gap: 2em;
-}*/
+
 
 .disponibilita{
   float:center;
@@ -483,6 +474,6 @@ div.end {
   color:var(--primary-light);
 }
 
-p{
+.parag{
 	line-height: 0.4em;
 }

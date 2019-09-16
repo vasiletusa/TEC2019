@@ -18,7 +18,7 @@
         $_SESSION['idTour']= $_GET['id'];
         echo   "<div class=\"marginPrincipale\" >
 					<h1>".$tour['Titolo']."</h1> 
-					<div class=\"sinistra\">
+					<div class=\"sinistratour\">
 						<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
 						<p class='coloret parag'>DATA: <label for=\"data\" class='coloret'>".$tour['Data']."</label></p>
 						<p class='coloret parag'>ORGANIZZATO DA :<label for=\"organiz\" class='coloret'>".$tour['Organizzatore']."</label></p>
@@ -32,17 +32,17 @@
 							
 					</div>
 
-					
+					<div class='end'/>
 
+					<div > 
+
+						<form action='area_admin.php' method='post'>
+							    	<input type='submit' name='iscriviti' value='ISCRIVITI'  class='buttonIscrizione' />
+
+						</form>
+					</div>
 				</div>"              
     ?>
-
-<div class="marginSecondario"> 
-
-	<form action="area_admin.php" method="post">
-		    	<input type="submit" name="iscriviti" value="ISCRIVITI" />
-
-	</form>
 
 </body>
 
