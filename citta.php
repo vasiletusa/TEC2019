@@ -31,7 +31,7 @@
         require_once('functions.php');
         $output=getTourDaCitta($citta['Nome']);
         $outCat="";
-                if($_SESSION['tour']==true){
+                if($_SESSION['tourD']==true){
          $tab=8;
         foreach ($output as $elem) {
             if($elem){
@@ -50,11 +50,11 @@
                                         <div class='end'></div>\n
                                 </div> ";
 
-            }else{ $outCat.= "<h2 class=\"disponibilita\"> Non ci sono tour al momento <a href=\"registra_tour.php class=\"messageTour\"> Organizzane</a> uno tu!</h2>";}
+            }
              $tab=8;
       
         }}
-
+else{ $outCat.= "<h2 > Non ci sono tour al momento <a href=\"registra_tour.php class=\"messageTour\"> Organizzane</a> uno tu!</h2>";}
             
        echo $outCat;
 
