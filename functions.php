@@ -178,4 +178,21 @@ function setIscrivitiButton(){
                  $output="<p style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
         return  $output;
 }
+function findImg($nome, $directory){
+    $dir=getcwd();
+
+    chdir("./".$directory);
+    $filenames = glob("*.jpg");
+    foreach($filenames as $filename){
+        echo "file".$filename;
+        echo "nome".$nome;
+        if($filename==$nome){
+            chdir($dir);
+            return "./".$directory."/".$nome;
+
+        }
+    }
+    chdir($dir);
+    return "./".$directory."/default.png";
+}
 ?>
