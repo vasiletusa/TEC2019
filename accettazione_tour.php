@@ -39,8 +39,10 @@
 
 
 <div class="marginSecondario"> 
-	<button type="submit" class="buttonIscrizione" name="accetta">ACCETTA</button>
+
 	<form action="area_admin.php" method="post">
+		    	<input type="submit" name="accetta" value="ACCETTA" />
+
     	<input type="submit" name="rifiuta" value="RIFIUTA" />
 	</form>
 	<!--input class="buttonIscrizione" name="rifiuta" type="submit" value="RIFIUTA" /-->

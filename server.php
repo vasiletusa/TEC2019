@@ -19,6 +19,11 @@ if (mysqli_connect_errno())
   session_start();
 
 //ACCETTAZIONE TOUR
+  if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['accetta']))
+    {
+        accetta();
+    }
+    //RIFIUTA TOUR
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['rifiuta']))
     {
         rifiuta();
@@ -237,4 +242,16 @@ function rifiuta()
     
 
     }
+
+  function accetta(){
+
+      $id=$_SESSION['idTour'];
+      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+
+        $sql= " UPDATE `tour` SET Stato='Approvato' WHERE Id='$id'";
+      
+        $result = mysqli_query($db,$sql) or die(mysqli_error($db));
+    
+
+  }
 ?>
