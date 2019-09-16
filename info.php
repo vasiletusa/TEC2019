@@ -33,7 +33,3 @@
 </body>
 
 <?php getfooter() ?>
-
-
-
-
