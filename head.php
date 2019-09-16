@@ -3,29 +3,24 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>TecWeb</title>
-	<link rel="stylesheet" href="css/stile.css"/>
-	
+	<link rel="stylesheet" href="css/style.css"/>
 </head>
 
 <body>
   
-
-	<header id="header-section">
-	 <div class="nav-header">
-	   
-	  	<a href="home.php" class="logo"><img src="img/logoT.png" alt="Veneto on Tour"></a>
-	  	<div id="menu-superiore">
-	   	<nav>
-	    	<ul id="menu">
-	     	<li><a href="home.php">Home</a></li>
-	     	<li><a href="tour.php">Tour</a></li>
-	     	<li><a href="registra_tour.php">Organizza</a></li>
-	     	<li><a href="login.php">Login</a></li>
-	     	</ul>
-	   	</nav>
-	  	</div>
-      	</div>
-      </header>
+<header id=header-section>
+<div class="header">
+  <a href="home.php" class="logo"><img src="logoT.png" alt="Veneto on Tour"></a>
+  <div class="header-right">
+    <a href="home.php">Home</a>
+    <a href="info.php">Come Funziona</a>
+	<a href="tour.php">Tour</a>
+	<a href="registra_tour.php">Organizza</a>
+    <a href="login.php">Login</a>
+  </div>
+</div>
+</header>
 
 
