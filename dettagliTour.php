@@ -25,16 +25,22 @@
 					
 						<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
 						<div>
-						<div class='sinistraparag'><p class='coloret parag'><label for=\"data\" class='coloret'>DATA:</label></p></div>
-						 <div class='sinistraparag'><p class='coloret parag'>".$tour['Data']."</p></div>
-						 </div>
+							 <div class='sinistraparag'><label for=\"data\" class='coloret '>DATA:</label></div>
+							 <div class='sinistraparagr'><p class='coloret '>".$tour['Data']."</p></div>
+							 <div class='end'></div>
+						</div>
 
-						<div class='sinistraparag'>
-                          <p class='coloret parag'>ORGANIZZATO DA :<label for=\"organiz\"class='coloret'>".$tour['Organizzatore']."</label>
-                          </p>
+
+						<div>
+                          <div class='sinistraparag'><label for=\"organiz\"class='coloret '>ORGANIZZATO DA :</label></div>
+                          <div class='sinistraparagr'><p class='coloret '>".$tour['Organizzatore']."</p></div>
+                          <div class='end'></div>
                         </div>
-						<div class='sinistraparag'>
-                          <p class='coloret parag'>CITTA' :<label for=\"citta\" class='coloret'>".$tour['Citta']."</label> </p>
+
+						<div>
+                          <div class='sinistraparag'><label for=\"citta\" class='coloret '>CITTA' :</label></div>
+                          <div class='sinistraparagr'><p class='coloret '>".$tour['Citta']."</p> </div>
+                          <div class='end'></div>
                         </div>
 						
 					</div>	

@@ -63,9 +63,11 @@ form {
   padding: 2em;
   max-width:50em;
   margin:2em auto;
-}*/
+  }
+*/
 
-/*label*/
+
+/*label
 label {
 width:100%;
 display:inline-block;
@@ -78,7 +80,7 @@ padding-bottom: 0.5em;
   font-size:20px;
   
 text-align: center;
-  width: 100%;
+  width: 100%;*/
   
 }
 /*box*/
@@ -86,6 +88,13 @@ text-align: center;
   padding: 5em;
     max-width:600px;
     margin:5em auto;
+  background:var(--primary-light);
+  color:white;
+  text-align: center;
+}
+
+.box1{
+  padding: 2em;
   background:var(--primary-light);
   color:white;
   text-align: center;
@@ -487,6 +496,21 @@ div.end {
 
 }
 
+.sfondoAP{
+  background: var(--primary-light);
+  margin-top: 2%;
+  margin-bottom: 5%;
+  width:70%; 
+  /*da mettere auto 
+  height: 14em;*/
+  padding: 2% 5% 2%;
+  height: auto;
+  color: white;
+  border-radius:1em;
+  /*margin-bottom: 3%;*/
+
+}
+
 
 .imgTour{
   /* width:15em; 
@@ -503,13 +527,12 @@ div.end {
   border-radius:0.5em;
   font-size:1.5em;
   font-weight:bold;
-  width: 40%;
   height: 2em;
   letter-spacing:.0.5em;
   background:var(--primary-light);
   color:white;
   cursor:pointer;
-  margin-top:40%;
+  
   /* -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;---
   margin-left: 80%;
@@ -525,7 +548,6 @@ div.end {
 .buttonDettagli :hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-
 
 
 .disponibilita{
@@ -578,6 +600,18 @@ body{
 .header-right {
   float: right;
 }
+
+.sinistraparag{
+	float:left;
+	width: 50%
+}
+
+.sinpersarea{
+	float: left;
+	width: 40%;
+	margin-left: 5%;
+}
+
 
 @media(max-width: 500px) {
   .header a {
