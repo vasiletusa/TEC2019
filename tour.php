@@ -27,10 +27,10 @@
                                                 \t<div class=' sinistratour'>\t\t <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour'> 
                                                 </div>\n
                                     \t<div id='descrTour' class='sinistratour'>\n
-                                            \t<p class='titolo'>".$elem['Titolo']."</p>\n
-                                            \t<p class='descrizione'>".$elem['Citta']."</p>\n
-                                            \t<p class='descrizione'>".$elem['Data']."</p>\n
-                                            \t<p class='descrizione'>".$elem['Organizzatore']."</p>\n
+                                            \t<p class='titolo parag'>".$elem['Titolo']."</p>\n
+                                            \t<p class='descrizione parag'>".$elem['Citta']."</p>\n
+                                            \t<p class='descrizione parag'>".$elem['Data']."</p>\n
+                                            \t<p class='descrizione parag'>".$elem['Organizzatore']."</p>\n
                                     \t</div>
 
                                    \t <div class='sinistratour'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
