@@ -147,8 +147,10 @@ function getTourInAttesa(){
 
 function setIscrivitiButton(){
     $idTour= $_SESSION['idTour'];
-  $username= $_SESSION['username'];
+    if(isset($_SESSION['isLogged'])){
+        $username= $_SESSION['username'];
             $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    
 
     $sql = "SELECT * FROM `partecipa` WHERE idTour='$idTour' ";
 
@@ -163,6 +165,9 @@ function setIscrivitiButton(){
         else{
             $output="<p class='coloret parag'>Iscritto</p>";
         }
+    
+    }else
+                 $output="<p style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
         return  $output;
 }
 ?>
