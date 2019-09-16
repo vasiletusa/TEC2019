@@ -467,9 +467,7 @@ li {
 }
 
 
-
 .sinistratour{float: left; width: 33%;}
-
 
 
 div.end {
@@ -478,8 +476,9 @@ div.end {
 
 .sfondotour{
   background: var(--primary-light);
-  margin-left: 20%;
+  margin-left: 15%;
   margin-top: 5%;
+  margin-bottom: 
   width:60%; 
 
  padding: 2% 5% 2%;
@@ -508,7 +507,7 @@ div.end {
   border-radius:0.5em;
   font-size:1.5em;
   font-weight:bold;
-  width: 100%;
+  width: 40%;
   height: 2em;
   letter-spacing:.0.5em;
   background:var(--primary-light);

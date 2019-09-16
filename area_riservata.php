@@ -28,16 +28,16 @@ include("auth.php");
         if($_SESSION['tuoiTour']==true){
         foreach ($output as $elem) {
             if($elem){
-                $outCat.=   "<div class='cardTour'>
+                $outCat.=   "<div class='sfondotour'>
                             
 
-                            <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
+                            <p class='titolo' class='coloret parag'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
                            
-                            <p class='descrizione'>".$elem['Descrizione']."</a></p>
+                            <p class='descrizione' class='coloret parag'>".$elem['Descrizione']."</a></p>
 
-                            <p class='descrizione'>".$elem['Citta']."</a></p>
-                            <p class='descrizione'>".$elem['Data']."</a></p>
-                            <p class='descrizione'>".$elem['Organizzatore']."</a></p>
+                            <p class='descrizione' class='coloret parag'>".$elem['Citta']."</a></p>
+                            <p class='descrizione' class='coloret parag'>".$elem['Data']."</a></p>
+                            <p class='descrizione' class='coloret parag'>".$elem['Organizzatore']."</a></p>
                             
                             
                             </div>";
@@ -60,12 +60,12 @@ include("auth.php");
         	foreach ($tuoiTour as $elem) {
                 if($key){
         		if($elem['IdTour']==$key['Id']){
-                $outCat.=   "<div class='cardTour'>
+                $outCat.=   "<div class='sfondotour'>
                             
 
-                            <p class='titolo'>".$key['Titolo']."</a></p>
+                            <p class='coloret parag' class='titolo'>".$key['Titolo']."</a></p>
                            
-                            <p class='data'>".$key['Data']."</a></p>
+                            <p class='coloret parag' class='data'>".$key['Data']."</a></p>
 
                             
                             
@@ -80,4 +80,4 @@ include("auth.php");
 
 </div>
 </body>
-</html>
+<?php include('footer.php') ?>
