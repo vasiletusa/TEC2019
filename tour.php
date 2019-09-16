@@ -36,13 +36,26 @@
                                    \t <div class='sinistratour'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
                                                 </div> <div class='end'/>\n
                                     </div>
+<<<<<<< HEAD
                                 </div>";
+=======
+                                    <div class='sinistratour2'> <input class='buttonDettagli' name='DETTAGLI' type='submit' value='DETTAGLI' /> </div>
+                                <div class='end'/>
+
+                            
+                            </div>";
+>>>>>>> master
             }
              $tab=8;
       
         }}
+<<<<<<< HEAD
             else{ $outCat.= "<h2 class=\"disponibilita\"> Non ci sono tour al momento</h2>";}
        echo $outCat;
+=======
+            else{ $outCat.= "<h2 class='disponibilita'> Non ci sono tour al momento</h2>";}
+        echo $outCat;
+>>>>>>> master
         unset($outCat);
     ?>
 </div>

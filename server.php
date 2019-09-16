@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['rifiuta']))
         rifiuta();
     }
     
-//REGISTRAZIONE
+//REGISTRAZIONE DEGLI UTENTI
 if (isset($_POST['registrazione_utente'])) {
   // receive all input values from the form
   $nome = mysqli_real_escape_string($db, $_POST['nome']);
@@ -63,6 +63,7 @@ if (isset($_POST['registrazione_utente'])) {
   if(strpos($email,'@') == false){
     $errors['email']="Fornire una mail valida";
   }
+  
   if(strlen($password)<4){
     $errors['password']="La password deve contenere almeno 4 caratteri";
   }
@@ -88,36 +89,6 @@ if (isset($_POST['registrazione_utente'])) {
   }
 }
 
-//REGISTRAZIONE TOUR
-
-if (isset($_POST['registra_tour'])) {
-  // receive all input values from the form
-  
-  $data = mysqli_real_escape_string($db, $_POST['data']);
-  $citta = mysqli_real_escape_string($db, $_POST['citta']);
-  $titolo = mysqli_real_escape_string($db, $_POST['titolo']);
-  $descrizione = mysqli_real_escape_string($db, $_POST['descrizione']);
-  
-  if(empty($data)){
-    $errors['data']="Data richiesta";
-  }
-  if(empty($citta)){
-    $errors['citta']="Citta' richiesta";
-  }
-  if(empty($titolo)){
-    $errors['titolo']="Titolo richiesto";
-  }
-  if(empty($descrizione)){
-    $errors['descrizione']="Descrizione richiesta";
-
-    //inserimento del tour nel DB
-  $organizzatore=$_SESSION['username'];
-    $query = "INSERT INTO tour ( data, organizzatore, citta, titolo, descrizione) 
-                      			  VALUES('$data','$organizzatore', '$citta','$titolo', '$descrizione')";
-                      	mysqli_query($db, $query);
-                        
-  }
-}
   //LOGIN
    
 if (isset($_POST['Login'])){
@@ -175,6 +146,44 @@ if(isset($_SESSION['area'])){
 }
 
 
+
+//REGISTRAZIONE TOUR (ancora non funziona)
+
+if (isset($_POST['registrazione_tour'])) {
+  // receive all input values from the form
+  
+  $data = mysqli_real_escape_string($db, $_POST['data']);
+  $citta = mysqli_real_escape_string($db, $_POST['citta']);
+  $titolo = mysqli_real_escape_string($db, $_POST['titolo']);
+  $descrizione = mysqli_real_escape_string($db, $_POST['descrizione']);
+  
+  if(empty($data)){
+    $errors['data']="Data richiesta";
+  }
+  if(empty($citta)){
+    $errors['citta']="Citta' richiesta";
+  }
+  if(empty($titolo)){
+    $errors['titolo']="Titolo richiesto";
+  }
+  if(empty($descrizione)){
+    $errors['descrizione']="Descrizione richiesta";
+  }
+  
+  if(strlen($descrizione)<20){
+    $errors['descrizione']="inserire una descrizione di almeno 20 caratteri";
+  }
+  if (count($errors) == 0) {
+    //inserimento del tour nel DB
+      $organizzatore=$_SESSION['username'];
+        $query = "INSERT INTO tour (data, organizzatore, citta, titolo, descrizione, stato) 
+                                VALUES('$data','$organizzatore', '$citta','$titolo', '$descrizione','In attesa')";
+                                $result = mysqli_query($db,$query) or die(mysql_error());
+  }
+}
+
+
+
 function setOrganizza(){
     if(!isset($_SESSION["username"])){
      $_SESSION['isOrganize']=true;
@@ -184,9 +193,6 @@ function setOrganizza(){
     else    $isOrganize=false;
 
   }
-
-
-
 
 
 function getUsernameError($errors) { 
@@ -229,10 +235,35 @@ function getNoPasswordError($errors) {
       echo $errors['noPassword'];
     }
 }
+
+function getDataError($errors) { 
+  if(isset($errors['data'])){
+      echo $errors['data'];
+    }
+}
+
+function getCittaError($errors) { 
+  if(isset($errors['citta'])){
+      echo $errors['citta'];
+    }
+}
+
+function getTitoloError($errors) { 
+  if(isset($errors['titolo'])){
+      echo $errors['titolo'];
+    }
+}
+
+function getDescrizioneError($errors) { 
+  if(isset($errors['descrizione'])){
+      echo $errors['descrizione'];
+    }
+}
+
+
+
 function rifiuta()
     {
-
-
       $id=$_SESSION['idTour'];
       $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
 
