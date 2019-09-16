@@ -62,4 +62,4 @@
 					</form>
 					<p> Gia registrato?  <a href="login.php">LogIn</a></p>
 </div>
-					<?php include('footer.php') ?>
+					<?php getfooter() ?>

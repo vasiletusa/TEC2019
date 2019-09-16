@@ -50,4 +50,4 @@
 </div>
 
 </body>
-<?php include('footer.php') ?>
+<?php getfooter() ?>

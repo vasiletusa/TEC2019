@@ -9,7 +9,7 @@
     ?>      
 </head>
 
-<?php getMenu("");?>
+<?php getMenu("Dettagli Tour");?>
 <?php getBreadcumbs("Tour->Dettagli Tour");?>
 
 <?php
@@ -62,4 +62,4 @@
 
 </body>
 
-<?php include('footer.php') ?>
+<?php getfooter()?>
