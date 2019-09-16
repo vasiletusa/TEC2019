@@ -214,18 +214,36 @@ input, text {
   text-align:center;
   color: black;
 }
+
+h1 {
+    color: var(--primary-dark);
+    font-size: 3em;
+    line-height: 1.1;
+    font-family: "Gilroy-ExtraBold",sans-serif;
+    text-align: center;
+    font-weight:bold;
+}
+
+h2{
+    color: var(--primary-dark);
+    font-size: 2em;
+    line-height: 1.1;
+    font-family: "Gilroy-ExtraBold",sans-serif;
+    text-align: center;
+    font-weight:bold;
+}
+
+ p{
+    text-align: center;
+}
+
+#testoinfo{
+  padding: 2em;
+}
+
 .messageTour{
   color:var(--primary-light);
 }
-/*.container-box2 {
-  display: grid;
-  grid-template-columns: auto auto;
-  
-  //extra styles 
-  grid-gap: 4em;
-  margin-left: 10%;
-}
-*/
 
 .sinacc{
 	float:right;
