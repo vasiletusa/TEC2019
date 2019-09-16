@@ -58,11 +58,11 @@ include("auth.php");
             $tuoiTour=getTuoiTourPartecipi();
             $tour=getTour();
             $outCat="";
-            if($_SESSION['tour']===true){
+            if($_SESSION['tuoiTour']===true){
 
             foreach ($tuoiTour as $elem) {
               
-                if($_SESSION['tuoiTour']===true){
+                if($_SESSION['tour']===true){
             	foreach ($tour as $key) {
                     
                     if($key&&$elem){
@@ -71,22 +71,23 @@ include("auth.php");
                     $outCat.=   "<div class='sfondoAP'>
                                 
                                     <div class='sinpersarea'>
-                                        <p class='titolo' class='coloret parag'>".$elem['Titolo']."</p>
+                                        <p class='titolo' class='coloret parag'>".$key['Titolo']."</p>
 
-                                        <p class='descrizione' class='coloret parag'>".$elem['Citta']."</a></p>
-                                        <p class='descrizione' class='coloret parag'>".$elem['Data']."</a></p>
-                                        <p class='descrizione' class='coloret parag'>".$elem['Organizzatore']."</a></p>
+                                        <p class='descrizione' class='coloret parag'>".$key['Citta']."</a></p>
+                                        <p class='descrizione' class='coloret parag'>".$key['Data']."</a></p>
+                                        <p class='descrizione' class='coloret parag'>".$key['Organizzatore']."</a></p>
                                     </div>
                                     <div class='sinpersarea'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$key['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/> </div>
                                     <div class='end'> </div>
                                 
                                 </div>";
-                                
+                                break;
                 }}
              
         }}
+        else{$outCat.= "<div class='sinpersarea'><h2> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h2></div>";}
+
     }}
-        else{$outCat.= "<p><h2> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h2></p>";}
         echo $outCat;
         unset($outCat);
     ?>
