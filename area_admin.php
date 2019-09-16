@@ -29,16 +29,17 @@ include("auth.php");
         if($_SESSION['tourInAttesa']==true){
         foreach ($output as $elem) {
             if($elem){
+
                 $outCat.=   "<div class='cardTour'>
                             
 
-                            <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
+                            <p class='titolo'>".$elem['Titolo']."</p>
                            
-                            <p class='descrizione'>".$elem['Descrizione']."</a></p>
+                            <p class='descrizione'>".$elem['Descrizione']."</p>
 
-                            <p class='descrizione'>".$elem['Citta']."</a></p>
-                            <p class='descrizione'>".$elem['Data']."</a></p>
-                            <p class='descrizione'>".$elem['Organizzatore']."</a></p>
+                            <p class='descrizione'>".$elem['Citta']."</p>
+                            <p class='descrizione'>".$elem['Data']."</p>
+                            <p class='descrizione'>".$elem['Organizzatore']."</p>
                             
                                                                                                    <div class='sinistratour '> <input class='buttonDettagli' name='DETTAGLI' type='submit' value='DETTAGLI' /> </div>
 

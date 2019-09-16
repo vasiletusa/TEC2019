@@ -5,12 +5,12 @@
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Login");
+	    getHead("Dettagli Tour");
     ?>      
 </head>
 
 <?php getMenu("");?>
-<?php getBreadcumbs("Dettagli Tour");?>
+<?php getBreadcumbs("Tour->Dettagli Tour");?>
 
 <?php
         require_once('functions.php');
@@ -32,14 +32,18 @@
 							
 					</div>
 
-					<div class='marginSecondario'> 
-						<input class='buttonIscrizione' name='iscrizione' type='submit' value='ISCRIVITI' />
-					</div>
+					
 
 				</div>"              
     ?>
 
+<div class="marginSecondario"> 
 
+	<form action="area_admin.php" method="post">
+		    	<input type="submit" name="iscriviti" value="ISCRIVITI" />
+
+    	<input type="submit" name="rifiuta" value="RIFIUTA" />
+	</form>
 
 </body>
 

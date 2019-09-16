@@ -19,31 +19,36 @@
         $output=getTour();
         $outCat="";
                 if($_SESSION['tour']==true){
-
+         $tab=8;
         foreach ($output as $elem) {
             if($elem){
-                $outCat.=  "<div class='sfondotour'>
+                $outCat.=       "<div class='sfondotour'>\n
                             
-                                    <div class=' sinistratour'> <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour' / class='imgTour'> </div>
-                                    <div id='descrTour' class='sinistratour'>
-                                        <p class='titolo'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
-                                        <p class='descrizione'>".$elem['Citta']."</a></p>
-                                        <p class='descrizione'>".$elem['Data']."</a></p>
-                                        <p class='descrizione'>".$elem['Organizzatore']."</a></p>
-                                    </div>
-                                    <div class='sinistratour2'> <input class='buttonDettagli' name='DETTAGLI' type='submit' value='DETTAGLI' /> </div>
-                                <div class='end'/>
+                                                \t<div class=' sinistratour'>\t\t <img src='img/padova.jpg' alt='foto della città di Padova' class='imgTour'> 
+                                                </div>\n
+                                    \t<div id='descrTour' class='sinistratour'>\n
+                                            \t<p class='titolo'>".$elem['Titolo']."</p>\n
+                                            \t<p class='descrizione'>".$elem['Citta']."</p>\n
+                                            \t<p class='descrizione'>".$elem['Data']."</p>\n
+                                            \t<p class='descrizione'>".$elem['Organizzatore']."</p>\n
+                                    \t</div>
 
-                            
-                            </div>";
+                                   \t <div class='sinistratour'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
+                                                </div> <div class='end'/>\n
+                                      </div>
+                                </div>";
+
             }
+             $tab=8;
+      
         }}
-            else{ $outCat.= "<h2 class='disponibilita'> Non ci sono tour al momento</h2>";}
-        echo $outCat;
+
+            else{ $outCat.= "<h2 class=\"disponibilita\"> Non ci sono tour al momento</h2>";}
+       echo $outCat;
+
         unset($outCat);
     ?>
 </div>
-
 
 </div>
 </body>
