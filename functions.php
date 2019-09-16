@@ -40,7 +40,7 @@ echo"
                 $result = mysqli_query($db,$query) or die(mysql_error());      
                 $ris=mysqli_fetch_assoc($result);
                 $ruolo=$ris['Ruolo'];
-	     		echo"<a href=\"area_riservata.php\" ";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"><a href=";if($ruolo=="User"){echo"\"area_riservata.php\"";} else {echo"\"area_admin.php\"";}echo">Area personale</a>
+	     		echo"<a href=";if($ruolo=="User"){echo"\"area_riservata.php\"";} else {echo"\"area_admin.php\"";}if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>
 	     			<a href=\"logout.php\">Logout</a>";}
 	     	else{
 	     		
