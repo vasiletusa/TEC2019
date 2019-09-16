@@ -36,7 +36,7 @@
 
 					<div > 
 
-						<form action='area_admin.php' method='post'>
+						<form action='tour.php' method='post'>
 							    	<input type='submit' name='iscriviti' value='ISCRIVITI'  class='buttonIscrizione' />
 
 						</form>

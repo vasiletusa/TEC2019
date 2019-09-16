@@ -325,6 +325,71 @@ li {
   margin-left: 10%;
 }
 */
+
+.sinacc{
+	float:right;
+	margin-right: 5%;
+	margin-bottom: 3%;
+}
+
+.buttonRifiuta{
+  border:1;
+  border-color: var(--primary-dark) ;
+  border-style: solid;
+  /*outline:none;*/
+  border-radius:0.5em;
+  font-size:1.5em;
+  font-weight:bold;
+  width: 100%;
+  height: 2em;
+  letter-spacing:.0.5em;
+  background:var(--primary-light);
+  color:white;
+  /* -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;*/
+  cursor:pointer;
+  margin-bottom: 2%;
+  /*margin-left: 60%;*/
+  
+  /* intanto così poi togliere questo e 
+  mettere sul footer position relative;*/
+
+  
+}
+.buttonRifiuta :hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.buttonAcettazione{
+  border:1;
+  border-color: var(--primary-dark) ;
+  border-style: solid;
+  /*outline:none;*/
+  border-radius:0.5em;
+  font-size:1.5em;
+  font-weight:bold;
+  width: 100%;
+  height: 2em;
+  letter-spacing:.0.5em;
+  background:var(--primary-light);
+  color:white;
+  /* -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;*/
+  cursor:pointer;
+  margin-bottom: 2%;
+  /*margin-left: 60%;*/
+  
+  /* intanto così poi togliere questo e 
+  mettere sul footer position relative;*/
+
+  
+}
+.buttonAccettazione :hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
 .buttonIscrizione {
   border:1;
   border-color: var(--primary-dark) ;
@@ -367,7 +432,6 @@ li {
 .marginPrincipale{
 	width:80%:
 	height:90%; 
-
 	padding:5% 5% 5%;
 }
 
@@ -379,7 +443,7 @@ li {
 .detourimg{
    width:80%; 
   /* da mettere auto */
-  height: 50%;
+  height: 40%;
   border-radius:0.5em;
 }
 

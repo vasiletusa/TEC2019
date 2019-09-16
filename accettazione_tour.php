@@ -16,42 +16,35 @@
         require_once('functions.php');
         $tour=tourDaId($_GET['id']);
         $_SESSION['idTour']=$_GET['id'];
-        echo   "<div class=\"marginPrincipale\ >
-	<h1>".$tour['Titolo']."</h1> 
-	<div class=\"sinistra\">
-		<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
-		<p>DATA: <label for=\"data\">".$tour['Data']."</label></p>
-		<p>ORGANIZZATO DA :<label for=\"organiz\">".$tour['Organizzatore']."</label></p>
-		<p>CITTA' :<label for=\"citta\">".$tour['Citta']."</label> </p>
+        echo   "<div class=\"marginPrincipale\" >
+					<h1>".$tour['Titolo']."</h1> 
+					<div class=\"sinistratour\">
+						<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
+						<p class='coloret parag'>DATA: <label for=\"data\" class='coloret'>".$tour['Data']."</label></p>
+						<p class='coloret parag'>ORGANIZZATO DA :<label for=\"organiz\" class='coloret'>".$tour['Organizzatore']."</label></p>
+						<p class='coloret parag'>CITTA' :<label for=\"citta\" class='coloret'>".$tour['Citta']."</label> </p>
+						
+					</div>	
 
-		
-	</div>	
+					<div class=\"sfondo sinistra\">
+						<div id=\"descrTour\">  Descrizione del Tour </div>
+						<p>  <label for=\"Descrizione\" id=\"labelTour\">".$tour['Descrizione']."</label> </p>
+							
+					</div>
 
-	<div class=\"sfondo sinistra\">
-		<div id=\"descrTour\">  Descrizione del Tour </div>
-		<p>  <label for=\"Descrizione\" id=\"labelTour\">".$tour['Descrizione']."</label> </p>
-		<p>STATO :<label for=\"stato\">".$tour['Stato']."</label> </p>
-			
-	</div>
-"              
+					<div class='end'/>
+
+					<div > 
+
+						<form action='area_admin.php' method='post'>
+						    	<div class='sinacc'><input type='submit' name='accetta' value='ACCETTA'   class='buttonAcettazione'/> </div>
+						    	<div class='sinacc'><input type='submit' name='rifiuta' value='RIFIUTA'  class='buttonRifiuta'/> </div>
+						</form>
+
+					</div>
+
+				</div>"      
     ?>
-
-
-
-<div class="marginSecondario"> 
-
-	<form action="area_admin.php" method="post">
-		    	<input type="submit" name="accetta" value="ACCETTA" />
-
-    	<input type="submit" name="rifiuta" value="RIFIUTA" />
-	</form>
-	<!--input class="buttonIscrizione" name="rifiuta" type="submit" value="RIFIUTA" /-->
-
-</div>
-
-
-
-
 
 </body>
 
