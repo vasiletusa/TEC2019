@@ -31,18 +31,17 @@ include("auth.php");
                 if($elem){
                     $outCat.=   "<div class='sfondoAP'>
                                 
-                                    <div class='sinpersarea'>
+                                    <div class='sinistraparag'>
                                         <p class='titolo' class='coloret parag'>".$elem['Titolo']."</p>
-                                       
-                                        <p class='descrizione' class='coloret parag'>".$elem['Descrizione']."</a></p>
 
                                         <p class='descrizione' class='coloret parag'>".$elem['Citta']."</a></p>
                                         <p class='descrizione' class='coloret parag'>".$elem['Data']."</a></p>
                                         <p class='descrizione' class='coloret parag'>".$elem['Organizzatore']."</a></p>
                                     </div>
-                                    <div class='sinpersarea'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div>
+                                    <div class='sinistraparag'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div>
 
                                     <div class='end'></div>
+
                                 </div>";
                 }
             }}
