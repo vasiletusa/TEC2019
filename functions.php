@@ -28,6 +28,8 @@ echo"
 	   	<nav>
 	    	<ul id=\"menu\">
 	     	<li ";if($current=="Home"){echo"class=\"active\"";}echo"><a href=\"home.php\">Home</a></li>
+            <li ";if($current=="Info"){echo"class=\"active\"";}echo"><a href=\"info.php\">Come funziona</a></li>
+
 	     	<li ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a></li>
 	     	<li ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a></li>";
 	     	if(isset($_SESSION['isLogged'])){

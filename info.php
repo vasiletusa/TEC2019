@@ -8,8 +8,18 @@
 	    getHead("Come funziona");
     ?>      
 
-
+</head>
 <?php getMenu("Info");?>
 <?php getBreadcumbs("Come funziona");?>
 
-</head>
+
+<h1> Veneto on tour ti porta alla scoperta del Veneto. Città e paesaggi mozzafiato. Parti con noi o organizza il tuo Tour!</h1>
+
+
+</body>
+
+<?php include('footer.php') ?>
+
+
+
+
