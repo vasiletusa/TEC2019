@@ -40,9 +40,7 @@ include("auth.php");
                             <p class='descrizione'>".$elem['Citta']."</p>
                             <p class='descrizione'>".$elem['Data']."</p>
                             <p class='descrizione'>".$elem['Organizzatore']."</p>
-                            
-                                                                                                   <div class='sinistratour '> <input class='buttonDettagli' name='DETTAGLI' type='submit' value='DETTAGLI' /> </div>
-
+                                <div class='sinistratour '><input type=\"button\" onclick=\"window.location.href = 'accettazione_tour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div>
 
 
                             </div>";

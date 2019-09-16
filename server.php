@@ -295,6 +295,8 @@ function rifiuta()
       $id=$_SESSION['idTour'];
       $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
       $username=$_SESSION['username'];
+      echo $id;
+      echo $username;
         $query = "INSERT INTO partecipa (idTour, Username) 
                                 VALUES('$id','$username')";
         $result = mysqli_query($db,$query) or die(mysql_error());
