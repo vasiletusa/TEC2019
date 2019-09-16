@@ -29,21 +29,21 @@ include("auth.php");
         foreach ($output as $elem) {
             if($elem){
 
-                $outCat.=   "<div class='sfondotour'>
+                $outCat.=   "<div class='sfondoapa'>
                             
-                                <div class='sinistra'>
+                                <div class='sinap'>
 
                                     <p class='titolo'>".$elem['Titolo']."</p>
 
-                                    <p  class='coloret parag' class='descrizione'>".$elem['Citta']."</p>
-                                    <p  class='coloret parag' class='descrizione'>".$elem['Data']."</p>
+                                    <p  class=' parag' class='descrizione'>".$elem['Citta']."</p>
+                                    <p  class=' parag' class='descrizione'>".$elem['Data']."</p>
                                 
-                                    <p class='coloret parag' class='descrizione'>".$elem['Organizzatore']."</p>
+                                    <p class=' parag' class='descrizione'>".$elem['Organizzatore']."</p>
                                 </div>
 
-                                <div class='sinistra '><input type=\"button\" onclick=\"window.location.href = 'accettazione_tour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
+                                <div class='destra '><input type=\"button\" onclick=\"window.location.href = 'accettazione_tour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
                                 </div>
-                                <div class='end'/>
+                                <div class='end'></div>
 
 
                             </div>";

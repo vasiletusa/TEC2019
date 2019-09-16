@@ -467,6 +467,8 @@ h2{
 }
 
 
+.sinap{ float:left; }
+
 .sinistratour{float: left; width: 33%;}
 
 
@@ -482,6 +484,23 @@ div.end {
   width:60%; 
 
  padding: 2% 5% 2%;
+  /* da mettere auto 
+  height: 14em;*/
+  height: auto;
+  color: white;
+  border-radius:1em;
+  /*margin-bottom: 3%;*/
+
+}
+
+.sfondoapa{
+  background: var(--primary-light);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width:30%; 
+ padding: 2% 2% 2%;
   /* da mettere auto 
   height: 14em;*/
   height: auto;
