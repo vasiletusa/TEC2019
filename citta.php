@@ -9,11 +9,11 @@
     ?>      
 
 </head>
-<?php getMenu("Info");?>
-<?php getBreadcumbs("citta");?>
+<?php getMenu("Citta");?>
+<?php getBreadcumbs("Home->Citta");?>
 
 <div>
-  <h1> le citta del veneto</h1>
+  <h1> Le citta del Veneto</h1>
   <p class="testo">  </p>
 </div>
 
