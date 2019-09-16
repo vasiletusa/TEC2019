@@ -28,7 +28,7 @@ echo"
         <a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
         <div class=\"header-right\">
         
-            <a ";if($current=="Home"){echo"class=\"active\"";}echo"><a href=\"home.php\">Home</a>
+            <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo" >Home</a>
             <a ";if($current=="Info"){echo"class=\"active\"";}echo"><a href=\"info.php\">Come funziona</a>
 
             <a ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a>
