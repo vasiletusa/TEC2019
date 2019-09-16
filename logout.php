@@ -7,4 +7,6 @@ if(session_destroy())
 // Redirecting To Home Page
 header("Location: home.php");
 }
+	$_SESSION['isLogged']=false;
+
 ?>
