@@ -183,8 +183,6 @@ function findImg($nome, $directory){
     chdir("./".$directory);
     $filenames = glob("*.jpg");
     foreach($filenames as $filename){
-        echo "file".$filename;
-        echo "nome".$nome;
         if($filename==$nome){
             chdir($dir);
             return "./".$directory."/".$nome;
