@@ -28,6 +28,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['rifiuta']))
     {
         rifiuta();
     }
+    //ISCRIVITI
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['iscriviti']))
+    {
+        iscriviti();
+    }
     
 //REGISTRAZIONE DEGLI UTENTI
 if (isset($_POST['registrazione_utente'])) {
@@ -282,6 +287,17 @@ function rifiuta()
         $sql= " UPDATE `tour` SET Stato='Approvato' WHERE Id='$id'";
       
         $result = mysqli_query($db,$sql) or die(mysqli_error($db));
+    
+
+  }
+    function iscriviti(){
+
+      $id=$_SESSION['idTour'];
+      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+      $username=$_SESSION['username'];
+        $query = "INSERT INTO partecipa (idTour, Username) 
+                                VALUES('$id','$username')";
+        $result = mysqli_query($db,$query) or die(mysql_error());
     
 
   }

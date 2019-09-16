@@ -5,12 +5,12 @@
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Accettazione");
+	    getHead("Gestisci tour");
     ?>      
 </head>
 
 <?php getMenu("AreaRiservata");?>
-<?php getBreadcumbs("Home->Area Riservata->Gestisci tour");?>
+<?php getBreadcumbs("Area Riservata->Gestisci tour");?>
 
 <?php
         require_once('functions.php');

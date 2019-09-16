@@ -15,7 +15,7 @@
 <?php
         require_once('functions.php');
         $tour=tourDaId($_GET['id']);
-        
+        $_SESSION['idTour']= $_GET['id'];
         echo   "<div class=\"marginPrincipale\" >
 					<h1>".$tour['Titolo']."</h1> 
 					<div class=\"sinistra\">
@@ -42,7 +42,6 @@
 	<form action="area_admin.php" method="post">
 		    	<input type="submit" name="iscriviti" value="ISCRIVITI" />
 
-    	<input type="submit" name="rifiuta" value="RIFIUTA" />
 	</form>
 
 </body>
