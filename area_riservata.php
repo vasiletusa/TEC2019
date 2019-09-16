@@ -31,7 +31,7 @@ include("auth.php");
                 $outCat.=   "<div class='sfondotour'>
                             
 
-                            <p class='titolo' class='coloret parag'><a href='dettagliTour.php?nome=".$elem['Titolo']."'>".$elem['Titolo']."</a></p>
+                            <p class='titolo' class='coloret parag'>".$elem['Titolo']."</p>
                            
                             <p class='descrizione' class='coloret parag'>".$elem['Descrizione']."</a></p>
 
@@ -39,7 +39,8 @@ include("auth.php");
                             <p class='descrizione' class='coloret parag'>".$elem['Data']."</a></p>
                             <p class='descrizione' class='coloret parag'>".$elem['Organizzatore']."</a></p>
                             
-                            
+                            <div class='sinistra '><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
+                                </div>
                             </div>";
             }
         }}
