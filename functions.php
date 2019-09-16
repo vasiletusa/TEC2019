@@ -20,9 +20,9 @@ echo"
 }function getFooter(){echo"
 <footer id=\"footer\" class=\"footer\">
     <div class=\"container\">     
-        <div>&copy; 2019 <span lang=\"en\">Veneto-on-Tour</span> | Via Dante Alighieri 123 - 30035 Mirano (<span lang=\"en\">Italy</span>)
+        <div>&copy; 2019 <span lang=\"en\">VenetoTour</span> | Via Dante Alighieri 123 - 30035 Mirano (<span lang=\"en\">Italy</span>)
         </div>
-        <div> email: venetontour@gmail.com </div>
+        <div> email: venetotour@gmail.com </div>
         <div> tel: +39 04145678910 </div>
 
         <div class=\"back-up\">   
@@ -43,7 +43,7 @@ echo"
 <body>
 	<header id=\"header-section\">
      <div class=\"header\"class=\"logo\">
-        <a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
+        <a href=\"home.php\"><img src=\"img/logot.png\" alt=\"Veneto on Tour\"></a>
         <div class=\"header-right\">
         
            <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>

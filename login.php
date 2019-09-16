@@ -36,4 +36,8 @@
 </form>
 <p id="notRegistered">Non ancora registrato?  <a href='registrazione_utente.php'>Registrati qui</a></p>
 </div>
+<<<<<<< HEAD
 <?php getfooter() ?>
+=======
+<?php getfooter()?>
+>>>>>>> master
