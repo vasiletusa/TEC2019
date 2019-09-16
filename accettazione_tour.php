@@ -9,8 +9,8 @@
     ?>      
 </head>
 
-<?php getMenu("");?>
-<?php getBreadcumbs("Dettagli Tour");?>
+<?php getMenu("AreaRiservata");?>
+<?php getBreadcumbs("Home->Area Riservata->Gestisci tour");?>
 
 <?php
         require_once('functions.php');
