@@ -17,6 +17,24 @@ echo"
       href=\"img/destination.png\">
 	
 ";
+}function getFooter(){echo"
+<footer id=\"footer\" class=\"footer\">
+    <div class=\"container\">     
+        <div>&copy; 2019 <span lang=\"en\">Veneto-on-Tour</span> | Via Dante Alighieri 123 - 30035 Mirano (<span lang=\"en\">Italy</span>)
+        </div>
+        <div> email: venetontour@gmail.com </div>
+        <div> tel: +39 04145678910 </div>
+
+        <div class=\"back-up\">   
+        <a href=\"#\">TORNA SU</a>
+        </div>
+    </div>  
+</footer></div>
+
+
+
+</body>
+</html>";
 }
 
 function getMenu($current){
@@ -53,6 +71,7 @@ echo"
 	   	</nav>
 	  	</div>
       	</div>
+        <div id='contPrincipale'>
       </header>
 
 ";

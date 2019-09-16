@@ -9,6 +9,7 @@
     ?>      
 </head>
 
+
 <?php getMenu("");?>
 <?php getBreadcumbs("Home->Città");?>
 
@@ -17,7 +18,7 @@
         $citta=cittaDaNome($_GET['nome']);
                 //echo $_SESSION['id'];
         echo   "<div class=\"marginPrincipale\" >
-                                            \t<div class=' sinistratour'><img src='".findImg($citta['Nome'].'.jpg','img')."' alt='".$citta['Nome']."' class='imgTour'/>\n \t</div>
+                                            \t<div  ><img src='".findImg($citta['Nome'].'.jpg','img')."' alt='".$citta['Nome']."' class='imgCitta'/></div>
 
 					<h1>".$citta['Nome']."</h1>
 					<p>".$citta['Descrizione']."</p>
@@ -64,4 +65,4 @@ else{ $outCat.= "<h2 > Non ci sono tour al momento <a href=\"registra_tour.php c
 
 </body>
 
-<?php include('footer.php') ?>
+<?php getFooter() ?>
