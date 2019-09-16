@@ -4,7 +4,7 @@
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Login");
+	    getHead("Home");
     ?>      
 </head>
 
@@ -29,33 +29,33 @@
 
 		<div class="pic ">
 			<img src="img/padova.jpg" alt="foto della città di Padova">
-			<div class="link"><a href="Citta/Padova.php">PADOVA</a></div>
+			<div class="link"><a href="citta.php?nome=Padova">PADOVA</a></div>
 		</div>
 
 		<div class="pic">			
 			<img src="img/venezia.jpg" alt="foto della città di Venezia">
-			<div class="link "><a href="Citta/Venezia.php">VENEZIA</a></div>
+			<div class="link "><a href="citta.php?nome=Venezia">VENEZIA</a></div>
 		</div>
 
 		<div class="pic">			
 			<img src="img/rovigo.jpg" alt="foto della città di Rovigo">
-			<div class="link "><a href="Citta/Rovigo.php">ROVIGO</a></div>
+			<div class="link "><a href="citta.php?nome=Rovigo">ROVIGO</a></div>
 		</div>
 		<div class="pic">
 			<img src="img/vicenza.jpg" alt="foto della città di Vicenza">
-			<div class="link "><a href="Citta/Vicenza.php">VICENZA</a></div>
+			<div class="link "><a href="citta.php?nome=Vicenza">VICENZA</a></div>
 		</div>
 		<div class="pic">
 			<img src="img/verona.jpg" alt="foto della città di Verona">
-			<div class="link "><a href="Citta/Verona.php">VERONA</a></div>
+			<div class="link "><a href="citta.php?nome=Verona">VERONA</a></div>
 		</div>
 		<div class="pic">			
 			<img src="img/treviso.jpg" alt="foto della città di Treviso">
-			<div class="link "><a href="Citta/Treviso.php">TREVISO</a></div>
+			<div class="link "><a href="citta.php?nome=Treviso">TREVISO</a></div>
 		</div>
 		<div class="pic">
 			<img src="img/belluno.jpg" alt="foto della città di Belluno"> 
-			<div class="link "><a  href="Citta/Belluno.php">BELLUNO</a></div>
+			<div class="link "><a  href="citta.php?nome=Belluno">BELLUNO</a></div>
 		</div>
 
 	</div>

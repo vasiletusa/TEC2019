@@ -74,8 +74,8 @@ function getMessage(){
 function tourDaId($id){
       $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
 
-    $sql = 'SELECT * FROM `tour` WHERE `Id`="'.$id.'"';
-    $ris = mysqli_query($db,$sql)or DIE("tourDaId: ".mysqli_error($con));
+    $sql = "SELECT * FROM `tour` WHERE Id='$id'";
+    $ris = mysqli_query($db,$sql)or DIE("tourDaId: ".mysqli_error($db));
     $output = mysqli_fetch_assoc($ris);
     return $output;
 }
@@ -191,5 +191,32 @@ function findImg($nome, $directory){
     }
     chdir($dir);
     return "./".$directory."/default.png";
+}
+function cittaDaNome($nome){
+      $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+
+    $sql = "SELECT * FROM `citta` WHERE Nome='$nome'";
+    $ris = mysqli_query($db,$sql)or DIE("cittaDaNome: ".mysqli_error($db));
+    $output = mysqli_fetch_assoc($ris);
+    return $output;
+}
+
+function getTourDaCitta($citta){
+    $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
+    $sql = "SELECT * FROM `tour` WHERE Stato='Approvato'";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+       $_SESSION['tour']=false;
+
+        //array_push($errore,"Errore della query: " . $sql);
+    }else{$_SESSION['tour']=true;}
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        if($row['Citta']==$citta)
+                array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
 }
 ?>
