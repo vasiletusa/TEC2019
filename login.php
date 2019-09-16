@@ -14,7 +14,7 @@
 
 
 
-<div class="container box" id="boxlogin">
+<div class=" box" >
 	<?php getMessage();?>
 	
 	<h1 id="login">Log In</h1>

@@ -19,23 +19,6 @@ include("auth.php");
     <h1>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</h1>
 </div>
 
-<<<<<<< HEAD
-=======
-                            <p class='descrizione' class='coloret parag'>".$elem['Citta']."</a></p>
-                            <p class='descrizione' class='coloret parag'>".$elem['Data']."</a></p>
-                            <p class='descrizione' class='coloret parag'>".$elem['Organizzatore']."</a></p>
-                            
-                            <div class='sinistra '><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  
-                                </div>
-                            </div>";
-            }
-        }}
-        else{$outCat.= "<p><h2> Non hai ancora organizzato tour. <a href='registra_tour.php' class='messageTour'> Organizza </a>il tuo primo tour!</h2></p>";}
-        echo $outCat;
-        unset($outCat);
-    ?>
-</div>
->>>>>>> f6636618018870d40e38e5534b99b5f8a8c4b5a8
 <div>
     <div class="sinpersarea">
     	<h2>I tour che hai organizzato</h2>
@@ -64,7 +47,7 @@ include("auth.php");
                 }
             }}
 
-            else{$outCat.= "<p><h2> Non hai ancora organizzato tour.</h2></p>";}
+            else{$outCat.= "<p><h2> Non hai ancora organizzato tour. <a href='registra_tour.php' class='messageTour'> Organizza </a>il tuo primo tour!</h2></p>";}
             echo $outCat;
             unset($outCat);
         ?>
