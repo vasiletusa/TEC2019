@@ -212,6 +212,7 @@ footer a{
   color: black;
 }
 
+<<<<<<< HEAD
 .destra{
   float:right;
 }
@@ -233,44 +234,36 @@ footer a{
 h1{
 color: var(--primary-dark);
     text-shadow: rgba(0,0,0,.1);
-    font-size: 4em;
-    line-height: 1.1;
-    position: relative;
-    z-index: 2;
-    font-family: "Gilroy-ExtraBold",sans-serif;
-    font-weight: 400;
+    font-size: 3em;
 
-  text-align: center;
-  font-weight:bold;
+    line-height: 1.1;
+    font-family: "Gilroy-ExtraBold",sans-serif;
+    text-align: center;
+    font-weight:bold;
 }
 
 h2{
+
   color: var(--primary-dark);
     text-shadow: rgba(0,0,0,.1);
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.1;
-    position: relative;
-    z-index: 2;
     font-family: "Gilroy-ExtraBold",sans-serif;
-    font-weight: 400;
-  	font-weight:bold;
 
+    font-weight: 400;
+    text-align: center;
+    font-weight:bold;
+}
+
+ p{
+    text-align: center;
 }
 
 
 .messageTour{
   color:var(--primary-light);
 }
-/*.container-box2 {
-  display: grid;
-  grid-template-columns: auto auto;
-  
-  //extra styles 
-  grid-gap: 4em;
-  margin-left: 10%;
-}
-*/
 
 .sinacc{
 	float:right;
