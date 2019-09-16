@@ -154,14 +154,14 @@ input, text {
   cursor:pointer;
   margin-top: 0.1em;
   text-align:center;
-
 }
 
 a{
   color:white;
 }
 
-div.pic img{
+
+.pic img{
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -580,8 +580,40 @@ body{
   }
 }
 
-@media(max-width:1000px){
-	.pic{
-		flex:1;
-	}
+@media(max-width:1200px){
+	.link{
+  
+  width: 15em;
+  
+}
+
+  .pic img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15em;
+    height: 7.5em;
+    margin-bottom:1%;
+    margin-top:3%;
+}
 }  
+
+@media(max-width: 600px){
+  
+  .link{
+    width: 7.5em;
+  }
+  .pic img{
+    width:7.5em;
+    height: 3.75em;
+  }
+}
+
+@media(max-width: 400px){
+  
+  
+  pic img{
+    width: 1.875em;
+    height: 0.9em;
+  }
+}

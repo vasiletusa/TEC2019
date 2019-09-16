@@ -13,8 +13,6 @@
 
 
 
-<div class="container-box1">
-
 	<div class="left">
 		<h2 class="testo">VENETOTOUR</h2>
 		<div>
@@ -60,7 +58,7 @@
 
 	</div>
 
-</div>
+
 
 </body>
 
