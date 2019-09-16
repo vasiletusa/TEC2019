@@ -28,11 +28,10 @@ echo"
         <a href=\"home.php\"><img src=\"img/logoT.png\" alt=\"Veneto on Tour\"></a>
         <div class=\"header-right\">
         
-            <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo" >Home</a>
-            <a ";if($current=="Info"){echo"class=\"active\"";}echo"><a href=\"info.php\">Come funziona</a>
-
-            <a ";if($current=="Tour"){echo"class=\"active\"";}echo"><a href=\"tour.php\">Tour</a>
-            <a ";if($current=="RegistraTour"){echo"class=\"active\"";}echo"><a href=\"registra_tour.php\">Organizza</a>";
+           <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo">Home</a>
+           <a href=\"info.php\"  ";if($current=="Info"){echo"class=\"active\"";}echo" >Come Funziona</a>
+           <a href=\"tour.php\"  ";if($current=="Tour"){echo"class=\"active\"";}echo" >Tour</a>
+           <a href=\"registra_tour.php\"  ";if($current=="RegistraTour"){echo"class=\"active\"";}echo" >Organizza</a>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
                 $db = mysqli_connect('localhost', 'root', 'root', 'progtec');
@@ -177,5 +176,22 @@ function setIscrivitiButton(){
     }else
                  $output="<p style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
         return  $output;
+}
+function findImg($nome, $directory){
+    $dir=getcwd();
+
+    chdir("./".$directory);
+    $filenames = glob("*.jpg");
+    foreach($filenames as $filename){
+        echo "file".$filename;
+        echo "nome".$nome;
+        if($filename==$nome){
+            chdir($dir);
+            return "./".$directory."/".$nome;
+
+        }
+    }
+    chdir($dir);
+    return "./".$directory."/default.png";
 }
 ?>
