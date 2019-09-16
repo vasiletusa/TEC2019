@@ -15,9 +15,8 @@ include("auth.php");
 <?php getMenu("AreaRiservata");?>
 <?php getBreadcumbs("Area personale");?>
 
-<div class="box">
-<h1>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</h1>
-
+<div class="box1">
+    <h1>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</h1>
 </div>
 
 <div>
@@ -35,8 +34,6 @@ include("auth.php");
                                 <div class='sinistra'>
 
                                     <p class='titolo'>".$elem['Titolo']."</p>
-                                   
-                                    <p class='coloret parag' class='descrizione'>".$elem['Descrizione']."</p>
 
                                     <p  class='coloret parag' class='descrizione'>".$elem['Citta']."</p>
                                     <p  class='coloret parag' class='descrizione'>".$elem['Data']."</p>
