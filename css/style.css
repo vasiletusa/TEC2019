@@ -74,15 +74,18 @@ label {
 
 }
 /*box*/
-.box{
-	margin:5em auto ; 
-	padding: 3em 3em 3em;
-	width: 40%;
-  background:var(--primary-light);
-  color:white;
-  text-align: center;
-  border-radius:0.5em;
-}
+
+	.box{
+		margin-left: 15%;
+		margin-right: 15%;  
+		padding: 3% 3% 3%;
+		width: auto;
+	  	background:var(--primary-light);
+	  	color:white;
+	  	text-align: center;
+	  	border-radius:0.5em;
+	}
+
 
 .box1{
   padding: 2em;
@@ -115,7 +118,7 @@ input, text {
   margin-top:1em;
   font-size:1.5em;
   font-weight:bold;
-  width: 50%;
+  width: auto;
   height: 2em;
   letter-spacing:.1em;
   background:var(--primary-light);
@@ -199,9 +202,10 @@ footer a{
   display: grid;
   grid-column-gap: 5em;
   grid-template-columns: auto auto;
-  padding: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding-top: 0em;
-  max-width: 80%;
+  width: 80%;
   grid-auto-rows: minmax(auto, auto);
 }
 
@@ -369,9 +373,8 @@ h2{
 }
 
 .marginPrincipale{
-	width:80%:
-	height:90%; 
-	padding:5% 5% 5%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .coloret{
@@ -443,7 +446,7 @@ div.end {
   margin-right: auto;
   margin-top: 5%;
   margin-bottom: 5%;
-  width:30%; 
+  width:60%; 
  padding: 2% 2% 2%;
   /* da mettere auto 
   height: 14em;*/
