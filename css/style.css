@@ -233,11 +233,10 @@ h2{
     font-weight:bold;
 }
 
- p{
-    text-align: center;
-}
+
 
 #testoinfo{
+  text-align: center;
   padding: 2em;
 }
 
