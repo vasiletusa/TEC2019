@@ -71,9 +71,11 @@ include("auth.php");
                     $outCat.=   "<div class='sfondoAP'>
                                 
                                     <div class='sinpersarea'>
-                                        <p class=' parag' class='titolo'>".$key['Titolo']."</a></p>
-                                       
-                                        <p class=' parag' class='data'>".$key['Data']."</a></p>
+                                        <p class='titolo' class='coloret parag'>".$elem['Titolo']."</p>
+
+                                        <p class='descrizione' class='coloret parag'>".$elem['Citta']."</a></p>
+                                        <p class='descrizione' class='coloret parag'>".$elem['Data']."</a></p>
+                                        <p class='descrizione' class='coloret parag'>".$elem['Organizzatore']."</a></p>
                                     </div>
                                     <div class='sinpersarea'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$key['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/> </div>
                                     <div class='end'> </div>
