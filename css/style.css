@@ -289,7 +289,7 @@ color: var(--primary-dark);
     line-height: 1.1;
     position: relative;
     z-index: 2;
-    font-family: Gilroy-ExtraBold,sans-serif;
+    font-family: "Gilroy-ExtraBold",sans-serif;
     font-weight: 400;
 
   text-align: center;
