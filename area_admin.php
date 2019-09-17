@@ -2,6 +2,7 @@
 //include auth.php file on all secure pages
 include("auth.php");
 ?>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
 
