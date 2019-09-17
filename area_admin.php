@@ -16,7 +16,7 @@ include("auth.php");
 <?php getBreadcumbs("Area personale");?>
 
 <div class="box1">
-    <h1>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</h1>
+    <p class="coloreAP">Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</p>
 </div>
 
 <div>
@@ -49,7 +49,7 @@ include("auth.php");
                             </div>";
             }
         }}
-        else{$outCat.= "<p><h2> Non ci sono tour in attesa di conferma per il momento!.</h2></p>";}
+        else{$outCat.= "<p><h3> Non ci sono tour in attesa di conferma per il momento!.</h3></p>";}
         echo $outCat;
         unset($outCat);
     ?>

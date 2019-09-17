@@ -16,12 +16,13 @@ include("auth.php");
 <?php getBreadcumbs("Area personale");?>
 
 <div class="box1">
-    <h1>Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</h1>
+    <p class="coloreAP">Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</p>
+    <div class="destra"><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."'\" value=\"Modificapassowrd\"/>  </div>
 </div>
 
 <div>
     <div class="sinpersarea">
-    	<h2>I tour che hai organizzato</h2>
+    	<p class="sottotitoloap">I tour che hai organizzato</p>
         <?php
             require_once('functions.php');
             $output=getTuoiTourOrganizzati();
@@ -46,7 +47,7 @@ include("auth.php");
                 }
             }}
 
-            else{$outCat.= "<p><h2> Non hai ancora organizzato tour. <a href='registra_tour.php' class='messageTour'> Organizza </a>il tuo primo tour!</h2></p>";}
+            else{$outCat.= "<p> <h3>Non hai ancora organizzato tour. <a href='registra_tour.php' class='messageTour'> Organizza </a>il tuo primo tour!<h3></p>";}
             echo $outCat;
             unset($outCat);
         ?>
@@ -87,7 +88,7 @@ include("auth.php");
         }}
         
 
-    }}  else{$outCat.= "<div><h2> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h2></div>";}
+    }}  else{$outCat.= "<div><h3> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h3></div>";}
         echo $outCat;
         unset($outCat);
     ?>

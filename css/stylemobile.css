@@ -46,6 +46,43 @@ body {
 
 /*footer*/
 
+.h3{
+  color: var(--primary-dark);
+  text-shadow: rgba(0,0,0,.1);
+    text-align: center;
+    line-height: 1.1;
+    font-family: "Gilroy-ExtraBold",sans-serif;
+
+    font-weight: 400;
+    text-align: center;
+    font-weight:bold;
+}
+
+.coloreAP{
+  color:white;
+    text-shadow: rgba(0,0,0,.1);
+    font-size: 3em;
+
+    line-height: 1.1;
+    font-family: "Gilroy-ExtraBold",sans-serif;
+    text-align: center;
+    font-weight:bold;
+}
+
+
+.sottotitoloap{
+
+    color: var(--primary-dark);
+    text-shadow: rgba(0,0,0,.1);
+    font-size: 2em;
+    line-height: 1.1;
+    font-family: "Gilroy-ExtraBold",sans-serif;
+
+    font-weight: 400;
+    text-align: center;
+    font-weight:bold;
+}
+
 footer {
 	margin-top: 10%;
   clear: both;
