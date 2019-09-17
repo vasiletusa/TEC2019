@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #2d495d;
-  --primary-light:#59748a;
-  --primary-dark:#002233;
-  --menu-footer-color:#fff;
+  --primary-color: #003366; /*#2d495d;*/
+  --primary-light:#336699; /*#59748a;*/
+  --primary-dark:#003399; /*#002233;*/
+  --menu-footer-color: #fff;
 
 }
 /*area personale*/
