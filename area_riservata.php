@@ -15,9 +15,12 @@ include("auth.php");
 <?php getMenu("AreaRiservata");?>
 <?php getBreadcumbs("Area personale");?>
 
+
 <div class="box1">
     <p class="coloreAP">Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</p>
-    <div class="destra"><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."'\" value=\"Modificapassowrd\"/>  </div>
+    <div class='destra'><a href="modifica_pw.php" style="color:white;">MODIFICA PASSWORD<a>  </div>
+        <div class="end"></div>
+    
 </div>
 
 <div>
