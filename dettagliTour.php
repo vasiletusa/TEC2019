@@ -18,12 +18,13 @@
         $_SESSION['idTour']=$_GET['id'];
         
         $controllo= setIscrivitiButton();
+
         //echo $_SESSION['id'];
         echo   "<div class=\"marginPrincipale\" >
 					<h1>".$tour['Titolo']."</h1> 
 					<div class=\"sinistratour\">
 					
-						<img src=\"img/padova.jpg\" alt=\"foto della città di Padova\" class=\"detourimg\" />
+						<img src=\"img/padova.jpg\" alt=\"foto della città di ".$tour['Data']." class=\"detourimg\" />
 						<div>
 							 <div class='sinistraparag'><label for=\"data\" class='coloret '>DATA:</label></div>
 							 <div class='sinistraparagr'><p class='coloret '>".$tour['Data']."</p></div>

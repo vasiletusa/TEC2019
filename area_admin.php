@@ -35,10 +35,10 @@ include("auth.php");
 
                                     <p class='titolo'>".$elem['Titolo']."</p>
 
-                                    <p  class=' parag' class='descrizione'>".$elem['Citta']."</p>
-                                    <p  class=' parag' class='descrizione'>".$elem['Data']."</p>
+                                    <p  class=' parag' >".$elem['Citta']."</p>
+                                    <p  class=' parag' >".$elem['Data']."</p>
                                 
-                                    <p class=' parag' class='descrizione'>".$elem['Organizzatore']."</p>
+                                    <p class=' parag' >".$elem['Organizzatore']."</p>
                                 </div>
 
                                 <div class='destra '><input type=\"button\" onclick=\"window.location.href = 'accettazione_tour.php?id=".$elem['Id']."';\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  

@@ -76,9 +76,9 @@ label {
 /*box*/
 
 	.box{
-		margin-left: 15%;
-		margin-right: 15%;  
-		padding: 3% 3% 3%;
+		margin-left: 2%;
+		margin-right: 2%;  
+		padding: 1% 1% 1%;
 		width: auto;
 	  	background:var(--primary-light);
 	  	color:white;
@@ -88,7 +88,7 @@ label {
 
 
 .box1{
-  padding: 2em;
+  padding: 0.5em;
   background:var(--primary-light);
   color:white;
   text-align: center;
@@ -118,7 +118,7 @@ input, text {
   margin-top:1em;
   font-size:1.5em;
   font-weight:bold;
-  width: auto;
+  width: 50%;
   height: 2em;
   letter-spacing:.1em;
   background:var(--primary-light);
@@ -203,9 +203,9 @@ footer a{
   grid-column-gap: 5em;
   grid-template-columns: auto auto;
   margin-left: 10%;
-  margin-right: 10%;
+  margin-right: 10%
   padding-top: 0em;
-  width: 80%;
+  max-width: 80%;
   grid-auto-rows: minmax(auto, auto);
 }
 
@@ -216,9 +216,9 @@ footer a{
   color: black;
 }
 
-.destra{
+/*.destra{
   float:right;
-}
+}*/
 
 
 .centro{
@@ -237,8 +237,7 @@ footer a{
 h1{
 color: var(--primary-dark);
     text-shadow: rgba(0,0,0,.1);
-    font-size: 3em;
-
+    font-size: 2em;
     line-height: 1.1;
     font-family: "Gilroy-ExtraBold",sans-serif;
     text-align: center;
@@ -250,7 +249,7 @@ h2{
   color: var(--primary-dark);
     text-shadow: rgba(0,0,0,.1);
     text-align: center;
-    font-size: 2em;
+    font-size: 1em;
     line-height: 1.1;
     font-family: "Gilroy-ExtraBold",sans-serif;
 
@@ -259,12 +258,8 @@ h2{
     font-weight:bold;
 }
 
-
-
-
-#testoinfo{
-  text-align: center;
-  padding: 2em;
+ p{
+    text-align: center;
 }
 
 
@@ -342,9 +337,9 @@ h2{
   border-style: solid;
   /*outline:none;*/
   border-radius:0.5em;
-  font-size:1.5em;
+  font-size:1em;
   font-weight:bold;
-  width: 20%;
+  width: 60%;
   height: 2em;
   letter-spacing:.0.5em;
   background:var(--primary-light);
@@ -352,12 +347,13 @@ h2{
   /* -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;*/
   cursor:pointer;
-  margin-bottom: 5%;
-  margin-left: 40%;
+  margin-bottom: 1%;
+  margin-left: 20%;
+  margin-right: 20%;
   
   /* intanto così poi togliere questo e 
   mettere sul footer position relative;*/
-  margin-bottom: 8%;
+  margin-bottom: 2%;
 
   
 }
@@ -377,7 +373,7 @@ h2{
 
 .marginPrincipale{
 	margin-left: 10%;
-	margin-right: 10%;
+  margin-right: 10%;
 }
 
 .coloret{
@@ -386,6 +382,8 @@ h2{
 }
 
 .detourimg{
+  margin-left:10%;
+  margin-right:10%;
    width:80%; 
   /* da mettere auto */
   height: 40%;
@@ -395,14 +393,16 @@ h2{
 .sfondo{
   padding-top: 2% ;
   padding-left: 1%;
-  padding-right: 2%;
+  padding-right: 1%;
+  margin-left: 1%;
+  margin-top: 1%;
   background: var(--primary-light);
-  width:70%; 
+  width:95%; 
   /* da mettere auto */
-  height: 20em;
+  height: auto;
   color: white;
   border-radius:0.5em;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 
 }
 .imgCitta{
@@ -411,15 +411,15 @@ h2{
   width: 50%;
 }
 
-.sinistra{
+/*.sinistra{
   float: left;
   width: 60%;
-}
+}*/
 
 
-.sinap{ float:left; }
+/*.sinap{ float:left; }*/
 
-.sinistratour{float: left; width: 33%;}
+/*.sinistratour{float: left; width: 33%;}*/
 
 
 div.end {
@@ -427,58 +427,47 @@ div.end {
 }
 
 .sfondotour{
+  
+  padding-top: 2% ;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-left: 1%;
+  margin-top: 1%;
   background: var(--primary-light);
-  margin-left: 15%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width:60%; 
-
- padding: 2% 5% 2%;
-  /* da mettere auto 
-  height: 14em;*/
+  width:95%; 
+  /* da mettere auto */
   height: auto;
   color: white;
-  border-radius:1em;
-  /*margin-bottom: 3%;*/
+  border-radius:0.5em;
+  margin-bottom: 3%;
 
 }
 
-/* DA FARE */
-.dimdescr{
-  margin-top:8em;
-}
-
-.sfondoapa{
+/*.sfondoapa{
   background: var(--primary-light);
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
   margin-bottom: 5%;
-  width:60%; 
+  width:30%; 
  padding: 2% 2% 2%;
-  /* da mettere auto 
-  height: 14em;*/
   height: auto;
   color: white;
   border-radius:1em;
-  /*margin-bottom: 3%;*/
+}*/
 
-}
-
-.sfondoAP{
+/*.sfondoAP{
   background: var(--primary-light);
+  margin-left: 15%;
   margin-top: 2%;
   margin-bottom: 5%;
   width:70%; 
-  /*da mettere auto 
-  height: 14em;*/
   padding: 2% 5% 2%;
   height: auto;
   color: white;
   border-radius:1em;
-  /*margin-bottom: 3%;*/
 
-}
+}*/
 
 
 .imgTour{
@@ -494,10 +483,11 @@ div.end {
   border-style: solid;
   /*outline:none;*/
   border-radius:0.5em;
-  font-size:1.5em;
+  font-size:1em;
   font-weight:bold;
-  height: 2em;
-  letter-spacing:.0.5em;
+  height: 5%;
+  /*margin-top: 90%;*/
+  letter-spacing:.0.1em;
   background:var(--primary-light);
   color:white;
   cursor:pointer;
@@ -524,7 +514,7 @@ div.end {
 }
 
 .parag{
-	line-height: 0.4em;
+	line-height: 0.1em;
 }
 
 /*body{
@@ -568,16 +558,21 @@ div.end {
   float: right;
 }
 
-.sinistraparag{
+.sinistraparagmob{
 	float:left;
 	width: 50%
 }
 
-.sinpersarea{
+.sinistraparag{
+  float:left;
+  width: 50%
+}
+
+/*.sinpersarea{
 	float: left;
 	width: 40%;
 	margin-left: 5%;
-}
+}*/
 
 
 @media(max-width: 600px) {
