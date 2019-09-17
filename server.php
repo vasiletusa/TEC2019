@@ -211,8 +211,8 @@ if (isset($_POST['modifica_pw'])) {
     $errors['pwC']="Conferma password richiesta";
   }
   $username=$_SESSION['username'];
-  $query="SELECT * FROM utenti WHERE username=$username"
-  $result=mysqli_query($db, $query);
+  $query = "SELECT * FROM `utenti` WHERE Username='$username'";
+  $result = mysqli_query($db, $query)or die(mysql_error());
   while ($row = mysqli_fetch_assoc($result)) {
         if($row['Password']!=$oldpw){
           $errors['password']="Password errata";
@@ -227,8 +227,8 @@ if (isset($_POST['modifica_pw'])) {
   
   if (count($errors) == 0) {
    
-        $query =" UPDATE `utenti` SET password='$newpw' WHERE username='$iusername'"
-              $result = mysqli_query($db,$query) or die(mysql_error());
+        $query =" UPDATE `utenti` SET password='$newpw' WHERE username='$username'";
+              $ris = mysqli_query($db,$query) or die(mysql_error());
     header("Location: area_riservata.php");
   }
 
