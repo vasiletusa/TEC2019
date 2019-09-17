@@ -17,7 +17,7 @@
 <div class=" box" >
 	<?php getMessage();?>
 	
-	<h1 id="login">Log In</h1>
+	<p id="login" class="coloreAP">Log In</p>
 <form action="login.php" method="post" name="login">
 	
 		

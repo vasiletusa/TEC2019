@@ -10,7 +10,7 @@
 <?php getBreadcumbs("Registrati");?>
 <div class="container box" id="boxlogin">
 <form method="post" action="registrazione_utente.php" >						
-						<h1> Registrati </h1>
+						<p class="coloreAP"> Registrati </p>
 						<div >
 							<label for="Nome" class="label nome">Nome</label>
 							<input id="Nome" type="text" name="nome" class="input nome" placeholder="Nome">

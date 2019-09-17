@@ -12,7 +12,7 @@
 <?php getBreadcumbs("Organizza tour");?>
 <div class="container box" id="boxlogin">
 <form method="post" action="registra_tour.php">						
-						
+						<p class="coloreAP"> Organizza il tuo tuor</p>
 						<div>
 							<label for="Data" class="label data">Data</label>
 							<input id="Data" type="date" name="data" class="input data" placeholder="gg/mm/aaaa">
