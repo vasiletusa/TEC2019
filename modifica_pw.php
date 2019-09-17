@@ -4,44 +4,44 @@
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Registrati");
+	    getHead("Modifica password");
      ?>        
   </head>
-<?php getMenu("Registrati");?>
-<?php getBreadcumbs("Registrati");?>
+<?php getMenu("Area personale");?>
+<?php getBreadcumbs("Area personale->modifica password");?>
 <div class="container box" id="boxlogin">
-<form method="post" action="registrazione_utente.php" >						
-						<p class="coloreAP"> Modifica Password </p>
+<form method="post" action="modifica_pw.php" >						
+						<h1> Modifica Password </h1>
 						
 	
 						<div>
-							<label for="username" class="label username">Username</label>
-							<input id="username" type="text" name="username" class="input username" placeholder="Username">
-							<p class="error"><?php getUsernameError($errors); ?></p>
-							<p class="error"><?php getEsistenteError($errors); ?></p>
+							<label for="username" class="label username">Vecchia password</label>
+							<input id="username" type="text" name="pwV" class="input username" placeholder="Username">
+							<p class="error"><?php getPasswordError($errors); ?></p>
+							<p class="error"><?php getPasswordError($errors); ?></p>
 
 						</div>
 						<div>
-							<label for="password" class="label password">Password</label>
-							<input id="password" type="password" name="password" class="input passoword" placeholder="********">
+							<label for="password" class="label password">Nuova password</label>
+							<input id="password" type="password" name="pwN" class="input passoword" placeholder="********">
 							<p class="error"><?php getPasswordError($errors); ?></p>
 
 					
 							
 						</div>
 						<div >
-							<label for="passwordR" class="label passwordR">Ripeti Password</label>
-							<input id="passwordR" type="password" name="passwordR" class="input passwordR" placeholder="********">
-							<p class="error"><?php getPassword2Error($errors); ?></p>
-							<p class="error"><?php getNoPasswordError($errors); ?></p>
+							<label for="passwordR" class="label passwordR">Conferma Password</label>
+							<input id="passwordR" type="password" name="pwC" class="input passwordR" placeholder="********">
+							<p class="error"><?php getPasswordError($errors); ?></p>
+							<p class="error"><?php getPasswordError($errors); ?></p>
 
 
 							
 						</div>
-						<button type="submit" class="button" name="registrazione_utente">Registrati</button>
+						<button type="submit" class="button" name="modifica_pw">Invia</button>
 
 					</form>
-					<p> Gia registrato?  <a href="login.php">LogIn</a></p>
+					
 </div>
 					<?php getfooter() ?>
 
