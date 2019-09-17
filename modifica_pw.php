@@ -10,34 +10,14 @@
 <?php getBreadcumbs("Registrati");?>
 <div class="container box" id="boxlogin">
 <form method="post" action="registrazione_utente.php" >						
-						<h1> Registrati </h1>
-						<div >
-							<label for="Nome" class="label nome">Nome</label>
-							<input id="Nome" type="text" name="nome" class="input nome" placeholder="Nome">
-							<p class="error"><?php getNomeError($errors); ?></p>
-
-							
-						</div>
-						<div >
-							<label for="Cognome" class="label cognome">Cognome</label>
-							<input id="Cognome" type="text" name="cognome" class="input cognome" placeholder="Cognome">
-							<p class="error"><?php getCognomeError($errors); ?></p>
-
+						<h1> Modifica Password </h1>
 						
-						</div>
-						<div >
-							<label for="email" class="label email">E-Mail</label>
-							<input id="email" type="email" required name="email" class="input email" placeholder="E-mail">
-							<p class="error"><?php getEmailError($errors); ?></p>
-
-						
-						</div>
+	
 						<div>
 							<label for="username" class="label username">Username</label>
 							<input id="username" type="text" name="username" class="input username" placeholder="Username">
 							<p class="error"><?php getUsernameError($errors); ?></p>
 							<p class="error"><?php getEsistenteError($errors); ?></p>
-
 
 						</div>
 						<div>
@@ -63,3 +43,5 @@
 					<p> Gia registrato?  <a href="login.php">LogIn</a></p>
 </div>
 					<?php getfooter() ?>
+
+
