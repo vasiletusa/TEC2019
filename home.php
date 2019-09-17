@@ -35,9 +35,9 @@
 			<div class="link "><a href="citta.php?nome=Venezia">VENEZIA</a></div>
 		</div>
 
-		<div class="pic">			
+		<div class="pic" href="citta.php?nome=Rovigo" >			
 			<img src="img/rovigo.jpg" alt="foto della citt&agrave; di Rovigo">
-			<div class="link "><a href="citta.php?nome=Rovigo">ROVIGO</a></div>
+			<div class="link "><a >ROVIGO</a></div>
 		</div>
 		<div class="pic">
 			<img src="img/vicenza.jpg" alt="foto della citt&agrave; di Vicenza">
