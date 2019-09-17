@@ -195,7 +195,44 @@ if (isset($_POST['registrazione_tour'])) {
   }
 }
 
+//MODIFICA PASSWORD
+if (isset($_POST['modifica_pw'])) {
+  $oldpw = mysqli_real_escape_string($db, $_POST['pwV']);
+  $newpw = mysqli_real_escape_string($db, $_POST['pwN']);
+  $newpw2 = mysqli_real_escape_string($db, $_POST['pwC']);
+  
+  if(empty($data)){
+    $errors['pwV']="Vecchia password richiesta";
+  }
+  if(empty($citta)){
+    $errors['pwN']="Nuova password richiesta";
+  }
+  if(empty($titolo)){
+    $errors['pwC']="Conferma password richiesta";
+  }
+  $username=$_SESSION['username'];
+  $query="SELECT * FROM utenti WHERE username=$username"
+  $result=mysqli_query($db, $query);
+  while ($row = mysqli_fetch_assoc($result)) {
+        if($row['Password']!=$oldpw){
+          $errors['password']="Password errata";
+        }
+  }
+  if($password != $password_2){
+    $errors['newpw']="Le password non corrispondono";
+    $errors['newpw2']="Le password non corrispondono";
+  }
 
+
+  
+  if (count($errors) == 0) {
+   
+        $query =" UPDATE `utenti` SET password='$newpw' WHERE username='$iusername'"
+              $result = mysqli_query($db,$query) or die(mysql_error());
+    header("Location: area_riservata.php");
+  }
+
+}
 
 function setOrganizza(){
     if(!isset($_SESSION["username"])){
