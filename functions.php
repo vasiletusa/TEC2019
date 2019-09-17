@@ -11,7 +11,10 @@ echo"
 	<title>$current</title>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 
-	<link rel=\"stylesheet\" href=\"css/style.css\"/>
+	<link rel=\"stylesheet\" href=\"css/style.css\"/ >
+
+    <link rel=\"stylesheet\" href=\"css/mobilestyle.css\"  media=\"only screen and (max-width: 1200px), only screen and (max-device-width: 1200px)\"/>
+
 	<link rel=\"icon\" 
       type=\"image/png\" 
       href=\"img/destination.png\">
