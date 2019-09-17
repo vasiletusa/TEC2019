@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<DOCTYPE html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div>
 <head>
@@ -35,9 +35,9 @@
 			<div class="link "><a href="citta.php?nome=Venezia">VENEZIA</a></div>
 		</div>
 
-		<div class="pic" href="citta.php?nome=Rovigo" >			
+		<div class="pic">			
 			<img src="img/rovigo.jpg" alt="foto della citt&agrave; di Rovigo">
-			<div class="link "><a >ROVIGO</a></div>
+			<div class="link "><a href="citta.php?nome=Rovigo">ROVIGO</a></div>
 		</div>
 		<div class="pic">
 			<img src="img/vicenza.jpg" alt="foto della citt&agrave; di Vicenza">
