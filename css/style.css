@@ -175,17 +175,17 @@ input, text {
   border-radius:0.5em;
   font-size:1em;
   font-weight:bold;
-  margin-left: 15%;
-    margin-right: 15%;
-  width: 70%;
+  width: 30em;
   height: 2em;
   background:var(--primary-light);
   margin-top: 0.1em;
-  text-align:center;
+  text-align: center;
+  
 }
 
 .link a{
   color:white;
+
 }
 
 footer a{
@@ -194,13 +194,12 @@ footer a{
 
 .pic img{
     display:block;
-    margin-left: auto;
-    margin-right: auto;
     width: 30em;
     height: 15em;
-    margin-bottom:1%;
-    margin-top:3%;
+    
 }
+
+
 
 .left{
   width: 100%;
@@ -226,18 +225,27 @@ footer a{
   box-sizing: border-box;
 }
 
-.grid-container {
-  display: grid;
-  grid-column-gap: 5em;
-  grid-template-columns: auto auto;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 0em;
-  width: 80%;
-  grid-auto-rows: minmax(auto, auto);
-}
+
 
 /*end homepage*/
+
+.riga{
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.col1{
+  
+  float:left; 
+  display:block;
+}
+
+.col2{
+  
+  float:right; 
+  display:block;
+}
 
 #titolo{
   text-align:center;
@@ -294,7 +302,6 @@ h2{
     font-size: 2em;
     line-height: 1.1;
     font-family: "Gilroy-ExtraBold",sans-serif;
-
     font-weight: 400;
     text-align: center;
     font-weight:bold;
@@ -406,15 +413,13 @@ h2{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#descrTour{
-  font-size: 1.5em;
-  text-align: center;
-}
 
 #labelTour{
   font-size: 5em;
   text-align: left;
 }
+
+
 
 .marginPrincipale{
 	margin-left: 10%;
@@ -460,8 +465,8 @@ h2{
 
 .sinap{ float:left; }
 
-.sinistratour{float: left; width: 33%;}
-
+.sinistratour{float: left; padding-left:1em; width: 33%;}
+.sinistratourdet{float: left;padding-left: 2.5em; padding-top: 7em; width: 33%;}
 
 div.end {
     clear:both;
@@ -469,7 +474,7 @@ div.end {
 
 .sfondotour{
   background: var(--primary-light);
-  margin-left: 15%;
+  margin-left: 20%;
   margin-top: 5%;
   margin-bottom: 5%;
   width:60%; 
@@ -565,7 +570,7 @@ div.end {
 }
 
 .parag{
-	line-height: 0.4em;
+	line-height: 1em;
 }
 
 /*body{
@@ -611,7 +616,7 @@ div.end {
 
 .sinistraparag{
 	float:left;
-	width: 50%
+	width: 50%;
 }
 
 .sinpersarea{
@@ -620,6 +625,12 @@ div.end {
 	margin-left: 5%;
 }
 
+
+ #descrTour{
+  font-size: 1.5em;
+  text-align: center;
+
+}
 
 @media(max-width: 600px) {
   .header a {
@@ -631,11 +642,59 @@ div.end {
   .header-right{
   	float:none;
   }
+
 }
 
-@media(max-width:1200px){
+
+
+@media(max-width:1600px){
+
   .link{
-    font-size: 0.7em;
+    width: 25em;
+  }
+
+  .pic img{
+    width: 25em;
+    height: 12.5em;
+  }
+
+  #descrTour{
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+}  
+
+@media(max-width:1400px){
+
+  .link{
+    width: 20em;
+  }
+
+  .pic img{
+    width: 20em;
+    height: 10em;
+  }
+
+  #descrTour{
+    font-size: 1em;
+    text-align: center;
+  }
+
+}  
+
+.sinistratourdet{
+  float: left;
+  padding-left: 2.5em;
+  padding-top: 3em; 
+ }
+
+
+
+@media(max-width:1000px){
+
+  .link{
+    width: 15em;
   }
 
   .pic img{
@@ -643,22 +702,36 @@ div.end {
     height: 7.5em;
   }
 
+  #descrTour{
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+.buttonDettagli {
+  border:1;
+  border-color: var(--primary-dark) ;
+  border-style: solid;
+  /*outline:none;*/
+  border-radius:0.5em;
+  font-size:1em;
+  font-weight:bold;
+  height: 1.8em;
+  letter-spacing:.0.2em;
+  background:var(--primary-light);
+  color:white;
+  cursor:pointer;
+
+}
+
+.buttonDettagli :hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.sinistratourdet{
+  float: left;
+  padding-left: 2.5em;
+  padding-top: 1em; 
+ }
+
 }  
 
-@media(max-width: 600px){
-  
-  
-  .pic img{
-    width:7.5em;
-    height: 3.75em;
-  }
-}
-
-@media(max-width: 400px){
-  
-
-  pic img{
-    width: 1.875em;
-    height: 0.9em;
-  }
-}

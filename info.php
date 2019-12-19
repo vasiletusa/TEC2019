@@ -12,7 +12,7 @@
 <?php getMenu("Info");?>
 <?php getBreadcumbs("Come funziona");?>
 
-<div>
+<div class="marginPrincipale">
   <div><h1> Veneto Tour ti porta alla scoperta del Veneto</h1></div>
   <div><h2>Offriamo un servizio pieno di emozioni con viaggi turistici nelle citt&agrave; del Veneto.</h2></div>
   <div><p class="testo altezza">

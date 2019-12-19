@@ -23,41 +23,53 @@
 		</div>
 	</div>
 
-	<div class="grid-container">
+	<div>
+		<div class="riga">
 
-		<div class="pic ">
-			<img src="img/padova.jpg" alt="foto della citt&agrave; di Padova">
-			<div class="link"><a href="citta.php?nome=Padova">PADOVA</a></div>
-		</div>
+			<div class="pic col1">
+				<img src="img/padova.jpg" alt="foto della citt&agrave; di Padova">
+				<div class="link"><a href="citta.php?nome=Padova">PADOVA</a></div>
+			</div>
 
-		<div class="pic">			
-			<img src="img/venezia.jpg" alt="foto della citt&agrave; di Venezia">
-			<div class="link "><a href="citta.php?nome=Venezia">VENEZIA</a></div>
-		</div>
+			<div class="pic col2">			
+				<img src="img/venezia.jpg" alt="foto della citt&agrave; di Venezia">
+				<div class="link "><a href="citta.php?nome=Venezia">VENEZIA</a></div>
+			</div>
+			<div class="end"></div>
 
-		<div class="pic">			
-			<img src="img/rovigo.jpg" alt="foto della citt&agrave; di Rovigo">
-			<div class="link "><a href="citta.php?nome=Rovigo">ROVIGO</a></div>
-		</div>
-		<div class="pic">
-			<img src="img/vicenza.jpg" alt="foto della citt&agrave; di Vicenza">
-			<div class="link "><a href="citta.php?nome=Vicenza">VICENZA</a></div>
-		</div>
-		<div class="pic">
-			<img src="img/verona.jpg" alt="foto della citt&agrave; di Verona">
-			<div class="link "><a href="citta.php?nome=Verona">VERONA</a></div>
-		</div>
-		<div class="pic">			
-			<img src="img/treviso.jpg" alt="foto della citt&agrave; di Treviso">
-			<div class="link "><a href="citta.php?nome=Treviso">TREVISO</a></div>
-		</div>
-		<div class="pic">
-			<img src="img/belluno.jpg" alt="foto della citt&agrave; di Belluno"> 
-			<div class="link "><a  href="citta.php?nome=Belluno">BELLUNO</a></div>
 		</div>
 
-	</div>
+		<div class="riga">
+			<div class="pic col1">			
+				<img src="img/rovigo.jpg" alt="foto della citt&agrave; di Rovigo">
+				<div class="link "><a href="citta.php?nome=Rovigo">ROVIGO</a></div>
+			</div>
+			<div class="pic col2">
+				<img src="img/vicenza.jpg" alt="foto della citt&agrave; di Vicenza">
+				<div class="link "><a href="citta.php?nome=Vicenza">VICENZA</a></div>
+			</div>
+		</div>
+		<div class="end"></div>
 
+		<div class="riga">
+			<div class="pic col1">
+				<img src="img/verona.jpg" alt="foto della citt&agrave; di Verona">
+				<div class="link "><a href="citta.php?nome=Verona">VERONA</a></div>
+			</div>
+			<div class="pic col2">			
+				<img src="img/treviso.jpg" alt="foto della citt&agrave; di Treviso">
+				<div class="link "><a href="citta.php?nome=Treviso">TREVISO</a></div>
+			</div>
+			<div class="end"></div>
+		</div>
+
+		<div class="riga">
+			<div class="pic col1">
+				<img src="img/belluno.jpg" alt="foto della citt&agrave; di Belluno"> 
+				<div class="link "><a  href="citta.php?nome=Belluno">BELLUNO</a></div>
+			</div>
+			<div class="end"></div>
+		</div>
 
 
 </body>
