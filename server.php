@@ -201,33 +201,34 @@ if (isset($_POST['modifica_pw'])) {
   $newpw = mysqli_real_escape_string($db, $_POST['pwN']);
   $newpw2 = mysqli_real_escape_string($db, $_POST['pwC']);
   
-  if(empty($data)){
-    $errors['pwV']="Vecchia password richiesta";
+  if(empty($oldpw)){
+    $errors['PasswordError']="Vecchia password richiesta";
   }
-  if(empty($citta)){
-    $errors['pwN']="Nuova password richiesta";
+  if(empty($newpw)){
+    $errors['PasswordError']="Nuova password richiesta";
   }
-  if(empty($titolo)){
-    $errors['pwC']="Conferma password richiesta";
+  if(empty($newpw2)){
+    $errors['PasswordError']="Conferma password richiesta";
   }
   $username=$_SESSION['username'];
   $query = "SELECT * FROM `utenti` WHERE Username='$username'";
   $result = mysqli_query($db, $query)or die(mysql_error());
   while ($row = mysqli_fetch_assoc($result)) {
         if($row['Password']!=$oldpw){
-          $errors['password']="Password errata";
+          $errors['PasswordError']="Password errata";
         }
   }
-  if($password != $password_2){
-    $errors['newpw']="Le password non corrispondono";
-    $errors['newpw2']="Le password non corrispondono";
+  if($newpw != $newpw2){
+    $errors['PasswordError']="Le password non corrispondono";
+    $errors['PasswordError']="Le password non corrispondono";
   }
 
 
-  
+    echo count($errorss);
+
   if (count($errors) == 0) {
    
-        $query =" UPDATE `utenti` SET password='$newpw' WHERE username='$username'";
+        $query =" UPDATE `utenti` SET Password='$newpw' WHERE Username='$username'";
               $ris = mysqli_query($db,$query) or die(mysql_error());
     header("Location: area_riservata.php");
   }
