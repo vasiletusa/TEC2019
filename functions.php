@@ -17,7 +17,7 @@ echo"
     <meta name=\"author\" content=\"Rizzo Ilaria, Romito Sara, Vasile Tusa, Salviato Alberto\" />
     <meta name=\"viewport\" content=\"width=device-width, initial-scale = 1.0\" />
 
-	<link rel=\"stylesheet\"  href=\"css/stylemobile.css\"/ >
+	<link rel=\"stylesheet\"  href=\"css/style.css\"/ >
 
 
 	<link rel=\"icon\" 
@@ -71,6 +71,7 @@ echo"
 	     		
 	     	
 	     	echo "<a href=\"login.php\"  ";if($current=="Login"){echo"class=\"active\"";}echo">Login</a>";}
+            echo "<a href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati</a>";
 
 	     	echo"
 	     	</ul>

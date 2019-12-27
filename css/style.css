@@ -735,3 +735,32 @@ div.end {
 
 }  
 
+
+
+
+
+
+
+.pageLogin{
+  height: 52em;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1em;
+  display: block;
+}
+
+
+.boxLeft{
+  margin-left: 5%;
+  width: 40%;
+  float: left;
+  text-align: center;
+}
+
+.boxRight{
+  width: 40%;
+  text-align: center;
+  float: right;
+}
