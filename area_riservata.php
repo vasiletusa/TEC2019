@@ -56,7 +56,7 @@ include("auth.php");
         ?>
     </div>
     <div class="sinpersarea">
-    	<h2>I tour a cui sei iscritto</h2>
+    	<p class="sottotitoloap">I tour a cui sei iscritto</p>
         <?php
             require_once('functions.php');
             $tuoiTour=getTuoiTourPartecipi();
