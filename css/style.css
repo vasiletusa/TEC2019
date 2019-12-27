@@ -30,6 +30,7 @@ body {
   font-size: 1.0em;
   background: #fff;
   color: #848484;
+
   /*overflow-x: hidden;*/
   overflow: auto;
 }
@@ -741,7 +742,7 @@ div.end {
 
 
 
-.pageLogin{
+.pageRegistrati, .pageLogin{
   height: 52em;
   width: 100%;
   float: left;
@@ -749,18 +750,66 @@ div.end {
   outline: none;
   font-size: 1em;
   display: block;
+  margin-bottom: 3em;
+  background: var(--primary-light);
+  border-radius: 0.1em;
 }
 
 
 .boxLeft{
-  margin-left: 5%;
+
   width: 40%;
   float: left;
   text-align: center;
+  background:var(--primary-light);
+      color:white;
+      text-align: center;
+      border-radius:0.5em;
+      padding-bottom: 2em;
 }
 
+
 .boxRight{
-  width: 40%;
+  width: 54%;
   text-align: center;
   float: right;
+  background:var(--primary-light);
+      color:white;
+      text-align: center;
+      border-radius:0.5em;
+      padding-bottom: 2em;
 }
+
+.insertBox{
+  border-radius:0.1em;
+  border-color: white;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 96%
+
+}
+
+.titlePage{
+  height: 30%;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif ;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+}
+
+.form{
+  height: 70%;
+}
+.boxDescr{
+  text-align: center;
+  
+  padding-bottom: 2.4em;
+  background: white;
+  color: black;
+  
+  font-style: bold;
+}
+

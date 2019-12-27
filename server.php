@@ -101,6 +101,68 @@ if (isset($_POST['registrazione_utente'])) {
   }
 }
 
+
+
+//REGISTRAZIONE DELLE AZIENDE
+if (isset($_POST['registrazione_azienda'])) {
+  // receive all input values from the form
+  $nomeA = mysqli_real_escape_string($db, $_POST['NomeAzienda']);
+  $nomeR = mysqli_real_escape_string($db, $_POST['NomeReferente']);
+  $emailR = mysqli_real_escape_string($db, $_POST['EmailReferente']);
+  $pi = mysqli_real_escape_string($db, $_POST['pi']);
+  $password = mysqli_real_escape_string($db, $_POST['password']);
+  $password_2 = mysqli_real_escape_string($db, $_POST['passwordR']);
+  if(empty($nome)){
+    $errors['NomeAzienda']="Nome richiesto";
+  }
+  if(empty($cognome)){
+    $errors['NomeReferente']="Cognome richiesto";
+  }
+  if(empty($username)){
+    $errors['EmailReferente']="Username richiesto";
+  }
+  if(empty($email)){
+    $errors['pi']="Email richiesta";
+  }
+  if(empty($nome)){
+    $errors['password']="Password richiesta";
+  }
+  if(empty($nome)){
+    $errors['password2']="Conferma password";
+  }
+  if($password != $password_2){
+    $errors['password']="Le password non corrispondono";
+    $errors['password2']="Le password non corrispondono";
+  }
+  if(strpos($email,'@') == false){
+    $errors['EmailReferente']="Fornire una mail valida";
+  }
+  
+  if(strlen($password)<4){
+    $errors['password']="La password deve contenere almeno 4 caratteri";
+  }
+    else{
+
+        //controllo se esiste già uno username uguale
+               $controllo = "SELECT * FROM `aziende` WHERE PI='$pi' ";
+                $result = mysqli_query($db,$controllo) or die(mysql_error());
+              $rows = mysqli_num_rows($result);
+              if($rows==1){
+                  $errors['esistente']="La tua azienda è già stata iscritta";
+              }
+              elseif($password==$password_2){
+                      $query = "INSERT INTO aziende (PI, Nome, Referente, emailReferente, password) 
+                              VALUES('$pi','$nomeA','$nomeR', '$emailR', '$password')";
+                        mysqli_query($db, $query);
+                        $_SESSION['pi']=$pi;
+                        $_SESSION['isLogged']=true;
+                        //reindirizzamento
+                        header("Location: area_riservata.php");
+              }else
+            $errors['noPassword']="Le password non coincidono";   
+  }
+}
+
   //LOGIN
    
 if (isset($_POST['Login'])){
