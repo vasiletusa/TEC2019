@@ -13,9 +13,13 @@
 <?php getBreadcumbs("Login");?>
 
 
-<div class="pageLogin">
+
+<div class=" box" >
 	<?php getMessage();?>
-	<div class="boxLeft" >
+	
+<p id="login" class="coloreAP">Login</p>
+<form action="login.php" method="post" name="login">
+	
 		
 	<div class="form">
 	<form action="login.php" method="post" name="login">
@@ -41,6 +45,10 @@
 
 	<p id="notRegistered">Non ancora registrato? Che aspetti? </br> Entra nella nostra community per restare aggiornato sugli eventi nelle città del Veneto, non perdere l'occasione di iscriverti ai tuoi avvenimenti preferiti prima che i posti finiscano! Già milioni di utenti utilizzano il nostro servizio e ne sono entusiasti! </br><a href='registrazione_utente.php'>Registrati qui</a></p>
 	</div>
+	<button type="submit" class="button" name="Login">Login</button>
+
+</form>
+<p id="notRegistered">Non ancora registrato?  <a href='registrazione_utente.php'>Registrati qui</a></p>
 </div>
 
 <?php getfooter()?>

@@ -89,25 +89,47 @@ label {
 	  	background:var(--primary-light);
 	  	color:white;
 	  	text-align: center;
-	  	border-radius:0.5em;
+	  	border-radius:1.5em;
 	}
 
+
+#scritta{
+  color:red;
+  padding-top: 5%;
+}
 
 .box1{
   padding: 2em;
   background:var(--primary-light);
 }
 
+
 .coloreAP{
 	color:white;
     text-shadow: rgba(0,0,0,.1);
     font-size: 3em;
-
+    text-align: center;
     line-height: 1.1;
     font-family: "Gilroy-ExtraBold",sans-serif;
-    text-align: center;
     font-weight:bold;
 }
+
+
+.dati{
+  margin-left: 35%;
+  width:30%;
+  transition:border-color .25s ease, box-shadow .25s ease;
+  border:1px solid black;
+  text-align: center;
+  font-size:1.5em;
+  background:white;
+  color:black;
+  border-radius: 0.5em;
+  font-size:22px;
+  display:block;
+}
+
+
 
 /*input*/
 input, text {
@@ -123,6 +145,16 @@ input, text {
   transition:border-color .25s ease, box-shadow .25s ease;
 
 }
+
+.dimdescr{
+  width:50%;
+  border:1px solid black;
+  font-size:1em;
+  background:white;
+  color:black;
+  border-radius: 0.5em;
+}
+
 /*bottoni*/
 .button {
   border:1;
@@ -423,8 +455,8 @@ h2{
 
 
 .marginPrincipale{
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .coloret{
@@ -432,26 +464,34 @@ h2{
 	color: var(--primary-dark);
 }
 
+
 .detourimg{
-   width:80%; 
-  /* da mettere auto */
-  height: 40%;
+  width: 40em; 
+  height: 30em;
   border-radius:0.5em;
 }
 
+#control{
+  float:right;
+  font-size: 1.5em;
+  padding-top: 15%;
+}
+
+
 .sfondo{
-  padding-top: 2% ;
-  padding-left: 1%;
+  margin-left: 5%;
+  padding-top: 4% ;
+  padding-left: 2%;
   padding-right: 2%;
   background: var(--primary-light);
-  width:70%; 
+  width:50%; 
   /* da mettere auto */
-  height: 20em;
+  height: 30em;
   color: white;
   border-radius:0.5em;
   margin-bottom: 5%;
-
 }
+
 .imgCitta{
   margin-left: 25%;
   margin-right: 25%;
@@ -463,6 +503,9 @@ h2{
   width: 60%;
 }
 
+.margdettour{
+  margin-left:5%;
+}
 
 .sinap{ float:left; }
 
@@ -664,6 +707,32 @@ div.end {
     text-align: center;
   }
 
+  #control{
+    float:right;
+    font-size: 1.3em;
+    padding-top: 9%;
+  }
+
+  .detourimg{
+    width: 30em; 
+    height: 25em;
+    border-radius:0.5em;
+  }
+
+  .sfondo{
+    margin-left: 5%;
+    padding-top: 4% ;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: var(--primary-light);
+    width:50%; 
+    /* da mettere auto */
+    height: 25em;
+    color: white;
+    border-radius:0.5em;
+    margin-bottom: 5%;
+  }
+
 }  
 
 @media(max-width:1400px){
@@ -682,14 +751,70 @@ div.end {
     text-align: center;
   }
 
-}  
+  #control{
+    float:right;
+    font-size: 1.2em;
+    padding-top: 10%;
+  }
 
-.sinistratourdet{
-  float: left;
-  padding-left: 2.5em;
-  padding-top: 3em; 
- }
+  .detourimg{
+    width: 30em; 
+    height: 25em;
+    border-radius:0.5em;
+  }
 
+  .sfondo{
+    margin-left: 5%;
+    padding-top: 4% ;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: var(--primary-light);
+    width:50%; 
+    /* da mettere auto */
+    height: 25em;
+    color: white;
+    border-radius:0.5em;
+    margin-bottom: 5%;
+  }
+
+
+  .sinistratourdet{
+    float: left;
+    padding-left: 2.5em;
+    padding-top: 3em; 
+   }
+
+
+} 
+
+@media(max-width:1200px){
+
+  #control{
+    float:right;
+    font-size: 1em;
+    
+  }
+
+  .detourimg{
+    width: 25em; 
+    height: 25em;
+    border-radius:0.5em;
+  }
+
+  .sfondo{
+    margin-left: 5%;
+    padding-top: 4% ;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: var(--primary-light);
+    width:50%; 
+    /* da mettere auto */
+    height: 25em;
+    color: white;
+    border-radius:0.5em;
+    margin-bottom: 5%;
+  }
+}
 
 
 @media(max-width:1000px){
@@ -708,35 +833,57 @@ div.end {
     text-align: center;
   }
 
-.buttonDettagli {
-  border:1;
-  border-color: var(--primary-dark) ;
-  border-style: solid;
-  /*outline:none;*/
-  border-radius:0.5em;
-  font-size:1em;
-  font-weight:bold;
-  height: 1.8em;
-  letter-spacing:.0.2em;
-  background:var(--primary-light);
-  color:white;
-  cursor:pointer;
+  .buttonDettagli {
+    border:1;
+    border-color: var(--primary-dark) ;
+    border-style: solid;
+    /*outline:none;*/
+    border-radius:0.5em;
+    font-size:1em;
+    font-weight:bold;
+    height: 1.8em;
+    letter-spacing:.0.2em;
+    background:var(--primary-light);
+    color:white;
+    cursor:pointer;
 
-}
+  }
 
-.buttonDettagli :hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
+  .buttonDettagli :hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
 
-.sinistratourdet{
-  float: left;
-  padding-left: 2.5em;
-  padding-top: 1em; 
- }
+  .sinistratourdet{
+    float: left;
+    padding-left: 2.5em;
+    padding-top: 1em; 
+   }
 
-}  
+  #control{
+    float:right;
+    font-size: 1em;
+    
+  }
 
+  .detourimg{
+    width: 25em; 
+    height: 25em;
+    border-radius:0.5em;
+  }
 
+  .sfondo{
+    margin-left: 5%;
+    padding-top: 4% ;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: var(--primary-light);
+    width:50%; 
+    /* da mettere auto */
+    height: 25em;
+    color: white;
+    border-radius:0.5em;
+    margin-bottom: 5%;
+  }
 
 
 
