@@ -17,7 +17,7 @@ echo"
     <meta name=\"author\" content=\"Rizzo Ilaria, Romito Sara, Vasile Tusa, Salviato Alberto\" />
     <meta name=\"viewport\" content=\"width=device-width, initial-scale = 1.0\" />
 
-	<link rel=\"stylesheet\"  href=\"css/style.css\"/ >
+	<link rel=\"stylesheet\"  href=\"stileila.css\"/ >
 
 
 	<link rel=\"icon\" 
@@ -29,32 +29,44 @@ echo"
 
     <footer>
         <div class=\"container\">     
-            <div>&copy; 2019 <span lang=\"en\">VenetoTour</span> | Via Dante Alighieri 123 - 30035 Mirano (<span lang=\"en\">Italy</span>)
+            <div>&copy; 2019 <span lang=\"en\">Veneto Eventi </span>Torre Archimede, Via Trieste, 63, 35121 Padova PD (<span lang=\"it\">Italia</span>)
             </div>
-            <div> email: venetotour@gmail.com </div>
-            <div> tel: +39 04145678910 </div>
+            <div> email: venetoeventi@gmail.com </div>
+            <div> tel: +39 123456789 </div>
 
-            <div class=\"back-up\">   
-            <a href=\"#\">TORNA SU</a>
+            <div class=\"torna-su\">   
+            <a class=\"scritta-torna-su\" href=\"#\">TORNA SU</a>
             </div>
         </div>  
     </footer>
 
 </html>";
 }
+function getMenu1($current){
+    echo "<body>
+    <header id=\"header-section\"><div id=\"menu-log-linea\"><div id=\"menu-log\">
 
-function getMenu($current){
+                
+                
+            ";if(isset($_SESSION['isLogged'])){
+                "<a class=\"a-menu-log log-scritta\"href=\"login.php\"  ";if($current=="Login"){echo"class=\"active\"";}echo"> Login</a>";}
+            else{echo"<a class=\"a-menu-log\"href=\"logout.php\"> Logout</a>";}
+            echo "<a class=\"a-menu-log\" href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati </a>
+            </div></div>";
+
+}
+function getMenu2($current){
 	  	
 echo"
-<body>
-	<header id=\"header-section\">
+
+    <div class=\"menu-2\">
      <div class=\"header\"class=\"logo\">
         <a href=\"home.php\"><img src=\"img/logot.png\" alt=\"Veneto on Tour\"></a>
         <div class=\"header-right\">
         
            <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>
-           <a href=\"info.php\"  ";if($current=="Info"){echo"class=\"active\"";}echo">Come Funziona</a>
-           <a href=\"tour.php\"  ";if(($current=="Tour")||($current=="Dettagli Tour")){echo"class=\"active\"";}echo">Tour</a>
+           <a href=\"info.php\"  ";if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
+           <a href=\"eventi.php\"  ";if($current=="Eventi"){echo"class=\"active\"";}echo">Eventi</a>
            <a href=\"registra_tour.php\"  ";if($current=="RegistraTour"){echo"class=\"active\"";}echo">Organizza</a>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
@@ -66,18 +78,14 @@ echo"
                 $ruolo=$ris['Ruolo'];
 	     		echo"<a href=";if($ruolo=="User"){echo"\"area_riservata.php\"";} else {echo"\"area_admin.php\"";}if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>
 	     			<a href=\"logout.php\">Logout</a>";}
-	     	else{
-	     		
-	     		
 	     	
-	     	echo "<a href=\"login.php\"  ";if($current=="Login"){echo"class=\"active\"";}echo">Login</a>";}
-            echo "<a href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati</a>";
 
 	     	echo"
 	     	</ul>
 	   	</nav>
 	  	</div>
       	</div>
+        </div>
         <div id='contPrincipale'>
       </header>
 
@@ -94,7 +102,7 @@ echo "<div class=\"contenitore\">
 function getMessage(){
 	if(isset($_SESSION['isOrganize'])){
 		echo "
-		<p id=\"messaggio\">Per iscrriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\">registrati</a href></p>";
+		<p id=\"messaggio\">Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\">registrati</a href></p>";
 	}
 }
 function tourDaId($id){

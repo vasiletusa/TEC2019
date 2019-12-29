@@ -1,0 +1,92 @@
+:root {
+  --primary-color: #003366; /*#2d495d;*/
+  --primary-light:#336699; /*#59748a;*/
+  --primary-dark:#003399; /*#002233;*/
+  --menu-footer-color: #fff;
+
+}
+
+html{
+	height: 100%;
+  padding:0;
+}
+/*body*/
+body {
+  height: 100%;
+  padding:0;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 1.0em;
+  background: #fff;
+  color: #848484;
+
+  /*overflow-x: hidden;*/
+  overflow: auto;
+}
+
+
+/*footer*/
+
+footer {
+	margin-top: 10%;
+  clear: both;
+
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.header img{
+  max-height: 5em;
+}
+
+.header {
+  font-family: Verdana, sans-serif;
+  overflow: hidden;
+  
+  padding: 1.11em 0.56em;
+}
+
+.header a {
+  background-color: var(--menu-footer-color);
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 0.66em;
+  text-decoration: none;
+  font-size: 0.9em; 
+  line-height: 1.38;
+  border-radius: 0.2em;
+}
+
+.header a:hover {
+  border-bottom: 0.225em
+  solid var(--primary-light);
+}
+
+.header a.active {
+  border-bottom: 0.225em
+  solid var(--primary-light);
+}
+
+.header-right {
+  float: right;
+}
+/*home*/
+.box-home{
+	width: 14%;
+}
+
+.img-citta{
+	width: 100%;
+}
+
+#padova {
+    height: 25em;
+    background-image: url(img/Padova.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

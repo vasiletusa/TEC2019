@@ -1,0 +1,328 @@
+:root {
+  --primary-color: #003366; /*#2d495d;*/
+  --primary-light:#336699; /*#59748a;*/
+  --primary-dark:#660000; /*#002233;*/
+  --menu-footer-color: #fff;
+
+}
+
+html{
+	height: 100%;
+  padding:0;
+}
+/*body*/
+body {
+  height: 100%;
+  padding:0;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 1.0em;
+  background: #fff;
+  color: #848484;
+
+  /*overflow-x: hidden;*/
+  overflow: auto;
+}
+
+
+/*footer*/
+
+footer {
+	margin-top: 10%;
+  clear: both;
+
+  width: 100%;
+  height: auto;
+  background-color: var(--primary-dark);
+  color: #fff;
+  text-align: center;
+}
+.torna-su{
+ width: 20%;
+ margin-left: 40%;
+ margin-right: 40%;
+ margin-top: 1%;
+ margin-bottom: 1%;
+  border: 0.1em solid #fff;
+}
+.scritta-torna-su{
+  color:#fff;
+}
+#menu-log-linea{
+  color: var(--primary-dark);
+
+
+  height: 2em;
+
+}
+#menu-log{
+  float: right;
+  margin-right: 1em;
+}
+.a-menu-log{
+  float: right;
+  width: auto;
+  text-align: right;
+  font-size: 1em;
+
+  margin-right: 1em;
+}
+
+.header img{
+  max-height: 5em;
+}
+
+.header {
+  font-family: Verdana, sans-serif;
+  overflow: hidden;
+  padding: 1.11em 0.56em;
+}
+
+.header a {
+  background-color: var(--menu-footer-color);
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 0.66em;
+  text-decoration: none;
+  font-size: 0.9em; 
+  line-height: 1.38;
+  border-radius: 0.2em;
+}
+
+.header a:hover {
+  border-bottom: 0.225em
+  solid var(--primary-dark);
+}
+
+.header a.active {
+  border-bottom: 0.225em
+  solid var(--primary-dark);
+}
+
+.header-right {
+  float: right;
+}
+
+a{
+  text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-color: currentcolor;
+    text-decoration-thickness: auto;
+    color:#000;
+}
+/*home*/
+/*prima parte immagine iniziale e bottoni delle città*/
+.box-pulsante{
+  float: left;
+	width: 14%;
+
+}
+.titolo-home{
+  color: var(--primary-dark);
+  text-align: center;
+  font-size: 3em;
+}
+.lista-citta{
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 1em;
+  width: 100%;
+  height: 2em;
+}
+
+.bottone-citta{
+	width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    color: #5c5c3d;
+
+  border:  0.2em solid var(--primary-dark);
+  border-radius: 0.2em;
+
+}
+.citta{
+  transition:all 0.25s ease;
+
+}
+
+
+#homeimg1 { 
+  height: 25em;
+    background-image: url(img/eventi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;   
+}
+/*seconda parte immagine con logo e descrizione di ciò che fa il sito*/
+.home-pt2{
+  margin-top: 2em;
+  height: 17em;
+  background: var(--primary-dark);
+}
+
+
+.box-left{
+  background-image: url(img/logoT.png);
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+
+.box-right{
+  width: 55%;
+  height: 100%;
+  float: right;
+  padding: 2%
+}
+
+.descr{
+  text-align: center;
+  color: white;
+}
+/*terza parte con gli ultimi 3 eventi*/
+.home-pt3{
+  margin-top: 3em;
+
+}
+.box-evento{
+  border-radius: 0.3em;
+  border: 0.1em solid var(--primary-dark);
+  width: 28%;
+  height: 30em;
+  padding: 1%;
+  float: left;
+  margin:1%; 
+}
+.box-img{
+  height: 40%;
+  width: 100%;
+}
+.img-evento{
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.box-icona{
+ 
+  width: 10%;
+  height: 100%;
+  float: left;
+  background: white;
+}
+.box-titolo{
+  float: left;
+  height: 10%;
+  width: 100%;
+}
+.scritte-evento{
+  text-align: center;
+  color:#000;
+   width: 90%;
+  height: 100%;
+  float: left;
+}
+.box-categoria{
+  float: left;
+  width: 100%;
+  height: 10%;
+}
+.box-data{
+  float: left;
+  width: 100%;
+  height: 10%;
+}
+
+#calendario{
+  width: 100%;
+  height: 100%;
+  background-image: url(img/calendar.png);
+
+background-repeat: no-repeat;
+  background-position: center; 
+}
+
+
+
+.box-descr{
+  width: 100%;
+  height: 20%;
+  float: left;
+}
+.box-luogo{
+  float: left;
+  width: 100%;
+  height: 10%;
+}
+
+#local{
+  width: 100%;
+  height: 100%;
+  background-image: url(img/local.png);
+  background-repeat: no-repeat;
+    background-position: center; 
+
+}
+
+
+@media (max-width: 650px) {
+  body{
+    font-size: 0.8em;
+  }
+  .lista-citta{
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 1em;
+  width: 70%;
+  height: 16em;
+  }
+  .box-pulsante{
+  float: left;
+  width: 100%;
+  margin-bottom: 2%;
+  }
+  .home-pt2{
+  margin-top: 2em;
+  height: 17em;
+  background: var(--primary-dark);
+  }
+  .box-evento{
+    width: 100%;
+    height: 35em;
+    font-size: 1.2em;
+  }
+  
+
+}
+
+
+@media(max-width: 1049px){
+  .box-pulsante{
+  float: left;
+  width: 100%;
+  margin-bottom: 2%;
+  }
+  .home-pt2{
+  margin-top: 2em;
+  height: 17em;
+  background: var(--primary-dark);
+  }
+  .box-evento{
+    width: 80%;
+    height: 35em;
+    font-size: 1.2em;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media(max-width: 442px){
+  .box-evento{
+    height: 40em;
+  }
+
+}
