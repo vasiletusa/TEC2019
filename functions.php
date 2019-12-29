@@ -94,7 +94,7 @@ echo "<div class=\"contenitore\">
 function getMessage(){
 	if(isset($_SESSION['isOrganize'])){
 		echo "
-		<p id=\"messaggio\">Per organizzare un tour devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\">registrati</a href></p>";
+		<p id=\"messaggio\">Per iscrriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\">registrati</a href></p>";
 	}
 }
 function tourDaId($id){

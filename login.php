@@ -12,17 +12,17 @@
 <?php getMenu("Login");?>
 <?php getBreadcumbs("Login");?>
 
+<div class="pageLogin">
 
-
-<div class=" box" >
-	<?php getMessage();?>
+	<div class=" boxLeft" >
+		<?php getMessage();?>
 	
-<p id="login" class="coloreAP">Login</p>
-<form action="login.php" method="post" name="login">
+
+		<form action="login.php" method="post" name="login">
 	
 		
-	<div class="form">
-	<form action="login.php" method="post" name="login">
+		<div class="form">
+			<form action="login.php" method="post" name="login">
 		
 			
 
@@ -31,24 +31,23 @@
 								<input class="insertBox" id="Username" type="text" name="username" class="input username" placeholder="Inserisci username">
 								<p class="error"><?php getUsernameError($errors); ?></p>
 			</div>
-		<div class="input password">
+			<div class="input password">
 								<label for="Password" class="label password"> Password</label>
 								<input class="insertBox" id="Password" type="password" name="password" class="input password" placeholder="********">
 								
-		</div>
+			</div>
 							<button type="submit" class="button" name="Login">Login</button>
-	</form>
-</div>
+			</form>
+		</div>
 	</div>
+	
 
 	<div class="boxRight boxDescr" >
 
 	<p id="notRegistered">Non ancora registrato? Che aspetti? </br> Entra nella nostra community per restare aggiornato sugli eventi nelle città del Veneto, non perdere l'occasione di iscriverti ai tuoi avvenimenti preferiti prima che i posti finiscano! Già milioni di utenti utilizzano il nostro servizio e ne sono entusiasti! </br><a href='registrazione_utente.php'>Registrati qui</a></p>
 	</div>
-	<button type="submit" class="button" name="Login">Login</button>
 
-</form>
-<p id="notRegistered">Non ancora registrato?  <a href='registrazione_utente.php'>Registrati qui</a></p>
+
 </div>
 
 <?php getfooter()?>

@@ -19,6 +19,7 @@ if (mysqli_connect_errno())
  if(!isset($_SESSION)) {
   $_SESSION['isLogged']=NULL;
      session_start();
+
 }
 
 //ACCETTAZIONE TOUR
@@ -154,7 +155,7 @@ if (isset($_POST['registrazione_azienda'])) {
                       $query = "INSERT INTO aziende (PI, Nome, Referente, emailReferente, password) 
                               VALUES('$pi','$nomeA','$nomeR', '$emailR', '$password')";
                         mysqli_query($db, $query);
-                        $_SESSION['pi']=$pi;
+                        $_SESSION['nomeAzienda']=$nomeA;
                         $_SESSION['isLogged']=true;
                         //reindirizzamento
                         header("Location: area_riservata.php");

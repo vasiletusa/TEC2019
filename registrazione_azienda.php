@@ -17,9 +17,7 @@
 
 
 <div class="boxLeft">
-	<div class="titlePage">
-	<p> Iscrivi la tua azienda per far conoscere i tuoi eventi </p></div>
-	<div class="form">
+	
 	<form method="post" action="registrazione_azienda.php" >						
 								<div >
 									<label for="NomeAzienda" class="label NomeAzienda">Nome azienda</label>
@@ -72,7 +70,10 @@
 							</form>
 						</div>
 							
-		</div>
+				<div class="boxRight ">
+			<img class="imgBoxRight" src="img/calendario.jpg" alt="foto di un calendario">
+		</div></div>
+
 </div>
 </div>
 					<?php getfooter() ?>
