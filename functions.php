@@ -48,9 +48,10 @@ function getMenu1($current){
 
                 
                 
-            ";if(isset($_SESSION['isLogged'])){
-                "<a class=\"a-menu-log log-scritta\"href=\"login.php\"  ";if($current=="Login"){echo"class=\"active\"";}echo"> Login</a>";}
-            else{echo"<a class=\"a-menu-log\"href=\"logout.php\"> Logout</a>";}
+            ";
+            if(isset($_SESSION['isLogged'])){
+                "<a class=\"a-menu-log log-scritta\"href=\"logout.php\"class=\"active\"> Logout</a>";}
+            else{echo"<a class=\"a-menu-log\"href=\"login.php\"> Login</a>";}
             echo "<a class=\"a-menu-log\" href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati </a>
             </div></div>";
 
@@ -67,7 +68,7 @@ echo"
         <div class=\"header-right\">
         
            <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>
-           <a href=\"info.php\"  ";if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
+           
            <a href=\"eventi.php\"  ";if($current=="Eventi"){echo"class=\"active\"";}echo">Eventi</a>
            <a class=\"link-menu\"href=\"registra_tour.php\"  ";if($current=="RegistraTour"){echo"class=\"active\"";}echo">Organizza</a>";
 	     	if(isset($_SESSION['isLogged'])){
@@ -82,9 +83,9 @@ echo"
 	     			<a href=\"logout.php\">Logout</a>";}
 	     	
 
-	     	echo"
-	     	</ul>
-	   	</nav>
+	     	echo"<a href=\"contatti.php\"  ";if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
+	     	
+	   	
 	  	</div>
       	</div>
         </div>

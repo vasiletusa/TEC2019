@@ -7,7 +7,8 @@
 	    getHead("Registrati");
      ?>        
   </head>
-<?php getMenu("Registrati");?>
+<?php getMenu1("Registrati");?>
+<?php getMenu2("Registrati");?>
 <?php getBreadcumbs("Registrati");?>
 <div class="pageRegistrati">
 	

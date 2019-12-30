@@ -9,12 +9,14 @@
           
   </head>
 
-<?php getMenu("Login");?>
+<?php getMenu1("Login");?>
+<?php getMenu2("Login");?>
+
 <?php getBreadcumbs("Login");?>
 
 <div class="pageLogin">
 
-	<div class=" boxLeft" >
+	<div class=" box-login-left" >
 		<?php getMessage();?>
 	
 
@@ -42,7 +44,7 @@
 	</div>
 	
 
-	<div class="boxRight boxDescr" >
+	<div class="box-login-right box-login-descr" >
 
 	<p id="notRegistered">Non ancora registrato? Che aspetti? </br> Entra nella nostra community per restare aggiornato sugli eventi nelle città del Veneto, non perdere l'occasione di iscriverti ai tuoi avvenimenti preferiti prima che i posti finiscano! Già milioni di utenti utilizzano il nostro servizio e ne sono entusiasti! </br><a href='registrazione_utente.php'>Registrati qui</a></p>
 	</div>

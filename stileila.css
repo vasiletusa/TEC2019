@@ -75,11 +75,12 @@ footer {
 .header {
   font-family: Verdana, sans-serif;
   overflow: hidden;
+   border-bottom: 0.1em solid var(--primary-dark);
+
 
 }
 .menu-2{
-  border-radius: 0.3em;
-  border-bottom: 0.1em solid var(--primary-dark);
+ 
 }
 
 .header a {
@@ -276,6 +277,150 @@ background-repeat: no-repeat;
 
 }
 
+
+
+.pageRegistrati, .pageLogin{
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1em;
+  display: block;
+  margin-bottom: 3em;
+  border-radius: 0.1em;
+  padding-top: 5em;
+}
+
+.pageRegistrati{
+    height: 52em;
+
+  }
+.pageLogin{
+  height:auto;
+}
+.box-login-left{
+border-radius: 0em;
+  border-right: 0.1em solid var(--primary-dark);
+  width: 38%;
+  float: left;
+  text-align: center;
+      color:white;
+      text-align: center;
+      
+      padding-bottom: 2em;
+      padding-right: 2%;
+}
+
+
+.box-login-right{
+  width: 54%;
+  text-align: center;
+  float: right;
+  background:var(--primary-light);
+      color:white;
+      text-align: center;
+      border-radius:0.5em;
+      padding-bottom: 2em;
+}
+
+.insertBox{
+  border-radius:0.4em;
+  border-color: white;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 96%
+
+}
+
+.titlePage{
+  height: 30%;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif ;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+}
+
+.form{
+  height: 70%;
+}
+.box-login-descr{
+  text-align: center;
+  margin-top: 1em;
+  margin-right: 2em;
+  margin-bottom: 2.4em;
+  background: white;
+  color: black;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-style: bold;
+}
+
+.imgBoxRight{
+ margin-top: 15em;
+}
+
+input, text {
+  font-size:22px;
+  display:block;
+  width:100%;
+  background:white;
+  background-image:none;
+  border:1px solid var(--primary-dark);
+  color:black;
+  text-align: center;
+  border-radius:0;
+  transition:border-color .25s ease, box-shadow .25s ease;
+
+}
+
+.insertBox{
+  border: 0.01em solid var(--primary-dark);
+
+}
+.label{
+  color: var(--primary-dark);
+}
+
+
+.button {
+  border:1;
+  border-color: white;
+  border-style: solid;
+  /*outline:none;*/
+  border-radius:0.5em;
+  margin-top:1em;
+  font-size:1em;
+  font-weight:bold;
+  width: auto;
+  height: 2em;
+  letter-spacing:.1em;
+  background:var(--primary-dark);
+  color:white;
+  /* -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;*/
+  cursor:pointer;
+  
+}
+@media (max-width: 1111px){
+  .box-login-left{
+      border-right: 0em;
+      width: 40%;
+      margin-left: 30%;
+      margin-right:30%;
+
+  }
+  .box-login-right{
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .insertBox{
+    font-size: 0.8em;
+  }
+}
 
 @media (max-width: 650px) {
  

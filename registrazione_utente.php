@@ -7,11 +7,13 @@
 	    getHead("Registrati");
      ?>        
   </head>
-<?php getMenu("Registrati");?>
+<?php getMenu1("Registrati");?>
+<?php getMenu2("Registrati");?>
+
 <?php getBreadcumbs("Registrati");?>
 <div class="pageRegistrati">
 	
-	<div class="boxLeft">
+	<div class="box-login-left">
 		
 		<div class="form">
 			<form method="post" action="registrazione_utente.php" >						
@@ -70,7 +72,7 @@
 			</div>
 
 
-<div class="boxRight boxDescr ">
+<div class="box-login-right box-login-descr ">
 	
 		<p> Entra nella nostra community per vedere e partecipare agli eventi </p>
 		<p>Se invece sei il proprietario di un'azienda, un locale, bar discoteca, o il referente di un'attività pubblica quale museo o luoghi culturali registra la tua azienda per far conoscere agli utenti della nostra community i tuoi eventi speciali o promozioni.</br> Registra la tua azienda <a href="registrazione_azienda.php">qui</a>.</p>
