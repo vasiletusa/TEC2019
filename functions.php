@@ -22,7 +22,7 @@ echo"
 
 	<link rel=\"icon\" 
       type=\"image/png\" 
-      href=\"img/destination.png\">
+      href=\"img/favicon.png\">
 	
 ";
 }function getFooter(){echo"
@@ -60,14 +60,16 @@ function getMenu2($current){
 echo"
 
     <div class=\"menu-2\">
-     <div class=\"header\"class=\"logo\">
-        <a href=\"home.php\"><img src=\"img/logot.png\" alt=\"Veneto on Tour\"></a>
+     <div class=\"header\">
+        <div class=\"header-left\">
+        <a class=\"logo-a\" href=\"home.php\"><img class=\"logo\"src=\"img/logo.jpg\" alt=\"Veneto on Tour\"></a>
+        </div>
         <div class=\"header-right\">
         
            <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>
            <a href=\"info.php\"  ";if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
            <a href=\"eventi.php\"  ";if($current=="Eventi"){echo"class=\"active\"";}echo">Eventi</a>
-           <a href=\"registra_tour.php\"  ";if($current=="RegistraTour"){echo"class=\"active\"";}echo">Organizza</a>";
+           <a class=\"link-menu\"href=\"registra_tour.php\"  ";if($current=="RegistraTour"){echo"class=\"active\"";}echo">Organizza</a>";
 	     	if(isset($_SESSION['isLogged'])){
 	     		$username=$_SESSION['username'];
                 $db = mysqli_connect('localhost', 'root', '', 'irizzo');

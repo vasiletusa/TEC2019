@@ -41,10 +41,10 @@
 		</div>
 	</div>
 	<div class="home-pt2">
-			<div class="box-left">
-				<div class="img-logo" id="logo-left"></div>
+			<div class="box-img-left">
+				
 			</div>
-			<div class="box-right">
+			<div class="box-descr-right">
 			
 					<p class = "descr">
 						Veneto Eventi ti propone una raccolta degli eventi disponibili nelle città del Veneto.</br> Registrati per poter partecipare agli eventi con posti limitati e comprare i biglietti. Se sei un locale o un'azienda che vuole proporre il proprio evento registra la tua attività e crea il tuo evento.

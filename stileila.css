@@ -69,13 +69,17 @@ footer {
 }
 
 .header img{
-  max-height: 5em;
+  max-height: 4em;
 }
 
 .header {
   font-family: Verdana, sans-serif;
   overflow: hidden;
-  padding: 1.11em 0.56em;
+
+}
+.menu-2{
+  border-radius: 0.3em;
+  border-bottom: 0.1em solid var(--primary-dark);
 }
 
 .header a {
@@ -90,18 +94,20 @@ footer {
   border-radius: 0.2em;
 }
 
-.header a:hover {
+.header-right a:hover {
   border-bottom: 0.225em
   solid var(--primary-dark);
 }
 
-.header a.active {
+.header-right a.active {
   border-bottom: 0.225em
   solid var(--primary-dark);
 }
 
 .header-right {
   float: right;
+ margin-top: 5%;
+ margin-bottom: 0.1%;
 }
 
 a{
@@ -166,14 +172,15 @@ a{
 }
 
 
-.box-left{
-  background-image: url(img/logoT.png);
+.box-img-left{
+  background-image: url(img/locandina.jpg);
   width: 40%;
   height: 100%;
   float: left;
+  background-repeat: no-repeat;
 }
 
-.box-right{
+.box-descr-right{
   width: 55%;
   height: 100%;
   float: right;
@@ -270,9 +277,7 @@ background-repeat: no-repeat;
 
 
 @media (max-width: 650px) {
-  body{
-    font-size: 0.8em;
-  }
+ 
   .lista-citta{
   padding-left: 15%;
   padding-right: 15%;
@@ -301,11 +306,7 @@ background-repeat: no-repeat;
 
 
 @media(max-width: 1049px){
-  .box-pulsante{
-  float: left;
-  width: 100%;
-  margin-bottom: 2%;
-  }
+ 
   .home-pt2{
   margin-top: 2em;
   height: 17em;
@@ -325,4 +326,15 @@ background-repeat: no-repeat;
     height: 40em;
   }
 
+}
+
+@media(max-width: 660px){
+  .box-img-left{
+    width: 0%;
+  }
+  .box-descr-right{
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 }
