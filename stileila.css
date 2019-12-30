@@ -259,6 +259,7 @@ background-repeat: no-repeat;
   width: 100%;
   height: 20%;
   float: left;
+
 }
 .box-luogo{
   float: left;
@@ -324,6 +325,14 @@ background-repeat: no-repeat;
 @media(max-width: 442px){
   .box-evento{
     height: 40em;
+  }
+  .box-descr p{
+    text-overflow: ellipsis; 
+    overflow: hidden;
+  }
+  .box-descr-right p{
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
 }
