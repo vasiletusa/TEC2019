@@ -129,6 +129,22 @@ function getEventiAzienda(){
     array_push($output,$errore);
     return $output;
 }
+function getEventiTutti(){
+    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $sql = "SELECT * FROM `eventi`";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+        $_SESSION['eventi']=false;
+        //array_push($errore,"Errore della query: " . $sql);
+    }else {$_SESSION['eventi']=true;}
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
+}
 
 ?>
 
