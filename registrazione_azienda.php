@@ -76,4 +76,5 @@
 
 </div>
 </div>
+</body>
 					<?php getfooter() ?>

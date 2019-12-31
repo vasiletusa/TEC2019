@@ -326,6 +326,11 @@ border-radius: 0em;
   text-align: center;
       color:white;
       text-align: center;
+
+  margin-bottom: 2em;
+  border-radius: 0.4em;
+  border:0.1em solid var(--primary-dark);
+  padding-bottom: 1em;
       
 }
 .contatti{
@@ -401,6 +406,7 @@ input, text {
   text-align: center;
   border-radius:0;
   transition:border-color .25s ease, box-shadow .25s ease;
+  height: 1.7em;
 
 }
 
@@ -410,6 +416,7 @@ input, text {
 }
 .label{
   color: var(--primary-dark);
+  font-size: 1.5em;
 }
 
 
@@ -506,7 +513,10 @@ input, text {
     font-size: 0.8em;
   }
 }
-
+/*nuovo evento*/
+.input-descrizione{
+  height: 12em;
+}
 @media (max-width: 650px) {
  
   .lista-citta{
