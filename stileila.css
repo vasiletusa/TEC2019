@@ -119,6 +119,10 @@ a{
     text-decoration-thickness: auto;
     color:#000;
 }
+
+.link-parola{
+  text-decoration: underline;
+}
 /*home*/
 /*prima parte immagine iniziale e bottoni delle città*/
 .box-pulsante{
@@ -435,11 +439,21 @@ input, text {
   text-align: center;
 }
 /*area personale*/
-.modifica-pw{
-  width: 10%;
-  margin-left:85%;
+.bottone-area{
+  width: 90%;
+  margin-left: 5%;
   margin-right: 5%;
   font-size: 1em;
+  float: left;
+}
+.area-titoli{
+  width: 75%;
+  float: left;
+}
+
+.area-bottoni{
+  width: 25%;
+  float: left;
 }
 .box-left-area{
   width: 49%;
@@ -456,6 +470,10 @@ input, text {
 .box-right-area{
   width: 50%;
   float: left;
+}
+
+.nuovo-evento{
+  margin-top: 2em;
 }
 
 @media (max-width: 1111px){

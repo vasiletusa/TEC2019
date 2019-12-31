@@ -176,7 +176,6 @@ if (isset($_POST['Login'])){
   }
   if (count($errors) == 0) {
         $query = "SELECT * FROM `log` WHERE Username='$username' and Password='$password'";
-        echo $query;
         $result = mysqli_query($db,$query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
        

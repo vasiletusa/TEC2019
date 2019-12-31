@@ -15,10 +15,13 @@
 <div class="pageArea">
 
 <div class="box1">
-    
-    <div class="bottone modifica-pw"><a href="modifica_pw.php" style="color:black;">Cambia password </a>  </div>
-    <h1 class="titolo benvenuto">Benvenuto nella tua area personale <?php echo $_SESSION['usernameU']; ?>!</h1>
-    <p class="titolo descrizione"> Qui troverai gli eventi salvati e quelli a cui sei iscritto</p>
+    <div class="area-bottoni">
+        <div class="bottone bottone-area"><a href="modifica_pw.php" style="color:black;">Cambia password </a>  </div>
+    </div>
+    <div class="area-titoli">
+        <h1 class="titolo ">Benvenuto nella tua area personale <?php echo $_SESSION['usernameU']; ?>!</h1>
+        <p class="titolo "> Qui troverai gli eventi salvati e quelli a cui sei iscritto</p>
+    </div>
 </div>
 
 <div class="box-left-area preferiti" >

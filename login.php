@@ -46,11 +46,12 @@
 
 	<div class="box-login-right box-login-descr" >
 
-	<p id="notRegistered">Non ancora registrato? Che aspetti? </br> Entra nella nostra community per restare aggiornato sugli eventi nelle città del Veneto, non perdere l'occasione di iscriverti ai tuoi avvenimenti preferiti prima che i posti finiscano! Già milioni di utenti utilizzano il nostro servizio e ne sono entusiasti! </br><a href='registrazione_utente.php'>Registrati qui</a></p>
+	<p id="notRegistered">Non ancora registrato? Che aspetti? </br> Entra nella nostra community per restare aggiornato sugli eventi nelle città del Veneto, non perdere l'occasione di iscriverti ai tuoi avvenimenti preferiti prima che i posti finiscano! Già milioni di utenti utilizzano il nostro servizio e ne sono entusiasti!</p>
+	<h1 class="titolo">Registrati <a class="link-parola" href='registrazione_utente.php'>qui</a></h1>
 	</div>
 
 
 </div>
-
+</body>
 <?php getfooter()?>
 

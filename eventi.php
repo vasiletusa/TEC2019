@@ -4,7 +4,7 @@
 
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Login");
+	    getHead("Eventi");
      ?>   
           
   </head>
