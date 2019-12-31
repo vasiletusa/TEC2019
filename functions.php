@@ -111,6 +111,25 @@ function getMessage(){
 	}
 }
 
+
+function getEventiAzienda(){
+    $azienda=$_SESSION['usernameA'];
+    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $sql = "SELECT * FROM `eventi` WHERE azienda='$azienda' ";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+        $_SESSION['eventiAzienda']=false;
+        //array_push($errore,"Errore della query: " . $sql);
+    }else {$_SESSION['eventiAzienda']=true;}
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
+}
+
 ?>
 
 
