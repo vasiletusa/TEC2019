@@ -29,7 +29,7 @@ echo"
 
     <footer>
         <div class=\"container\">     
-            <div>&copy; 2019 <span lang=\"en\">Veneto Eventi </span>Torre Archimede, Via Trieste, 63, 35121 Padova PD (<span lang=\"it\">Italia</span>)
+            <div>&copy; 2019 <span lang=\"it\">Veneto Eventi </span>Torre Archimede, Via Trieste, 63, 35121 Padova PD (<span lang=\"it\">Italia</span>)
             </div>
             <div> email: venetoeventi@gmail.com </div>
             <div> tel: +39 123456789 </div>

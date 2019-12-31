@@ -17,7 +17,7 @@
 										
 
 
-<div class="box-reg">
+<div class="box-centrale">
 	
 	<form method="post" action="registrazione_azienda.php" >						
 								<div >

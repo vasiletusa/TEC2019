@@ -12,90 +12,90 @@
 <?php getMenu2("AreaRiservata");?>
 
 <?php getBreadcumbs("Area personale");?>
-
+<div class="pageArea">
 
 <div class="box1">
-    <p class="coloreAP">Benvenuto nella tua area personale <?php echo $_SESSION['usernameU']; ?>!</p>
-    <div class='destra'><a href="modifica_pw.php" style="color:white;">MODIFICA PASSWORD<a>  </div>
-        <div class="end"></div>
+    
+    <div class="bottone modifica-pw"><a href="modifica_pw.php" style="color:black;">Cambia password </a>  </div>
+    <h1 class="titolo benvenuto">Benvenuto nella tua area personale <?php echo $_SESSION['usernameU']; ?>!</h1>
+    <p class="titolo descrizione"> Qui troverai gli eventi salvati e quelli a cui sei iscritto</p>
+</div>
+
+<div class="box-left-area preferiti" >
+    <h1 class="titolo"> Preferiti</h1>
+    <div class="evento-1 box-evento piccolo">
+                <div class="box-img">
+                    <img class="img-evento" src="img/eventi.jpg">
+
+                </div>
+                <div class="box-titolo box-5">
+                    <div class="box-icona"></div>
+                    <p class="scritte-evento"> La fabbrica di Babbo Natale</p>
+                </div>
+                <div class="box-categoria box-5">
+                    <div class="box-icona"></div>
+                    <p class="scritte-evento">Famiglie</p>
+                </div>
+                <div class="box-data box-5">
+                    <div class="box-icona">
+                        <div id="calendario"></div>
+                    </div>
+                    <div class="box-data-evento">
+                        <p class="scritte-evento"> 23 Novembre 2019</p>
+                    </div>
+                </div>
+                <div class="box-descr box-10">
+                    <div class="box-icona"></div>
+                    <p class="scritte-evento"> Apre la fabbrica di babbo natale con le casette in legno in cui trovare tante idee regalo e sorprese per grandi e piccini!
+                </div>
+                <div class="box-luogo box-5">
+                    <div class="box-icona">
+                        <div id="local"></div>
+                    </div>
+                    <div class="box-luogo-evento">
+                        <p class="scritte-evento"> 23 Piazza Eremitani</p>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="box-right-area iscrizioni">
+    <h1 class="titolo"> Iscrizioni</h1>
+    <div class="evento-1 box-evento piccolo">
+                <div class="box-img">
+                    <img class="img-evento" src="img/eventi.jpg">
+
+                </div>
+                <div class="box-titolo box-5">
+                    <div class="box-icona"></div>
+                    <p class="scritte-evento"> La fabbrica di Babbo Natale</p>
+                </div>
+                <div class="box-categoria box-5">
+                    <div class="box-icona"></div>
+                    <p class="scritte-evento">Famiglie</p>
+                </div>
+                <div class="box-data box-5">
+                    <div class="box-icona">
+                        <div id="calendario"></div>
+                    </div>
+                    <div class="box-data-evento">
+                        <p class="scritte-evento"> 23 Novembre 2019</p>
+                    </div>
+                </div>
+                <div class="box-descr box-10">
+                    <div class="box-icona"></div>
+                    <p class="scritte-evento"> Apre la fabbrica di babbo natale con le casette in legno in cui trovare tante idee regalo e sorprese per grandi e piccini!
+                </div>
+                <div class="box-luogo box-5">
+                    <div class="box-icona">
+                        <div id="local"></div>
+                    </div>
+                    <div class="box-luogo-evento">
+                        <p class="scritte-evento"> 23 Piazza Eremitani</p>
+                    </div>
+                </div>
+            </div>
     
 </div>
-
-<div>
-    <div class="sinpersarea">
-    	<p class="sottotitoloap">I tour che hai organizzato</p>
-        <?php
-            require_once('functions.php');
-            $output=getTuoiTourOrganizzati();
-            $outCat="";
-            if($_SESSION['tuoiTour']===true){
-            foreach ($output as $elem) {
-                if($elem){
-                    $outCat.=   "<div class='sfondoAP'>
-                                
-                                    <div class='sinistraparag'>
-                                        <p class='titolo' class='coloret parag'>".$elem['Titolo']."</p>
-
-                                        <p class='descrizione' class='coloret parag'>".$elem['Citta']."</a></p>
-                                        <p class='descrizione' class='coloret parag'>".$elem['Data']."</a></p>
-                                        <p class='descrizione' class='coloret parag'>".$elem['Organizzatore']."</a></p>
-                                    </div>
-                                    <div class='sinistraparag'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$elem['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/>  </div>
-
-                                    <div class='end'></div>
-
-                                </div>";
-                }
-            }}
-
-            else{$outCat.= "<p> <h3>Non hai ancora organizzato tour. <a href='registra_tour.php' class='messageTour'> Organizza </a>il tuo primo tour!<h3></p>";}
-            echo $outCat;
-            unset($outCat);
-        ?>
-    </div>
-    <div class="sinpersarea">
-    	<p class="sottotitoloap">I tour a cui sei iscritto</p>
-        <?php
-            require_once('functions.php');
-            $tuoiTour=getTuoiTourPartecipi();
-            $tour=getTour();
-            $outCat="";
-            if($_SESSION['tuoiTour']===true){
-
-            foreach ($tuoiTour as $elem) {
-              
-                if($_SESSION['tour']===true){
-            	foreach ($tour as $key) {
-                    
-                    if($key&&$elem){
-            		if($elem['IdTour']==$key['Id']){
-                       
-                    $outCat.=   "<div class='sfondoAP'>
-                                
-                                    <div class='sinpersarea'>
-                                        <p class='titolo' class='coloret parag'>".$key['Titolo']."</p>
-
-                                        <p class='descrizione' class='coloret parag'>".$key['Citta']."</a></p>
-                                        <p class='descrizione' class='coloret parag'>".$key['Data']."</a></p>
-                                        <p class='descrizione' class='coloret parag'>".$key['Organizzatore']."</a></p>
-                                    </div>
-                                    <div class='sinpersarea'><input type=\"button\" onclick=\"window.location.href = 'dettagliTour.php?id=".$key['Id']."'\" class=\"buttonDettagli\" value=\"DETTAGLI\"/> </div>
-                                    <div class='end'> </div>
-                                
-                                </div>";
-                                break;
-                }}
-             
-        }}
-        
-
-    }}  else{$outCat.= "<div><h3> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h3></div>";}
-        echo $outCat;
-        unset($outCat);
-    ?>
 </div>
-
-</div>
-
 </body>
 <?php getFooter() ?>
