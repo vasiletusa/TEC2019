@@ -22,7 +22,25 @@ if (mysqli_connect_errno())
 
 }
 
-
+//ACCETTAZIONE TOUR
+  if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['accetta']))
+    {
+        accetta();
+    }
+    //RIFIUTA TOUR
+if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['rifiuta']))
+    {
+        rifiuta();
+    }
+    //ISCRIVITI
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['iscriviti']))
+    {
+        iscriviti();
+    }
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['disiscriviti']))
+    {
+        disiscriviti();
+    }
     
 //REGISTRAZIONE DEGLI UTENTI
 if (isset($_POST['registrazione_utente'])) {
@@ -91,7 +109,7 @@ if (isset($_POST['registrazione_utente'])) {
 
 //REGISTRAZIONE DELLE AZIENDE
 if (isset($_POST['registrazione_azienda'])) {
- 
+  echo "1";
   // receive all input values from the form
   $nomeA = mysqli_real_escape_string($db, $_POST['NomeAzienda']);
   $nomeR = mysqli_real_escape_string($db, $_POST['NomeReferente']);
@@ -130,30 +148,28 @@ if (isset($_POST['registrazione_azienda'])) {
     $errors['password']="La password deve contenere almeno 4 caratteri";
   }
     else{
-   
+      echo "2";
 
         //controllo se esiste già uno username uguale
               $controllo = "SELECT * FROM `aziende` WHERE username='$username' ";
               $result = mysqli_query($db,$controllo) or die(mysql_error());
               $rows = mysqli_num_rows($result);
               if($rows==1){
-             
                   $errors['esistente']="Username non disponibile";
               }
               elseif($password==$password_2){
-                echo "$nomeA, $nomeR, $emailR, $password, $username";
-                      $query2 = "INSERT INTO aziende (nome, nomereferente, emailreferente, password, username) 
-                              VALUES('$nomeA','$nomeR', '$emailR', '$password', '$username')";
-                        mysqli_query($db, $query2);
-                    
-                        $_SESSION['usernameA']=$username;
+                echo "3";
+                      $query = "INSERT INTO aziende (Nome, NomeReferente, EmailReferente, Password, Username) 
+                              VALUES('$nomeA','$nomeR', '$emailR', '$password, '$username')";
+                        mysqli_query($db, $query);
+                        $_SESSION['nomeAzienda']=$nomeA;
                         $_SESSION['isLogged']=true;
                         $tipo="azienda";
-                     
-                      $query3 = "INSERT INTO log (username, password, tipo)VALUES('$username','$password', '$tipo')";
-                      mysqli_query($db, $query3);
+                        echo "4";
+                      $query2 = "INSERT INTO log (username, password, tipo)VALUES('$username','$password', '$tipo')";
+                      mysqli_query($db, $query2);
                         //reindirizzamento
-                        header("Location: area_riservata_azienda.php");
+                        //header("Location: area_riservata_azienda.php");
               }else
             $errors['noPassword']="Le password non coincidono";   
   }
@@ -175,38 +191,123 @@ if (isset($_POST['Login'])){
     $errors['password']="Password richiesta";
   }
   if (count($errors) == 0) {
-        $query = "SELECT * FROM `log` WHERE Username='$username' and Password='$password'";
-        echo $query;
+        $query = "SELECT * FROM `utenti` WHERE Username='$username' and Password='$password'";
         $result = mysqli_query($db,$query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
        
         $ris=mysqli_fetch_assoc($result);
-        $tipo=$ris['Tipo'];
+        $ruolo=$ris['Ruolo'];
               if($rows==1){
-                
+                $_SESSION['username'] = $username;
                 $_SESSION['isLogged']= true;
                       //Reindirizzamento 
-              
-                 
-                    if($tipo=='azienda'){
-                        $_SESSION['usernameA']=$username;
-                        header("Location: area_riservata_azienda.php");}
-                      elseif($tipo=='utente') {
-                        $_SESSION['usernameU']=$username;
-                        header("Location: area_riservata_utente.php");
+                if($isOrganize==true){
+                  header("Location: registra_tour.php");
+                 $isOrganize=false;}
+                  else{
+                    if($ruolo=='User')
+                        header("Location: area_riservata.php");
+                      else 
+                        header("Location: area_admin.php");
                       }
-                      else{
-                        $_SESSION['usernameAdmin']=$username;
-                        header("Location: area_riservata_admin.php");
-                      }
-              }
               }      
   }
 
+}
+if(isset($_SESSION['area'])){
+  $username=$_SESSION['username'];
+  $query = "SELECT * FROM `tour` WHERE Organizzatore='$username' ";
+        $result = mysqli_query($db,$query) or die(mysql_error());
+        $rows = mysqli_num_rows($result);
+
+              if($rows==0){
+                $tuoitour['vuoto']="Non hai ancora organizzato tour";
+               }
+                /*else{
+                  $count=1;
+                  while($row = mysqli_fetch_assoc($result)) { 
+
+                   echo " <p><a href=\"#\" align=\"center\"><".$row['Descrizione']."></a>";
+                  $count++; }
+                }*/
+}
 
 
 
+//REGISTRAZIONE TOUR
+if (isset($_POST['registrazione_tour'])) {
+  // receive all input values from the form
+  
+  $data = mysqli_real_escape_string($db, $_POST['data']);
+  $citta = mysqli_real_escape_string($db, $_POST['citta']);
+  $titolo = mysqli_real_escape_string($db, $_POST['titolo']);
+  $descrizione = mysqli_real_escape_string($db, $_POST['descrizione']);
+  
+  if(empty($data)){
+    $errors['data']="Data richiesta";
+  }
+  if(empty($citta)){
+    $errors['citta']="Citta' richiesta";
+  }
+  if(empty($titolo)){
+    $errors['titolo']="Titolo richiesto";
+  }
+  if(empty($descrizione)){
+    $errors['descrizione']="Descrizione richiesta";
+  }
+  
+  if(strlen($descrizione)<20){
+    $errors['descrizione']="inserire una descrizione di almeno 20 caratteri";
+  }
+  if (count($errors) == 0) {
+    //inserimento del tour nel DB
+      $organizzatore=$_SESSION['username'];
+        $query = "INSERT INTO tour (data, organizzatore, citta, titolo, descrizione, stato) 
+                                VALUES('$data','$organizzatore', '$citta','$titolo', '$descrizione','In attesa')";
+                                $result = mysqli_query($db,$query) or die(mysql_error());
+    header("Location: area_riservata.php");
+  }
+}
 
+//MODIFICA PASSWORD
+if (isset($_POST['modifica_pw'])) {
+  $oldpw = mysqli_real_escape_string($db, $_POST['pwV']);
+  $newpw = mysqli_real_escape_string($db, $_POST['pwN']);
+  $newpw2 = mysqli_real_escape_string($db, $_POST['pwC']);
+  
+  if(empty($oldpw)){
+    $errors['PasswordError']="Vecchia password richiesta";
+  }
+  if(empty($newpw)){
+    $errors['PasswordError']="Nuova password richiesta";
+  }
+  if(empty($newpw2)){
+    $errors['PasswordError']="Conferma password richiesta";
+  }
+  $username=$_SESSION['username'];
+  $query = "SELECT * FROM `utenti` WHERE Username='$username'";
+  $result = mysqli_query($db, $query)or die(mysql_error());
+  while ($row = mysqli_fetch_assoc($result)) {
+        if($row['Password']!=$oldpw){
+          $errors['PasswordError']="Password errata";
+        }
+  }
+  if($newpw != $newpw2){
+    $errors['PasswordError']="Le password non corrispondono";
+    $errors['PasswordError']="Le password non corrispondono";
+  }
+
+
+    echo count($errorss);
+
+  if (count($errors) == 0) {
+   
+        $query =" UPDATE `utenti` SET Password='$newpw' WHERE Username='$username'";
+              $ris = mysqli_query($db,$query) or die(mysql_error());
+    header("Location: area_riservata.php");
+  }
+
+}
 
 function setOrganizza(){
     if(!isset($_SESSION["username"])){

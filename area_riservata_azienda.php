@@ -1,7 +1,4 @@
-<?php
-//include auth.php file on all secure pages
-include("auth.php");
-?>
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
 
@@ -12,12 +9,16 @@ include("auth.php");
 	    $_SESSION['area']=true;
      ?>        
   </head>
-<?php getMenu("AreaRiservata");?>
+<?php getMenu1("AreaRiservata");?>
+<?php getMenu2("AreaRiservata");?>
+
+
+
 <?php getBreadcumbs("Area personale");?>
 
 
 <div class="box1">
-    <p class="coloreAP">Benvenuto nella tua area personale <?php echo $_SESSION['username']; ?>!</p>
+    <p class="coloreAP">Benvenuto nella tua area personale <?php echo $_SESSION['usernameA']; ?>!</p>
     <div class='destra'><a href="modifica_pw.php" style="color:white;">MODIFICA PASSWORD<a>  </div>
         <div class="end"></div>
     

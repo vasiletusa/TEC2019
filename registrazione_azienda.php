@@ -17,7 +17,7 @@
 										
 
 
-<div class="boxLeft">
+<div class="box-reg">
 	
 	<form method="post" action="registrazione_azienda.php" >						
 								<div >
@@ -42,8 +42,8 @@
 								
 								</div>
 								<div>
-									<label for="pi" class="label pi">Partita IVA</label>
-									<input id="pi" type="text" name="pi" class="input pi insertBox" placeholder="Partita IVA">
+									<label for="Username" class="label Username">Username</label>
+									<input id="Username" type="text" name="Username" class="input username insertBox" placeholder="Username">
 									<p class="error"><?php getUsernameError($errors); ?></p>
 									<p class="error"><?php getEsistenteError($errors); ?></p>
 
@@ -71,8 +71,7 @@
 							</form>
 						</div>
 							
-				<div class="boxRight ">
-			<img class="imgBoxRight" src="img/calendario.jpg" alt="foto di un calendario">
+				
 		</div></div>
 
 </div>
