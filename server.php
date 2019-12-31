@@ -99,7 +99,7 @@ if (isset($_POST['registrazione_azienda'])) {
   $username = mysqli_real_escape_string($db, $_POST['Username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
   $password_2 = mysqli_real_escape_string($db, $_POST['passwordR']);
-  echo "1.5";
+  
   if(empty($nome)){
     $errors['NomeAzienda']="Nome richiesto";
   }
@@ -202,7 +202,46 @@ if (isset($_POST['Login'])){
               }      
   }
 
-
+//nuovo evento
+  if (isset($_POST['nuovo_evento'])) {
+ 
+  // receive all input values from the form
+  $titolo = mysqli_real_escape_string($db, $_POST['TitoloEvento']);
+  $descrizione = mysqli_real_escape_string($db, $_POST['Descrizione']);
+  $luogo = mysqli_real_escape_string($db, $_POST['Luogo']);
+  $data = mysqli_real_escape_string($db, $_POST['Data']);
+  $categoria = mysqli_real_escape_string($db, $_POST['Categoria']);
+  
+  if(empty($titolo)){
+    $errors['TitoloEvento']="Titolo richiesto";
+  }
+  if(empty($descrizione)){
+    $errors['Descrizione']="Descrizione richiesta";
+  }
+  if(empty($luogo)){
+    $errors['Luogo']="Luogo richiesto";
+  }
+  if(empty($data)){
+    $errors['Data']="Data richiesta";
+  }
+  if(empty($categoria)){
+    $errors['categoria']="Categoria richiesta";
+  }
+  
+  
+    else{
+                      $azienda=$_SESSION['usernameA'];
+                      $query2 = "INSERT INTO eventi (titolo, descrizione, luogo, categoria, azienda ) 
+                              VALUES('$titolo','$descrizione', '$luogo', '$categoria', '$azienda')";
+                        mysqli_query($db, $query2);
+                    
+                        
+                     
+                      
+                        //reindirizzamento
+                        header("Location: area_riservata_azienda.php");
+    }
+}
 
 
 

@@ -33,20 +33,20 @@
 								</div>
 								<div >
 									<label for="Luogo" class="label Luogo">Luogo</label>
-									<input id="Luogo" type="email" required name="Luogo" class="input insertBox" placeholder="Luogo">
+									<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Luogo">
 									
 								
 								</div>
 								<div>
 									<label for="Data" class="label Data">Data</label>
-									<input id="Data" type="text" name="Data" class="input insertBox" placeholder="Data">
+									<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Data">
 									
 
 
 								</div>
 								<div>
 									<label for="Categoria" class="label Categoria">Categoria</label>
-									<input id="Categoria" type="Categoria" name="Categoria" class="input insertBox" placeholder="Categoria">
+									<input id="Categoria" type="text" name="Categoria" class="input insertBox" placeholder="Categoria">
 								
 								</div>
 								
