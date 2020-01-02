@@ -145,6 +145,38 @@ function getEventiTutti(){
     array_push($output,$errore);
     return $output;
 }
+function getEventiPrefe(){
+    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $sql = "SELECT * FROM `preferiti`";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+        $_SESSION['eventiPrefe']=false;
+        //array_push($errore,"Errore della query: " . $sql);
+    }else {$_SESSION['eventiPrefe']=true;}
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
+}
+function getEventiIscritto(){
+    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $sql = "SELECT * FROM `partecipa`";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+        $_SESSION['eventiIscritto']=false;
+        //array_push($errore,"Errore della query: " . $sql);
+    }else {$_SESSION['eventiIscritto']=true;}
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
+}
 function getEventoDettagli($id){
       $db = mysqli_connect('localhost', 'root', '', 'irizzo');
 
@@ -166,13 +198,13 @@ function setIscrivitiBottone(){
         $ris= mysqli_query($db, $sql);
     
         if(mysqli_num_rows($ris)==0){
-            $output= "<form action='area_riservata_utente.php' method='post'>
+            $output= "<form action='' method='post'>
                                     <input type='submit' name='iscriviti' value='ISCRIVITI'  class='scritte-iscriviti' />
 
                 </form>";
                        }
         else{
-            $output="<form action='eventi.php' method='post'>
+            $output="<form action='' method='post'>
                                     <input type='submit' name='disiscriviti' value='DISISCRIVITI'  class='scritte-iscriviti' />
 
                 </form>";

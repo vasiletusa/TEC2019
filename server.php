@@ -206,9 +206,15 @@ if (isset($_POST['Login'])){
   }
 
 
+
 //nuovo evento
   if (isset($_POST['nuovo_evento'])) {
- 
+   /* $target_dir = "uploads/";
+    $file=$_FILES['fileToUpload']['name'];
+    $target_file = $target_dir . $file;
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+ */
   // receive all input values from the form
   $titolo = mysqli_real_escape_string($db, $_POST['TitoloEvento']);
   $descrizione = mysqli_real_escape_string($db, $_POST['Descrizione']);
@@ -238,9 +244,14 @@ if (isset($_POST['Login'])){
                       $query2 = "INSERT INTO eventi (titolo, descrizione, luogo, categoria, azienda ) 
                               VALUES('$titolo','$descrizione', '$luogo', '$categoria', '$azienda')";
                         mysqli_query($db, $query2);
-                    
-                        
-                     
+                   /*$move= move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file) ;
+  
+                      if( $move) {
+                        echo "Successfully uploaded";         
+                      } else {
+                        echo "Not uploaded";
+                      } 
+                     */
                       
                         //reindirizzamento
                         header("Location: area_riservata_azienda.php");

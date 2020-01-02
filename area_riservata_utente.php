@@ -15,97 +15,138 @@
 <div class="pageArea">
 
 <div class="box1">
-    <div class="area-bottoni">
-        <div class="bottone bottone-area"><a href="modifica_pw.php" style="color:black;">Cambia password </a>  </div>
-    </div>
+    
     <div class="area-titoli">
         <h1 class="titolo ">Benvenuto nella tua area personale <?php echo $_SESSION['usernameU']; ?>!</h1>
         <p class="titolo "> Qui troverai gli eventi salvati e quelli a cui sei iscritto</p>
     </div>
+    <div class="area-bottoni">
+        <div class="bottone bottone-area"><a href="modifica_pw.php" style="color:black;">Cambia password </a>  </div>
+    </div>
 </div>
-
 <div class="box-left-area preferiti" >
-    <h1 class="titolo"> Preferiti</h1>
-    <div class="evento-1 box-evento piccolo">
-                <div class="box-img">
-                    <img class="img-evento" src="img/eventi.jpg">
+<?php
+            require_once('functions.php');
+            $tuoiTour=getEventiPrefe();
+            $tour=getEventiTutti();
+            $outCat="";
+            if($_SESSION['eventiPrefe']===true){
+                $outCat.="<h1 class=\"titolo\"> Preferiti</h1>";
 
-                </div>
-                <div class="box-titolo box-5">
-                    <div class="box-icona"></div>
-                    <p class="scritte-evento"> La fabbrica di Babbo Natale</p>
-                </div>
-                <div class="box-categoria box-5">
-                    <div class="box-icona"></div>
-                    <p class="scritte-evento">Famiglie</p>
-                </div>
-                <div class="box-data box-5">
-                    <div class="box-icona">
-                        <div id="calendario"></div>
-                    </div>
-                    <div class="box-data-evento">
-                        <p class="scritte-evento"> 23 Novembre 2019</p>
-                    </div>
-                </div>
-                <div class="box-descr box-10">
-                    <div class="box-icona"></div>
-                    <p class="scritte-evento"> Apre la fabbrica di babbo natale con le casette in legno in cui trovare tante idee regalo e sorprese per grandi e piccini!
-                </div>
-                <div class="box-luogo box-5">
-                    <div class="box-icona">
-                        <div id="local"></div>
-                    </div>
-                    <div class="box-luogo-evento">
-                        <p class="scritte-evento"> 23 Piazza Eremitani</p>
-                    </div>
-                </div>
-            </div>
-</div>
-<div class="box-right-area iscrizioni">
-    <h1 class="titolo"> Iscrizioni</h1>
-    <div class="evento-1 box-evento piccolo">
-                <div class="box-img">
-                    <img class="img-evento" src="img/eventi.jpg">
-
-                </div>
-                <div class="box-titolo ">
-                    <div class="box-icona"></div>
-                    <p class="scritte-evento"> La fabbrica di Babbo Natale</p>
-                </div>
-                <div class="box-categoria ">
-                    <div class="box-icona"></div>
-                    <p class="scritte-evento">Famiglie</p>
-                </div>
-                <div class="box-data ">
-                    <div class="box-icona">
-                        <div id="calendario"></div>
-                    </div>
-                    <div class="box-data-evento">
-                        <p class="scritte-evento"> 23 Novembre 2019</p>
-                    </div>
-                </div>
-                <div class="box-descr ">
-                    <div class="box-icona"></div>
-                    <p class="scritte-evento"> Apre la fabbrica di babbo natale con le casette in legno in cui trovare tante idee regalo e sorprese per grandi e piccini!
-                </div>
-                <div class="box-luogo">
-                    <div class="box-icona">
-                        <div id="local"></div>
-                    </div>
-                    <div class="box-luogo-evento">
-                        <p class="scritte-evento"> 23 Piazza Eremitani</p>
-                    </div>
-                </div>
-                <div class=\"box-dettagli\">
-                                        <div class=\"box-icona\">
-                                                
-                                            </div>
-                                            <div >
-
-                                                <input type=\"button\" onclick=\"window.location.href = 'dettagli_evento.php?id=".$elem['ID']."'\" class=\"scritte-dettagli\" value=\"DETTAGLI\"/>  
-                                            </div> 
+            foreach ($tuoiTour as $elem) {
+              
+                if($_SESSION['eventi']===true){
+                foreach ($tour as $key) {
+                    
+                    if($key&&$elem){
+                    if($elem['ID']==$key['ID']){
+                       
+                    $outCat.=   "
+                                    <div class=\"evento-1 box-evento piccolo\">
+                                        <div class=\"box-img\">
+                                        <img class=\"img-evento\" src=\"img/eventi.jpg\">
                                         </div>
-            </div>
+                                        <div class=\"box-titolo\">
+                                            <div class=\"box-icona\"></div>
+                                            <p class=\"scritte-evento\">".$key['Titolo']." </p>
+                                        </div>
+                                        <div class=\"box-categoria\">
+                                            <div class=\"box-icona\"></div>
+                                            <p class=\"scritte-evento\">".$key['Categoria']."</p>
+                                        </div>
+                                        <div class=\"box-data\">
+                                                <div class=\"box-icona\">
+                                                    <div id=\"calendario\"></div>
+                                                </div>
+                                                <div class=\"box-data-evento\">
+                                                    <p class=\"scritte-evento\">".$key['Data']."</p>
+                                                </div>
+                                        </div>
+                                        <div class=\"box-descr\">
+                                            <div class=\"box-icona\"></div>
+                                            <p class=\"scritte-evento\">".$key['Descrizione']."</div>
+                                        <div class=\"box-luogo\">
+                                            <div class=\"box-icona\">
+                                                <div id=\"local\"></div>
+                                            </div>
+                                            <div class=\"box-luogo-evento\">
+                                                <p class=\"scritte-evento\">".$key['Luogo']."</p>
+                                            </div>
+                                        </div>
+                                    </div>";
+                                break;
+                }}
+             
+        }}
+        
+
+    }}  else{$outCat.= "<div><h3> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h3></div>";}
+        echo $outCat;
+        unset($outCat);
+    ?>
+        
+    </div>
+    <div class="box-right-area iscrizioni">
+
+    <?php
+            require_once('functions.php');
+            $tuoiTour=getEventiIscritto();
+            $tour=getEventiTutti();
+            $outCat="";
+            if($_SESSION['eventiIscritto']===true){
+                $outCat.="<h1 class=\"titolo\"> Iscrizioni</h1>";
+
+            foreach ($tuoiTour as $elem) {
+              
+                if($_SESSION['eventi']===true){
+                foreach ($tour as $key) {
+                    
+                    if($key&&$elem){
+                    if($elem['ID']==$key['ID']){
+                       
+                    $outCat.=   "
+                                    <div class=\"evento-1 box-evento piccolo\">
+                                        <div class=\"box-img\">
+                                        <img class=\"img-evento\" src=\"img/eventi.jpg\">
+                                        </div>
+                                        <div class=\"box-titolo\">
+                                            <div class=\"box-icona\"></div>
+                                            <p class=\"scritte-evento\">".$key['Titolo']." </p>
+                                        </div>
+                                        <div class=\"box-categoria\">
+                                            <div class=\"box-icona\"></div>
+                                            <p class=\"scritte-evento\">".$key['Categoria']."</p>
+                                        </div>
+                                        <div class=\"box-data\">
+                                                <div class=\"box-icona\">
+                                                    <div id=\"calendario\"></div>
+                                                </div>
+                                                <div class=\"box-data-evento\">
+                                                    <p class=\"scritte-evento\">".$key['Data']."</p>
+                                                </div>
+                                        </div>
+                                        <div class=\"box-descr\">
+                                            <div class=\"box-icona\"></div>
+                                            <p class=\"scritte-evento\">".$key['Descrizione']."</div>
+                                        <div class=\"box-luogo\">
+                                            <div class=\"box-icona\">
+                                                <div id=\"local\"></div>
+                                            </div>
+                                            <div class=\"box-luogo-evento\">
+                                                <p class=\"scritte-evento\">".$key['Luogo']."</p>
+                                            </div>
+                                        </div>
+                                    </div>";
+                                break;
+                }}
+             
+        }}
+        
+
+    }}  else{$outCat.= "<div><h3> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h3></div>";}
+        echo $outCat;
+        unset($outCat);
+    ?>
             
     
 </div>

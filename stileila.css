@@ -360,8 +360,7 @@ border-radius: 0em;
 }
 
 .insertBox{
-  border-radius:0.4em;
-  border-color: white;
+  border-radius:0.4em solid var(--primary-dark);
   margin-left: 2%;
   margin-right: 2%;
   width: 96%

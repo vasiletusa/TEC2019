@@ -17,7 +17,7 @@
 
 <div class="box-centrale">
 	<h1 class="titolo">Nuovo evento</h1>
-	<form method="post" action="nuovo_evento.php" >						
+	<form method="post" action="server.php" >						
 								<div >
 									<label for="TitoloEvento" class="label TitoloEvento">Titolo Evento</label>
 									<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Titolo Evento">
@@ -54,6 +54,13 @@
 								
 								</div>
 								
+
+
+    
+    							<!--input type="file" name="fileToUpload" id="fileToUpload"-->
+    
+
+
 								<button type="submit" class="button" name="nuovo_evento">Invia</button>
 
 							</form>
