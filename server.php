@@ -147,6 +147,7 @@ if (isset($_POST['registrazione_azienda'])) {
                         mysqli_query($db, $query2);
                     
                         $_SESSION['usernameA']=$username;
+                       
                         $_SESSION['isLogged']=true;
                         $tipo="azienda";
                      
@@ -178,7 +179,7 @@ if (isset($_POST['Login'])){
         $query = "SELECT * FROM `log` WHERE Username='$username' and Password='$password'";
         $result = mysqli_query($db,$query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
-       
+
         $ris=mysqli_fetch_assoc($result);
         $tipo=$ris['Tipo'];
               if($rows==1){
@@ -188,7 +189,9 @@ if (isset($_POST['Login'])){
               
                  
                     if($tipo=='azienda'){
+                      
                         $_SESSION['usernameA']=$username;
+                       
                         header("Location: area_riservata_azienda.php");}
                       elseif($tipo=='utente') {
                         $_SESSION['usernameU']=$username;
@@ -241,10 +244,8 @@ if (isset($_POST['Login'])){
                         //reindirizzamento
                         header("Location: area_riservata_azienda.php");
     }
+    
 }
-
-
-
 
 function setOrganizza(){
     if(!isset($_SESSION["username"])){

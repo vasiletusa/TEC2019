@@ -68,15 +68,15 @@
                     <img class="img-evento" src="img/eventi.jpg">
 
                 </div>
-                <div class="box-titolo box-5">
+                <div class="box-titolo ">
                     <div class="box-icona"></div>
                     <p class="scritte-evento"> La fabbrica di Babbo Natale</p>
                 </div>
-                <div class="box-categoria box-5">
+                <div class="box-categoria ">
                     <div class="box-icona"></div>
                     <p class="scritte-evento">Famiglie</p>
                 </div>
-                <div class="box-data box-5">
+                <div class="box-data ">
                     <div class="box-icona">
                         <div id="calendario"></div>
                     </div>
@@ -84,11 +84,11 @@
                         <p class="scritte-evento"> 23 Novembre 2019</p>
                     </div>
                 </div>
-                <div class="box-descr box-10">
+                <div class="box-descr ">
                     <div class="box-icona"></div>
                     <p class="scritte-evento"> Apre la fabbrica di babbo natale con le casette in legno in cui trovare tante idee regalo e sorprese per grandi e piccini!
                 </div>
-                <div class="box-luogo box-5">
+                <div class="box-luogo">
                     <div class="box-icona">
                         <div id="local"></div>
                     </div>
@@ -96,7 +96,17 @@
                         <p class="scritte-evento"> 23 Piazza Eremitani</p>
                     </div>
                 </div>
+                <div class=\"box-dettagli\">
+                                        <div class=\"box-icona\">
+                                                
+                                            </div>
+                                            <div >
+
+                                                <input type=\"button\" onclick=\"window.location.href = 'dettagli_evento.php?id=".$elem['ID']."'\" class=\"scritte-dettagli\" value=\"DETTAGLI\"/>  
+                                            </div> 
+                                        </div>
             </div>
+            
     
 </div>
 </div>

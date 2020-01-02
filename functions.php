@@ -145,6 +145,14 @@ function getEventiTutti(){
     array_push($output,$errore);
     return $output;
 }
+function getEventoDettagli($id){
+      $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+
+    $sql = "SELECT * FROM `eventi` WHERE Id='$id'";
+    $ris = mysqli_query($db,$sql)or DIE("tourDaId: ".mysqli_error($db));
+    $output = mysqli_fetch_assoc($ris);
+    return $output;
+}
 
 ?>
 
