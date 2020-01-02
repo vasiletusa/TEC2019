@@ -271,10 +271,27 @@ if (isset($_POST['Login'])){
       
         $query = "DELETE FROM `partecipa`WHERE ID='$id' AND Username='$username'";
         $result = mysqli_query($db,$query) or die(mysql_error());
-    
+  }
 
-    
+if(isset($_POST['preferiti'])){
 
+     $id=$_SESSION['idEvento'];
+  
+      $username=$_SESSION['usernameU'];
+      
+        $query = "INSERT INTO preferiti (ID, Username) 
+                                VALUES('$id','$username')";
+        $result = mysqli_query($db,$query) or die(mysql_error());
+        echo $result;
+  }
+if(isset($_POST['nopreferiti'])){
+
+     $id=$_SESSION['idEvento'];
+  
+      $username=$_SESSION['usernameU'];
+      
+        $query = "DELETE FROM `preferiti`WHERE ID='$id' AND Username='$username'";
+        $result = mysqli_query($db,$query) or die(mysql_error());
   }
 function setOrganizza(){
     if(!isset($_SESSION["username"])){

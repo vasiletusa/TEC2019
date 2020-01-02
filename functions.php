@@ -179,8 +179,43 @@ function setIscrivitiBottone(){
         }
     
     }else
-                 $output="<p style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
+                 $output="<p class='scritte-iscriviti' style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
         return  $output;
+}
+
+
+
+function setPreferitiBottone(){
+    $idEvento= $_SESSION['idEvento'];
+    if(isset($_SESSION['usernameU'])){
+        $username= $_SESSION['usernameU'];
+            $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    
+
+        $sql = "SELECT * FROM `preferiti` WHERE id='$idEvento' AND Username='$username' ";
+
+        $ris= mysqli_query($db, $sql);
+    
+        if(mysqli_num_rows($ris)==0){
+            $output= "<form action='' method='post'>
+                                    <input type='submit' name='preferiti' value=''  class='scritte-preferiti prefe' />
+
+                </form>";
+                       }
+        else{
+                                                            
+
+            $output="<form action='' method='post'>
+                                    <input type='submit' name='nopreferiti' value=''  class='scritte-preferiti noprefe' />
+
+                </form>";
+        }
+    
+    }else
+        $output="<p class='scritte-preferiti' style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
+    
+
+    return  $output;
 }
 
 

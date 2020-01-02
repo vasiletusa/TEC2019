@@ -21,7 +21,8 @@
         $evento=getEventoDettagli($_GET['id']);
         $_SESSION['idEvento']=$_GET['id'];
         
-        $controllo= setIscrivitiBottone();
+        $controlloIscrizione= setIscrivitiBottone();
+        $controlloPreferiti= setPreferitiBottone();
                                 
          echo   " <div class=\"box-evento dettagli-evento \">
                                         <div class=\"box-img\">
@@ -61,11 +62,11 @@
                                             </div>
                                             <div >
 
-                                                <input type=\"button\" onclick=\"window.location.href = 'dettagli_evento.php?id=".$evento['ID']."'\" class=\"scritte-preferiti\" value=\"Salva\"/>  
+                                                ".$controlloPreferiti."
                                             </div> 
                                             <div >
 
-                                                ".$controllo."  
+                                                ".$controlloIscrizione."  
                                             </div> 
                                         </div>
                                     </div>

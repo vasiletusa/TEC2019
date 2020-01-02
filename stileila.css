@@ -524,12 +524,30 @@ input, text {
 .scritte-preferiti{
   text-align: center;
   color:#000;
-   width: 28%;
+   width: 10%;
   height: 100%;
   margin-left: 10%;
   margin-right: 2%;
   float: left;
+
 }
+
+.prefe{
+  background-repeat: no-repeat;
+    background-position: center; 
+  
+  background-image: url(img/heart1.png);
+}
+
+
+.noprefe{
+  background-repeat: no-repeat;
+    background-position: center; 
+  
+  background-image: url(img/heart2.png);
+}
+
+
 .scritte-iscriviti{
   text-align: center;
   color:#000;
@@ -538,6 +556,7 @@ input, text {
   margin-right: 10%;
   margin-left: 2%;
   float: left;
+  background: 
 }
 
 @media (max-width: 1111px){
