@@ -19,9 +19,9 @@
            
         require_once('functions.php');
         $evento=getEventoDettagli($_GET['id']);
-        $_SESSION['idTour']=$_GET['id'];
+        $_SESSION['idEvento']=$_GET['id'];
         
-        //$controllo= setIscrivitiButton();
+        $controllo= setIscrivitiBottone();
                                 
          echo   " <div class=\"box-evento dettagli-evento \">
                                         <div class=\"box-img\">
@@ -65,7 +65,7 @@
                                             </div> 
                                             <div >
 
-                                                <input type=\"button\" onclick=\"window.location.href = 'dettagli_evento.php?id=".$evento['ID']."'\" class=\"scritte-iscriviti\" value=\"Iscriviti\"/>  
+                                                ".$controllo."  
                                             </div> 
                                         </div>
                                     </div>

@@ -154,6 +154,37 @@ function getEventoDettagli($id){
     return $output;
 }
 
+function setIscrivitiBottone(){
+    $idEvento= $_SESSION['idEvento'];
+    if(isset($_SESSION['usernameU'])){
+        $username= $_SESSION['usernameU'];
+            $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    
+
+        $sql = "SELECT * FROM `partecipa` WHERE id='$idEvento' AND Username='$username' ";
+
+        $ris= mysqli_query($db, $sql);
+    
+        if(mysqli_num_rows($ris)==0){
+            $output= "<form action='area_riservata_utente.php' method='post'>
+                                    <input type='submit' name='iscriviti' value='ISCRIVITI'  class='scritte-iscriviti' />
+
+                </form>";
+                       }
+        else{
+            $output="<form action='eventi.php' method='post'>
+                                    <input type='submit' name='disiscriviti' value='DISISCRIVITI'  class='scritte-iscriviti' />
+
+                </form>";
+        }
+    
+    }else
+                 $output="<p style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
+        return  $output;
+}
+
+
+
 ?>
 
 

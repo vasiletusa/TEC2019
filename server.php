@@ -202,8 +202,9 @@ if (isset($_POST['Login'])){
                         header("Location: area_riservata_admin.php");
                       }
               }
-              }      
+      }      
   }
+
 
 //nuovo evento
   if (isset($_POST['nuovo_evento'])) {
@@ -244,9 +245,37 @@ if (isset($_POST['Login'])){
                         //reindirizzamento
                         header("Location: area_riservata_azienda.php");
     }
-    
+
 }
 
+
+ if(isset($_POST['iscriviti'])){
+
+      $id=$_SESSION['idEvento'];
+  
+      $username=$_SESSION['usernameU'];
+      
+        $query = "INSERT INTO partecipa (ID, Username) 
+                                VALUES('$id','$username')";
+        $result = mysqli_query($db,$query) or die(mysql_error());
+        echo $result;
+    
+
+  }
+
+ if(isset($_POST['disiscriviti'])){
+
+     $id=$_SESSION['idEvento'];
+  
+      $username=$_SESSION['usernameU'];
+      
+        $query = "DELETE FROM `partecipa`WHERE ID='$id' AND Username='$username'";
+        $result = mysqli_query($db,$query) or die(mysql_error());
+    
+
+    
+
+  }
 function setOrganizza(){
     if(!isset($_SESSION["username"])){
      $_SESSION['isOrganize']=true;
@@ -348,27 +377,9 @@ function rifiuta()
     
 
   }
-    function iscriviti(){
 
-      $id=$_SESSION['idTour'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
-      $username=$_SESSION['username'];
+ 
+
       
-        $query = "INSERT INTO partecipa (idTour, Username) 
-                                VALUES('$id','$username')";
-        $result = mysqli_query($db,$query) or die(mysql_error());
-    
-
-  }
-  function disiscriviti(){
-
-      $id=$_SESSION['idTour'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
-      $username=$_SESSION['username'];
-      
-        $query = "DELETE FROM `partecipa`WHERE idTour='$id' AND Username='$username'";
-        $result = mysqli_query($db,$query) or die(mysql_error());
-    
-
-  }
+  
 ?>
