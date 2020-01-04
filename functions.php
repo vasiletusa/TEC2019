@@ -211,7 +211,7 @@ function setIscrivitiBottone(){
         }
     
     }else
-                 $output="<p class='scritte-iscriviti' style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
+        $output="<p class='scritte-dettagli' style='color:red'> *per iscriverti a un evento devi prima accedere.</p>";
         return  $output;
 }
 
@@ -243,11 +243,28 @@ function setPreferitiBottone(){
                 </form>";
         }
     
-    }else
-        $output="<p class='scritte-preferiti' style='color:red'> *per iscriverti a un tour devi prima accedere <a href='login.php' style='color:red'>Login</a></p>";
-    
+        
 
     return  $output;
+    }
+
+}
+
+function getUltimiEventi(){
+    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $sql = "SELECT * FROM ( SELECT * FROM `eventi` ORDER BY ID DESC LIMIT 3 ) as r ORDER BY ID";
+    $ris = mysqli_query($db,$sql);
+    $errore = array();
+    if(mysqli_num_rows($ris)==0){
+        $_SESSION['eventi']=false;
+    }else {$_SESSION['eventi']=true;}
+    $output = array();
+    while ($row = mysqli_fetch_assoc($ris)) {
+        array_push($output,$row);
+    }
+    array_push($output,$errore);
+    return $output;
+    
 }
 
 

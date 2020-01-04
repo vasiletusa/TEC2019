@@ -25,7 +25,7 @@
         $controlloPreferiti= setPreferitiBottone();
                                 
          echo   " <div class=\"box-evento dettagli-evento \">
-                                        <div class=\"box-img\">
+                                        <div class=\"box-img img-dettagli\">
                                             <img class=\"img-evento\" src=\"img/eventi.jpg\">
                                         </div>
                                         <div class=\"box-titolo box-5\">

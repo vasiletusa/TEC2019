@@ -13,6 +13,35 @@
 <?php getMenu2("Eventi");?>
 
 <?php getBreadcumbs("Eventi");?>
+
+<div class="home-pt1">
+        
+            
+        <div class="lista-citta">
+            <div class="box-pulsante box1">
+                    <button class="attivo bottone" id="padova"><a class="citta" href="citta.php?nome=Paodva">PADOVA</a></div>
+            </div>
+            <div class="box-pulsante box2">
+                    <button class="bottone" id="verona"><a href="citta.php?nome=Verona">VERONA</a></div>
+            </div>
+            <div class="box-pulsante box3">
+                    <button class="bottone" id="vicenza"><a href="citta.php?nome=Vicenza">VICENZA</a></div>
+            </div>
+            <div class="box-pulsante box4">
+                    <button class="bottone" id="venezia"><a href="citta.php?nome=Venezia">VENEZIA</a></div>
+            </div>
+            <div class="box-pulsante box5">
+                    <button class="bottone" id="treviso"><a href="citta.php?nome=Treviso">TREVISO</a></div>
+            </div>
+            <div class="box-pulsante box6">
+                    <button class="bottone" id="belluno"><a href="citta.php?nome=Belluno">BELLUNO</a></div>
+            </div>
+            <div class="box-pulsante box7">
+                    <div class="bottone" id="rovigo"><a href="citta.php?nome=Rovigo">ROVIGO</a></div>
+            </div>
+
+        </div>
+    </div>
 <p class="titolo-home">Prossimi eventi</p>
 	<div class="home-pt3">
 

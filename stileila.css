@@ -200,6 +200,12 @@ a{
   text-align: center;
   color: white;
 }
+.prossimi-eventi{
+  width: 70%;
+  margin-right: 15%;
+  margin-left: 15%;
+  text-align: center;
+}
 /*terza parte con gli ultimi 3 eventi*/
 .home-pt3{
   margin-top: 3em;
@@ -217,6 +223,9 @@ a{
 .box-img{
   height: 38%;
   width: 100%;
+}
+.img-dettagli{
+  height: 30%;
 }
 .img-evento{
   float: left;
@@ -512,11 +521,11 @@ input, text {
 }
 
 .box-5{
-  height: 5%;
+  height: 6%;
 }
 
 .box-10{
-  height: 34%;
+  height: 38%;
 }
 
 

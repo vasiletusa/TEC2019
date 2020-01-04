@@ -9,8 +9,8 @@
           
   </head>
 
-<?php getMenu1("Login");?>
-<?php getMenu2("Login");?>
+<?php getMenu1("Home");?>
+<?php getMenu2("Home");?>
 
 <?php getBreadcumbs("Login");?>
 
