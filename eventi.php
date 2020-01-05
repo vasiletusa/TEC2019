@@ -40,7 +40,7 @@
 
         </div>
     </div>
-<p class="titolo-home">Prossimi eventi</p>
+
 	<div class="home-pt3">
 
 <?php
@@ -53,7 +53,7 @@
                     $outCat.=   "
                                 
             
-                                    <div class=\"filterDiv ".$elem['Luogo']." box-evento\">
+                                    <div class=\"filterDiv ".$elem['Citta']." box-evento\">
                                         <div class=\"box-img\">
                                             <img class=\"img-evento\" src=\"img/eventi.jpg\">
                                         </div>
@@ -90,8 +90,8 @@
                                                 
                                             </div>
                                             <div >
-
-                                                <input type=\"button\" onclick=\"window.location.href = 'dettagli_evento.php?id=".$elem['ID']."'\" class=\"scritte-dettagli\" value=\"DETTAGLI\"/>  
+                                                
+                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button> 
                                             </div> 
                                              
                                         </div>
@@ -99,6 +99,7 @@
                                     ";
                     }
             }}
+
 
             else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour'> Nuovo evento </a><h3></p>";}
             echo $outCat;

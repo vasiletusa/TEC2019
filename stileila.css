@@ -131,6 +131,8 @@ a{
 .box-pulsante{
   float: left;
 	width: 13%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 
 }
 .titolo-home{
@@ -147,9 +149,8 @@ a{
 }
 
 button{
-	width: 90%;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
+	
+  
   background: #fff;
   text-align: center;
   color: #5c5c3d;
@@ -342,7 +343,7 @@ border-radius: 0em;
   border-radius: 0.4em;
   border:0.1em solid var(--primary-dark);
   padding-bottom: 1em;
-      
+      height: auto;
 }
 .contatti{
   color: var(--primary-dark);
@@ -451,7 +452,7 @@ input, text {
   /* -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;*/
   cursor:pointer;
-  
+
 }
 
 
@@ -466,6 +467,14 @@ input, text {
   margin-right: 5%;
   font-size: 1em;
   float: left;
+  outline: none;
+  margin-top: 2%;
+  cursor: pointer;
+}
+.bottone-area:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+  border-color: var(--primary-dark);
 }
 .area-titoli{
   width: 75%;
@@ -510,6 +519,7 @@ input, text {
   margin-right: 10%;
   margin-left: 10%;
   float: left;
+  margin-top: 1%;
 }
 
 .dettagli-evento{
@@ -578,6 +588,7 @@ input, text {
 
 /* Style the buttons */
 .selezione {
+
   height: 100%;
 
   outline: none;
@@ -608,6 +619,46 @@ input, text {
 .input-descrizione{
   height: 12em;
 }
+
+.bottone-centrale{
+  float: left;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+  height: 3em;
+  font-size: 1.4em;
+}
+/*select*/
+.select-categoria , .select-citta{
+  height: 2em;
+}
+.select-categoria label{
+  float: left;
+  width: 50%;
+  
+}
+.select-citta label{
+  float: left;
+  width: 50%;
+
+}
+select{
+  border: 2px solid var(--primary-dark);
+  height: 100%;
+  width: 40%;
+  font-size: 1.5em;
+  float: left;
+  background: #fff;
+
+}
+
+.select-citta-selected {
+  background-color: var(--primary-light);
+}
+
+
+
+
 @media (max-width: 1111px){
   .box-left-area, .box-right-area{
     width: 100%;
@@ -655,6 +706,7 @@ input, text {
   height: 16em;
   }
   .box-pulsante{
+
   float: left;
   width: 70%;
   margin-bottom: 2%;

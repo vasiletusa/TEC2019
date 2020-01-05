@@ -220,7 +220,8 @@ if (isset($_POST['Login'])){
   $descrizione = mysqli_real_escape_string($db, $_POST['Descrizione']);
   $luogo = mysqli_real_escape_string($db, $_POST['Luogo']);
   $data = mysqli_real_escape_string($db, $_POST['Data']);
-  $categoria = mysqli_real_escape_string($db, $_POST['Categoria']);
+  $categoria = $_POST['selectCategoria'];
+  $citta=$_POST['selectCitta'];
   
   if(empty($titolo)){
     $errors['TitoloEvento']="Titolo richiesto";
@@ -234,15 +235,20 @@ if (isset($_POST['Login'])){
   if(empty($data)){
     $errors['Data']="Data richiesta";
   }
-  if(empty($categoria)){
-    $errors['categoria']="Categoria richiesta";
+  if($categoria=='Seleziona'){
+    $errors['Categoria']="Categoria richiesta";
   }
+  if($citta=='Seleziona'){
+    $errors['Citta']="Citta richiesta";
+  }
+
   
   
     else{
                       $azienda=$_SESSION['usernameA'];
-                      $query2 = "INSERT INTO eventi (titolo, descrizione, luogo, categoria, azienda ) 
-                              VALUES('$titolo','$descrizione', '$luogo', '$categoria', '$azienda')";
+                      $query2 = "INSERT INTO eventi (titolo, descrizione, luogo, citta, data, categoria, azienda ) 
+                              VALUES('$titolo','$descrizione', '$luogo', '$citta', '$data', '$categoria', '$azienda')";
+                      echo $query2;
                         mysqli_query($db, $query2);
                    /*$move= move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file) ;
   
@@ -357,54 +363,36 @@ function getNoPasswordError($errors) {
 }
 
 function getDataError($errors) { 
-  if(isset($errors['data'])){
-      echo $errors['data'];
+  if(isset($errors['Data'])){
+      echo $errors['Data'];
     }
 }
 
 function getCittaError($errors) { 
-  if(isset($errors['citta'])){
-      echo $errors['citta'];
+  if(isset($errors['Citta'])){
+      echo $errors['Citta'];
     }
 }
 
 function getTitoloError($errors) { 
-  if(isset($errors['titolo'])){
-      echo $errors['titolo'];
+  if(isset($errors['TitoloEvento'])){
+      echo $errors['TitoloEvento'];
     }
 }
 
 function getDescrizioneError($errors) { 
-  if(isset($errors['descrizione'])){
-      echo $errors['descrizione'];
+  if(isset($errors['Descrizione'])){
+      echo $errors['Descrizione'];
+    }
+}
+function getCategoriaError($errors) { 
+  if(isset($errors['Categoria'])){
+      echo $errors['Categoria'];
     }
 }
 
 
 
-function rifiuta()
-    {
-      $id=$_SESSION['idTour'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
-
-        $sql= " UPDATE `tour` SET Stato='Rifiutato' WHERE Id='$id'";
-      
-        $result = mysqli_query($db,$sql) or die(mysqli_error($db));
-    
-
-    }
-
-  function accetta(){
-
-      $id=$_SESSION['idTour'];
-      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
-
-        $sql= " UPDATE `tour` SET Stato='Approvato' WHERE Id='$id'";
-      
-        $result = mysqli_query($db,$sql) or die(mysqli_error($db));
-    
-
-  }
 
  
 

@@ -33,8 +33,8 @@
 								
 								</div>
 								<div >
-									<label for="Luogo" class="label Luogo">Luogo</label>
-									<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Luogo">
+									<label for="Luogo" class="label Luogo">Indirizzo</label>
+									<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Indirizzo">
 									<p class="error"><?php getNomeError($errors); ?></p>
 									
 								
@@ -47,21 +47,47 @@
 
 
 								</div>
-								<div>
+								<div class="select-categoria">
 									<label for="Categoria" class="label Categoria">Categoria</label>
-									<input id="Categoria" type="text" name="Categoria" class="input insertBox" placeholder="Categoria">
-									<p class="error"><?php getNomeError($errors); ?></p>
-								
+									<select name="selectCategoria" >
+									<option name="Seleziona" value="Seleziona">Seleziona categoria</option>
+
+									  <option name="Concerto" value="Concerto">Concerto
+									  </option>
+									  <option name="Famiglie" value="Famiglie">Famiglie</option>
+									  <option name="Giovani" value="Giovani">Giovani</option>
+									  <option name="Cultura" value="Cultura">Cultura</option>
+									  <option name="Spettacolo" value="Spettacolo">Spettacolo</option>
+									  <option name="Locale" value="Locale">Locale</option>
+									  <option name="Discoteca" value="Discoteca">Discoteca</option>
+									 
+									</select>
+									<p class="error"><?php getCategoriaError($errors); ?></p>
+
 								</div>
 								
-
+								<div class="select-citta">
+									<label for="Citta" class="label Citta">Citta</label>
+									<select name="selectCitta">
+									  <option name="Seleziona" value="Seleziona">Seleziona citt&agrave</option>
+									  <option name="Padova" value="Padova">Padova</option>
+									  <option name="Venezia" value="Venezia">Venezia</option>
+									  <option name="Vicenza" value="Vicenza">Vicenza</option>
+									  <option name="Verona" value="Verona">Verona</option>
+									  <option name="Treviso" value="Treviso">Treviso</option>
+									  <option name="Belluno" value="Belluno">Belluno</option>
+									  <option name="Rovigo" value="Rovigo">Rovigo</option>
+									 
+									</select>
+									<p class="error"><?php getCittaError($errors);?></p>
+								</div>
 
     
     							<!--input type="file" name="fileToUpload" id="fileToUpload"-->
     
 
 
-								<button type="submit" class="button" name="nuovo_evento">Invia</button>
+								<button type="submit" class="button bottone-centrale" name="nuovo_evento">Invia</button>
 
 							</form>
 						</div>
