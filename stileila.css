@@ -130,7 +130,7 @@ a{
 /*prima parte immagine iniziale e bottoni delle città*/
 .box-pulsante{
   float: left;
-	width: 14%;
+	width: 13%;
 
 }
 .titolo-home{
@@ -146,18 +146,17 @@ a{
   height: 2em;
 }
 
-.bottone{
+button{
 	width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    text-align: center;
-    color: #5c5c3d;
-
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  background: #fff;
+  text-align: center;
+  color: #5c5c3d;
   border:  0.2em solid var(--primary-dark);
   border-radius: 0.2em;
+  background: #fff;
+  font-size: 1.1em;
 
 }
 
@@ -579,22 +578,15 @@ input, text {
 
 /* Style the buttons */
 .selezione {
-  float: left;
-  width: 10%;
-  outline: none;
   height: 100%;
-  cursor: pointer;
-background: #fff;
-  margin-left: 5%;
-  margin-right: 5%;
-    background-size: contain;
-    background-position: center;
-    text-align: center;
 
-  border:  0.2em solid var(--primary-dark);
-  border-radius: 0.2em;
-  margin-left: 1%;
-  margin-right: 1%;
+  outline: none;
+
+  cursor: pointer;
+  
+  text-align: center;
+  color: #000;
+  
 }
 
 /* Add a light grey background on mouse-over */
@@ -608,6 +600,9 @@ background: #fff;
 .attivo {
   background-color: var(--primary-dark);
   color: white;
+}
+.box-width-11{
+  width: 11%;
 }
 
 @media (max-width: 1111px){

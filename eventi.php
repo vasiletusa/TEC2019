@@ -17,26 +17,26 @@
 <div class="home-pt1">
         
             
-        <div id="contenitore-bottoni"
+        <div id="contenitore-bottoni" class="lista-citta">
 
-         class="lista-citta">
-            
-                    <button class="box-pulsante attivo bottone selezione" onclick="filterSelection('Tutti')"> Tutti </button>
-            
-                    <button class="box-pulsante bottone selezione" onclick="filterSelection('Padova')"> PADOVA </button>
-            
-                    <button class="box-pulsante bottone selezione" onclick="filterSelection('Verona')">VERONA</button>
-            
-                    <button class="box-pulsante bottone selezione" onclick="filterSelection('Vicenza')">VICENZA</button>
-            
-                    <button class="box-pulsante bottone selezione" onclick="filterSelection('Venezia')">VENEZIA</button>
-            
-                    <button class="box-pulsante bottone selezione" onclick="filterSelection('Treviso')">TREVISO</button>
-            
-                    <button class="box-pulsante bottone selezione" onclick="filterSelection('Belluno')">BELLUNO</button>
-            
-                    <button class="box-pulsante bottone selezione" onclick="filterSelection('Rovigo')">ROVIGO</button>
-            
+                    
+                        <button class="box-pulsante box-width-11 attivo selezione" onclick="filterSelection('Tutti')"> Tutti </button>
+                    
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Padova')"> PADOVA </button>
+                              
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Verona')">VERONA</button>
+                               
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Vicenza')">VICENZA</button>
+                                
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Venezia')">VENEZIA</button>
+                    
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Treviso')">TREVISO</button>
+                               
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Belluno')">BELLUNO</button>
+                                
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Rovigo')">ROVIGO</button>
+                   
+                    
 
         </div>
     </div>

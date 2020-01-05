@@ -15,30 +15,28 @@
 		
 			<div class="img-sfondo" id="homeimg1"></div>
 		<p class="titolo-home">Scegli la citt&agrave</p>
-		<div class="lista-citta">
-			<div class="box-pulsante box1">
-					<div class="bottone" id="padova"><a class="citta" href="citta.php?nome=Paodva">PADOVA</a></div>
-			</div>
-			<div class="box-pulsante box2">
-					<div class="bottone" id="verona"><a href="citta.php?nome=Verona">VERONA</a></div>
-			</div>
-			<div class="box-pulsante box3">
-					<div class="bottone" id="vicenza"><a href="citta.php?nome=Vicenza">VICENZA</a></div>
-			</div>
-			<div class="box-pulsante box4">
-					<div class="bottone" id="venezia"><a href="citta.php?nome=Venezia">VENEZIA</a></div>
-			</div>
-			<div class="box-pulsante box5">
-					<div class="bottone" id="treviso"><a href="citta.php?nome=Treviso">TREVISO</a></div>
-			</div>
-			<div class="box-pulsante box6">
-					<div class="bottone" id="belluno"><a href="citta.php?nome=Belluno">BELLUNO</a></div>
-			</div>
-			<div class="box-pulsante box7">
-					<div class="bottone" id="rovigo"><a href="citta.php?nome=Rovigo">ROVIGO</a></div>
-			</div>
+		<div id="contenitore-bottoni" class="lista-citta">
 
-		</div>
+                    
+                       
+                    
+                        <button class="box-pulsante selezione" onclick="filterSelection('Padova')"> PADOVA </button>
+                              
+                        <button class="box-pulsante selezione" onclick="filterSelection('Verona')">VERONA</button>
+                               
+                        <button class="box-pulsante selezione" onclick="filterSelection('Vicenza')">VICENZA</button>
+                                
+                        <button class="box-pulsante selezione" onclick="filterSelection('Venezia')">VENEZIA</button>
+                    
+                        <button class="box-pulsante selezione" onclick="filterSelection('Treviso')">TREVISO</button>
+                               
+                        <button class="box-pulsante selezione" onclick="filterSelection('Belluno')">BELLUNO</button>
+                                
+                        <button class="box-pulsante selezione" onclick="filterSelection('Rovigo')">ROVIGO</button>
+                   
+                    
+
+        </div>
 	</div>
 	<div class="home-pt2">
 			<div class="box-img-left">
