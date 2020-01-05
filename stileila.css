@@ -604,7 +604,10 @@ input, text {
 .box-width-11{
   width: 11%;
 }
-
+/*nuovo evento*/
+.input-descrizione{
+  height: 12em;
+}
 @media (max-width: 1111px){
   .box-left-area, .box-right-area{
     width: 100%;
@@ -634,11 +637,11 @@ input, text {
   .insertBox{
     font-size: 0.8em;
   }
+  .selezione{
+    font-size: 0.8em;
+  }
 }
-/*nuovo evento*/
-.input-descrizione{
-  height: 12em;
-}
+
 
 
 
@@ -653,10 +656,15 @@ input, text {
   }
   .box-pulsante{
   float: left;
-  width: 100%;
+  width: 70%;
   margin-bottom: 2%;
+  height: 2em;
+  margin-right: 15%;
+  margin-left: 15%;
   }
-
+  .selezione{
+    font-size: 1em;
+  }
   .home-pt2{
   margin-top: 2em;
   height: 17em;
