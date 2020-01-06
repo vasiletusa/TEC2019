@@ -14,27 +14,49 @@
 
 <?php getBreadcumbs("Eventi");?>
 
-<div class="home-pt1">
+<div class="home-pt1 eventi-pt1">
         
             
-        <div id="contenitore-bottoni" class="lista-citta">
+        <div id="contenitore-bottoni-citta" class="lista-citta citta-eventi">
 
                     
+                        <button class="box-pulsante box-width-11 attivo selezione" onclick="filterSelectionCitta('Tutti')"> Tutti </button>
+                    
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Padova')"> PADOVA </button>
+                              
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Verona')">VERONA</button>
+                               
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Vicenza')">VICENZA</button>
+                                
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Venezia')">VENEZIA</button>
+                    
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Treviso')">TREVISO</button>
+                               
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Belluno')">BELLUNO</button>
+                                
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Rovigo')">ROVIGO</button>
+                   
+                    
+
+        </div>
+        <div id="contenitore-bottoni-categoria" class="lista-citta categoria-eventi">
+
+                   
                         <button class="box-pulsante box-width-11 attivo selezione" onclick="filterSelection('Tutti')"> Tutti </button>
                     
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Padova')"> PADOVA </button>
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Padova')"> FAMIGLIE </button>
                               
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Verona')">VERONA</button>
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Verona')">GIOVANI</button>
                                
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Vicenza')">VICENZA</button>
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Vicenza')">DISCOTECA</button>
                                 
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Venezia')">VENEZIA</button>
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Venezia')">CULTURA</button>
                     
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Treviso')">TREVISO</button>
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Treviso')">ALL'APERTO</button>
                                
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Belluno')">BELLUNO</button>
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Belluno')">SPETTACOLO</button>
                                 
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Rovigo')">ROVIGO</button>
+                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelection('Rovigo')">CONCERTO</button>
                    
                     
 
@@ -53,7 +75,7 @@
                     $outCat.=   "
                                 
             
-                                    <div class=\"filterDiv ".$elem['Citta']." box-evento\">
+                                    <div class=\"filterDiv ".$elem['Citta']." box-evento ".$elem['Categoria']."\">
                                         <div class=\"box-img\">
                                             <img class=\"img-evento\" src=\"img/eventi.jpg\">
                                         </div>
@@ -114,8 +136,8 @@
 
 <script>
 
-filterSelection("Tutti")
-function filterSelection(c) {
+filterSelectionCitta("Tutti")
+function filterSelectionCitta(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
   if (c == "Tutti") c = "";
@@ -152,7 +174,7 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("contenitore-bottoni");
+var btnContainer = document.getElementById("contenitore-bottoni-citta");
 var btns = btnContainer.getElementsByClassName("selezione");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {

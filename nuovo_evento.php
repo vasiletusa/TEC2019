@@ -60,6 +60,7 @@
 									  <option name="Spettacolo" value="Spettacolo">Spettacolo</option>
 									  <option name="Locale" value="Locale">Locale</option>
 									  <option name="Discoteca" value="Discoteca">Discoteca</option>
+									  <option name="Aperto" value="Aperto">All'aperto</option>
 									 
 									</select>
 									<p class="error"><?php getCategoriaError($errors); ?></p>

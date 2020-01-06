@@ -628,6 +628,7 @@ input, text {
   height: 3em;
   font-size: 1.4em;
 }
+
 /*select*/
 .select-categoria , .select-citta{
   height: 2em;
@@ -704,6 +705,25 @@ select{
   margin-top: 1em;
   width: 70%;
   height: 16em;
+  }
+  .citta-eventi{
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+    float: left;
+  }
+  .categoria-eventi{
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .home-pt1{
+    height: 60em;
   }
   .box-pulsante{
 
