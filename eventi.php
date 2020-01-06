@@ -39,7 +39,7 @@
                     
 
         </div>
-        <div id="contenitore-bottoni-categoria" class="lista-citta categoria-eventi">
+        <!--div id="contenitore-bottoni-categoria" class="lista-citta categoria-eventi">
 
                    
                         <button class="box-pulsante box-width-11 attivo selezione" onclick="filterSelection('Tutti')"> Tutti </button>
@@ -60,7 +60,7 @@
                    
                     
 
-        </div>
+        </div-->
     </div>
 
 	<div class="home-pt3">
