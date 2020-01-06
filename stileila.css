@@ -33,7 +33,7 @@ footer {
 
   width: 100%;
   height: auto;
-  background-color: var(--primary-dark);
+  background-color: #660000;
   color: #fff;
   text-align: center;
 }
@@ -52,7 +52,7 @@ footer {
   color:#fff;
 }
 #menu-log-linea{
-  color: var(--primary-dark);
+  color: #660000;
 
 
   height: 2em;
@@ -78,7 +78,7 @@ footer {
 .header {
   font-family: Verdana, sans-serif;
   overflow: hidden;
-   border-bottom: 0.1em solid var(--primary-dark);
+   border-bottom: 0.1em solid #660000;
 
 
 }
@@ -100,12 +100,12 @@ footer {
 
 .header-right a:hover {
   border-bottom: 0.225em
-  solid var(--primary-dark);
+  solid #660000;
 }
 
 .header-right a.active {
   border-bottom: 0.225em
-  solid var(--primary-dark);
+  solid #660000;
 }
 
 .header-right {
@@ -136,7 +136,7 @@ a{
 
 }
 .titolo-home{
-  color: var(--primary-dark);
+  color: #660000;
   text-align: center;
   font-size: 3em;
 }
@@ -154,7 +154,7 @@ button{
   background: #fff;
   text-align: center;
   color: #5c5c3d;
-  border:  0.2em solid var(--primary-dark);
+  border:  0.2em solid #660000;
   border-radius: 0.2em;
   background: #fff;
   font-size: 1.1em;
@@ -177,7 +177,7 @@ button{
 .home-pt2{
   margin-top: 2em;
   height: 17em;
-  background: var(--primary-dark);
+  background: #660000;
 }
 
 
@@ -213,7 +213,7 @@ button{
 }
 .box-evento{
   border-radius: 0.3em;
-  border: 0.1em solid var(--primary-dark);
+  border: 0.1em solid #660000;
   width: 28%;
   height: 33em;
   padding: 1%;
@@ -319,7 +319,7 @@ background-repeat: no-repeat;
 }
 .box-login-left{
 border-radius: 0em;
-  border-right: 0.1em solid var(--primary-dark);
+  border-right: 0.1em solid #660000;
   width: 38%;
   float: left;
   text-align: center;
@@ -341,18 +341,18 @@ border-radius: 0em;
 
   margin-bottom: 2em;
   border-radius: 0.4em;
-  border:0.1em solid var(--primary-dark);
+  border:0.1em solid #660000;
   padding-bottom: 1em;
       height: auto;
 }
 .contatti{
-  color: var(--primary-dark);
+  color: #660000;
   height: 12em;
   padding-top: 4%;
   padding-bottom: 4%;
   border-radius: 0.4em;
   margin-bottom: 2%;
-  border:0.1em solid var(--primary-dark);
+  border:0.1em solid #660000;
 
 }
 
@@ -369,7 +369,7 @@ border-radius: 0em;
 }
 
 .insertBox{
-  border-radius:0.4em solid var(--primary-dark);
+  border-radius:0.4em solid #660000;
   margin-left: 2%;
   margin-right: 2%;
   width: 96%
@@ -412,7 +412,7 @@ input, text {
   width:100%;
   background:white;
   background-image:none;
-  border:1px solid var(--primary-dark);
+  border:1px solid #660000;
   color:black;
   text-align: center;
   border-radius:0;
@@ -422,11 +422,11 @@ input, text {
 }
 
 .insertBox{
-  border: 0.01em solid var(--primary-dark);
+  border: 0.01em solid #660000;
 
 }
 .label{
-  color: var(--primary-dark);
+  color: #660000;
   font-size: 1.5em;
 }
 .pulsante-dettagli{
@@ -436,7 +436,7 @@ input, text {
 }
 
 .button {
-  border:1;
+  border:1em;
   border-color: white;
   border-style: solid;
   /*outline:none;*/
@@ -447,7 +447,7 @@ input, text {
   width: auto;
   height: 2em;
   letter-spacing:.1em;
-  background:var(--primary-dark);
+  background:#660000;
   color:white;
   /* -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;*/
@@ -457,7 +457,7 @@ input, text {
 
 
 .titolo{
-  color: var(--primary-dark);
+  color: #660000;
   text-align: center;
 }
 /*area personale*/
@@ -472,9 +472,9 @@ input, text {
   cursor: pointer;
 }
 .bottone-area:hover {
-  background-color: var(--primary-dark);
+  background-color: #660000;
   color: #fff;
-  border-color: var(--primary-dark);
+  border-color: #660000;
 }
 .area-titoli{
   width: 75%;
@@ -488,7 +488,7 @@ input, text {
 .box-left-area{
   width: 49%;
   float: left;
-  border-right: 0.1em solid var(--primary-dark);
+  border-right: 0.1em solid #660000;
 }
 .piccolo{
   width: 90%;
@@ -573,7 +573,7 @@ input, text {
   margin-right: 10%;
   margin-left: 2%;
   float: left;
-  background: 
+   
 }
 
 .filterDiv {
@@ -602,14 +602,14 @@ input, text {
 
 /* Add a light grey background on mouse-over */
 .selezione:hover {
-  background-color: var(--primary-dark);
+  background-color: #660000;
   color: #fff;
-  border-color: var(--primary-dark);
+  border-color: #660000;
 }
 
 /* Add a dark background to the active button */
 .attivo {
-  background-color: var(--primary-dark);
+  background-color: #660000;
   color: white;
 }
 .box-width-11{
@@ -644,7 +644,7 @@ input, text {
 
 }
 select{
-  border: 2px solid var(--primary-dark);
+  border: 2px solid #660000;
   height: 100%;
   width: 40%;
   font-size: 1.5em;
@@ -740,7 +740,7 @@ select{
   .home-pt2{
   margin-top: 2em;
   height: 17em;
-  background: var(--primary-dark);
+  background: #660000;
   }
   .box-evento{
     width: 100%;
@@ -761,7 +761,7 @@ select{
   .home-pt2{
   margin-top: 2em;
   height: 17em;
-  background: var(--primary-dark);
+  background: #660000;
   }
   .box-evento{
     width: 80%;
