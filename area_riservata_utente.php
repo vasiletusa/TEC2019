@@ -73,6 +73,10 @@
                                             <div class=\"box-luogo-evento\">
                                                 <p class=\"scritte-evento\">".$key['Luogo']."</p>
                                             </div>
+                                            <div >
+                                                
+                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button> 
+                                            </div> 
                                         </div>
                                     </div>";
                                 break;
@@ -136,6 +140,10 @@
                                             <div class=\"box-luogo-evento\">
                                                 <p class=\"scritte-evento\">".$key['Luogo']."</p>
                                             </div>
+                                            <div >
+                                                
+                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button> 
+                                            </div> 
                                         </div>
                                     </div>";
                                 break;

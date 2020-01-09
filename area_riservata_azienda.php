@@ -74,8 +74,8 @@
                                                 
                                             </div>
                                             <div >
-
-                                                <input type=\"button\" onclick=\"window.location.href = 'dettagli_evento.php?id=".$elem['ID']."'\" class=\"scritte-dettagli\" value=\"DETTAGLI\"/>  
+                                                
+                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button> 
                                             </div> 
                                         </div>
                                         

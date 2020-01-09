@@ -66,7 +66,7 @@
 
 									
 								</div>
-								<button type="submit" class="button" name="registrazione_azienda">Registrati</button>
+								<button type="submit" class="bottone-invia selezione" name="registrazione_azienda">Registrati</button>
 
 							</form>
 						</div>

@@ -38,7 +38,8 @@
 								<input class="insertBox" id="Password" type="password" name="password" class="input password" placeholder="********">
 								
 			</div>
-							<button type="submit" class="button" name="Login">Login</button>
+			
+							<button type="submit" class="bottone-invia selezione" name="Login">Login</button>
 			</form>
 		</div>
 	</div>

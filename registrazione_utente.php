@@ -64,7 +64,7 @@
 
 										
 									</div>
-									<button type="submit" class="button" name="registrazione_utente">Registrati</button>
+									<button type="submit" class="bottone-invia selezione " name="registrazione_utente">Registrati</button>
 
 								</form>
 							</div>

@@ -657,7 +657,9 @@ select{
   background-color: var(--primary-light);
 }
 
-
+.bottone-invia{
+  margin-top: 1em;
+}
 
 
 @media (max-width: 1111px){
