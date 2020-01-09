@@ -42,41 +42,47 @@
                     if($key&&$elem){
                     if($elem['ID']==$key['ID']){
                        
-                    $outCat.=   "
-                                    <div class=\"evento-1 box-evento piccolo\">
+                    $outCat.=   "<div class=\"evento-1 box-evento piccolo\">
                                         <div class=\"box-img\">
-                                        <img class=\"img-evento\" src=\"img/eventi.jpg\">
+                                            <img class=\"img-evento\" src=\"img/eventi.jpg\">
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\">".$key['Titolo']." </p>
+                                                <p class=\"scritte-evento\">".$key['Titolo']."</p>
                                         </div>
-                                        <div class=\"box-categoria\">
+                                        <div class=\"box-categoria \">
                                             <div class=\"box-icona\"></div>
                                             <p class=\"scritte-evento\">".$key['Categoria']."</p>
                                         </div>
                                         <div class=\"box-data\">
-                                                <div class=\"box-icona\">
-                                                    <div id=\"calendario\"></div>
-                                                </div>
-                                                <div class=\"box-data-evento\">
-                                                    <p class=\"scritte-evento\">".$key['Data']."</p>
-                                                </div>
+                                            <div class=\"box-icona\">
+                                                <div id=\"calendario\"></div>
+                                            </div>
+                                            <div class=\"box-data-evento\">
+                                                <p class=\"scritte-evento\">".$key['Data']."</p>
+                                            </div>
                                         </div>
                                         <div class=\"box-descr\">
                                             <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\">".$key['Descrizione']."</div>
-                                        <div class=\"box-luogo\">
+                                            <p class=\"scritte-evento\"> ".$key['Descrizione']."</p>
+                                        </div>
+                                        <div class=\"box-luogo \">
                                             <div class=\"box-icona\">
                                                 <div id=\"local\"></div>
                                             </div>
                                             <div class=\"box-luogo-evento\">
                                                 <p class=\"scritte-evento\">".$key['Luogo']."</p>
                                             </div>
+                                        </div>
+                                        <div class=\"box-dettagli\">
+                                        <div class=\"box-icona\">
+                                                
+                                        </div>
                                             <div >
                                                 
-                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button> 
+                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$key['ID']."'\" type=\"button\"> Dettagli </button> 
                                             </div> 
+                                             
                                         </div>
                                     </div>";
                                 break;
@@ -112,38 +118,45 @@
                     $outCat.=   "
                                     <div class=\"evento-1 box-evento piccolo\">
                                         <div class=\"box-img\">
-                                        <img class=\"img-evento\" src=\"img/eventi.jpg\">
+                                            <img class=\"img-evento\" src=\"img/eventi.jpg\">
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\">".$key['Titolo']." </p>
+                                                <p class=\"scritte-evento\">".$key['Titolo']."</p>
                                         </div>
-                                        <div class=\"box-categoria\">
+                                        <div class=\"box-categoria \">
                                             <div class=\"box-icona\"></div>
                                             <p class=\"scritte-evento\">".$key['Categoria']."</p>
                                         </div>
                                         <div class=\"box-data\">
-                                                <div class=\"box-icona\">
-                                                    <div id=\"calendario\"></div>
-                                                </div>
-                                                <div class=\"box-data-evento\">
-                                                    <p class=\"scritte-evento\">".$key['Data']."</p>
-                                                </div>
+                                            <div class=\"box-icona\">
+                                                <div id=\"calendario\"></div>
+                                            </div>
+                                            <div class=\"box-data-evento\">
+                                                <p class=\"scritte-evento\">".$key['Data']."</p>
+                                            </div>
                                         </div>
                                         <div class=\"box-descr\">
                                             <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\">".$key['Descrizione']."</div>
-                                        <div class=\"box-luogo\">
+                                            <p class=\"scritte-evento\"> ".$key['Descrizione']."</p>
+                                        </div>
+                                        <div class=\"box-luogo \">
                                             <div class=\"box-icona\">
                                                 <div id=\"local\"></div>
                                             </div>
                                             <div class=\"box-luogo-evento\">
                                                 <p class=\"scritte-evento\">".$key['Luogo']."</p>
                                             </div>
+                                        </div>
+                                        <div class=\"box-dettagli\">
+                                        <div class=\"box-icona\">
+                                                
+                                        </div>
                                             <div >
                                                 
-                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button> 
+                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$key['ID']."'\" type=\"button\"> Dettagli </button> 
                                             </div> 
+                                             
                                         </div>
                                     </div>";
                                 break;

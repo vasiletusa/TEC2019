@@ -509,7 +509,7 @@ input, text {
 .box-dettagli{
   float: left;
   width: 100%;
-  height: 9%;
+  height: 7%;
 }
 .scritte-dettagli{
   text-align: center;
@@ -552,15 +552,29 @@ input, text {
 .prefe{
   background-repeat: no-repeat;
     background-position: center; 
-  
+  border:none;
+    cursor: pointer;
+
   background-image: url(img/heart1.png);
 }
+.prefe:hover {
+  background-color: #f5f5f0;
+  color: #fff;
+  border-color: #f5f5f0;
+}
 
+.noprefe:hover {
+  background-color: #f5f5f0;
+  color: #fff;
+  border-color: #f5f5f0;
+}
 
 .noprefe{
+  border: none;
   background-repeat: no-repeat;
     background-position: center; 
-  
+    cursor: pointer;
+
   background-image: url(img/heart2.png);
 }
 
@@ -600,14 +614,12 @@ input, text {
   
 }
 
-/* Add a light grey background on mouse-over */
 .selezione:hover {
   background-color: #660000;
   color: #fff;
   border-color: #660000;
 }
 
-/* Add a dark background to the active button */
 .attivo {
   background-color: #660000;
   color: white;
