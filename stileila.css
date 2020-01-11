@@ -82,9 +82,6 @@ footer {
 
 
 }
-.menu-2{
- 
-}
 
 .header a {
   background-color: var(--menu-footer-color);
@@ -140,6 +137,7 @@ a{
   text-align: center;
   font-size: 3em;
 }
+
 .lista-citta{
   padding-left: 1%;
   padding-right: 1%;
@@ -737,7 +735,7 @@ select{
     padding-right: 0%;
   }
   .home-pt1{
-    height: 60em;
+    height: auto;
   }
   .box-pulsante{
 
@@ -810,4 +808,41 @@ select{
     padding-left: 2%;
     padding-right: 2%;
   }
+}
+
+@media(max-width: 360px){
+  .box-evento{
+    height: 15em;
+
+  }
+  .box-descr{
+    display: none;
+  }
+  .box-titolo, .box-categoria, .box-data, .box-luogo{
+    height:13%; 
+    width: 100%;
+  }
+  .box-icona{
+    width: 0%;
+  }
+  .box-dettagli{
+    height: 10%;
+    width: 100%;
+  }
+  .scritte-evento {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: 100%;
+  }
+  .scritte-dettagli{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #homeimg1 { 
+  width: 320px;
+    background-image: url(img/eventi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;   
+}
 }
