@@ -222,9 +222,8 @@ button{
   height: 38%;
   width: 100%;
 }
-.img-dettagli{
-  height: 30%;
-}
+
+
 .img-evento{
   float: left;
   width: 100%;
@@ -521,10 +520,8 @@ input, text {
 }
 
 .dettagli-evento{
-  width: 40%;
-  margin-right: 30%;
-  margin-left: 30%;
-  height:75em;
+  width: 95%;
+  height:45em;
 }
 
 .box-5{
@@ -671,6 +668,32 @@ select{
   margin-top: 1em;
 }
 
+.img-dettagli{
+  height: 55%;
+}
+.box-evento-indettagli{
+  height: 35%;
+  width: 40%;
+  float: left;
+}
+.prefe-iscrizione{
+  height:10%; 
+  padding-top: 2%;
+  margin-left: 40%;
+  width: 60%;
+  float: right;
+}
+.descr-dettagli{
+  height: 35%;
+  width: 60%;
+  float: left;
+}
+.titolo-dettagli, .data-dettagli, .luogo-dettagli, .categoria-dettagli{
+  height: 25%;
+}
+
+
+
 
 @media (max-width: 1111px){
   .box-left-area, .box-right-area{
@@ -781,6 +804,24 @@ select{
     font-size: 1.2em;
     margin-left: 10%;
     margin-right: 10%;
+  }
+  .box-evento-indettagli{
+    width: 100%;
+  }
+  .descr-dettagli{
+    width: 100%;
+    height: auto;
+  }
+  .dettagli-evento{
+    width: 98%;
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .prefe-iscrizione{
+    width: 100%;
+    margin-left: 10%;
+    float: left;
   }
 }
 
