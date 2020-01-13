@@ -75,7 +75,7 @@ footer {
   max-height: 4em;
 }
 
-.header {
+header {
   font-family: Verdana, sans-serif;
   overflow: hidden;
    border-bottom: 0.1em solid #660000;
@@ -96,7 +96,7 @@ footer {
 }
 
 .header-right a:hover {
-  border-bottom: 0.225em
+  border-bottom: 0.5em
   solid #660000;
 }
 
@@ -107,8 +107,7 @@ footer {
 
 .header-right {
   float: right;
- margin-top: 5%;
- margin-bottom: 0.1%;
+  margin-right: 2%;
 }
 
 a{
@@ -765,6 +764,9 @@ select{
     margin-left: 25%;
   }
 
+ 
+}
+
 }
 
 
@@ -796,8 +798,53 @@ select{
     text-overflow: ellipsis;
     overflow: hidden;
   }
-
 }
+
+@media(max-width: 600px){
+.mobile-container {
+	  margin: auto;
+	  background-color: white;
+	  color: red;
+	}
+
+	.topnav {
+	  overflow: hidden;
+	  background-color: white;
+	  position: relative;
+	}
+
+	.topnav #myLinks {
+	  display: none;
+	}
+
+	.topnav a {
+	  color: black;
+	  padding: 0.5em 0.5em;
+	  text-decoration: none;
+	  font-size: 1em;
+	  display: block;
+	}
+
+	.topnav a.icon {
+	  background: #660000;
+	  display: block;
+	  position: absolute;
+	  padding: 2em 2em;
+	  right: 0;
+	  top: 0;
+	}
+
+	.topnav a:hover {
+	  background-color: #660000;
+	  color: white;
+	}
+
+	.active {
+	  background-color: grey;
+	  color: black;
+	}
+}
+
 
 @media(max-width: 660px){
   .box-img-left{
@@ -844,5 +891,50 @@ select{
     background-image: url(img/eventi.jpg);
     background-repeat: no-repeat;
     background-position: center;   
+  }
 }
+
+
+
+.distanza-header{
+	margin-bottom: 3%;
 }
+
+.menu-distanza{
+	margin-top: 2%;
+}
+
+.logo-menu{
+	float: left;
+	margin-left: 1%;
+ }
+
+.pulsante-logo{
+  	color:#660000;
+  	background: white;
+	font-size: 3em;
+	border: white;
+}
+
+#padd{
+	margin-bottom: 1%;
+}
+
+@font-face {
+  font-family: 'Wkwkwk';
+  src: url(./font/Wkwkwk.ttf) format('truetype');;
+}
+
+.fontlogo{
+	font-family: Wkwkwk;
+}
+
+div.end {
+    clear:both;
+}
+
+.spazio{
+	 word-spacing: 1.5em;
+}
+
+

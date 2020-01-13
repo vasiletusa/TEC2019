@@ -7,8 +7,8 @@
 	    getHead("Home");
     ?>      
 </head>
-<?php getMenu1("Home");?>
-<?php getMenu2("Home");?>
+<?php getMenu("Home");?>
+<?php getMenuMobile("Home");?>
 <?php getBreadcumbs("Home");?>
 <div class="home">
 	<div class="home-pt1">
@@ -121,9 +121,16 @@
 	</div>
 </div>
 
-
-	
-
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
 
 </body>
 
