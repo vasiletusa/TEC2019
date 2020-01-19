@@ -6,12 +6,12 @@
         include_once 'functions.php'; 
         getHead("AreaRiservata");
         $_SESSION['area']=true;
-     ?>        
-  </head>
-<?php getMenu1("AreaRiservata");?>
-<?php getMenu2("AreaRiservata");?>
+     ?>      
+</head>
+<?php getMenu("Home");?>
+<?php getMenuMobile("Home");?>
+<?php getBreadcumbs("Home");?>
 
-<?php getBreadcumbs("Area personale");?>
 <div class="pageArea">
 
     <div class="area-titoli">

@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Nuovo Evento");
-     ?>   
-          
-  </head>
-
-<?php getMenu1("AreaRiservata");?>
-<?php getMenu2("AreaRiservata");?>
-
-<?php getBreadcumbs("Area personale -> Nuovo evento");?>
-
+	    getHead("Home");
+    ?>      
+</head>
+<?php getMenu("Home");?>
+<?php getMenuMobile("Home");?>
+<?php getBreadcumbs("Home");?>
 
 <div class="box-centrale">
 	<h1 class="titolo">Nuovo evento</h1>
-	<form method="post" action="server.php" >						
+	<form method="post" action="server.php" enctype="multipart/form-data">						
 								<div >
 									<label for="TitoloEvento" class="label TitoloEvento">Titolo Evento</label>
 									<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Titolo Evento">
@@ -84,8 +79,9 @@
 								</div>
 
     
-    							<!--input type="file" name="fileToUpload" id="fileToUpload"-->
+    							
     
+<input type="file" name="file" id="file"><br><br>
 
 
 								<button type="submit" class="button bottone-centrale" name="nuovo_evento">Invia</button>

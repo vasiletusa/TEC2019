@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
 
+
+
+<head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Login");
-     ?>   
-          
-  </head>
+	    getHead("Home");
+    ?>      
+</head>
+<?php getMenu("Home");?>
+<?php getMenuMobile("Home");?>
+<?php getBreadcumbs("Home");?>
 
-<?php getMenu1("Home");?>
-<?php getMenu2("Home");?>
-
-<?php getBreadcumbs("Login");?>
 
 <div class="pageLogin">
 

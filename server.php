@@ -222,6 +222,8 @@ if (isset($_POST['Login'])){
   $data = mysqli_real_escape_string($db, $_POST['Data']);
   $categoria = $_POST['selectCategoria'];
   $citta=$_POST['selectCitta'];
+  $name       = $_FILES['file']['name'];  
+  $temp_name  = $_FILES['file']['tmp_name'];
   
   if(empty($titolo)){
     $errors['TitoloEvento']="Titolo richiesto";
@@ -250,15 +252,30 @@ if (isset($_POST['Login'])){
                               VALUES('$titolo','$descrizione', '$luogo', '$citta', '$data', '$categoria', '$azienda')";
                       echo $query2;
                         mysqli_query($db, $query2);
-                   /*$move= move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file) ;
-  
-                      if( $move) {
-                        echo "Successfully uploaded";         
-                      } else {
-                        echo "Not uploaded";
-                      } 
-                     */
-                      
+                   
+                     
+
+
+                          
+                      if(isset($name)){
+                          if(!empty($name)){      
+                              $location = 'uploads/';      
+                              if(move_uploaded_file($temp_name, $location.$name)){
+                                  echo 'File uploaded successfully';
+
+                              }
+                          }       
+                      }  else {
+                          echo 'Seleziona un file da caricare';
+                      }
+
+
+
+
+
+
+
+
                         //reindirizzamento
                         header("Location: area_riservata_azienda.php");
     }
