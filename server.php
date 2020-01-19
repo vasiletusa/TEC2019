@@ -222,9 +222,9 @@ if (isset($_POST['Login'])){
   $data = mysqli_real_escape_string($db, $_POST['Data']);
   $categoria = $_POST['selectCategoria'];
   $citta=$_POST['selectCitta'];
-  $name       = $_FILES['file']['name'];  
   $temp_name  = $_FILES['file']['tmp_name'];
-  
+
+
   if(empty($titolo)){
     $errors['TitoloEvento']="Titolo richiesto";
   }
@@ -254,9 +254,14 @@ if (isset($_POST['Login'])){
                         mysqli_query($db, $query2);
                    
                      
+                      $sql = "SELECT ID FROM `eventi` WHERE azienda='$azienda' ORDER BY ID DESC LIMIT 1 ";
+                      echo $sql;
 
-
-                          
+                      $result= mysqli_query($db, $sql);
+                        $ris=mysqli_fetch_assoc($result);
+echo $ris['ID'];
+                      $name = $ris['ID'].'.' . pathinfo($_FILES['file']['name'],PATHINFO_EXTENSION);
+     
                       if(isset($name)){
                           if(!empty($name)){      
                               $location = 'uploads/';      
@@ -277,7 +282,7 @@ if (isset($_POST['Login'])){
 
 
                         //reindirizzamento
-                        header("Location: area_riservata_azienda.php");
+                        //header("Location: area_riservata_azienda.php");
     }
 
 }
