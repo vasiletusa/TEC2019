@@ -51,52 +51,31 @@ footer {
 .scritta-torna-su{
   color:#fff;
 }
-#menu-log-linea{
-  color: #660000;
 
-
-  height: 2em;
-
-}
-#menu-log{
-  float: right;
-  margin-right: 1em;
-}
-.a-menu-log{
-  float: right;
-  width: auto;
-  text-align: right;
-  font-size: 1em;
-
-  margin-right: 1em;
-}
 
 .header img{
   max-height: 4em;
 }
 
+
+
 header {
   font-family: Verdana, sans-serif;
   overflow: hidden;
-   border-bottom: 0.1em solid #660000;
-
-
+  border-bottom: 0.1em solid #660000;
 }
 
 .header a {
   background-color: var(--menu-footer-color);
-  float: left;
   color: black;
   text-align: center;
-  padding: 0.66em;
   text-decoration: none;
   font-size: 0.9em; 
-  line-height: 1.38;
   border-radius: 0.2em;
 }
 
 .header-right a:hover {
-  border-bottom: 0.5em
+  border-bottom: 0.225em
   solid #660000;
 }
 
@@ -108,7 +87,10 @@ header {
 .header-right {
   float: right;
   margin-right: 2%;
+  margin-top:1%;
 }
+
+
 
 a{
   text-decoration: none;
@@ -117,6 +99,10 @@ a{
     text-decoration-color: currentcolor;
     text-decoration-thickness: auto;
     color:#000;
+}
+
+.a-menu-log{
+  margin-right: 0.7em;
 }
 
 .link-parola{
@@ -147,7 +133,6 @@ a{
 
 button{
 	
-  
   background: #fff;
   text-align: center;
   color: #5c5c3d;
@@ -839,10 +824,38 @@ select{
     text-overflow: ellipsis;
     overflow: hidden;
   }
+
 }
 
-@media(max-width: 600px){
-.mobile-container {
+@media(max-width: 700px){
+
+	.pos{
+		clear:both;
+	 }
+
+	.header-right {
+	  float: none;
+	  margin-right: 0%;
+	  margin-top:0%;
+	}
+
+	
+
+	.header a {
+	  background-color: var(--menu-footer-color);
+	  color: black;
+	  text-align: center;
+	  text-decoration: none;
+	  font-size: 0.9em; 
+	  border-radius: 0.2em;
+	}
+
+	.header-right a.active {
+	  border-bottom: 0;
+	}
+
+
+	.mobile-container {
 	  margin: auto;
 	  background-color: white;
 	  color: red;
@@ -870,20 +883,21 @@ select{
 	  background: #660000;
 	  display: block;
 	  position: absolute;
-	  padding: 2em 2em;
+	  padding: 1.5em 1.5em;
 	  right: 0;
 	  top: 0;
 	}
 
-	.topnav a:hover {
+	.topnav a:hover{
 	  background-color: #660000;
 	  color: white;
 	}
 
-	.active {
+	.active{
 	  background-color: grey;
 	  color: black;
 	}
+
 }
 
 
@@ -946,14 +960,14 @@ select{
 }
 
 .logo-menu{
-	float: left;
+    float: left;
 	margin-left: 1%;
  }
 
 .pulsante-logo{
   	color:#660000;
   	background: white;
-	font-size: 3em;
+	font-size: 2em;
 	border: white;
 }
 

@@ -47,77 +47,28 @@ echo"
 
 function getMenu($current){
     echo "<body>
-    <header id=\"distanza-header\">
-        <div>
-            <div class=\"logo-menu \" id=\"padd\">
-                <button class=\"pulsante-logo fontlogo\" onclick=\"location.href = \"./home.php? \">VENETO EVENTI </button>
-            </div>
-
-            <div class=\"header-right\">
-                
-                <div id=\"menu-log-linea\"  class=\"spazio\">
-                    ";
-                    if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                        echo "<a class=\"a-menu-log log-scritta\"href=\"logout.php\"class=\"active\">Logout</a>";}
-                    else{echo"<a class=\"a-menu-log\"href=\"login.php\"> Login</a>";}
-                    echo "<a class=\"a-menu-log\" href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati</a>  
-                </div>
-
-                <div class=\"spazio menu-distanza\">
-        
-                   <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>
-                   
-                   <a href=\"eventi.php\"  ";if($current=="Eventi"){echo"class=\"active\"";}echo">Eventi </a>";
-                    if(isset($_SESSION['usernameU'])){
-                        $username=$_SESSION['usernameU'];
-                        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
-
-                        $query = "SELECT * FROM `utenti` WHERE Username='$username'";
-                        $result = mysqli_query($db,$query) or die(mysql_error());      
-                        $ris=mysqli_fetch_assoc($result);
-                        $ruolo=$ris['Ruolo'];
-                        echo"<a href=";if($ruolo=="User"){echo"\"area_riservata_utente.php\"";} else {echo"\"area_admin_utente.php\"";}if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>";}
-                         
-                    if(isset($_SESSION['usernameA'])){
-                        
-                        echo"<a href=\"area_riservata_azienda.php\""; if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>";
-                    }
-
-                    echo"<a href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
-            
-        
-                 </div>
-
-            </div>
-
-        </div>
-        <div class='end'> </div>
-    </header>
-
-";
-}
-
-
-function getMenuMobile($current){
-    echo "<body>
     <header id=\"distanza-header\" class=\"mobile-container\">
         <div class=\"topnav\">
-            <div>
-                <button class=\"pulsante-logo fontlogo\" onclick=\"location.href = \"./home.php? \">VENETO EVENTI </button>
+            <div class=\" logo-menu \" id=\"padd\">
+                <button class=\" pulsante-logo fontlogo\" onclick=\"location.href = \"./home.php? \">VENETO EVENTI </button>
             </div>
+            <div class=\"pos\"></div>
 
-            <div class=\"mobile-container\">
-            <div  id=\"myLinks\">
+            <div class=\"header-right\" class=\"mobile-container\">
+                
+                <div id=\"myLinks\" >
                     ";
                     if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                        echo "<a class=\" log-scritta\"href=\"logout.php\"class=\"active\">Logout</a>";}
-                    else{echo"<a href=\"login.php\"> Login</a>";}
-                    
-                    echo "<a href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati</a>  
+                        echo "<a class=\"a-menu-log \"href=\"logout.php\"class=\"active\">Logout</a>";}
+                    else{
+                        echo"<a class=\"a-menu-log\"href=\"login.php\"> Login</a>";
+                    }
+                    echo "<a class=\"a-menu-log\" href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati</a>  
+              
         
                    <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>
                    
-                   <a href=\"eventi.php\"  ";if($current=="Eventi"){echo"class=\"active\"";}echo">Eventi </a>";
+                   <a class=\"a-menu-log\" href=\"eventi.php\" ";if($current=="Eventi"){echo"class=\"active\"";}echo">Eventi</a>";
                     if(isset($_SESSION['usernameU'])){
                         $username=$_SESSION['usernameU'];
                         $db = mysqli_connect('localhost', 'root', '', 'irizzo');
@@ -130,24 +81,22 @@ function getMenuMobile($current){
                          
                     if(isset($_SESSION['usernameA'])){
                         
-                        echo"<a href=\"area_riservata_azienda.php\""; if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>";
+                        echo"<a  class=\"a-menu-log\" href=\"area_riservata_azienda.php\""; if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>";
                     }
 
-                    echo"<a href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
+                    echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
             
         
                  </div>
-
-                 <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\"> </a>
-
+                 <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\"> 
+                 </a>
             </div>
         </div>
-        </div>
+        
     </header>
 
 ";
 }
-
 
 
 function getBreadcumbs($current){

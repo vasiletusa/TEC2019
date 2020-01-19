@@ -5,10 +5,14 @@
 	<?php 
         include_once 'functions.php'; 
 	    getHead("Home");
-    ?>      
+    ?>  
 </head>
+
+
+
 <?php getMenu("Home");?>
-<?php getMenuMobile("Home");?>
+
+
 <?php getBreadcumbs("Home");?>
 <div class="home">
 	<div class="home-pt1">
