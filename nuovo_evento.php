@@ -20,10 +20,8 @@
 								</div>
 								<div >
 									<label for="Descrizione" class="label Descrizione">Descrizione</label>
-									<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione">
+									<textarea rows = "10" cols = "100" id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione"> </textarea>
 									<p class="error"><?php getNomeError($errors); ?></p>
-									
-
 								
 								</div>
 								<div >
@@ -94,4 +92,4 @@
 </div>
 </div>
 </body>
-					<?php getfooter() ?>
+<?php getfooter() ?>
