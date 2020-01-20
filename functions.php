@@ -89,6 +89,9 @@ function getMenu($current){
         
                  </div>
                  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\"> 
+                    <div class=\"icon-menu pos1-icon\"></div>
+                    <div class=\"icon-menu pos2-icon\"></div>
+                    <div class=\"icon-menu pos3-icon\"></div>
                  </a>
             </div>
         </div>

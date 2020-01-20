@@ -9,8 +9,7 @@
           
   </head>
 
-<?php getMenu1("Contatti");?>
-<?php getMenu2("Contatti");?>
+<?php getMenu("Contatti");?>
 
 <?php getBreadcumbs("Contatti");?>
 

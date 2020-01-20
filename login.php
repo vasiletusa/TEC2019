@@ -10,7 +10,6 @@
     ?>      
 </head>
 <?php getMenu("Home");?>
-<?php getMenuMobile("Home");?>
 <?php getBreadcumbs("Home");?>
 
 

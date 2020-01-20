@@ -9,8 +9,7 @@
           
   </head>
 
-<?php getMenu1("Eventi");?>
-<?php getMenu2("Eventi");?>
+<?php getMenu("Eventi");?>
 
 <?php getBreadcumbs("Eventi");?>
 

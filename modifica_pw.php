@@ -7,8 +7,7 @@
 	    getHead("Modifica password");
      ?>        
   </head>
-<?php getMenu1("Area personale");?>
-<?php getMenu2("Area personale");?>
+<?php getMenu("Area personale");?>
 
 <?php getBreadcumbs("Area personale->modifica password");?>
 <div class="pageChange">

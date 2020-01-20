@@ -8,8 +8,7 @@
 	    $_SESSION['area']=true;
      ?>        
   </head>
-<?php getMenu1("AreaRiservata");?>
-<?php getMenu2("AreaRiservata");?>
+<?php getMenu("AreaRiservata");?>
 
 <?php getBreadcumbs("Area personale");?>
 <div class="pageArea">

@@ -883,9 +883,30 @@ select{
 	  background: #660000;
 	  display: block;
 	  position: absolute;
-	  padding: 1.5em 1.5em;
+	  height: 2em;
+	  width: 2em;
 	  right: 0;
 	  top: 0;
+	}
+
+	.icon-menu{
+		background:white;
+		height: 0.2em;
+		width: 1.5em;
+		border-radius: 0.5em;
+	}
+
+	.pos1-icon{
+		margin-left:14%;
+		margin-top:12%;
+	}
+	.pos2-icon{
+		margin-left:14%;
+		margin-top:18%;
+	}
+	.pos3-icon{
+		margin-left:14%;
+		margin-top:23%;
 	}
 
 	.topnav a:hover{
