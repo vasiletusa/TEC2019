@@ -62,29 +62,29 @@ function getMenu($current){
                   <div>
                     ";
                     if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                        echo "<a class=\"a-menu-log \"href=\"logout.php\"class=\"active\">Logout</a>";}
+                        echo "<a class=\"a-menu-log \"href=\"logout.php\">Logout</a>";}
                     else{
-                        echo"<a class=\"a-menu-log\"href=\"login.php\"> Login</a>";
+                        echo"<a class=\"a-menu-log  ";if($current=="Login"){echo"active";}echo" \"href=\"login.php\"> Login</a>";
                     }
-                    echo "<a class=\"a-menu-log\" href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati</a>  
+                    echo "<a class=\"a-menu-log ";if($current=="Registrati"){echo"active";}echo" \" href=\"registrazione_utente.php\">Registrati</a>  
                   </div>
 
                   <div>
-                   <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo">Home</a>
+                   <a class=\"a-menu-log ";if($current=="Home"){echo"active" ;}echo"\" href=\"home.php\" >Home</a>
                    
                    
                    <a class=\"a-menu-log ";if($current=="Eventi"){echo"active";}echo"\" href=\"eventi.php\">Eventi</a>";
                     
                     if(isset($_SESSION['usernameU'])){
                         
-                        echo"<a href=";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"\"area_riservata_utente.php\">Area personale</a>";}
+                        echo"<a class=\"a-menu-log \" href=";if($current=="AreaRiservata"){echo"active";}echo"\"area_riservata_utente.php\">Area personale</a>";}
                          
                     if(isset($_SESSION['usernameA'])){
                         
-                        echo"<a  class=\"a-menu-log\" href=\"area_riservata_azienda.php\""; if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>";
+                        echo"<a  class=\"a-menu-log\" href=\"area_riservata_azienda.php\""; if($current=="AreaRiservata"){echo"active";}echo">Area personale</a>";
                     }
 
-                    echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
+                    echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo " >Contatti</a>
             
                   </div>
                  </div>

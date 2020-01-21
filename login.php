@@ -6,10 +6,10 @@
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Home");
+	    getHead("Login");
     ?>      
 </head>
-<?php getMenu("Home");?>
+<?php getMenu("Login");?>
 <?php getBreadcumbs("Home");?>
 
 

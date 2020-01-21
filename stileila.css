@@ -823,7 +823,7 @@ select{
   }
   .box-descr-right p{
     text-overflow: ellipsis;
-    overflow: hidden;
+    overflow: hidden; 
   }
 
 }
@@ -849,7 +849,7 @@ select{
 	  border-radius: 0.2em;
 	}
 
-	.header-right a.active {
+	.header-right a .active {
 	  border-bottom: 0;
     background-color: grey;
     color: black;
@@ -931,6 +931,27 @@ select{
     padding-left: 2%;
     padding-right: 2%;
   }
+
+  .eventi-sx{
+    float: left;
+    margin-left: 25%;
+  }
+
+
+  .end-eventi{
+    clear: both;
+  }
+
+  .box-pulsante{
+    float: none;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+  }
+
+  .box-width-11{
+    width: 40%;
+  }
+    
 }
 
 @media(max-width: 360px){
@@ -1015,6 +1036,9 @@ div.end {
     clear:both;
 }
 
+.topnav #myLinks {
+    display: visible;
+  }
 
 
 
