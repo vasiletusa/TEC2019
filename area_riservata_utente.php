@@ -43,7 +43,7 @@
                        
                     $outCat.=   "<div class=\"evento-1 box-evento piccolo\">
                                         <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"img/eventi.jpg\">
+                                            <img class=\"img-evento\" src=\"".getImg($key['ID'])."\">
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>
@@ -117,7 +117,7 @@
                     $outCat.=   "
                                     <div class=\"evento-1 box-evento piccolo\">
                                         <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"img/eventi.jpg\">
+                                            <img class=\"img-evento\" src=\"".getImg($key['ID'])."\">
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>

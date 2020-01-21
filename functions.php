@@ -272,7 +272,21 @@ function getUltimiEventi(){
     
 }
 
-
+function getImg($id){
+    $location='uploads/';
+    if(file_exists($location.$id.'.png')){
+        $output=$location.$id.'.png';
+        
+    }
+    elseif(file_exists($location.$id.'.jpg')){
+        $output=$location.$id.'.jpg';
+    }
+    else {
+        $location='img/';
+        $output=$location.'locandina.jpg';
+    }
+    return $output;
+}
 
 ?>
 

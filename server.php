@@ -259,8 +259,10 @@ if (isset($_POST['Login'])){
 
                       $result= mysqli_query($db, $sql);
                         $ris=mysqli_fetch_assoc($result);
-echo $ris['ID'];
+                      echo $ris['ID'];
                       $name = $ris['ID'].'.' . pathinfo($_FILES['file']['name'],PATHINFO_EXTENSION);
+
+
      
                       if(isset($name)){
                           if(!empty($name)){      
@@ -275,14 +277,13 @@ echo $ris['ID'];
                       }
 
 
-
-
+                     
 
 
 
 
                         //reindirizzamento
-                        //header("Location: area_riservata_azienda.php");
+                        header("Location: area_riservata_azienda.php");
     }
 
 }

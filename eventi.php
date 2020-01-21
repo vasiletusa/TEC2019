@@ -76,7 +76,7 @@
             
                                     <div class=\"filterDiv ".$elem['Citta']." box-evento ".$elem['Categoria']."\">
                                         <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"img/eventi.jpg\">
+                                            <img class=\"img-evento\" src=\"".getImg($elem['ID'])."\">
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>

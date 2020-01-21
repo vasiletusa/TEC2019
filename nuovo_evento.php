@@ -7,6 +7,7 @@
     ?>      
 </head>
 <?php getMenu("Home");?>
+<?php getMenuMobile("Home");?>
 <?php getBreadcumbs("Home");?>
 
 <div class="box-centrale">
@@ -20,8 +21,10 @@
 								</div>
 								<div >
 									<label for="Descrizione" class="label Descrizione">Descrizione</label>
-									<textarea rows = "10" cols = "100" id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione"> </textarea>
+									<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione">
 									<p class="error"><?php getNomeError($errors); ?></p>
+									
+
 								
 								</div>
 								<div >
@@ -78,7 +81,7 @@
     
     							
     
-<input type="file" name="file" id="file"><br><br>
+								<input type="file" name="file" id="file"><br><br>
 
 
 								<button type="submit" class="button bottone-centrale" name="nuovo_evento">Invia</button>
@@ -92,4 +95,4 @@
 </div>
 </div>
 </body>
-<?php getfooter() ?>
+					<?php getfooter() ?>
