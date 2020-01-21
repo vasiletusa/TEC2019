@@ -71,6 +71,7 @@
             if($_SESSION['eventi']===true){
             foreach ($output as $elem) {
                 if($elem){
+                  
                     $outCat.=   "
                                 
             
@@ -123,7 +124,7 @@
 
 
             else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour'> Nuovo evento </a><h3></p>";}
-            echo $outCat;
+            echo $outCat; 
             unset($outCat);
         ?>
 

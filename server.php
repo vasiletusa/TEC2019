@@ -272,9 +272,7 @@ if (isset($_POST['Login'])){
 
                               }
                           }       
-                      }  else {
-                          echo 'Seleziona un file da caricare';
-                      }
+                      }  
 
 
                      
@@ -298,7 +296,6 @@ if (isset($_POST['Login'])){
         $query = "INSERT INTO partecipa (ID, Username) 
                                 VALUES('$id','$username')";
         $result = mysqli_query($db,$query) or die(mysql_error());
-        echo $result;
     
 
   }
@@ -330,9 +327,21 @@ if(isset($_POST['nopreferiti'])){
   
       $username=$_SESSION['usernameU'];
       
-        $query = "DELETE FROM `preferiti`WHERE ID='$id' AND Username='$username'";
+        $query = "DELETE FROM `preferiti` WHERE ID='$id' AND Username='$username'";
         $result = mysqli_query($db,$query) or die(mysql_error());
   }
+
+
+if(isset($_POST['elimina'])){
+  $id=$_SESSION['idEvento'];
+  $query = "DELETE FROM `eventi` WHERE ID='$id'";
+  $result = mysqli_query($db, $query) or die(mysql_error());
+  header("Location: area_riservata_azienda.php");
+
+
+}
+
+
 function setOrganizza(){
     if(!isset($_SESSION["username"])){
      $_SESSION['isOrganize']=true;

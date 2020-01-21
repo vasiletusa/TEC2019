@@ -566,6 +566,7 @@ input, text {
   margin-right: 10%;
   margin-left: 2%;
   float: left;
+  cursor:pointer;
    
 }
 

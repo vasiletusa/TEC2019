@@ -137,8 +137,10 @@ function getEventiAzienda(){
 function getEventiTutti(){
     $db = mysqli_connect('localhost', 'root', '', 'irizzo');
     $sql = "SELECT * FROM `eventi`";
+
     $ris = mysqli_query($db,$sql);
     $errore = array();
+
     if(mysqli_num_rows($ris)==0){
         $_SESSION['eventi']=false;
         //array_push($errore,"Errore della query: " . $sql);
@@ -183,10 +185,11 @@ function getEventiIscritto(){
     return $output;
 }
 function getEventoDettagli($id){
+    echo $id;
       $db = mysqli_connect('localhost', 'root', '', 'irizzo');
 
     $sql = "SELECT * FROM `eventi` WHERE Id='$id'";
-    $ris = mysqli_query($db,$sql)or DIE("tourDaId: ".mysqli_error($db));
+    $ris = mysqli_query($db,$sql)or DIE("evento: ".mysqli_error($db));
     $output = mysqli_fetch_assoc($ris);
     return $output;
 }
@@ -219,6 +222,7 @@ function setIscrivitiBottone(){
         $username= $_SESSION['usernameA'];
         $db = mysqli_connect('localhost', 'root', '', 'irizzo');
         $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
+
         $ris= mysqli_query($db, $sql);
         if(mysqli_num_rows($ris)==0){
             $output="<p class='scritte-dettagli' style='color:red'> *per iscriverti a un evento devi prima accedere.</p>";
@@ -240,6 +244,7 @@ function setIscrivitiBottone(){
 
 function setPreferitiBottone(){
     $idEvento= $_SESSION['idEvento'];
+    $output="";
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
             $db = mysqli_connect('localhost', 'root', '', 'irizzo');
@@ -255,6 +260,8 @@ function setPreferitiBottone(){
 
                 </form>";
                        }
+        
+        
         else{
                                                             
 
@@ -262,13 +269,21 @@ function setPreferitiBottone(){
                                     <input type='submit' name='nopreferiti' value=''  class='scritte-preferiti noprefe' />
 
                 </form>";
+        }    
+    }elseif(isset($_SESSION['usernameA'])){ 
+        $username= $_SESSION['usernameA'];
+        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+        $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
+        $ris= mysqli_query($db, $sql);
+        if(mysqli_num_rows($ris)==1){
+            
+            $output="<form action='' method='post'>
+                                    
+<input type=\"button\" onclick=\"window.location.href = 'modifica_evento.php?id=".$idEvento."'\" class=\"scritte-iscriviti\" value=\"MODIFICA\"/>  
+                </form>";
         }
-    
-        
-
-    return  $output;
     }
-
+    return  $output;
 }
 
 function getUltimiEventi(){
