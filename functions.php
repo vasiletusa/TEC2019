@@ -47,6 +47,7 @@ echo"
 
 
 function getMenu($current){
+    echo $current;
     echo "<body>
     <header id=\"distanza-header\">
         <div class=\"topnav\">
@@ -69,18 +70,14 @@ function getMenu($current){
                   </div>
 
                   <div>
-                   <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>
+                   <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo">Home</a>
                    
-                   <a class=\"a-menu-log\" href=\"eventi.php\" ";if($current=="Eventi"){echo"class=\"active\"";}echo">Eventi</a>";
+                   
+                   <a class=\"a-menu-log ";if($current=="Eventi"){echo"active";}echo"\" href=\"eventi.php\">Eventi</a>";
+                    
                     if(isset($_SESSION['usernameU'])){
-                        $username=$_SESSION['usernameU'];
-                        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
-
-                        $query = "SELECT * FROM `utenti` WHERE Username='$username'";
-                        $result = mysqli_query($db,$query) or die(mysql_error());      
-                        $ris=mysqli_fetch_assoc($result);
-                        $ruolo=$ris['Ruolo'];
-                        echo"<a href=";if($ruolo=="User"){echo"\"area_riservata_utente.php\"";} else {echo"\"area_admin_utente.php\"";}if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>";}
+                        
+                        echo"<a href=";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"href=\"area_riservata_utente.php\">Area personale</a>";}
                          
                     if(isset($_SESSION['usernameA'])){
                         
