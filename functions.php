@@ -217,9 +217,25 @@ function setIscrivitiBottone(){
                 </form>";
         }
     
-    }else
-        $output="<p class='scritte-dettagli' style='color:red'> *per iscriverti a un evento devi prima accedere.</p>";
-        return  $output;
+    }elseif(isset($_SESSION['usernameA'])){ 
+        $username= $_SESSION['usernameA'];
+        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+        $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
+        $ris= mysqli_query($db, $sql);
+        if(mysqli_num_rows($ris)==0){
+            $output="<p class='scritte-dettagli' style='color:red'> *per iscriverti a un evento devi prima accedere.</p>";
+                       }
+        else{
+            $output="<form action='' method='post'>
+                                    <input type='submit' name='elimina' value='ELIMINA'  class='scritte-iscriviti' />
+
+                </form>";
+        }
+
+    }
+     else   $output="<p class='scritte-dettagli' style='color:red'> *per iscriverti a un evento devi prima accedere.</p>";
+    
+    return  $output;
 }
 
 
