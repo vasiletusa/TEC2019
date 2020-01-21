@@ -19,6 +19,7 @@ echo"
 
 	<link rel=\"stylesheet\"  href=\"stileila.css\"/ >
     <script src=\"selection.js\"></script>
+    <script src=\"js/menu-hamburger.js\"></script>
 
 
 	<link rel=\"icon\" 
@@ -47,7 +48,7 @@ echo"
 
 function getMenu($current){
     echo "<body>
-    <header id=\"distanza-header\" class=\"mobile-container\">
+    <header id=\"distanza-header\">
         <div class=\"topnav\">
             <div class=\" logo-menu \" id=\"padd\">
                 <button class=\" pulsante-logo fontlogo\" onclick=\"location.href = \"./home.php? \">VENETO EVENTI </button>
@@ -90,11 +91,11 @@ function getMenu($current){
             
                   </div>
                  </div>
-                 <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\"> 
-                    <div class=\"icon-menu pos1-icon\"></div>
-                    <div class=\"icon-menu pos2-icon\"></div>
-                    <div class=\"icon-menu pos3-icon\"></div>
-                 </a>
+                     <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\"> 
+                        <div class=\"icon-menu pos1-icon\"></div>
+                        <div class=\"icon-menu pos2-icon\"></div>
+                        <div class=\"icon-menu pos3-icon\"></div>
+                     </a>
             </div>
         </div>
         
