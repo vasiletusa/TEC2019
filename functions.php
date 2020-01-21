@@ -47,7 +47,7 @@ echo"
 
 
 function getMenu($current){
-    echo $current;
+    
     echo "<body>
     <header id=\"distanza-header\">
         <div class=\"topnav\">
