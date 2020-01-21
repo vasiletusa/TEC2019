@@ -77,7 +77,7 @@ function getMenu($current){
                     
                     if(isset($_SESSION['usernameU'])){
                         
-                        echo"<a href=";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"href=\"area_riservata_utente.php\">Area personale</a>";}
+                        echo"<a href=";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"\"area_riservata_utente.php\">Area personale</a>";}
                          
                     if(isset($_SESSION['usernameA'])){
                         
