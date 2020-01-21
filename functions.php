@@ -57,6 +57,7 @@ function getMenu($current){
             <div class=\"header-right\" class=\"mobile-container\">
                 
                 <div id=\"myLinks\" >
+                  <div>
                     ";
                     if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
                         echo "<a class=\"a-menu-log \"href=\"logout.php\"class=\"active\">Logout</a>";}
@@ -64,8 +65,9 @@ function getMenu($current){
                         echo"<a class=\"a-menu-log\"href=\"login.php\"> Login</a>";
                     }
                     echo "<a class=\"a-menu-log\" href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati</a>  
-              
-        
+                  </div>
+
+                  <div>
                    <a href=\"home.php\"  ";if(($current=="Home")||($current=="Città")){echo"class=\"active\"";}echo">Home</a>
                    
                    <a class=\"a-menu-log\" href=\"eventi.php\" ";if($current=="Eventi"){echo"class=\"active\"";}echo">Eventi</a>";
@@ -86,7 +88,7 @@ function getMenu($current){
 
                     echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
             
-        
+                  </div>
                  </div>
                  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\"> 
                     <div class=\"icon-menu pos1-icon\"></div>
