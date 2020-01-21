@@ -57,7 +57,7 @@
                                         
                                             <div class=\"box-dettagli prefe-iscrizione\">
                                             
-                                            <button type=\"submit\" class=\" selezione\" name=\"modifica_evento\">Invia</button>
+                                                <input type=\"submit\" class=\" selezione\" name=\"modifica_evento\">Modifica</button>
  
                                             </div>
                             </div>
