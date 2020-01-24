@@ -56,7 +56,7 @@
              $tab=8;
       
         }}
-else{ $outCat.= "<h2 > Non ci sono tour al momento <a href=\"registra_tour.php class=\"messageTour\"> Organizzane</a> uno tu!</h2>";}
+else{ $outCat.= "<h2 > Non ci sono tour al momento <a href=\"registra_tour.php class=\"messageTour\" tabindex='1' accesskey='s'> Organizzane</a> uno tu!</h2>";}
             
        echo $outCat;
 

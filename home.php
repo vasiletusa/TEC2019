@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
@@ -72,7 +73,7 @@
             
                                     <div class=\"box-evento\">
                                         <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"".getImg($elem['ID'])."\">
+                                            <img class=\"img-evento\" src=\"".getImg($elem['ID'])."\" alt='immagine evento'>
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>
@@ -117,7 +118,7 @@
                     }
             }}
 
-            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour'> Nuovo evento </a><h3></p>";}
+            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='1' accesskey='s'> Nuovo evento </a><h3></p>";}
             echo $outCat;
             unset($outCat);
         ?>
@@ -125,7 +126,7 @@
 	</div>
 </div>
 
-<script>
+<script type="text/javascript">
     function myFunction() {
       var x = document.getElementById("myLinks");
       if (x.style.display === "block") {

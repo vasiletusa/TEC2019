@@ -43,7 +43,7 @@
                        
                     $outCat.=   "<div class=\"evento-1 box-evento piccolo\">
                                         <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"".getImg($key['ID'])."\">
+                                            <img class=\"img-evento\" src=\"".getImg($key['ID'])."\" alt=\"immagine evento\">
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>
@@ -90,7 +90,7 @@
         }}
         
 
-    }}  else{$outCat.= "<div><h3> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h3></div>";}
+    }}  else{$outCat.= "<div><h3> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour' tabindex='1' accesskey='s'> Iscriviti </a>al tuo primo tour!</h3></div>";}
         echo $outCat;
         unset($outCat);
     ?>
@@ -117,7 +117,7 @@
                     $outCat.=   "
                                     <div class=\"evento-1 box-evento piccolo\">
                                         <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"".getImg($key['ID'])."\">
+                                            <img class=\"img-evento\" src=\"".getImg($key['ID'])."\" alt=\"immagine evento\">
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>
@@ -164,7 +164,7 @@
         }}
         
 
-    }}  else{$outCat.= "<div><h3> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour'> Iscriviti </a>al tuo primo tour!</h3></div>";}
+    }}  else{$outCat.= "<div><h3> Non ci sono tour a cui partecipi. <a href='tour.php' class='messageTour' tabindex='1' accesskey='s'> Iscriviti </a>al tuo primo tour!</h3></div>";}
         echo $outCat;
         unset($outCat);
     ?>

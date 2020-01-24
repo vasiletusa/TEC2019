@@ -16,28 +16,31 @@
 <div class="home-pt1 eventi-pt1">
         
             
-        <div id="contenitore-bottoni-citta" class="lista-citta citta-eventi">
+        <div class="eventi-sx">
 
+            <div>
+              <button class="box-pulsante box-width-11 attivo selezione" onclick="filterSelectionCitta('Tutti')"> Tutti </button>
+          
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Padova')"> PADOVA </button>
                     
-                        <button class="box-pulsante box-width-11 attivo selezione" onclick="filterSelectionCitta('Tutti')"> Tutti </button>
-                    
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Padova')"> PADOVA </button>
-                              
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Verona')">VERONA</button>
-                               
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Vicenza')">VICENZA</button>
-                                
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Venezia')">VENEZIA</button>
-                    
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Treviso')">TREVISO</button>
-                               
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Belluno')">BELLUNO</button>
-                                
-                        <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Rovigo')">ROVIGO</button>
-                   
-                    
-
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Verona')">VERONA</button>
+                     
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Vicenza')">VICENZA</button>
+            </div>
+            <div>
+                      
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Venezia')">VENEZIA</button>
+          
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Treviso')">TREVISO</button>
+                     
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Belluno')">BELLUNO</button>
+                      
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Rovigo')">ROVIGO</button>
+         
+            </div>
+                  
         </div>
+        <div class="end-eventi"></div>
         <!--div id="contenitore-bottoni-categoria" class="lista-citta categoria-eventi">
 
                    
@@ -77,7 +80,7 @@
             
                                     <div class=\"filterDiv ".$elem['Citta']." box-evento ".$elem['Categoria']."\">
                                         <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"".getImg($elem['ID'])."\">
+                                            <img class=\"img-evento\" src=\"".getImg($elem['ID'])."\" alt=\"immagine evento\">
                                         </div>
                                         <div class=\"box-titolo\">
                                             <div class=\"box-icona\"></div>
@@ -123,7 +126,7 @@
             }}
 
 
-            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour'> Nuovo evento </a><h3></p>";}
+            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='1' accesskey='s'> Nuovo evento </a><h3></p>";}
             echo $outCat; 
             unset($outCat);
         ?>

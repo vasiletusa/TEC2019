@@ -24,7 +24,7 @@ echo"
 
 	<link rel=\"icon\" 
       type=\"image/png\" 
-      href=\"img/favicon.png\">
+      href=\"img/favicon.png\" alt='immagine favicon'>
 	
 ";
 }function getFooter(){echo"
@@ -37,7 +37,7 @@ echo"
             <div> tel: +39 123456789 </div>
 
             <div class=\"torna-su\">   
-            <a class=\"scritta-torna-su\" href=\"#\">TORNA SU</a>
+            <a class=\"scritta-torna-su\" href=\"#\" tabindex='1' accesskey='s'>TORNA SU</a>
             </div>
         </div>  
     </footer>
@@ -62,33 +62,34 @@ function getMenu($current){
                   <div>
                     ";
                     if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                        echo "<a class=\"a-menu-log \"href=\"logout.php\"class=\"active\">Logout</a>";}
+                        echo "<a class=\"a-menu-log \"href=\"logout.php\" tabindex='1' accesskey='s'>Logout</a>";}
                     else{
-                        echo"<a class=\"a-menu-log\"href=\"login.php\"> Login</a>";
+                        echo"<a class=\"a-menu-log  ";if($current=="Login"){echo"active";}echo" \"href=\"login.php\" tabindex='1' accesskey='s'> Login</a>";
                     }
-                    echo "<a class=\"a-menu-log\" href=\"registrazione_utente.php\" ";if($current=="Registrati"){echo"class=\"active\"";}echo">Registrati</a>  
+                    echo "<a class=\"a-menu-log ";if($current=="Registrati"){echo"active";}echo" \" href=\"registrazione_utente.php\" tabindex='1' accesskey='s'>Registrati</a>  
                   </div>
 
                   <div>
-                   <a href=\"home.php\"  ";if($current=="Home"){echo"class=\"active\"";}echo">Home</a>
+                   <a class=\"a-menu-log ";if($current=="Home"){echo"active" ;}echo"\" href=\"home.php\" tabindex='1' accesskey='s'>Home</a>
                    
                    
-                   <a class=\"a-menu-log ";if($current=="Eventi"){echo"active";}echo"\" href=\"eventi.php\">Eventi</a>";
+                   <a class=\"a-menu-log ";if($current=="Eventi"){echo"active";}echo"\" href=\"eventi.php\" tabindex='1' accesskey='s'>Eventi</a>";
                     
                     if(isset($_SESSION['usernameU'])){
                         
-                        echo"<a href=";if($current=="AreaRiservata"){echo"class=\"active\"";}echo"\"area_riservata_utente.php\">Area personale</a>";}
+                        echo"<a class=\"a-menu-log ";if($current=="AreaRiservata"){echo"active";}echo" \" href=\"area_riservata_utente.php\" tabindex='1' accesskey='s'>Area personale</a>";
+                    }
                          
                     if(isset($_SESSION['usernameA'])){
                         
-                        echo"<a  class=\"a-menu-log\" href=\"area_riservata_azienda.php\""; if($current=="AreaRiservata"){echo"class=\"active\"";}echo">Area personale</a>";
+                        echo"<a  class=\"a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"\" href=\"area_riservata_azienda.php\" tabindex='1' accesskey='s'>Area personale</a>";
                     }
 
-                    echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo">Contatti</a>
+                    echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo " tabindex='1' accesskey='s'>Contatti</a>
             
                   </div>
                  </div>
-                     <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\"> 
+                     <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\" tabindex='1' accesskey='s'> 
                         <div class=\"icon-menu pos1-icon\"></div>
                         <div class=\"icon-menu pos2-icon\"></div>
                         <div class=\"icon-menu pos3-icon\"></div>
@@ -112,14 +113,14 @@ echo "<div class=\"contenitore\">
 function getMessage(){
 	if(isset($_SESSION['isOrganize'])){
 		echo "
-		<p id=\"messaggio\">Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\">registrati</a href></p>";
+		<p id=\"messaggio\">Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\" tabindex='1' accesskey='s'>registrati</a href></p>";
 	}
 }
 
 
 function getEventiAzienda(){
     $azienda=$_SESSION['usernameA'];
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `eventi` WHERE azienda='$azienda' ";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -135,7 +136,7 @@ function getEventiAzienda(){
     return $output;
 }
 function getEventiTutti(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `eventi`";
 
     $ris = mysqli_query($db,$sql);
@@ -153,7 +154,7 @@ function getEventiTutti(){
     return $output;
 }
 function getEventiPrefe(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `preferiti`";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -169,7 +170,7 @@ function getEventiPrefe(){
     return $output;
 }
 function getEventiIscritto(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `partecipa`";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -186,7 +187,7 @@ function getEventiIscritto(){
 }
 function getEventoDettagli($id){
     echo $id;
-      $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
     $sql = "SELECT * FROM `eventi` WHERE Id='$id'";
     $ris = mysqli_query($db,$sql)or DIE("evento: ".mysqli_error($db));
@@ -198,7 +199,7 @@ function setIscrivitiBottone(){
     $idEvento= $_SESSION['idEvento'];
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
-            $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+            $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
         $sql = "SELECT * FROM `partecipa` WHERE id='$idEvento' AND Username='$username' ";
@@ -220,7 +221,7 @@ function setIscrivitiBottone(){
     
     }elseif(isset($_SESSION['usernameA'])){ 
         $username= $_SESSION['usernameA'];
-        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+        $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
         $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
 
         $ris= mysqli_query($db, $sql);
@@ -247,7 +248,7 @@ function setPreferitiBottone(){
     $output="";
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
-            $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+            $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
         $sql = "SELECT * FROM `preferiti` WHERE id='$idEvento' AND Username='$username' ";
@@ -272,7 +273,7 @@ function setPreferitiBottone(){
         }    
     }elseif(isset($_SESSION['usernameA'])){ 
         $username= $_SESSION['usernameA'];
-        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+        $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
         $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
         $ris= mysqli_query($db, $sql);
         if(mysqli_num_rows($ris)==1){
@@ -287,7 +288,7 @@ function setPreferitiBottone(){
 }
 
 function getUltimiEventi(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM ( SELECT * FROM `eventi` ORDER BY ID DESC LIMIT 3 ) as r ORDER BY ID";
     $ris = mysqli_query($db,$sql);
     $errore = array();

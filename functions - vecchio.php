@@ -21,7 +21,7 @@ echo"
 
 	<link rel=\"icon\" 
       type=\"image/png\" 
-      href=\"img/favicon.png\">
+      href=\"img/favicon.png\" alt='immagine favicon'>
 	
 ";
 }function getFooter(){echo"
@@ -62,7 +62,7 @@ echo"
     <div class=\"menu-2\">
      <div class=\"header\">
         <div class=\"header-left\">
-        <a class=\"logo-a\" href=\"home.php\"><img class=\"logo\"src=\"img/logo.jpg\" alt=\"Veneto on Tour\"></a>
+        <a class=\"logo-a\" href=\"home.php\"><img class=\"logo\"src=\"img/logo.jpg\" alt=\"Veneto Tour\"></a>
         </div>
         <div class=\"header-right\">
         

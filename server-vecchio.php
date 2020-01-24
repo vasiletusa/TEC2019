@@ -227,7 +227,7 @@ if(isset($_SESSION['area'])){
                   $count=1;
                   while($row = mysqli_fetch_assoc($result)) { 
 
-                   echo " <p><a href=\"#\" align=\"center\"><".$row['Descrizione']."></a>";
+                   echo " <p><a href=\"#\" align=\"center\"><".$row['Descrizione']." tabindex="1" accesskey="s"></a>";
                   $count++; }
                 }*/
 }

@@ -6,7 +6,7 @@
 		<div> tel: +39 04145678910 </div>
 
 		<div class="back-up">	
-		<a href="#">TORNA SU</a>
+		<a href="#" tabindex="1" accesskey="s">TORNA SU</a>
 		</div>
 	</div>	
 </footer>

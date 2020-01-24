@@ -8,7 +8,7 @@
      ?>        
   </head>
 <?php getMenu("Home");?>
-<?php getBreadcumbs("Registrati");?>
+<?php getBreadcumbs("Registrati/Registrazione-azienda");?>
 <div class="pageRegistrati">
 	
 	
