@@ -11,7 +11,7 @@
 
 <?php getMenu("Eventi");?>
 
-<?php getBreadcumbs("Eventi");?>
+<?php getBreadcumbs("Eventi/Dettagli-evento");?>
 
 
 <?php
@@ -23,9 +23,9 @@
         $controlloIscrizione= setIscrivitiBottone();
         $controlloPreferiti= setPreferitiBottone();
                                 
-         echo   " <div class=\"box-evento dettagli-evento \">
+         echo   " <div class=\" dettagli-evento \">
                                         <div class=\"box-img img-dettagli\">
-                                            <img class=\"img-evento\" src=\"img/eventi.jpg\" alt=\"immagine evento\">
+                                            <img class=\"img-detevento\" src=\"img/eventi.jpg\" alt=\"immagine evento\">
                                         </div>
                                         <div class=\"box-evento-indettagli \">
                                             <div class=\"box-titolo titolo-dettagli\">
@@ -61,11 +61,11 @@
                                         
                                             <div class=\"box-dettagli prefe-iscrizione\">
                                             
-                                                <div >
+                                                <div>
 
                                                     ".$controlloPreferiti."
                                                 </div> 
-                                                <div >
+                                                <div class='verifica-iscr'>
 
                                                     ".$controlloIscrizione."  
                                                 </div> 

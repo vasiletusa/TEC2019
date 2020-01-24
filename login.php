@@ -46,7 +46,7 @@
 
 	<div class="box-login-right box-login-descr" >
 
-	<p id="notRegistered">Non ancora registrato? Che aspetti? </br> Entra nella nostra community per restare aggiornato sugli eventi nelle città del Veneto, non perdere l'occasione di iscriverti ai tuoi avvenimenti preferiti prima che i posti finiscano! Già milioni di utenti utilizzano il nostro servizio e ne sono entusiasti!</p>
+	<p >Non ancora registrato? Che aspetti? </br> Entra nella nostra community per restare aggiornato sugli eventi nelle città del Veneto, non perdere l'occasione di iscriverti ai tuoi avvenimenti preferiti prima che i posti finiscano! Già milioni di utenti utilizzano il nostro servizio e ne sono entusiasti!</p>
 	<h1 class="titolo">Registrati <a class="link-parola" href='registrazione_utente.php' tabindex="1" accesskey="s">qui</a></h1>
 	</div>
 

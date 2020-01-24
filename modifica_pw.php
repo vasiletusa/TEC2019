@@ -9,7 +9,7 @@
   </head>
 <?php getMenu("Area personale");?>
 
-<?php getBreadcumbs("Area personale->modifica password");?>
+<?php getBreadcumbs("Area personale/Modifica-password");?>
 <div class="pageChange">
 <div class="box-centrale">
 <form method="post" action="modifica_pw.php" >						
@@ -40,7 +40,7 @@
 
 							
 						</div>
-						<button type="submit" class="button" name="modifica_pw">Invia</button>
+						<button type="submit" class="bottone-invia selezione" name="modifica_pw">Invia</button>
 
 					</form>
 					

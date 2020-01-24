@@ -77,11 +77,12 @@ function getMenu($current){
                     
                     if(isset($_SESSION['usernameU'])){
                         
-                        echo"<a class=\"a-menu-log \" href=";if($current=="AreaRiservata"){echo"active";}echo"\"area_riservata_utente.php\" tabindex='1' accesskey='s'>Area personale</a>";}
+                        echo"<a class=\"a-menu-log ";if($current=="AreaRiservata"){echo"active";}echo" \" href=\"area_riservata_utente.php\" tabindex='1' accesskey='s'>Area personale</a>";
+                    }
                          
                     if(isset($_SESSION['usernameA'])){
                         
-                        echo"<a  class=\"a-menu-log\" href=\"area_riservata_azienda.php\" "; if($current=="AreaRiservata"){echo"active";}echo" tabindex='1' accesskey='s'>Area personale</a>";
+                        echo"<a  class=\"a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"\" href=\"area_riservata_azienda.php\" tabindex='1' accesskey='s'>Area personale</a>";
                     }
 
                     echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo " tabindex='1' accesskey='s'>Contatti</a>
@@ -119,7 +120,7 @@ function getMessage(){
 
 function getEventiAzienda(){
     $azienda=$_SESSION['usernameA'];
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `eventi` WHERE azienda='$azienda' ";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -135,7 +136,7 @@ function getEventiAzienda(){
     return $output;
 }
 function getEventiTutti(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `eventi`";
 
     $ris = mysqli_query($db,$sql);
@@ -153,7 +154,7 @@ function getEventiTutti(){
     return $output;
 }
 function getEventiPrefe(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `preferiti`";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -169,7 +170,7 @@ function getEventiPrefe(){
     return $output;
 }
 function getEventiIscritto(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `partecipa`";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -186,7 +187,7 @@ function getEventiIscritto(){
 }
 function getEventoDettagli($id){
     echo $id;
-      $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
     $sql = "SELECT * FROM `eventi` WHERE Id='$id'";
     $ris = mysqli_query($db,$sql)or DIE("evento: ".mysqli_error($db));
@@ -198,7 +199,7 @@ function setIscrivitiBottone(){
     $idEvento= $_SESSION['idEvento'];
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
-            $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+            $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
         $sql = "SELECT * FROM `partecipa` WHERE id='$idEvento' AND Username='$username' ";
@@ -220,7 +221,7 @@ function setIscrivitiBottone(){
     
     }elseif(isset($_SESSION['usernameA'])){ 
         $username= $_SESSION['usernameA'];
-        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+        $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
         $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
 
         $ris= mysqli_query($db, $sql);
@@ -247,7 +248,7 @@ function setPreferitiBottone(){
     $output="";
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
-            $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+            $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
         $sql = "SELECT * FROM `preferiti` WHERE id='$idEvento' AND Username='$username' ";
@@ -272,7 +273,7 @@ function setPreferitiBottone(){
         }    
     }elseif(isset($_SESSION['usernameA'])){ 
         $username= $_SESSION['usernameA'];
-        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+        $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
         $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
         $ris= mysqli_query($db, $sql);
         if(mysqli_num_rows($ris)==1){
@@ -287,7 +288,7 @@ function setPreferitiBottone(){
 }
 
 function getUltimiEventi(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM ( SELECT * FROM `eventi` ORDER BY ID DESC LIMIT 3 ) as r ORDER BY ID";
     $ris = mysqli_query($db,$sql);
     $errore = array();
