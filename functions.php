@@ -24,7 +24,7 @@ echo"
 
 	<link rel=\"icon\" 
       type=\"image/png\" 
-      href=\"img/favicon.png\">
+      href=\"img/favicon.png\" alt='immagine favicon'>
 	
 ";
 }function getFooter(){echo"
@@ -37,7 +37,7 @@ echo"
             <div> tel: +39 123456789 </div>
 
             <div class=\"torna-su\">   
-            <a class=\"scritta-torna-su\" href=\"#\">TORNA SU</a>
+            <a class=\"scritta-torna-su\" href=\"#\" tabindex='1' accesskey='s'>TORNA SU</a>
             </div>
         </div>  
     </footer>
@@ -62,33 +62,33 @@ function getMenu($current){
                   <div>
                     ";
                     if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                        echo "<a class=\"a-menu-log \"href=\"logout.php\">Logout</a>";}
+                        echo "<a class=\"a-menu-log \"href=\"logout.php\" tabindex='1' accesskey='s'>Logout</a>";}
                     else{
-                        echo"<a class=\"a-menu-log  ";if($current=="Login"){echo"active";}echo" \"href=\"login.php\"> Login</a>";
+                        echo"<a class=\"a-menu-log  ";if($current=="Login"){echo"active";}echo" \"href=\"login.php\" tabindex='1' accesskey='s'> Login</a>";
                     }
-                    echo "<a class=\"a-menu-log ";if($current=="Registrati"){echo"active";}echo" \" href=\"registrazione_utente.php\">Registrati</a>  
+                    echo "<a class=\"a-menu-log ";if($current=="Registrati"){echo"active";}echo" \" href=\"registrazione_utente.php\" tabindex='1' accesskey='s'>Registrati</a>  
                   </div>
 
                   <div>
-                   <a class=\"a-menu-log ";if($current=="Home"){echo"active" ;}echo"\" href=\"home.php\" >Home</a>
+                   <a class=\"a-menu-log ";if($current=="Home"){echo"active" ;}echo"\" href=\"home.php\" tabindex='1' accesskey='s'>Home</a>
                    
                    
-                   <a class=\"a-menu-log ";if($current=="Eventi"){echo"active";}echo"\" href=\"eventi.php\">Eventi</a>";
+                   <a class=\"a-menu-log ";if($current=="Eventi"){echo"active";}echo"\" href=\"eventi.php\" tabindex='1' accesskey='s'>Eventi</a>";
                     
                     if(isset($_SESSION['usernameU'])){
                         
-                        echo"<a class=\"a-menu-log \" href=";if($current=="AreaRiservata"){echo"active";}echo"\"area_riservata_utente.php\">Area personale</a>";}
+                        echo"<a class=\"a-menu-log \" href=";if($current=="AreaRiservata"){echo"active";}echo"\"area_riservata_utente.php\" tabindex='1' accesskey='s'>Area personale</a>";}
                          
                     if(isset($_SESSION['usernameA'])){
                         
-                        echo"<a  class=\"a-menu-log\" href=\"area_riservata_azienda.php\""; if($current=="AreaRiservata"){echo"active";}echo">Area personale</a>";
+                        echo"<a  class=\"a-menu-log\" href=\"area_riservata_azienda.php\" "; if($current=="AreaRiservata"){echo"active";}echo" tabindex='1' accesskey='s'>Area personale</a>";
                     }
 
-                    echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo " >Contatti</a>
+                    echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo " tabindex='1' accesskey='s'>Contatti</a>
             
                   </div>
                  </div>
-                     <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\"> 
+                     <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\" tabindex='1' accesskey='s'> 
                         <div class=\"icon-menu pos1-icon\"></div>
                         <div class=\"icon-menu pos2-icon\"></div>
                         <div class=\"icon-menu pos3-icon\"></div>
@@ -112,7 +112,7 @@ echo "<div class=\"contenitore\">
 function getMessage(){
 	if(isset($_SESSION['isOrganize'])){
 		echo "
-		<p id=\"messaggio\">Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\">registrati</a href></p>";
+		<p id=\"messaggio\">Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\" tabindex='1' accesskey='s'>registrati</a href></p>";
 	}
 }
 

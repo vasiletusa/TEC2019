@@ -25,7 +25,7 @@
                                 
          echo   " <div class=\"box-evento dettagli-evento \">
                                         <div class=\"box-img img-dettagli\">
-                                            <img class=\"img-evento\" src=\"img/eventi.jpg\">
+                                            <img class=\"img-evento\" src=\"img/eventi.jpg\" alt=\"immagine evento\">
                                         </div>
                                         <div class=\"box-evento-indettagli \">
                                             <div class=\"box-titolo titolo-dettagli\">

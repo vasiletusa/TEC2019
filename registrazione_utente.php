@@ -75,7 +75,7 @@
 	
 		<p> Entra nella nostra community per vedere e partecipare agli eventi </p>
 		<p>Se invece sei il proprietario di un'azienda, un locale, bar discoteca, o il referente di un'attività pubblica quale museo o luoghi culturali registra la tua azienda per far conoscere agli utenti della nostra community i tuoi eventi speciali o promozioni.</p>
-		<h1 class="titolo"> Registra la tua azienda <a class="link-parola" href="registrazione_azienda.php">qui</a>.</h1>
+		<h1 class="titolo"> Registra la tua azienda <a class="link-parola" href="registrazione_azienda.php" tabindex="1" accesskey="s">qui</a>.</h1>
 									</div>
 </div>
 					<?php getfooter() ?>
