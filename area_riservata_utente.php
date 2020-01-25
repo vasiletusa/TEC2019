@@ -31,7 +31,7 @@
             $tour=getEventiTutti();
             $outCat="";
             if($_SESSION['eventiPrefe']===true){
-                $outCat.="<h1 class=\"titolo\"> Preferiti</h1>";
+                $outCat.="<h1 class='titolo'> Preferiti</h1>";
 
             foreach ($tuoiTour as $elem) {
               
@@ -41,13 +41,13 @@
                     if($key&&$elem){
                     if($elem['ID']==$key['ID']){
                        
-                    $outCat.=   "<div class=\"evento-1 box-evento piccolo\">
-                                        <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"".getImg($key['ID'])."\" alt=\"immagine evento\">
+                    $outCat.=   "<div class='evento-1 box-evento piccolo'>
+                                        <div class='box-img'>
+                                            <img class='img-evento' src='".getImg($key['ID'])."' alt='immagine evento'>
                                         </div>
-                                        <div class=\"box-titolo\">
-                                            <div class=\"box-icona\"></div>
-                                                <p class=\"scritte-evento\">".$key['Titolo']."</p>
+                                        <div class='box-titolo'>
+                                            <div class='box-icona'></div>
+                                                <p class='scritte-evento'>".$key['Titolo']."</p>
                                         </div>
                                         <div class=\"box-categoria \">
                                             <div class=\"box-icona\"></div>
