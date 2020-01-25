@@ -116,7 +116,11 @@
                                             </div>
                                             <div >
                                                 
-                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button> 
+                                                <!--button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button-->
+                                                <div class=\"scritte-dettagli selezione \"><a href=\"dettagli_evento.php?id=".$elem['ID']."\">DETTAGLI</a></div>
+
+
+
                                             </div> 
                                              
                                         </div>
