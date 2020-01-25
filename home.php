@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
@@ -51,7 +52,7 @@
 			<div class="box-descr-right">
 			
 					<p class = "descr">
-						Veneto Eventi ti propone una raccolta degli eventi disponibili nelle città del Veneto.</br> Registrati per poter partecipare agli eventi con posti limitati e comprare i biglietti. Se sei un locale o un'azienda che vuole proporre il proprio evento registra la tua attività e crea il tuo evento.
+						Veneto Eventi ti propone una raccolta degli eventi disponibili nelle città del Veneto. Registrati per poter partecipare agli eventi con posti limitati e comprare i biglietti. Se sei un locale o un'azienda che vuole proporre il proprio evento registra la tua attività e crea il tuo evento.
 					</p>
 				
 			</div>
