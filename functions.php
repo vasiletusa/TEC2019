@@ -1,7 +1,11 @@
 <?php
 include_once 'server.php';
 
-
+function tabIndex($tabindex) {
+    $tabindex=$tabindex+1;
+    echo "tabindex=\"$tabindex\" ";
+    
+}
 function getHead($current){
 echo"
 
@@ -37,7 +41,7 @@ echo"
             <div> tel: +39 123456789 </div>
 
             <div class=\"torna-su\">   
-            <a class=\"scritta-torna-su\" href=\"#\" tabindex='1' accesskey='s'>TORNA SU</a>
+            <a class=\"scritta-torna-su\" href=\"#\" >TORNA SU</a>
             </div>
         </div>  
     </footer>
@@ -49,50 +53,50 @@ echo"
 function getMenu($current){
     
     echo "<body>
-    <header id=\"distanza-header\">
-        <div class=\"topnav\">
-            <div class=\" logo-menu \" id=\"padd\">
-                <button class=\" pulsante-logo fontlogo\" onclick=\"location.href = \"./home.php? \">VENETO EVENTI </button>
+    <header id='distanza-header'>
+        <div class='topnav'>
+            <div class='logo-menu' id='padd'>
+                <a class=' pulsante-logo fontlogo' href = 'home.php' tabindex='1' accesskey='v' >VENETO EVENTI </a>
             </div>
-            <div class=\"pos\"></div>
+            <div class='pos'></div>
 
-            <div class=\"header-right\" class=\"mobile-container\">
+            <div class='header-right' class='mobile-container'>
                 
-                <div id=\"myLinks\" >
+                <div id='myLinks' >
                   <div>
                     ";
                     if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                        echo "<a class=\"a-menu-log \"href=\"logout.php\" tabindex='1' accesskey='s'>Logout</a>";}
+                        echo "<a class='a-menu-log' href='logout.php' tabindex='2' >Logout</a>";}
                     else{
-                        echo"<a class=\"a-menu-log  ";if($current=="Login"){echo"active";}echo" \"href=\"login.php\" tabindex='1' accesskey='s'> Login</a>";
+                        echo"<a class='a-menu-log  ";if($current=="Login"){echo"active";}echo" 'href='login.php' tabindex='2' accesskey='l'> Login</a>";
                     }
-                    echo "<a class=\"a-menu-log ";if($current=="Registrati"){echo"active";}echo" \" href=\"registrazione_utente.php\" tabindex='1' accesskey='s'>Registrati</a>  
+                    echo "<a class='a-menu-log ";if($current=="Registrati"){echo"active";}echo" ' href='registrazione_utente.php' tabindex='3' accesskey='r'>Registrati</a>  
                   </div>
 
                   <div>
-                   <a class=\"a-menu-log ";if($current=="Home"){echo"active" ;}echo"\" href=\"home.php\" tabindex='1' accesskey='s'>Home</a>
+                   <a class='a-menu-log ";if($current=="Home"){echo"active" ;}echo"' href='home.php' tabindex='4' accesskey='h'>Home</a>
                    
                    
-                   <a class=\"a-menu-log ";if($current=="Eventi"){echo"active";}echo"\" href=\"eventi.php\" tabindex='1' accesskey='s'>Eventi</a>";
+                   <a class='a-menu-log ";if($current=="Eventi"){echo"active";}echo"' href='eventi.php' tabindex='5' accesskey='e'>Eventi</a>";
                     
                     if(isset($_SESSION['usernameU'])){
                         
-                        echo"<a class=\"a-menu-log ";if($current=="AreaRiservata"){echo"active";}echo" \" href=\"area_riservata_utente.php\" tabindex='1' accesskey='s'>Area personale</a>";
+                        echo"<a class='a-menu-log ";if($current=="AreaRiservata"){echo"active";}echo" ' href='area_riservata_utente.php' tabindex='6' accesskey='a'>Area personale</a>";
                     }
                          
                     if(isset($_SESSION['usernameA'])){
                         
-                        echo"<a  class=\"a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"\" href=\"area_riservata_azienda.php\" tabindex='1' accesskey='s'>Area personale</a>";
+                        echo"<a  class='a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"' href='area_riservata_azienda.php' tabindex='6' accesskey='a'>Area personale</a>";
                     }
 
-                    echo"<a class=\"a-menu-log"; if($current=="Contatti"){echo" active";}echo" \" href=\"contatti.php\" tabindex='1' accesskey='s'>Contatti</a>
+                    echo"<a class='a-menu-log' href='contatti.php'"; if($current=="Contatti"){echo"class='active'";}echo " tabindex='7' accesskey='c'>Contatti</a>
             
                   </div>
                  </div>
-                     <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\" tabindex='1' accesskey='s'> 
-                        <div class=\"icon-menu pos1-icon\"></div>
-                        <div class=\"icon-menu pos2-icon\"></div>
-                        <div class=\"icon-menu pos3-icon\"></div>
+                     <a href='javascript:void(0);' class='icon' onclick='myFunction()' tabindex='8' accesskey='s'> 
+                        <div class='icon-menu pos1-icon'></div>
+                        <div class='icon-menu pos2-icon'></div>
+                        <div class='icon-menu pos3-icon'></div>
                      </a>
             </div>
         </div>
