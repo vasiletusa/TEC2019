@@ -271,18 +271,6 @@ function setPreferitiBottone(){
 
                 </form>";
         }    
-    }elseif(isset($_SESSION['usernameA'])){ 
-        $username= $_SESSION['usernameA'];
-        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
-        $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
-        $ris= mysqli_query($db, $sql);
-        if(mysqli_num_rows($ris)==1){
-            
-            $output="<form action='' method='post'>
-                                    
-<input type=\"button\" onclick=\"window.location.href = 'modifica_evento.php?id=".$idEvento."'\" class=\"scritte-iscriviti\" value=\"MODIFICA\"/>  
-                </form>";
-        }
     }
     return  $output;
 }
