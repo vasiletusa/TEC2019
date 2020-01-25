@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
@@ -72,45 +72,45 @@
                     $outCat.=   "
                                 
             
-                                    <div class=\"box-evento\">
-                                        <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"".getImg($elem['ID'])."\" alt='immagine evento'>
+                                    <div class='box-evento'>
+                                        <div class='box-img'>
+                                            <img class='img-evento' src='".getImg($elem['ID'])."' alt='immagine evento'>
                                         </div>
-                                        <div class=\"box-titolo\">
-                                            <div class=\"box-icona\"></div>
-                                                <p class=\"scritte-evento\">".$elem['Titolo']."</p>
+                                        <div class='box-titolo'>
+                                            <div class='box-icona'></div>
+                                                <p class='scritte-evento'>".$elem['Titolo']."</p>
                                         </div>
-                                        <div class=\"box-categoria \">
-                                            <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\">".$elem['Categoria']."</p>
+                                        <div class='box-categoria'>
+                                            <div class='box-icona'></div>
+                                            <p class='scritte-evento'>".$elem['Categoria']."</p>
                                         </div>
-                                        <div class=\"box-data\">
-                                            <div class=\"box-icona\">
-                                                <div id=\"calendario\"></div>
+                                        <div class='box-data'>
+                                            <div class='box-icona'>
+                                                <div id='calendario'></div>
                                             </div>
-                                            <div class=\"box-data-evento\">
-                                                <p class=\"scritte-evento\">".$elem['Data']."</p>
-                                            </div>
-                                        </div>
-                                        <div class=\"box-descr\">
-                                            <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\"> ".$elem['Descrizione']."</p>
-                                        </div>
-                                        <div class=\"box-luogo \">
-                                            <div class=\"box-icona\">
-                                                <div id=\"local\"></div>
-                                            </div>
-                                            <div class=\"box-luogo-evento\">
-                                                <p class=\"scritte-evento\">".$elem['Luogo']."</p>
+                                            <div class='box-data-evento'>
+                                                <p class='scritte-evento'>".$elem['Data']."</p>
                                             </div>
                                         </div>
-                                        <div class=\"box-dettagli\">
-                                        <div class=\"box-icona\">
+                                        <div class='box-descr'>
+                                            <div class='box-icona'></div>
+                                            <p class='scritte-evento'> ".$elem['Descrizione']."</p>
+                                        </div>
+                                        <div class='box-luogo'>
+                                            <div class='box-icona'>
+                                                <div id='local'></div>
+                                            </div>
+                                            <div class='box-luogo-evento'>
+                                                <p class='scritte-evento'>".$elem['Luogo']."</p>
+                                            </div>
+                                        </div>
+                                        <div class='box-dettagli'>
+                                        <div class='box-icona'>
                                                 
                                             </div>
                                             <div >
                                                 
-                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button> 
+                                                <button class='scritte-dettagli selezione' onclick='location.href = './dettagli_evento.php?id=".$elem['ID']."'' type='button'> Dettagli </button> 
                                             </div>  
                                              
                                         </div>
@@ -126,17 +126,6 @@
 
 	</div>
 </div>
-
-<script type="text/javascript">
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-</script>
 
 </body>
 

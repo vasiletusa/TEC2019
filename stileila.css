@@ -37,6 +37,13 @@ footer {
   color: #fff;
   text-align: center;
 }
+
+ul {
+list-style-type: none;
+}
+
+
+
 .error{
   color: red;
 }
@@ -86,10 +93,15 @@ header {
 
 .header-right {
   float: right;
-  margin-right: 1%;
-  margin-top:1%;
 }
 
+li{
+  float:left;
+}
+
+.sx-logo{
+  float:left;
+}
 
 
 a{
@@ -101,9 +113,7 @@ a{
     color:#000;
 }
 
-.a-menu-log{
-  margin-right: 0.7em;
-}
+
 
 .link-parola{
   text-decoration: underline;
@@ -830,98 +840,7 @@ select{
     width: 40%;
   }
 
-
-}
-
-@media(max-width: 600px){
-
-	.pos{
-		clear:both;
-	 }
-
-	.header-right {
-	  float: none;
-	  margin-right: 0%;
-	  margin-top:0%;
-	}
-
-	.header a {
-	  background-color: var(--menu-footer-color);
-	  color: black;
-	  text-align: center;
-	  text-decoration: none;
-	  font-size: 0.9em; 
-	  border-radius: 0.2em;
-	}
-
-	.header-right a.active {
-	  border-bottom: 0;
-    background-color: grey;
-    color: black;
-	}
-
-
-	.mobile-container {
-
-	  margin: auto;
-	  background-color: white;
-	  color: red;
-	}
-
-	.topnav {
-	  overflow: hidden;
-	  background-color: white;
-	  position: relative;
-	}
-
-
-	.topnav #myLinks {
-    display: none;
-  }
-
-	.topnav a {
-	  color: black;
-	  padding: 0.5em 0.5em;
-	  text-decoration: none;
-	  font-size: 1em;
-	  display: block;
-    position: relative;
-	}
-
-	.topnav a.icon {
-	  background: #660000;
-	  display: block;
-	  position: absolute;
-	  height: 2em;
-	  width: 2em;
-	  right: 0;
-	  top: 0;
-	}
-
-	.icon-menu{
-		background:white;
-		height: 0.2em;
-		width: 1.5em;
-		border-radius: 0.5em;
-	}
-
-	.pos1-icon{
-		margin-left:14%;
-		margin-top:12%;
-	}
-	.pos2-icon{
-		margin-left:14%;
-		margin-top:18%;
-	}
-	.pos3-icon{
-		margin-left:14%;
-		margin-top:23%;
-	}
-
-	.topnav a:hover{
-	  background-color: #660000;
-	  color: white;
-	}
+ 
 
 }
 
@@ -1022,6 +941,31 @@ select{
     margin-bottom: 3%;
 
   }
+
+  .icon-menu{
+    background:white;
+    height: 0.2em;
+    width: 1.5em;
+    border-radius: 0.5em;
+  }
+
+  .pos1-icon{
+    margin-left:14%;
+    margin-top:12%;
+  }
+  .pos2-icon{
+    margin-left:14%;
+    margin-top:18%;
+  }
+  .pos3-icon{
+    margin-left:14%;
+    margin-top:23%;
+  }
+
+  .topnav a:hover{
+    background-color: #660000;
+    color: white;
+  }
     
 }
 
@@ -1103,28 +1047,20 @@ select{
     background-position: center;   
     margin-right: 5%;
   }
-
 }
 
-.distanza-header{
-	margin-bottom: 3%;
-}
+
 
 .menu-distanza{
 	margin-top: 3%;
 }
 
-.logo-menu{
-    float: left;
-	margin-left: 1%;
+.logo-pulsante{
+  font-size: 2em;
+  color:#660000;
+  background: white;
+  border: white;
  }
-
-.pulsante-logo{
-  	color:#660000;
-  	background: white;
-	font-size: 2em;
-	border: white;
-}
 
 #padd{
 	margin-bottom: 2%;
@@ -1143,9 +1079,76 @@ div.end {
     clear:both;
 }
 
-.topnav #myLinks {
-    display: visible;
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.topnav a {
+  display: block;
+  padding: 0.3em 0.5em;
+}
+
+.logo-pulsante{
+  color: #660000;
+  font-size: 2em;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 660px) {
+  .topnav a{display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    position: relative;
+    background: #660000;
+    height: 2em;
+    width: 2em;
+    margin-top: 0;
   }
 
+  .topnav a:hover {
+    background-color: #660000;
+    color: white;
+  }
 
+  .topnav a.active {
+    background-color: grey;
+    color: white;
+    border:0;
+  }
+}
 
+@media screen and (max-width: 660px) {
+  .topnav.responsive a.icon {
+    position: absolute;
+    background: #660000;
+    height: 2em;
+    width: 2em;
+    right: 1%;
+    top: 5%;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+  }
+  .pos{
+    clear:both;
+   }
+
+   .header-right{
+    float: none;
+   }
+   li{
+    float:none;
+   }
+
+}

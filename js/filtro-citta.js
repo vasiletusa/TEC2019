@@ -1,4 +1,4 @@
-filterSelectionCitta("Tutti")
+
 function filterSelectionCitta(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
