@@ -142,6 +142,21 @@ button{
   font-size: 1.1em;
 
 }
+.link{
+  background: #fff;
+  text-align: center;
+  color: #5c5c3d;
+  border:  0.2em solid #660000;
+  border-radius: 0.2em;
+  background: #fff;
+  font-size: 1.1em;
+
+}
+.link a:hover{
+  background-color: #f5f5f0;
+  color: #fff;
+  border-color: #f5f5f0;
+}
 
 .citta{
   transition:all 0.25s ease;

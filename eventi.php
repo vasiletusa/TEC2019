@@ -118,7 +118,7 @@
                                             <div >
                                                 
                                                 <!--button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$elem['ID']."'\" type=\"button\"> Dettagli </button-->
-                                                <div class=\"scritte-dettagli selezione \"><a href=\"dettagli_evento.php?id=".$elem['ID']."\">DETTAGLI</a></div>
+                                                <a href=\"dettagli_evento.php?id=".$elem['ID']."\" class=\"scritte-dettagli selezione link\">DETTAGLI</a>
 
 
 
