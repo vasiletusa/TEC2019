@@ -63,10 +63,10 @@ function getMenu($current){
             <div class='header-right' class='mobile-container'>
                 
                 <div id='myLinks' >
-                  <div>
+                  <div><ul>
                     ";
                     if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                        echo "<a class='a-menu-log' href='logout.php' tabindex='2' >Logout</a>";}
+                        echo "<li><a class='a-menu-log' href='logout.php' tabindex='2' >Logout</a></li></ul>";}
                     else{
                         echo"<a class='a-menu-log  ";if($current=="Login"){echo"active";}echo" 'href='login.php' tabindex='2' accesskey='l'> Login</a>";
                     }
