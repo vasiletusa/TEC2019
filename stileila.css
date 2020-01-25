@@ -737,6 +737,9 @@ select{
     padding-bottom: 1em;
   }
 
+  .lista-citta{
+    font-size: 0.6em;
+  }
 
 }
 
@@ -924,6 +927,7 @@ select{
     width: 70%;
     margin-left: 20%;
     margin-right: 15%;
+    font-size: 1.5em;
   }
 
 
@@ -943,21 +947,7 @@ select{
   }
 
 
-  .lista-citta{
-    padding-left: 15%;
-    padding-right: 15%;
-    margin-top: 1em;
-    width: 70%;
-    height: 16em;
-  }
-  .citta-eventi{
-    width: 40%;
-    margin-right: 5%;
-    margin-left: 5%;
-    padding-left: 0%;
-    padding-right: 0%;
-    float: left;
-  }
+
   .categoria-eventi{
     width: 40%;
     margin-left: 5%;

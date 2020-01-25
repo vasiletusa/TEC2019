@@ -15,7 +15,7 @@
 
 <div class="home-pt1 eventi-pt1">
         
-            
+       <div id="contenitore-bottoni-citta" class="lista-citta citta-eventi">     
         <div class="eventi-sx">
 
             <div>
@@ -41,6 +41,7 @@
                   
         </div>
         <div class="end-eventi"></div>
+      </div>
         <!--div id="contenitore-bottoni-categoria" class="lista-citta categoria-eventi">
 
                    
