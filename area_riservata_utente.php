@@ -20,8 +20,8 @@
         <p class="titolo "> Qui troverai gli eventi salvati e quelli a cui sei iscritto</p>
     </div>
     <div class="area-bottoni">
-        <button class="bottone-area" onclick="location.href='./modifica_pw.php'" type="button">
-         Cambia password</button>
+        <a class="bottone-area link" href="modifica_pw.php'">
+         Cambia password</a>
     </div>
 </div>
 <div class="box-left-area preferiti" >
@@ -78,8 +78,9 @@
                                                 
                                         </div>
                                             <div >
+
+                                                <a href=\"dettagli_evento.php?id=".$key['ID']."\" class=\"scritte-dettagli selezione link\">DETTAGLI</a>
                                                 
-                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$key['ID']."'\" type=\"button\"> Dettagli </button> 
                                             </div> 
                                              
                                         </div>
@@ -153,7 +154,8 @@
                                         </div>
                                             <div >
                                                 
-                                                <button class=\"scritte-dettagli selezione\" onclick=\"location.href = './dettagli_evento.php?id=".$key['ID']."'\" type=\"button\"> Dettagli </button> 
+                                            
+                                                <a href=\"dettagli_evento.php?id=".$key['ID']."\" class=\"scritte-dettagli selezione link\">DETTAGLI</a>
                                             </div> 
                                              
                                         </div>

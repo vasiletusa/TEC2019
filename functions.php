@@ -85,7 +85,7 @@ function getMenu($current){
                         echo"<a  class=\"a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"\" href=\"area_riservata_azienda.php\" tabindex='1' accesskey='s'>Area personale</a>";
                     }
 
-                    echo"<a class=\"a-menu-log\" href=\"contatti.php\""; if($current=="Contatti"){echo"class=\"active\"";}echo " tabindex='1' accesskey='s'>Contatti</a>
+                    echo"<a class=\"a-menu-log"; if($current=="Contatti"){echo" active";}echo" \" href=\"contatti.php\" tabindex='1' accesskey='s'>Contatti</a>
             
                   </div>
                  </div>
