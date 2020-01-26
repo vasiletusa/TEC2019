@@ -20,30 +20,7 @@
 	<div class="home-pt1">
 		
 			<div class="img-sfondo" id="homeimg1"></div>
-		<!--p class="titolo-home">Scegli la citt&agrave</p>
-		<div id="contenitore-bottoni" class="lista-citta">
-
-                    
-                       
-                       
-                    
-                        <button class="box-pulsante selezione" onclick="filterSelection('Padova')"> PADOVA </button>
-                              
-                        <button class="box-pulsante selezione" onclick="filterSelection('Verona')">VERONA</button>
-                               
-                        <button class="box-pulsante selezione" onclick="filterSelection('Vicenza')">VICENZA</button>
-                                
-                        <button class="box-pulsante selezione" onclick="filterSelection('Venezia')">VENEZIA</button>
-                    
-                        <button class="box-pulsante selezione" onclick="filterSelection('Treviso')">TREVISO</button>
-                               
-                        <button class="box-pulsante selezione" onclick="filterSelection('Belluno')">BELLUNO</button>
-                                
-                        <button class="box-pulsante selezione" onclick="filterSelection('Rovigo')">ROVIGO</button>
-                   
-                    
-
-        </div-->
+		
 	</div>
 	<div class="home-pt2">
 			<div class="box-img-left">
@@ -66,9 +43,12 @@
             require_once('functions.php');
             $output=getUltimiEventi();
             $outCat="";
+            $tab=8;
+            
             if($_SESSION['eventi']===true){
             foreach ($output as $elem) {
                 if($elem){
+                    $tab=$tab+1;
                     $outCat.=   "
                                 
             
@@ -78,7 +58,7 @@
                                         </div>
                                         <div class='box-titolo'>
                                             <div class='box-icona'></div>
-                                                <p class='scritte-evento'>".$elem['Titolo']."</p>
+                                                <p class='scritte-evento' >".$elem['Titolo']."</p>
                                         </div>
                                         <div class='box-categoria'>
                                             <div class='box-icona'></div>
@@ -110,7 +90,9 @@
                                             </div>
                                             <div >
                                                 
-                                                <button class='scritte-dettagli selezione' onclick='location.href = './dettagli_evento.php?id=".$elem['ID']."'' type='button'> Dettagli </button> 
+                                               
+                                                <a href='dettagli_evento.php?id=".$elem['ID']."' class='scritte-dettagli selezione link' tabindex='".tabIndex($tab)."'>DETTAGLI</a>
+
                                             </div>  
                                              
                                         </div>
@@ -122,6 +104,7 @@
             else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='1' accesskey='s'> Nuovo evento </a><h3></p>";}
             echo $outCat;
             unset($outCat);
+
         ?>
 
 	</div>

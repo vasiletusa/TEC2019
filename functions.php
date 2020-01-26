@@ -3,7 +3,7 @@ include_once 'server.php';
 
 function tabIndex($tabindex) {
     $tabindex=$tabindex+1;
-    echo "tabindex='$tabindex' ";
+    return $tabindex ;
     
 }
 function getHead($current){
@@ -196,7 +196,7 @@ function getEventiIscritto(){
     return $output;
 }
 function getEventoDettagli($id){
-    echo $id;
+    
       $db = mysqli_connect('localhost', 'root', '', 'irizzo');
 
     $sql = "SELECT * FROM `eventi` WHERE Id='$id'";
