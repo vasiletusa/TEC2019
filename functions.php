@@ -43,7 +43,7 @@ function getFooter(){echo"
             <img src='img/vxhtml.png' alt='Valid XHTML 1.0 Strict'>
             <img src='img/vcss.gif' alt='Valid CSS!'>
             <div class='torna-su'>
-            <a class='scritta-torna-su' href='#' >TORNA SU</a>
+            <a class='scritta-torna-su' href='#'>TORNA SU</a>
             </div>
         </div>  
     </footer>
