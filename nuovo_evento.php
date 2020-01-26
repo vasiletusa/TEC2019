@@ -14,13 +14,13 @@
 	<form method="post" action="server.php" enctype="multipart/form-data">						
 		<div >
 			<label for="TitoloEvento" class="label TitoloEvento">Titolo Evento</label>
-			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Titolo Evento">
+			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Titolo Evento"  tabindex="10">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 		</div>
 		<div >
 			<label for="Descrizione" class="label Descrizione">Descrizione</label>
-			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione">
+			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione" tabindex="11">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 
@@ -28,22 +28,22 @@
 		</div>
 		<div >
 			<label for="Luogo" class="label Luogo">Indirizzo</label>
-			<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Indirizzo">
+			<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Indirizzo" tabindex="12">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 		
 		</div>
 		<div>
 			<label for="Data" class="label Data">Data</label>
-			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Data">
+			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Data" tabindex="13">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 
 
 		</div>
-		<div class="select-categoria">
+		<div class="select-categoria" >
 			<label for="Categoria" class="label Categoria">Categoria</label>
-			<select name="selectCategoria" >
+			<select name="selectCategoria" tabindex="14">
 			<option name="Seleziona" value="Seleziona">Seleziona categoria</option>
 
 			  <option name="Concerto" value="Concerto">Concerto
@@ -65,7 +65,7 @@
 		
 		<div class="select-citta ">
 			<label for="Citta" class="label Citta">Citta</label>
-			<select name="selectCitta">
+			<select name="selectCitta" tabindex="15">
 			  <option name="Seleziona" value="Seleziona">Seleziona citt&agrave</option>
 			  <option name="Padova" value="Padova">Padova</option>
 			  <option name="Venezia" value="Venezia">Venezia</option>
@@ -85,7 +85,7 @@
 		<input type="file" name="file" id="file"><br><br>
 
 
-		<button type="submit" class="bottone-invia selezione" name="nuovo_evento">Invia</button>
+		<button type="submit" class="bottone-invia selezione" name="nuovo_evento" tabindex="16" accesskey="i">Invia</button>
 
 	</form>
 </div>

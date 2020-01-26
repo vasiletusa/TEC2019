@@ -86,6 +86,11 @@ header {
   solid #660000;
 }
 
+.header-right a:focus {
+  border-bottom: 0.225em
+  solid #660000;
+}
+
 .header-right a.active {
   border-bottom: 0.225em
   solid #660000;
@@ -163,6 +168,12 @@ button{
 
 }
 .link a:hover{
+  background-color: #f5f5f0;
+  color: #fff;
+  border-color: #f5f5f0;
+}
+
+.link a:focus{
   background-color: #f5f5f0;
   color: #fff;
   border-color: #f5f5f0;
@@ -492,6 +503,13 @@ input, text {
   color: #fff;
   border-color: #660000;
 }
+
+.bottone-area:focus {
+  background-color: #660000;
+  color: #fff;
+  border-color: #660000;
+}
+
 .area-titoli{
   width: 75%;
   float: left;
@@ -578,7 +596,19 @@ input, text {
   border-color: #f5f5f0;
 }
 
+.prefe:focus {
+  background-color: #f5f5f0;
+  color: #fff;
+  border-color: #f5f5f0;
+}
+
 .noprefe:hover {
+  background-color: #f5f5f0;
+  color: #fff;
+  border-color: #f5f5f0;
+}
+
+.noprefe:focus {
   background-color: #f5f5f0;
   color: #fff;
   border-color: #f5f5f0;
@@ -632,6 +662,12 @@ input, text {
 }
 
 .selezione:hover {
+  background-color: #660000;
+  color: #fff;
+  border-color: #660000;
+}
+
+.selezione:focus {
   background-color: #660000;
   color: #fff;
   border-color: #660000;
@@ -966,6 +1002,11 @@ select{
     background-color: #660000;
     color: white;
   }
+
+  .topnav a:focus{
+    background-color: #660000;
+    color: white;
+  }
     
 }
 
@@ -1107,14 +1148,21 @@ div.end {
   .topnav a.icon {
     float: right;
     display: block;
-    position: relative;
+    position: absolute;
     background: #660000;
     height: 2em;
     width: 2em;
-    margin-top: 0;
+    top: 2%;
+    right: 2%;
   }
 
   .topnav a:hover {
+    background-color: #660000;
+    color: white;
+  }
+
+
+  .topnav a:focus {
     background-color: #660000;
     color: white;
   }
@@ -1124,6 +1172,9 @@ div.end {
     color: white;
     border:0;
   }
+
+
+
 }
 
 @media screen and (max-width: 660px) {
@@ -1132,9 +1183,11 @@ div.end {
     background: #660000;
     height: 2em;
     width: 2em;
-    right: 1%;
-    top: 5%;
+    right: 2%;
+    top: 2%;
   }
+
+
 
   .topnav.responsive a {
     float: none;

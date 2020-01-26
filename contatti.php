@@ -22,8 +22,6 @@
 
 </div>
 
-
-
 </body>
 
 <?php getFooter() ?>    
