@@ -16,7 +16,7 @@
 						<h1 class="titolo mod-password"> Modifica Password </h1>
 						<div >
 									<label for="passwordV" class="label passwordV">Vecchia password</label>
-									<input id="passwordV" type="text" name="passworedV" class="input insertBox" placeholder="Vecchia Password">
+									<input id="passwordV" type="text" name="pwV" class="input insertBox" placeholder="Vecchia Password">
 									<p class="error"><?php getPasswordError($errors); ?></p>
 									<p class="error"><?php getPasswordError($errors); ?></p>
 

@@ -22,6 +22,8 @@
          Cambia password</a>
          <a class="bottone-area link" href='nuovo_evento.php'>
          Nuovo evento</a>
+         <a class="bottone-area link" href='modifica_azienda.php'>
+         Modifica dati</a>
     </div>
 </div>
 <div class="home-pt3">

@@ -131,7 +131,7 @@
             }}
 
 
-            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='1' accesskey='s'> Nuovo evento </a><h3></p>";}
+            else{$outCat.= "<p> <h3>Non sono ancora stati inseriti eventi.<h3></p>";}
             echo $outCat; 
             unset($outCat);
         ?>
