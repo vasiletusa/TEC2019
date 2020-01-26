@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <head>
 	<?php 
         include_once 'functions.php'; 
@@ -14,13 +15,13 @@
 	<form method="post" action="server.php" enctype="multipart/form-data">						
 		<div >
 			<label for="TitoloEvento" class="label TitoloEvento">Titolo Evento</label>
-			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Titolo Evento"  tabindex="10">
+			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Inserire titolo Evento"  tabindex="10">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 		</div>
 		<div >
 			<label for="Descrizione" class="label Descrizione">Descrizione</label>
-			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione" tabindex="11">
+			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Inserire Descrizione"tabindex="11">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 
@@ -28,14 +29,14 @@
 		</div>
 		<div >
 			<label for="Luogo" class="label Luogo">Indirizzo</label>
-			<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Indirizzo" tabindex="12">
+			<input id="Luogo" type="text" required name="Luogo" class="input insertBox"  placeholder="Inserire Indirizzo" tabindex="12">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 		
 		</div>
 		<div>
 			<label for="Data" class="label Data">Data</label>
-			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Data" tabindex="13">
+			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Inserire data: YYYY-MM-DD" tabindex="13">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 
