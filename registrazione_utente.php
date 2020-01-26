@@ -20,28 +20,28 @@
 									
 									<div >
 										<label for="Nome" class="  label nome">Nome</label>
-										<input id="Nome" type="text" name="nome" class=" input nome insertBox" placeholder="Nome">
+										<input id="Nome" type="text" name="nome" class=" input nome insertBox" placeholder="Inserisci nome">
 										<p class="error"><?php getNomeError($errors); ?></p>
 
 										
 									</div>
 									<div >
 										<label for="Cognome" class="label cognome">Cognome</label>
-										<input id="Cognome" type="text" name="cognome" class="input cognome insertBox" placeholder="Cognome">
+										<input id="Cognome" type="text" name="cognome" class="input cognome insertBox" placeholder="Inserisci cognome">
 										<p class="error"><?php getCognomeError($errors); ?></p>
 
 									
 									</div>
 									<div >
 										<label for="email" class="label email">E-Mail</label>
-										<input id="email" type="email" required name="email" class="input email insertBox" placeholder="E-mail">
+										<input id="email" type="email" required name="email" class="input email insertBox" placeholder="Inserisci E-mail">
 										<p class="error"><?php getEmailError($errors); ?></p>
 
 									
 									</div>
 									<div>
 										<label for="username" class="label username">Username</label>
-										<input id="username" type="text" name="username" class="input username insertBox" placeholder="Username">
+										<input id="username" type="text" name="username" class="input username insertBox" placeholder="Inserisci Username">
 										<p class="error"><?php getUsernameError($errors); ?></p>
 										<p class="error"><?php getEsistenteError($errors); ?></p>
 
