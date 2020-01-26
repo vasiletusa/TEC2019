@@ -40,8 +40,9 @@ function getFooter(){echo"
             </div>
             <div> email: venetoeventi@gmail.com </div>
             <div> tel: +39 123456789 </div>
-
-            <div class='torna-su'>   
+            <img src='img/vxhtml.png' alt='Valid XHTML 1.0 Strict'>
+            <img src='img/vcss.gif' alt='Valid CSS!'>
+            <div class='torna-su'>
             <a class='scritta-torna-su' href='#' >TORNA SU</a>
             </div>
         </div>  
