@@ -15,13 +15,13 @@
 	<form method="post" action="server.php" enctype="multipart/form-data">						
 		<div >
 			<label for="TitoloEvento" class="label TitoloEvento">Titolo Evento</label>
-			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Titolo Evento">
+			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Inserire titolo Evento">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 		</div>
 		<div >
 			<label for="Descrizione" class="label Descrizione">Descrizione</label>
-			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione">
+			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Inserire Descrizione">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 
@@ -29,14 +29,14 @@
 		</div>
 		<div >
 			<label for="Luogo" class="label Luogo">Indirizzo</label>
-			<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Indirizzo">
+			<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Inserire Indirizzo">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 		
 		</div>
 		<div>
 			<label for="Data" class="label Data">Data</label>
-			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Data">
+			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Inserire data: YYYY-MM-DD">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 
