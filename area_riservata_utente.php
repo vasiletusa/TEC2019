@@ -22,6 +22,7 @@
     <div class="area-bottoni">
         <a class="bottone-area link" href="modifica_pw.php'">
          Cambia password</a>
+         <a class="bottone-area link href="modifica_account.php">Modifica account</a>
     </div>
 </div>
 <div class="box-left-area preferiti" >
