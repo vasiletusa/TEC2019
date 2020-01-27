@@ -83,10 +83,10 @@
 
 		
 
-		<input type="file" name="file" id="file"><br><br>
+		<input type="file" name="file" id="file" tabindex="16"><br><br>
 
 
-		<button type="submit" class="bottone-invia selezione" name="nuovo_evento" tabindex="16" accesskey="i">Invia</button>
+		<button type="submit" class="bottone-invia selezione" name="nuovo_evento" tabindex="17" accesskey="i">Invia</button>
 
 	</form>
 </div>

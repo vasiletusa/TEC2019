@@ -21,7 +21,7 @@ body {
 
 footer {
 	margin-top: 10%;
-  clear: both;
+  float: left;
 
   width: 100%;
   height: auto;
@@ -233,6 +233,17 @@ button{
   float: left;
   margin:1%; 
 }
+
+.box-evento1{
+  border-radius: 0.3em;
+  border: 0.1em solid #660000;
+  width: 28%;
+  height: 33em;
+  padding: 1%;
+  float: left;
+  margin:1%; 
+}
+
 .box-img{
   height: 38%;
   width: 100%;
@@ -512,9 +523,10 @@ input, text {
   float: left;
 }
 .box-left-area{
-  width: 49%;
+  width: 39%;
   float: left;
   border-right: 0.1em solid #660000;
+  padding: 5%;
 }
 .piccolo{
   width: 90%;
@@ -524,7 +536,8 @@ input, text {
 }
 
 .box-right-area{
-  width: 50%;
+  width: 39%;
+  padding:5%;
   float: left;
 }
 
@@ -747,17 +760,24 @@ select{
 
 
 @media (max-width: 1111px){
-  .box-left-area, .box-right-area{
-    width: 100%;
+  .box-right-area{
+    width: 80%;
+    margin-left:5%;
+    margin-right: 10%;
+    float: none;
   }
   .box-left-area{
-    border-right: 0em;
+    width: 80%;
+    border-right: 0;
+    margin-left:5%;
+    margin-right: 10%;
   }
+
   .modifica-pw{
     width: 30%;
     margin-right: 0%;
     margin-left: 70%;
-
+    float: none;
 
   }
   .box-login-left{
@@ -796,6 +816,25 @@ select{
 
 }
 
+
+@media(max-width: 880px){
+
+  .box-evento{
+    width: 40%;
+    height: 35em;
+    padding: 1%;
+    font-size: 1.2em;
+    float: left;
+  }
+
+  .box-evento1{
+    height: 35em;
+    padding: 1%;
+    font-size: 1.2em;
+    float: left;
+  }
+}
+
 @media(max-width: 1049px){
 
   .home-pt2{
@@ -804,12 +843,24 @@ select{
   background: #660000;
   }
   .box-evento{
-    width: 80%;
+    width: 40%;
     height: 35em;
+    padding: 1%;
     font-size: 1.2em;
-    margin-left: 10%;
-    margin-right: 10%;
+    float: left;
+    margin-left: 5%;
   }
+
+  .box-evento1{
+    height: 35em;
+    padding: 1%;
+    font-size: 1.2em;
+    float: left;
+    margin-left: 5%;
+  }
+
+
+
   .box-evento-indettagli{
     width: 98%;
   }
@@ -838,6 +889,15 @@ select{
     margin-right: 5%;
     font-size: 1em;
   }
+
+  .box-evento1{
+    width: 90%;
+    height: 30em;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1em;
+  }
+
 
   .box-descr p{
     max-width: 50em;
@@ -930,6 +990,9 @@ select{
     height: 35em;
     font-size: 1.2em;
   }
+
+
+
   .pulsante-dettagli{
     width: 50%;
     margin-right: 25%;
@@ -1005,8 +1068,18 @@ select{
     margin: 0%;
     margin-bottom: 1em;
 
+  }
+
+.box-evento1{
+    height: 15em;
+    width: 98%;
+    padding: 0%;
+    margin: 0%;
+    margin-bottom: 1em;
 
   }
+
+
   .box-descr{
     display: none;
   }

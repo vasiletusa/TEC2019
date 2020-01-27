@@ -42,7 +42,7 @@
                     
                     if($key&&$elem){
                     if($elem['ID']==$key['ID']){
-                    $outCat.=   "<div class='evento-1 box-evento piccolo'>
+                    $outCat.=   "<div class='evento-1 box-evento1 piccolo'>
                                         <div class='box-img'>
                                             <img class='img-evento' src='".getImg($key['ID'])."' alt='immagine evento'>
                                         </div>
@@ -120,7 +120,7 @@
                     if($elem['ID']==$key['ID']){
                     $tab=$tab+1;
                     $outCat.=   "
-                                    <div class=\"evento-1 box-evento piccolo\">
+                                    <div class=\"evento-1 box-evento1 piccolo\">
                                         <div class=\"box-img\">
                                             <img class=\"img-evento\" src=\"".getImg($key['ID'])."\" alt=\"immagine evento\">
                                         </div>
