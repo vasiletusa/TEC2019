@@ -216,7 +216,7 @@ button{
   margin-left: 15%;
   text-align: center;
 }
-/*terza parte con gli ultimi 3 eventi*/
+
 .home-pt3{
   margin-top: 3em;
 
@@ -840,6 +840,7 @@ select{
   }
 
   .box-descr p{
+    max-width: 50em;
     text-overflow: ellipsis; 
     overflow: hidden;
   }

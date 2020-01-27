@@ -10,7 +10,7 @@ $tuoitour=array();
 $isOrganize=false;
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
+$db = mysqli_connect('localhost', 'root', '', 'irizzo');
 // Check connection
 if (mysqli_connect_errno())
   {
@@ -64,7 +64,6 @@ if (isset($_POST['registrazione_utente'])) {
   }
     else{
 
-        //controllo se esiste già uno username uguale
                $controllo = "SELECT * FROM `utenti` WHERE Username='$username' ";
                 $result = mysqli_query($db,$controllo) or die(mysql_error());
               $rows = mysqli_num_rows($result);
@@ -92,7 +91,6 @@ if (isset($_POST['registrazione_utente'])) {
 //REGISTRAZIONE DELLE AZIENDE
 if (isset($_POST['registrazione_azienda'])) {
  
-  // receive all input values from the form
   $nomeA = mysqli_real_escape_string($db, $_POST['NomeAzienda']);
   $nomeR = mysqli_real_escape_string($db, $_POST['NomeReferente']);
   $emailR = mysqli_real_escape_string($db, $_POST['EmailReferente']);
@@ -132,7 +130,6 @@ if (isset($_POST['registrazione_azienda'])) {
     else{
    
 
-        //controllo se esiste già uno username uguale
               $controllo = "SELECT * FROM `aziende` WHERE username='$username' ";
               $result = mysqli_query($db,$controllo) or die(mysql_error());
               $rows = mysqli_num_rows($result);
