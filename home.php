@@ -19,30 +19,7 @@
 	<div class="home-pt1">
 		
 			<div class="img-sfondo" id="homeimg1"></div>
-		<!--p class="titolo-home">Scegli la citt&agrave</p>
-		<div id="contenitore-bottoni" class="lista-citta">
-
-                    
-                       
-                       
-                    
-                        <button class="box-pulsante selezione" onclick="filterSelection('Padova')"> PADOVA </button>
-                              
-                        <button class="box-pulsante selezione" onclick="filterSelection('Verona')">VERONA</button>
-                               
-                        <button class="box-pulsante selezione" onclick="filterSelection('Vicenza')">VICENZA</button>
-                                
-                        <button class="box-pulsante selezione" onclick="filterSelection('Venezia')">VENEZIA</button>
-                    
-                        <button class="box-pulsante selezione" onclick="filterSelection('Treviso')">TREVISO</button>
-                               
-                        <button class="box-pulsante selezione" onclick="filterSelection('Belluno')">BELLUNO</button>
-                                
-                        <button class="box-pulsante selezione" onclick="filterSelection('Rovigo')">ROVIGO</button>
-                   
-                    
-
-        </div-->
+		
 	</div>
 	<div class="home-pt2">
 			<div class="box-img-left">
