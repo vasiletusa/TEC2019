@@ -98,7 +98,7 @@
                     $tab=$tab+1;
             }}
 
-            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='".tabIndex($tab)."' accesskey='n'> Nuovo evento </a><h3></p>";}
+            else{$outCat.= "";}
             echo $outCat;
             unset($outCat);
         ?>
