@@ -50,32 +50,32 @@
                                             <div class='box-icona'></div>
                                                 <p class='scritte-evento'>".$key['Titolo']."</p>
                                         </div>
-                                        <div class=\"box-categoria \">
-                                            <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\">".$key['Categoria']."</p>
+                                        <div class='box-categoria '>
+                                            <div class='box-icona'></div>
+                                            <p class='scritte-evento'>".$key['Categoria']."</p>
                                         </div>
-                                        <div class=\"box-data\">
-                                            <div class=\"box-icona\">
-                                                <div id=\"calendario\"></div>
+                                        <div class='box-data'>
+                                            <div class='box-icona'>
+                                                <div id='calendario'></div>
                                             </div>
-                                            <div class=\"box-data-evento\">
-                                                <p class=\"scritte-evento\">".$key['Data']."</p>
-                                            </div>
-                                        </div>
-                                        <div class=\"box-descr\">
-                                            <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\"> ".$key['Descrizione']."</p>
-                                        </div>
-                                        <div class=\"box-luogo \">
-                                            <div class=\"box-icona\">
-                                                <div id=\"local\"></div>
-                                            </div>
-                                            <div class=\"box-luogo-evento\">
-                                                <p class=\"scritte-evento\">".$key['Luogo']."</p>
+                                            <div class='box-data-evento'>
+                                                <p class='scritte-evento'>".$key['Data']."</p>
                                             </div>
                                         </div>
-                                        <div class=\"box-dettagli\">
-                                        <div class=\"box-icona\">
+                                        <div class='box-descr'>
+                                            <div class='box-icona'></div>
+                                            <p class='scritte-evento'> ".$key['Descrizione']."</p>
+                                        </div>
+                                        <div class='box-luogo '>
+                                            <div class='box-icona'>
+                                                <div id='local'></div>
+                                            </div>
+                                            <div class='box-luogo-evento'>
+                                                <p class='scritte-evento'>".$key['Luogo']."</p>
+                                            </div>
+                                        </div>
+                                        <div class='box-dettagli'>
+                                        <div class='box-icona'>
                                                 
                                         </div>
                                             <div >
@@ -109,7 +109,7 @@
             $tour=getEventiTutti();
             $outCat="";
             if($_SESSION['eventiIscritto']===true){
-                $outCat.="<h1 class=\"titolo\"> Iscrizioni</h1>";
+                $outCat.="<h1 class='titolo'> Iscrizioni</h1>";
 
             foreach ($tuoiTour as $elem) {
               
@@ -120,40 +120,40 @@
                     if($elem['ID']==$key['ID']){
                     $tab=$tab+1;
                     $outCat.=   "
-                                    <div class=\"evento-1 box-evento piccolo\">
-                                        <div class=\"box-img\">
-                                            <img class=\"img-evento\" src=\"".getImg($key['ID'])."\" alt=\"immagine evento\">
+                                    <div class='evento-1 box-evento piccolo'>
+                                        <div class='box-img'>
+                                            <img class='img-evento' src='".getImg($key['ID'])."' alt='immagine evento'>
                                         </div>
-                                        <div class=\"box-titolo\">
-                                            <div class=\"box-icona\"></div>
-                                                <p class=\"scritte-evento\">".$key['Titolo']."</p>
+                                        <div class='box-titolo'>
+                                            <div class='box-icona'></div>
+                                                <p class='scritte-evento'>".$key['Titolo']."</p>
                                         </div>
-                                        <div class=\"box-categoria \">
-                                            <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\">".$key['Categoria']."</p>
+                                        <div class='box-categoria '>
+                                            <div class='box-icona'></div>
+                                            <p class='scritte-evento'>".$key['Categoria']."</p>
                                         </div>
-                                        <div class=\"box-data\">
-                                            <div class=\"box-icona\">
-                                                <div id=\"calendario\"></div>
+                                        <div class='box-data'>
+                                            <div class='box-icona'>
+                                                <div id='calendario'></div>
                                             </div>
-                                            <div class=\"box-data-evento\">
-                                                <p class=\"scritte-evento\">".$key['Data']."</p>
-                                            </div>
-                                        </div>
-                                        <div class=\"box-descr\">
-                                            <div class=\"box-icona\"></div>
-                                            <p class=\"scritte-evento\"> ".$key['Descrizione']."</p>
-                                        </div>
-                                        <div class=\"box-luogo \">
-                                            <div class=\"box-icona\">
-                                                <div id=\"local\"></div>
-                                            </div>
-                                            <div class=\"box-luogo-evento\">
-                                                <p class=\"scritte-evento\">".$key['Luogo']."</p>
+                                            <div class='box-data-evento'>
+                                                <p class='scritte-evento'>".$key['Data']."</p>
                                             </div>
                                         </div>
-                                        <div class=\"box-dettagli\">
-                                        <div class=\"box-icona\">
+                                        <div class='box-descr'>
+                                            <div class='box-icona'></div>
+                                            <p class='scritte-evento'> ".$key['Descrizione']."</p>
+                                        </div>
+                                        <div class='box-luogo '>
+                                            <div class='box-icona'>
+                                                <div id='local'></div>
+                                            </div>
+                                            <div class='box-luogo-evento'>
+                                                <p class='scritte-evento'>".$key['Luogo']."</p>
+                                            </div>
+                                        </div>
+                                        <div class='box-dettagli'>
+                                        <div class='box-icona'>
                                                 
                                         </div>
                                             <div >
