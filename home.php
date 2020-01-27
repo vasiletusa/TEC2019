@@ -88,7 +88,7 @@
                                             </div>
                                             <div >
                                                 
-                                                <a class='scritte-dettagli selezione link' href = 'dettagli_evento.php?id=".$elem['ID']."'' tabindex='".tabIndex($tab)."'> Dettagli </a> 
+                                                <button class='scritte-dettagli selezione' onclick='location.href = './dettagli_evento.php?id=".$elem['ID']."'' type='button'> Dettagli </button> 
                                             </div>  
                                              
                                         </div>
@@ -98,13 +98,24 @@
                     $tab=$tab+1;
             }}
 
-            else{$outCat.= "";}
+            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='".tabIndex($tab)."' accesskey='n'> Nuovo evento </a><h3></p>";}
             echo $outCat;
             unset($outCat);
         ?>
 
 	</div>
 </div>
+
+<script type="text/javascript">
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
 
 </body>
 

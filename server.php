@@ -10,7 +10,7 @@ $tuoitour=array();
 $isOrganize=false;
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
+$db = mysqli_connect('localhost', 'root', '', 'irizzo');
 // Check connection
 if (mysqli_connect_errno())
   {
