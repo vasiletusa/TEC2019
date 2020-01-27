@@ -17,7 +17,7 @@
 <div class="pageLogin">
 
 	<div class=" box-login-left" >
-		<?php getMessage();?>
+		
 	
 
 		<form action="login.php" method="post" name="login">

@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <?php 
+	<?php 
         include_once 'functions.php'; 
-        getHead("Home");
+	    getHead("Home");
     ?>  
 </head>
 
@@ -16,29 +16,29 @@
 
 <?php getBreadcumbs("Home");?>
 <div class="home">
-    <div class="home-pt1">
-        
-            <div class="img-sfondo" id="homeimg1"></div>
-        
-    </div>
-    <div class="home-pt2">
-            <div class="box-img-left">
-                
-            </div>
-            <div class="box-descr-right">
-            
-                    <p class = "descr">
-                        Veneto Eventi ti propone una raccolta degli eventi disponibili nelle città del Veneto.</br> Registrati per poter partecipare agli eventi con posti limitati e comprare i biglietti. Se sei un locale o un'azienda che vuole proporre il proprio evento registra la tua attività e crea il tuo evento.
-                    </p>
-                
-            </div>
-    </div>
-    <div class="prossimi-eventi">
-        <p class="titolo-home">Prossimi eventi</p>
-    </div>
-    <div class="home-pt3">
-            
-        <?php
+	<div class="home-pt1">
+		
+			<div class="img-sfondo" id="homeimg1"></div>
+		
+	</div>
+	<div class="home-pt2">
+			<div class="box-img-left">
+				
+			</div>
+			<div class="box-descr-right">
+			
+					<p class = "descr">
+						Veneto Eventi ti propone una raccolta degli eventi disponibili nelle città del Veneto.</br> Registrati per poter partecipare agli eventi con posti limitati e comprare i biglietti. Se sei un locale o un'azienda che vuole proporre il proprio evento registra la tua attività e crea il tuo evento.
+					</p>
+				
+			</div>
+	</div>
+	<div class="prossimi-eventi">
+		<p class="titolo-home">Prossimi eventi</p>
+	</div>
+	<div class="home-pt3">
+			
+		<?php
             require_once('functions.php');
             $output=getUltimiEventi();
             $outCat="";
@@ -88,7 +88,7 @@
                                             </div>
                                             <div >
                                                 
-                                                <a class='scritte-dettagli selezione link' href = 'dettagli_evento.php?id=".$elem['ID']."'' tabindex='".tabIndex($tab)."'> Dettagli </a> 
+                                                <a class='scritte-dettagli selezione link' href = 'dettagli_evento.php?id=".$elem['ID']."''  tabindex='".tabIndex($tab)."> Dettagli </a> 
                                             </div>  
                                              
                                         </div>
@@ -98,13 +98,15 @@
                     $tab=$tab+1;
             }}
 
-            else{$outCat.= "";}
+            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='".tabIndex($tab)."' accesskey='n'> Nuovo evento </a><h3></p>";}
             echo $outCat;
             unset($outCat);
         ?>
 
-    </div>
+	</div>
 </div>
+
+
 
 </body>
 

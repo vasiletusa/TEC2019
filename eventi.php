@@ -52,10 +52,10 @@
             require_once('functions.php');
             $output=getEventiTutti();
             $outCat="";
+            $tab=17;
             if($_SESSION['eventi']===true){
             foreach ($output as $elem) {
                 if($elem){
-                   $tab=$tab+1;
                     $outCat.=   "
                                 
             
@@ -108,6 +108,7 @@
                                     </div>
                                     ";
                     }
+                    $tab=$tab+1;
             }}
 
 

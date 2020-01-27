@@ -212,13 +212,13 @@ function setIscrivitiBottone(){
     
         if(mysqli_num_rows($ris)==0){
             $output= "<form action='' method='post'>
-                                    <input type='submit' name='iscriviti' value='ISCRIVITI'  class='scritte-iscriviti' />
+                                    <input type='submit' name='iscriviti' value='ISCRIVITI'  class='scritte-iscriviti' tabindex'10' />
 
                 </form>";
                        }
         else{
             $output="<form action='' method='post'>
-                                    <input type='submit' name='disiscriviti' value='DISISCRIVITI'  class='scritte-iscriviti' />
+                                    <input type='submit' name='disiscriviti' value='DISISCRIVITI'  class='scritte-iscriviti' tabindex'10'/>
 
                 </form>";
         }
@@ -234,7 +234,7 @@ function setIscrivitiBottone(){
                        }
         else{
             $output="<form action='' method='post'>
-                                    <input type='submit' name='elimina' value='ELIMINA'  class='scritte-iscriviti' />
+                                    <input type='submit' name='elimina' value='ELIMINA'  class='scritte-iscriviti' tabindex'9' />
 
                 </form>";
         }
@@ -261,7 +261,7 @@ function setPreferitiBottone(){
     
         if(mysqli_num_rows($ris)==0){
             $output= "<form action='' method='post'>
-                                    <input type='submit' name='preferiti' value=''  class='scritte-preferiti prefe' />
+                                    <input type='submit' name='preferiti' value=''  class='scritte-preferiti prefe' tabindex'9' />
 
                 </form>";
                        }
@@ -271,7 +271,7 @@ function setPreferitiBottone(){
                                                             
 
             $output="<form action='' method='post'>
-                                    <input type='submit' name='nopreferiti' value=''  class='scritte-preferiti noprefe' />
+                                    <input type='submit' name='nopreferiti' value=''  class='scritte-preferiti noprefe' tabindex'9'/>
 
                 </form>";
         }    
