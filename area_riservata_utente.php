@@ -20,7 +20,7 @@
         <p class="titolo "> Qui troverai gli eventi salvati e quelli a cui sei iscritto</p>
     </div>
     <div class="area-bottoni">
-        <a class="bottone-area link" href="modifica_pw.php'">
+        <a class="bottone-area link" href="modifica_pw.php">
          Cambia password</a>
          <a class="bottone-area link" href="modifica_account.php">Modifica account</a>
     </div>
