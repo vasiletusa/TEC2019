@@ -179,8 +179,8 @@ INSERT INTO `utenti` (`Nome`, `Cognome`, `Username`, `Password`, `Email`) VALUES
 ('Admin', 'Admin', 'admin', 'admin', 'admin@admin'),
 ('Alberto', 'Salviato', 'asalviato', 'asalviato', 'alberto.salviato@studenti.unipd.it'),
 ('ilaria', 'Rizzo', 'irizzo', 'irizzo', 'ilaria.rizzo.5@studenti.unipd.it'),
-('Sara', 'Romito', 'sromito', 'sromito', 'sara.romito@studenti.unipd.it',),
-('User', 'User', 'user', 'user', 'user@user',),
+('Sara', 'Romito', 'sromito', 'sromito', 'sara.romito@studenti.unipd.it'),
+('User', 'User', 'user', 'user', 'user@user'),
 ('Vasile', 'Tusa', 'vtusa', 'vtusa', 'vasile.tusa@studenti.unipd.it');
 
 --

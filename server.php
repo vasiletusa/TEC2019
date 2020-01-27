@@ -193,14 +193,11 @@ if (isset($_POST['Login'])){
                         $_SESSION['usernameA']=$username;
                        
                         header("Location: area_riservata_azienda.php");}
-                      elseif($tipo=='utente') {
+                      else {
                         $_SESSION['usernameU']=$username;
                         header("Location: area_riservata_utente.php");
                       }
-                      else{
-                        $_SESSION['usernameAdmin']=$username;
-                        header("Location: area_riservata_admin.php");
-                      }
+                      
               }
       }      
   }
