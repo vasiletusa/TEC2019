@@ -16,7 +16,7 @@
 						<h1 class="titolo mod-password"> Modifica Password </h1>
 						<div >
 									<label for="passwordV" class="label passwordV">Vecchia password</label>
-									<input id="passwordV" type="text" name="passworedV" class="input insertBox" placeholder="Vecchia Password">
+									<input id="passwordV" type="text" name="pwV" class="input insertBox" placeholder="Vecchia Password" tabindex="10">
 									<p class="error"><?php getPasswordError($errors); ?></p>
 									<p class="error"><?php getPasswordError($errors); ?></p>
 
@@ -25,7 +25,7 @@
 	
 						<div>
 							<label for="password" class="label password">Nuova password</label>
-							<input id="password" type="password" name="pwN" class="input insertBox" placeholder="********">
+							<input id="password" type="password" name="pwN" class="input insertBox" placeholder="********" tabindex="11">
 							<p class="error"><?php getPasswordError($errors); ?></p>
 
 					
@@ -33,14 +33,14 @@
 						</div>
 						<div >
 							<label for="passwordR" class="label passwordR">Conferma Password</label>
-							<input id="passwordR" type="password" name="pwC" class="input insertBox" placeholder="********">
+							<input id="passwordR" type="password" name="pwC" class="input insertBox" placeholder="********" tabindex="12">
 							<p class="error"><?php getPasswordError($errors); ?></p>
 							<p class="error"><?php getPasswordError($errors); ?></p>
 
 
 							
 						</div>
-						<button type="submit" class="bottone-invia selezione" name="modifica_pw">Invia</button>
+						<button type="submit" class="bottone-invia selezione" name="modifica_pw" tabindex="13" accesskey="t">Invia</button>
 
 					</form>
 					

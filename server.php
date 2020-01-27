@@ -205,17 +205,52 @@ if (isset($_POST['Login'])){
       }      
   }
 
+//modifica account utente
+  if(isset($_POST['modifica_account'])){
+    $nome = mysqli_real_escape_string($db, $_POST['nome']);
+    $cognome = mysqli_real_escape_string($db, $_POST['cognome']);
+    $email = mysqli_real_escape_string($db, $_POST['email']);
 
+    $usernameU=$_SESSION['usernameU'];
+    $query = "UPDATE `utenti` SET Nome = '$nome', Cognome = '$cognome', Email = '$email' WHERE Username = '$usernameU' ";
+    mysqli_query($db, $query);
+    echo $query;
+    header("Location: area_riservata_utente.php");
+  }
+
+
+  //modifica account azienda
+  if(isset($_POST['modifica_azienda'])){
+    $nomeA = mysqli_real_escape_string($db, $_POST['nome']);
+    $nomeR = mysqli_real_escape_string($db, $_POST['nomeR']);
+    $email = mysqli_real_escape_string($db, $_POST['email']);
+
+    $usernameA=$_SESSION['usernameA'];
+    $query = "UPDATE `aziende` SET Nome = '$nomeA', NomeReferente = '$nomeR', EmailReferente = '$email' WHERE Username = '$usernameA' ";
+    mysqli_query($db, $query);
+    header("Location: area_riservata_azienda.php");
+  }
+
+  //modifica password
+  if(isset($_POST['modifica_pw'])){
+
+    $nomeA = mysqli_real_escape_string($db, $_POST['pwV']);
+    $nomeR = mysqli_real_escape_string($db, $_POST['pwN']);
+    $email = mysqli_real_escape_string($db, $_POST['pwC']);
+    
+    $usernameU=$_SESSION['usernameU'];
+    $query = "UPDATE `utenti` SET Password = '$pwN' WHERE Username = '$usernameU' ";
+    mysqli_query($db, $query);
+    $query = "UPDATE `log` SET Password = '$pwN' WHERE Username = '$usernameU' ";
+    mysqli_query($db, $query);
+
+    header("Location: area_riservata_utente.php");
+
+  }
 
 //nuovo evento
   if (isset($_POST['nuovo_evento'])) {
-   /* $target_dir = "uploads/";
-    $file=$_FILES['fileToUpload']['name'];
-    $target_file = $target_dir . $file;
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
- */
-  // receive all input values from the form
+
   $titolo = mysqli_real_escape_string($db, $_POST['TitoloEvento']);
   $descrizione = mysqli_real_escape_string($db, $_POST['Descrizione']);
   $luogo = mysqli_real_escape_string($db, $_POST['Luogo']);
@@ -250,16 +285,16 @@ if (isset($_POST['Login'])){
                       $azienda=$_SESSION['usernameA'];
                       $query2 = "INSERT INTO eventi (titolo, descrizione, luogo, citta, data, categoria, azienda ) 
                               VALUES('$titolo','$descrizione', '$luogo', '$citta', '$data', '$categoria', '$azienda')";
-                      echo $query2;
+                      
                         mysqli_query($db, $query2);
                    
                      
                       $sql = "SELECT ID FROM `eventi` WHERE azienda='$azienda' ORDER BY ID DESC LIMIT 1 ";
-                      echo $sql;
+                      
 
                       $result= mysqli_query($db, $sql);
                         $ris=mysqli_fetch_assoc($result);
-                      echo $ris['ID'];
+                      
                       $name = $ris['ID'].'.' . pathinfo($_FILES['file']['name'],PATHINFO_EXTENSION);
 
 
@@ -274,13 +309,6 @@ if (isset($_POST['Login'])){
                           }       
                       }  
 
-
-                     
-
-
-
-
-                        //reindirizzamento
                         header("Location: area_riservata_azienda.php");
     }
 
@@ -342,15 +370,7 @@ if(isset($_POST['elimina'])){
 }
 
 
-function setOrganizza(){
-    if(!isset($_SESSION["username"])){
-     $_SESSION['isOrganize']=true;
-    header("Location: login.php");
-    
-    exit();}
-    else    $isOrganize=false;
 
-  }
 
 
 function getUsernameError($errors) { 
@@ -422,8 +442,6 @@ function getCategoriaError($errors) {
       echo $errors['Categoria'];
     }
 }
-
-
 
 
  

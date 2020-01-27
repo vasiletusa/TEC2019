@@ -3,45 +3,47 @@ include_once 'server.php';
 
 function tabIndex($tabindex) {
     $tabindex=$tabindex+1;
-    echo "tabindex=\"$tabindex\" ";
+    return $tabindex ;
     
 }
 function getHead($current){
 echo"
 
-	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 	
 
 	<title>$current</title>
-    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
-    <meta name=\"title\" content=\"VenetoTour\" />
-    <meta name=\"description\" content=\"Tour in veneto\" />
-    <meta name=\"keywords\" content=\"Tour, veneto, gite, padova, vicenza, venezia, treviso, rovigo, verona, belluno\" />
-    <meta name=\"language\" content=\"it\" />
-    <meta name=\"author\" content=\"Rizzo Ilaria, Romito Sara, Vasile Tusa, Salviato Alberto\" />
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale = 1.0\" />
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name='title' content='VenetoTour' />
+    <meta name='description' content='Tour in veneto' />
+    <meta name='keywords' content='Tour, veneto, gite, padova, vicenza, venezia, treviso, rovigo, verona, belluno' />
+    <meta name='language' content='it' />
+    <meta name='author' content='Rizzo Ilaria, Romito Sara, Vasile Tusa, Salviato Alberto' />
+    <meta name='viewport' content='width=device-width, initial-scale = 1.0' />
 
-	<link rel=\"stylesheet\"  href=\"stileila.css\"/ >
-    <script src=\"js/filtro-citta.js\"></script>
-    <script src=\"js/menu-hamburger.js\"></script>
+	<link rel='stylesheet'  href='css/stile.css' />
+    <script src='js/menu-hamburger.js'></script>
 
 
-	<link rel=\"icon\" 
-      type=\"image/png\" 
-      href=\"img/favicon.png\" alt='immagine favicon'>
+	<link rel='icon' 
+      type='image/png' 
+      href='img/favicon.png' alt='immagine favicon'>
 	
 ";
-}function getFooter(){echo"
+}
+
+function getFooter(){echo"
 
     <footer>
-        <div class=\"container\">     
-            <div>&copy; 2019 <span lang=\"it\">Veneto Eventi </span>Torre Archimede, Via Trieste, 63, 35121 Padova PD (<span lang=\"it\">Italia</span>)
+        <div class='container'>     
+            <div>&copy; 2019 <span lang='it'>Veneto Eventi </span>Torre Archimede, Via Trieste, 63, 35121 Padova PD (<span lang='it'>Italia</span>)
             </div>
             <div> email: venetoeventi@gmail.com </div>
             <div> tel: +39 123456789 </div>
-
-            <div class=\"torna-su\">   
-            <a class=\"scritta-torna-su\" href=\"#\" >TORNA SU</a>
+            <img src='img/vxhtml.png' alt='Valid XHTML 1.0 Strict'>
+            <img src='img/vcss.gif' alt='Valid CSS!'>
+            <div class='torna-su'>
+            <a class='scritta-torna-su' href='#'>TORNA SU</a>
             </div>
         </div>  
     </footer>
@@ -49,58 +51,62 @@ echo"
 </html>";
 }
 
-
 function getMenu($current){
     
     echo "<body>
-    <header id='distanza-header'>
-        <div class='topnav'>
-            <div class='logo-menu' id='padd'>
-                <a class=' pulsante-logo fontlogo' href = 'home.php' tabindex='1' accesskey='h' >VENETO EVENTI </a>
-            </div>
-            <div class='pos'></div>
-
-            <div class='header-right' class='mobile-container'>
-                
-                <div id='myLinks' >
-                  <div><ul>
-                    ";
-                    if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                        echo "<li><a class='a-menu-log' href='logout.php' tabindex='2' >Logout</a></li></ul>";}
-                    else{
-                        echo"<a class='a-menu-log  ";if($current=="Login"){echo"active";}echo" 'href='login.php' tabindex='2' accesskey='l'> Login</a>";
-                    }
-                    echo "<a class='a-menu-log ";if($current=="Registrati"){echo"active";}echo" ' href='registrazione_utente.php' tabindex='3' accesskey='r'>Registrati</a>  
-                  </div>
-
-                  <div>
-                   <a class='a-menu-log ";if($current=="Home"){echo"active" ;}echo"' href='home.php' tabindex='4' accesskey='h'>Home</a>
-                   
-                   
-                   <a class='a-menu-log ";if($current=="Eventi"){echo"active";}echo"' href='eventi.php' tabindex='5' accesskey='e'>Eventi</a>";
-                    
-                    if(isset($_SESSION['usernameU'])){
-                        
-                        echo"<a class='a-menu-log ";if($current=="AreaRiservata"){echo"active";}echo" ' href='area_riservata_utente.php' tabindex='6' accesskey='a'>Area personale</a>";
-                    }
-                         
-                    if(isset($_SESSION['usernameA'])){
-                        
-                        echo"<a  class='a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"' href='area_riservata_azienda.php' tabindex='6' accesskey='a'>Area personale</a>";
-                    }
-
-                    echo"<a class='a-menu-log' href='contatti.php'"; if($current=="Contatti"){echo"class='active'";}echo " tabindex='7' accesskey='c'>Contatti</a>
+    <header>
             
-                  </div>
-                 </div>
-                     <a href='javascript:void(0);' class='icon' onclick='myFunction()' tabindex='8' accesskey='s'> 
+                <div class='sx-logo'>
+                    <a class='logo-pulsante fontlogo' href = 'home.php' tabindex='1' accesskey='v'> VENETO EVENTI </a>
+                </div>
+                <div class='pos'> </div>
+
+                <div class='topnav' id='myTopnav'>
+
+                <a href='javascript:void(0);' class='icon' onclick='myFunction()' tabindex='8' accesskey='s'> 
                         <div class='icon-menu pos1-icon'></div>
                         <div class='icon-menu pos2-icon'></div>
                         <div class='icon-menu pos3-icon'></div>
-                     </a>
+                </a>
+            
+                <div class='header-right'>
+
+                    <ul>";
+                        if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
+                            echo "<li><a class='a-menu-log' href='logout.php' tabindex='2' >Logout</a></li>";}
+                        else{
+                            echo"<li><a class='a-menu-log  ";if($current=="Login"){echo"active";}echo" 'href='login.php' tabindex='2' accesskey='l'> Login</a></li>";
+                        }
+                        echo "<li><a class='a-menu-log ";if($current=="Registrati"){echo"active";}echo" ' href='registrazione_utente.php' tabindex='3' accesskey='r'>Registrati</a></li>  
+                    </ul>
+                </div>
+
+                    <div class='end'></div>
+                
+
+                <div class='header-right' id='padd'>
+                    <ul>
+                       <li><a class='a-menu-log ";if($current=="Home"){echo"active" ;}echo"' href='home.php' tabindex='4' accesskey='h'>Home</a></li>
+                       
+                       
+                       <li><a class='a-menu-log ";if($current=="Eventi"){echo"active";}echo"' href='eventi.php' tabindex='5' accesskey='e'>Eventi</a></li>";
+                        
+                        if(isset($_SESSION['usernameU'])){
+                            
+                            echo"<li><a class='a-menu-log ";if($current=="AreaRiservata"){echo"active";}echo" ' href='area_riservata_utente.php' tabindex='6' accesskey='a'>Area personale</a></li>";
+                        }
+                             
+                        if(isset($_SESSION['usernameA'])){
+                            
+                            echo"<li><a  class='a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"' href='area_riservata_azienda.php' tabindex='6' accesskey='a'>Area personale</a></li>";
+                        }
+
+                        echo"<li><a class='a-menu-log' href='contatti.php'"; if($current=="Contatti"){echo"class='active'";}echo " tabindex='7' accesskey='c'>Contatti</a></li>
+                
+                    </ul>
+                    <div class='end'></div>
+                </div>
             </div>
-        </div>
-        
     </header>
 
 ";
@@ -108,8 +114,8 @@ function getMenu($current){
 
 
 function getBreadcumbs($current){
-echo "<div class=\"contenitore\">
-			<p id=\"breadcumb\">Sei in : ".$current."</p>
+echo "<div class='contenitore'>
+			<p id='breadcumb'>Sei in : ".$current."</p>
         </div>
   ";
 }
@@ -117,7 +123,7 @@ echo "<div class=\"contenitore\">
 function getMessage(){
 	if(isset($_SESSION['isOrganize'])){
 		echo "
-		<p id=\"messaggio\">Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href=\"registrazione_utente.php\" tabindex='1' accesskey='s'>registrati</a href></p>";
+		<p id='messaggio'>Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href='registrazione_utente.php' tabindex='1' accesskey='s'>registrati</a href></p>";
 	}
 }
 
@@ -190,7 +196,7 @@ function getEventiIscritto(){
     return $output;
 }
 function getEventoDettagli($id){
-    echo $id;
+    
       $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
     $sql = "SELECT * FROM `eventi` WHERE Id='$id'";
@@ -312,6 +318,39 @@ function getImg($id){
     }
     return $output;
 }
+
+
+
+function getAccountU(){
+        $utente= $_SESSION['usernameU'];
+        
+
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
+    
+
+    $sql = "SELECT * FROM `utenti` WHERE username='$utente' ";
+    
+    $ris = mysqli_query($db,$sql);
+    $output = mysqli_fetch_assoc($ris);
+    return $output;
+
+}
+
+function getAccountA(){
+        $azienda= $_SESSION['usernameA'];
+        
+
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
+    
+
+    $sql = "SELECT * FROM `aziende` WHERE username='$azienda' ";
+    
+    $ris = mysqli_query($db,$sql);
+    $output = mysqli_fetch_assoc($ris);
+    return $output;
+
+}
+
 
 ?>
 
