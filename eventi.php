@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <head>
 
-	<?php 
+  <?php 
         include_once 'functions.php'; 
-	    getHead("Eventi");
+      getHead("Eventi");
      ?>   
           
   </head>
@@ -20,23 +20,23 @@
         <div class="eventi-sx">
 
             <div>
-              <button class="box-pulsante box-width-11 attivo selezione" onclick="filterSelectionCitta('Tutti')"> Tutti </button>
+              <button class="box-pulsante box-width-11 attivo selezione" onclick="filterSelectionCitta('Tutti')" tabindex="9"> Tutti </button>
           
-              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Padova')"> PADOVA </button>
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Padova')" tabindex="10"> PADOVA </button>
                     
-              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Verona')">VERONA</button>
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Verona')" tabindex="11">VERONA</button>
                      
-              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Vicenza')">VICENZA</button>
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Vicenza')" tabindex="12">VICENZA</button>
             </div>
             <div>
                       
-              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Venezia')">VENEZIA</button>
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Venezia')" tabindex="13">VENEZIA</button>
           
-              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Treviso')">TREVISO</button>
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Treviso')" tabindex="14">TREVISO</button>
                      
-              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Belluno')">BELLUNO</button>
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Belluno')" tabindex="15">BELLUNO</button>
                       
-              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Rovigo')">ROVIGO</button>
+              <button class="box-pulsante box-width-11 selezione" onclick="filterSelectionCitta('Rovigo')" tabindex="16">ROVIGO</button>
          
             </div>
                   
@@ -46,7 +46,7 @@
       
     </div>
 
-	<div class="home-pt3">
+  <div class="home-pt3">
 
 <?php
             require_once('functions.php');
@@ -55,7 +55,7 @@
             if($_SESSION['eventi']===true){
             foreach ($output as $elem) {
                 if($elem){
-                  
+                   $tab=$tab+1;
                     $outCat.=   "
                                 
             
@@ -98,7 +98,7 @@
                                             <div >
                                                 
                                                 
-                                                <a href='dettagli_evento.php?id=".$elem['ID']."' class='scritte-dettagli selezione link'>DETTAGLI</a>
+                                                <a href='dettagli_evento.php?id=".$elem['ID']."' class='scritte-dettagli selezione link' tabindex='".tabIndex($tab)."'>DETTAGLI</a>
 
 
 

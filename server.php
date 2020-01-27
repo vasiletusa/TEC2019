@@ -10,7 +10,7 @@ $tuoitour=array();
 $isOrganize=false;
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'irizzo');
+$db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 // Check connection
 if (mysqli_connect_errno())
   {
@@ -73,8 +73,8 @@ if (isset($_POST['registrazione_utente'])) {
               }
               elseif($password==$password_2){
                       $query = "INSERT INTO utenti ( nome, cognome, username, email, password, ruolo) 
-                      			  VALUES('$nome','$cognome','$username', '$email', '$password', 'User')";
-                      	mysqli_query($db, $query);
+                              VALUES('$nome','$cognome','$username', '$email', '$password', 'User')";
+                        mysqli_query($db, $query);
                         $_SESSION['usernameU']=$username;
                         $_SESSION['isLoggedU']=true;
                         $tipo="utente";
@@ -83,7 +83,7 @@ if (isset($_POST['registrazione_utente'])) {
                         //reindirizzamento
                         header("Location: area_riservata_utente.php");
               }else
-            $errors['noPassword']="Le password non coincidono";  	
+            $errors['noPassword']="Le password non coincidono";   
   }
 }
 

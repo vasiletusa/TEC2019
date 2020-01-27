@@ -9,26 +9,26 @@ function tabIndex($tabindex) {
 function getHead($current){
 echo"
 
-	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-	
-
-	<title>$current</title>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-    <meta name='title' content='VenetoTour' />
-    <meta name='description' content='Tour in veneto' />
-    <meta name='keywords' content='Tour, veneto, gite, padova, vicenza, venezia, treviso, rovigo, verona, belluno' />
+    
+
+    <title>$current</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name='title' content='VenetoEventi' />
+    <meta name='description' content='Eventi in veneto' />
+    <meta name='keywords' content='Eventi, veneto,  padova, vicenza, venezia, treviso, rovigo, verona, belluno' />
     <meta name='language' content='it' />
     <meta name='author' content='Rizzo Ilaria, Romito Sara, Vasile Tusa, Salviato Alberto' />
     <meta name='viewport' content='width=device-width, initial-scale = 1.0' />
 
-	<link rel='stylesheet'  href='css/stile.css' />
+    <link rel='stylesheet'  href='css/stile.css' />
     <script src='js/menu-hamburger.js'></script>
 
 
-	<link rel='icon' 
+    <link rel='icon' 
       type='image/png' 
       href='img/favicon.png' alt='immagine favicon'>
-	
+    
 ";
 }
 
@@ -115,22 +115,16 @@ function getMenu($current){
 
 function getBreadcumbs($current){
 echo "<div class='contenitore'>
-			<p id='breadcumb'>Sei in : ".$current."</p>
+            <p id='breadcumb'>Sei in : ".$current."</p>
         </div>
   ";
 }
 
-function getMessage(){
-	if(isset($_SESSION['isOrganize'])){
-		echo "
-		<p id='messaggio'>Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href='registrazione_utente.php' tabindex='1' accesskey='s'>registrati</a href></p>";
-	}
-}
 
 
 function getEventiAzienda(){
     $azienda=$_SESSION['usernameA'];
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `eventi` WHERE azienda='$azienda' ";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -146,7 +140,7 @@ function getEventiAzienda(){
     return $output;
 }
 function getEventiTutti(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `eventi`";
 
     $ris = mysqli_query($db,$sql);
@@ -164,7 +158,7 @@ function getEventiTutti(){
     return $output;
 }
 function getEventiPrefe(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `preferiti`";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -180,7 +174,7 @@ function getEventiPrefe(){
     return $output;
 }
 function getEventiIscritto(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM `partecipa`";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -197,7 +191,7 @@ function getEventiIscritto(){
 }
 function getEventoDettagli($id){
     
-      $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+      $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
 
     $sql = "SELECT * FROM `eventi` WHERE Id='$id'";
     $ris = mysqli_query($db,$sql)or DIE("evento: ".mysqli_error($db));
@@ -209,7 +203,7 @@ function setIscrivitiBottone(){
     $idEvento= $_SESSION['idEvento'];
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
-            $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+            $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
         $sql = "SELECT * FROM `partecipa` WHERE id='$idEvento' AND Username='$username' ";
@@ -231,7 +225,7 @@ function setIscrivitiBottone(){
     
     }elseif(isset($_SESSION['usernameA'])){ 
         $username= $_SESSION['usernameA'];
-        $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+        $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
         $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
 
         $ris= mysqli_query($db, $sql);
@@ -258,7 +252,7 @@ function setPreferitiBottone(){
     $output="";
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
-            $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+            $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
         $sql = "SELECT * FROM `preferiti` WHERE id='$idEvento' AND Username='$username' ";
@@ -287,7 +281,7 @@ function setPreferitiBottone(){
 }
 
 function getUltimiEventi(){
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     $sql = "SELECT * FROM ( SELECT * FROM `eventi` ORDER BY ID DESC LIMIT 3 ) as r ORDER BY ID";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -325,7 +319,7 @@ function getAccountU(){
         $utente= $_SESSION['usernameU'];
         
 
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
     $sql = "SELECT * FROM `utenti` WHERE username='$utente' ";
@@ -340,7 +334,7 @@ function getAccountA(){
         $azienda= $_SESSION['usernameA'];
         
 
-    $db = mysqli_connect('localhost', 'root', '', 'irizzo');
+    $db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
     
 
     $sql = "SELECT * FROM `aziende` WHERE username='$azienda' ";
