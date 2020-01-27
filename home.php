@@ -88,10 +88,10 @@
                                             </div>
                                             <div >
                                                 
-                                                <a class='scritte-dettagli selezione link' href = 'dettagli_evento.php?id=".$elem['ID']."''  tabindex='".tabIndex($tab)."> Dettagli </a> 
+                                                <a class='scritte-dettagli selezione link' href = 'dettagli_evento.php?id=".$elem['ID']."'  tabindex='".tabIndex($tab)."'> Dettagli </a> 
                                             </div>  
-                                             
                                         </div>
+                                        
                                     </div>
                                     ";
                     }
