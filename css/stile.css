@@ -372,7 +372,8 @@ border-radius: 0em;
   margin-bottom: 2em;
   border-radius: 0.4em;
   border:0.1em solid #660000;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
+  padding-top: 2em;
   height: auto;
 }
 .contatti{
