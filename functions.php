@@ -21,7 +21,7 @@ echo"
     <meta name='author' content='Rizzo Ilaria, Romito Sara, Vasile Tusa, Salviato Alberto' />
     <meta name='viewport' content='width=device-width, initial-scale = 1.0' />
 
-	<link rel='stylesheet'  href='stileila.css'/ >
+	<link rel='stylesheet'  href='css/stile.css' />
     <script src='js/menu-hamburger.js'></script>
 
 
