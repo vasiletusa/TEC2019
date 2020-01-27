@@ -22,8 +22,6 @@
          Cambia password</a>
          <a class="bottone-area link" href='nuovo_evento.php'>
          Nuovo evento</a>
-         <a class="bottone-area link" href='modifica_azienda.php'>
-         Modifica dati</a>
     </div>
 </div>
 <div class="home-pt3">
@@ -85,7 +83,7 @@
                     }
             }}
 
-            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='1' accesskey='s'> Nuovo evento </a><h3></p>";}
+            else{$outCat.= "<p> <h3>Non hai ancora registrato eventi. <a href='nuovo_evento.php' class='messageTour' tabindex='1' accesskey='m'> Nuovo evento </a><h3></p>";}
             echo $outCat;
             unset($outCat);
         ?>

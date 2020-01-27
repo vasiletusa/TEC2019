@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<!DOCTYPE html>
+<html>
 <head>
 	<?php 
         include_once 'functions.php'; 
@@ -15,13 +14,13 @@
 	<form method="post" action="server.php" enctype="multipart/form-data">						
 		<div >
 			<label for="TitoloEvento" class="label TitoloEvento">Titolo Evento</label>
-			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Inserire titolo Evento"  tabindex="10">
+			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Titolo Evento">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 		</div>
 		<div >
 			<label for="Descrizione" class="label Descrizione">Descrizione</label>
-			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Inserire Descrizione"tabindex="11">
+			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Descrizione">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 
@@ -29,22 +28,22 @@
 		</div>
 		<div >
 			<label for="Luogo" class="label Luogo">Indirizzo</label>
-			<input id="Luogo" type="text" required name="Luogo" class="input insertBox"  placeholder="Inserire Indirizzo" tabindex="12">
+			<input id="Luogo" type="text" required name="Luogo" class="input insertBox" placeholder="Indirizzo">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 		
 		</div>
 		<div>
 			<label for="Data" class="label Data">Data</label>
-			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Inserire data: YYYY-MM-DD" tabindex="13">
+			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Data">
 			<p class="error"><?php getNomeError($errors); ?></p>
 			
 
 
 		</div>
-		<div class="select-categoria" >
+		<div class="select-categoria">
 			<label for="Categoria" class="label Categoria">Categoria</label>
-			<select name="selectCategoria" tabindex="14">
+			<select name="selectCategoria" >
 			<option name="Seleziona" value="Seleziona">Seleziona categoria</option>
 
 			  <option name="Concerto" value="Concerto">Concerto
@@ -66,7 +65,7 @@
 		
 		<div class="select-citta ">
 			<label for="Citta" class="label Citta">Citta</label>
-			<select name="selectCitta" tabindex="15">
+			<select name="selectCitta">
 			  <option name="Seleziona" value="Seleziona">Seleziona citt&agrave</option>
 			  <option name="Padova" value="Padova">Padova</option>
 			  <option name="Venezia" value="Venezia">Venezia</option>
@@ -86,7 +85,7 @@
 		<input type="file" name="file" id="file"><br><br>
 
 
-		<button type="submit" class="bottone-invia selezione" name="nuovo_evento" tabindex="16" accesskey="i">Invia</button>
+		<button type="submit" class="bottone-invia selezione" name="nuovo_evento">Invia</button>
 
 	</form>
 </div>

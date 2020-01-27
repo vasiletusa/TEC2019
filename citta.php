@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
 <?php include_once 'server.php'?>
@@ -57,7 +56,7 @@
              $tab=8;
       
         }}
-else{ $outCat.= "<h2 > Non ci sono tour al momento <a href=\"registra_tour.php class=\"messageTour\" tabindex='1' accesskey='s'> Organizzane</a> uno tu!</h2>";}
+else{ $outCat.= "<h2 > Non ci sono tour al momento <a href=\"registra_tour.php class=\"messageTour\" tabindex='1' accesskey='m'> Organizzane</a> uno tu!</h2>";}
             
        echo $outCat;
 
