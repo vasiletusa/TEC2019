@@ -231,9 +231,9 @@ if (isset($_POST['Login'])){
   //modifica password
   if(isset($_POST['modifica_pw'])){
 
-    $nomeA = mysqli_real_escape_string($db, $_POST['pwV']);
-    $nomeR = mysqli_real_escape_string($db, $_POST['pwN']);
-    $email = mysqli_real_escape_string($db, $_POST['pwC']);
+    $pwV = mysqli_real_escape_string($db, $_POST['pwV']);
+    $pwN = mysqli_real_escape_string($db, $_POST['pwN']);
+    $pwC = mysqli_real_escape_string($db, $_POST['pwC']);
     
     $usernameU=$_SESSION['usernameU'];
     $query = "UPDATE `utenti` SET Password = '$pwN' WHERE Username = '$usernameU' ";
@@ -242,6 +242,24 @@ if (isset($_POST['Login'])){
     mysqli_query($db, $query);
 
     header("Location: area_riservata_utente.php");
+
+  }
+
+  //modifica password azienda
+  if(isset($_POST['modifica_pw_a'])){
+
+    $pwV = mysqli_real_escape_string($db, $_POST['pwV']);
+    $pwN = mysqli_real_escape_string($db, $_POST['pwN']);
+    $pwC = mysqli_real_escape_string($db, $_POST['pwC']);
+    
+    $usernameA=$_SESSION['usernameA'];
+    $query = "UPDATE `aziende` SET Password = '$pwN' WHERE Username = '$usernameA' ";
+
+    mysqli_query($db, $query);
+    $query = "UPDATE `log` SET Password = '$pwN' WHERE Username = '$usernameA' ";
+    mysqli_query($db, $query);
+
+    header("Location: area_riservata_azienda.php");
 
   }
 

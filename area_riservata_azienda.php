@@ -18,7 +18,7 @@
         <p class="titolo"> Qui troverai gli eventi inseriti dalla tua azienda</p>
     </div>
     <div class="area-bottoni">
-        <a class="bottone-area link" href='modifica_pw.php'>
+        <a class="bottone-area link" href='modifica_pw_a.php'>
          Cambia password</a>
          <a class="bottone-area link" href='nuovo_evento.php'>
          Nuovo evento</a>

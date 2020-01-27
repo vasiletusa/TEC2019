@@ -4,14 +4,14 @@
 
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Dettagli evento");
+	    getHead("Modifica-account");
      ?>   
           
   </head>
 
-<?php getMenu("Eventi");?>
+<?php getMenu("AreaRiservata");?>
 
-<?php getBreadcumbs("Eventi");?>
+<?php getBreadcumbs("AreaRiservata/Modifica-account");?>
 
 
 <?php

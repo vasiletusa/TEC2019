@@ -4,11 +4,11 @@
 <head>
 	<?php 
         include_once 'functions.php'; 
-	    getHead("Home");
+	    getHead("Nuovo-evento");
     ?>      
 </head>
-<?php getMenu("Nuovo-evento");?>
-<?php getBreadcumbs("Eventi/Nuovo-evento");?>
+<?php getMenu("AreaRiservata");?>
+<?php getBreadcumbs("Area Personale/Nuovo-evento");?>
 
 <div class="box-centrale">
 	<h1 class="titolo">Nuovo evento</h1>
