@@ -63,7 +63,7 @@ function getMenu($current){
 
                 <div class='topnav' id='myTopnav'>
 
-                <a href='javascript:void(0);' class='icon' onclick='myFunction()' tabindex='8' accesskey='s'> 
+                <a href='javascript:void(0);' class='icon' onclick='myFunction()' tabindex='2' accesskey='s'> 
                         <div class='icon-menu pos1-icon'></div>
                         <div class='icon-menu pos2-icon'></div>
                         <div class='icon-menu pos3-icon'></div>
@@ -73,11 +73,11 @@ function getMenu($current){
 
                     <ul>";
                         if((isset($_SESSION['usernameU']))or(isset($_SESSION['usernameA']))){
-                            echo "<li><a class='a-menu-log' href='logout.php' tabindex='2' >Logout</a></li>";}
+                            echo "<li><a class='a-menu-log' href='logout.php' tabindex='3' >Logout</a></li>";}
                         else{
-                            echo"<li><a class='a-menu-log  ";if($current=="Login"){echo"active";}echo" 'href='login.php' tabindex='2' accesskey='l'> Login</a></li>";
+                            echo"<li><a class='a-menu-log  ";if($current=="Login"){echo"active";}echo" 'href='login.php' tabindex='3' accesskey='l'> Login</a></li>";
                         }
-                        echo "<li><a class='a-menu-log ";if($current=="Registrati"){echo"active";}echo" ' href='registrazione_utente.php' tabindex='3' accesskey='r'>Registrati</a></li>  
+                        echo "<li><a class='a-menu-log ";if($current=="Registrati"){echo"active";}echo" ' href='registrazione_utente.php' tabindex='4' accesskey='r'>Registrati</a></li>  
                     </ul>
                 </div>
 
@@ -86,22 +86,22 @@ function getMenu($current){
 
                 <div class='header-right' id='padd'>
                     <ul>
-                       <li><a class='a-menu-log ";if($current=="Home"){echo"active" ;}echo"' href='home.php' tabindex='4' accesskey='h'>Home</a></li>
+                       <li><a class='a-menu-log ";if($current=="Home"){echo"active" ;}echo"' href='home.php' tabindex='5' accesskey='h'>Home</a></li>
                        
                        
-                       <li><a class='a-menu-log ";if($current=="Eventi"){echo"active";}echo"' href='eventi.php' tabindex='5' accesskey='e'>Eventi</a></li>";
+                       <li><a class='a-menu-log ";if($current=="Eventi"){echo"active";}echo"' href='eventi.php' tabindex='6' accesskey='e'>Eventi</a></li>";
                         
                         if(isset($_SESSION['usernameU'])){
                             
-                            echo"<li><a class='a-menu-log ";if($current=="AreaRiservata"){echo"active";}echo" ' href='area_riservata_utente.php' tabindex='6' accesskey='a'>Area personale</a></li>";
+                            echo"<li><a class='a-menu-log ";if($current=="AreaRiservata"){echo"active";}echo" ' href='area_riservata_utente.php' tabindex='7' accesskey='a'>Area personale</a></li>";
                         }
                              
                         if(isset($_SESSION['usernameA'])){
                             
-                            echo"<li><a  class='a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"' href='area_riservata_azienda.php' tabindex='6' accesskey='a'>Area personale</a></li>";
+                            echo"<li><a  class='a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"' href='area_riservata_azienda.php' tabindex='7' accesskey='a'>Area personale</a></li>";
                         }
 
-                        echo"<li><a class='a-menu-log' href='contatti.php'"; if($current=="Contatti"){echo"class='active'";}echo " tabindex='7' accesskey='c'>Contatti</a></li>
+                        echo"<li><a class='a-menu-log' href='contatti.php'"; if($current=="Contatti"){echo"class='active'";}echo " tabindex='8' accesskey='c'>Contatti</a></li>
                 
                     </ul>
                     <div class='end'></div>
