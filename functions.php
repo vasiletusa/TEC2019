@@ -14,9 +14,9 @@ echo"
 
 	<title>$current</title>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-    <meta name='title' content='VenetoTour' />
-    <meta name='description' content='Tour in veneto' />
-    <meta name='keywords' content='Tour, veneto, gite, padova, vicenza, venezia, treviso, rovigo, verona, belluno' />
+    <meta name='title' content='VenetoEventi' />
+    <meta name='description' content='Eventi in veneto' />
+    <meta name='keywords' content='Eventi, veneto,  padova, vicenza, venezia, treviso, rovigo, verona, belluno' />
     <meta name='language' content='it' />
     <meta name='author' content='Rizzo Ilaria, Romito Sara, Vasile Tusa, Salviato Alberto' />
     <meta name='viewport' content='width=device-width, initial-scale = 1.0' />
@@ -120,12 +120,6 @@ echo "<div class='contenitore'>
   ";
 }
 
-function getMessage(){
-	if(isset($_SESSION['isOrganize'])){
-		echo "
-		<p id='messaggio'>Per iscriverti agli eventi devi accedere con le tue credenziali,<br> se è la prima volta devi prima <a href='registrazione_utente.php' tabindex='1' accesskey='s'>registrati</a href></p>";
-	}
-}
 
 
 function getEventiAzienda(){
