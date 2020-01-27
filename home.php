@@ -88,7 +88,7 @@
                                             </div>
                                             <div >
                                                 
-                                                <button class='scritte-dettagli selezione' onclick='location.href = './dettagli_evento.php?id=".$elem['ID']."'' type='button'> Dettagli </button> 
+                                                <a class='scritte-dettagli selezione link' href = 'dettagli_evento.php?id=".$elem['ID']."'' tabindex='".tabIndex($tab)."'> Dettagli </a> 
                                             </div>  
                                              
                                         </div>
@@ -105,17 +105,6 @@
 
 	</div>
 </div>
-
-<script type="text/javascript">
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-</script>
 
 </body>
 
