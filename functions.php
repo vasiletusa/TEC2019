@@ -124,7 +124,7 @@ echo "<div class='contenitore'>
 
 function getEventiAzienda(){
     $azienda=$_SESSION['usernameA'];
-    $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+    $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     $sql = "SELECT * FROM `eventi` WHERE azienda='$azienda' ";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -139,7 +139,7 @@ function getEventiAzienda(){
     return $output;
 }
 function getEventiTutti(){
-    $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+    $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     $sql = "SELECT * FROM `eventi`";
 
     $ris = mysqli_query($db,$sql);
@@ -157,7 +157,7 @@ function getEventiTutti(){
     return $output;
 }
 function getEventiPrefe(){
-    $db =mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+    $db =mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     $sql = "SELECT * FROM `preferiti`";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -173,7 +173,7 @@ function getEventiPrefe(){
     return $output;
 }
 function getEventiIscritto(){
-    $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+    $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     $sql = "SELECT * FROM `partecipa`";
     $ris = mysqli_query($db,$sql);
     $errore = array();
@@ -189,7 +189,7 @@ function getEventiIscritto(){
 }
 function getEventoDettagli($id){
     
-      $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+      $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
 
     $sql = "SELECT * FROM `eventi` WHERE Id='$id'";
     $ris = mysqli_query($db,$sql)or DIE("evento: ".mysqli_error($db));
@@ -201,7 +201,7 @@ function setIscrivitiBottone(){
     $idEvento= $_SESSION['idEvento'];
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
-            $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+            $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     
 
         $sql = "SELECT * FROM `partecipa` WHERE id='$idEvento' AND Username='$username' ";
@@ -223,7 +223,7 @@ function setIscrivitiBottone(){
     
     }elseif(isset($_SESSION['usernameA'])){ 
         $username= $_SESSION['usernameA'];
-        $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+        $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
         $sql = "SELECT * FROM `eventi` WHERE id='$idEvento' AND Azienda='$username' ";
 
         $ris= mysqli_query($db, $sql);
@@ -250,7 +250,7 @@ function setPreferitiBottone(){
     $output="";
     if(isset($_SESSION['usernameU'])){
         $username= $_SESSION['usernameU'];
-            $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+            $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     
 
         $sql = "SELECT * FROM `preferiti` WHERE id='$idEvento' AND Username='$username' ";
@@ -279,13 +279,14 @@ function setPreferitiBottone(){
 }
 
 function getUltimiEventi(){
-    $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+    $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     $sql = "SELECT * FROM ( SELECT * FROM `eventi` ORDER BY ID DESC LIMIT 3 ) as r ORDER BY ID";
     $ris = mysqli_query($db,$sql);
     $errore = array();
     if(mysqli_num_rows($ris)==0){
         $_SESSION['eventi']=false;
     }else {$_SESSION['eventi']=true;}
+
     $output = array();
     while ($row = mysqli_fetch_assoc($ris)) {
         array_push($output,$row);
@@ -320,7 +321,7 @@ function getAccountU(){
         $utente= $_SESSION['usernameU'];
         
 
-    $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+    $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     
 
     $sql = "SELECT * FROM `utenti` WHERE username='$utente' ";
@@ -335,7 +336,7 @@ function getAccountA(){
         $azienda= $_SESSION['usernameA'];
         
 
-    $db = mysqli_connect('localhost:8080', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
+    $db = mysqli_connect('localhost', 'irizzo', 'ohqu6AiLaiDeiyoh', 'irizzo');
     
 
     $sql = "SELECT * FROM `aziende` WHERE username='$azienda' ";
