@@ -16,13 +16,13 @@
 		<div >
 			<label for="TitoloEvento" class="label TitoloEvento">Titolo Evento</label>
 			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Inserire titolo Evento"  tabindex="10">
-			<p class="error"><?php getNomeError($errors); ?></p>
+			<p class="error"><?php getTitoloError($errors); ?></p>
 			
 		</div>
 		<div >
 			<label for="Descrizione" class="label Descrizione">Descrizione</label>
-			<input id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Inserire Descrizione"tabindex="11">
-			<p class="error"><?php getNomeError($errors); ?></p>
+			<textarea rows="50" cols="100" id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Inserire Descrizione"tabindex="11">
+			<p class="error"><?php getDescrError($errors); ?></p>
 			
 
 		
@@ -30,14 +30,14 @@
 		<div >
 			<label for="Luogo" class="label Luogo">Indirizzo</label>
 			<input id="Luogo" type="text" required name="Luogo" class="input insertBox"  placeholder="Inserire Indirizzo" tabindex="12">
-			<p class="error"><?php getNomeError($errors); ?></p>
+			<p class="error"><?php getLuogoError($errors); ?></p>
 			
 		
 		</div>
 		<div>
 			<label for="Data" class="label Data">Data</label>
 			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Inserire data: YYYY-MM-DD" tabindex="13">
-			<p class="error"><?php getNomeError($errors); ?></p>
+			<p class="error"><?php getDataError($errors); ?></p>
 			
 
 

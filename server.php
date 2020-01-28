@@ -393,7 +393,31 @@ if(isset($_POST['elimina'])){
 
 }
 
-
+function getTitoloError($errors){
+  if(isset($errors['TitoloEvento'])){
+      echo $errors['TitoloEvento'];
+    }
+}
+function getDescrError($errors){
+  if(isset($errors['Descrizione'])){
+      echo $errors['Descrizione'];
+    }
+}
+function getLuogoError($errors){
+  if(isset($errors['Luogo'])){
+      echo $errors['Luogo'];
+  }
+}
+function getCategoriaError($errors){
+  if(isset($errors['Categoria'])){
+      echo $errors['Categoria'];
+    }
+}
+function getCittaError($errors){
+  if(isset($errors['Citta'])){
+      echo $errors['Citta'];
+    }
+}
 
 
 

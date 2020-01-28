@@ -101,7 +101,7 @@ function getMenu($current){
                             echo"<li><a  class='a-menu-log  "; if($current=="AreaRiservata"){echo"active";}echo"' href='area_riservata_azienda.php' tabindex='7' accesskey='a'>Area personale</a></li>";
                         }
 
-                        echo"<li><a class='a-menu-log' href='contatti.php'"; if($current=="Contatti"){echo"class='active'";}echo " tabindex='8' accesskey='c'>Contatti</a></li>
+                        echo"<li><a class='a-menu-log  "; if($current=="Contatti"){echo"active";}echo"' href='contatti.php' tabindex='8' accesskey='c'>Contatti</a></li>
                 
                     </ul>
                     <div class='end'></div>
