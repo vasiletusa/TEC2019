@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 09, 2020 alle 22:25
+-- Creato il: Gen 28, 2020 alle 07:39
 -- Versione del server: 10.4.10-MariaDB
 -- Versione PHP: 7.3.12
 
@@ -41,14 +41,15 @@ CREATE TABLE `aziende` (
 --
 
 INSERT INTO `aziende` (`Nome`, `NomeReferente`, `EmailReferente`, `Password`, `Username`) VALUES
-('vivipadova', 'davide', 'davide@vivipadova.it', ' vivipadova', 'vivipadova'),
-('blended', 'matteo', 'matteo@blended.it', 'blended', 'blended'),
 ('amici', 'laura', 'laura@amici.it', 'amici', 'amici'),
+('Aperishow', 'Gianluca', 'gianluca@aperishow', 'aperishow', 'aperishow'),
+('MotorShow', 'james', 'james@motorshow.it', 'azienda', 'azienda'),
+('blended', 'matteo', 'matteo@blended.it', 'blended', 'blended'),
 ('HotelDanieli', 'danieli', 'danieli@hoteldanieli.it', 'danieli', 'danieli'),
-('Garzanti', 'mario', 'mario@garzanti.it', 'azienda', 'azienda'),
-('MotorShow', 'james', 'james@motorshow.it', 'motorshow', 'motorshow'),
+('Garzanti', 'mario', 'mario@garzanti.it', 'garzanti', 'garzanti'),
+('iFitness', 'mark', 'mark@ifitness.it', 'ifitness', 'ifitness'),
 ('Sweet Elderly People', 'orietta', 'orietta@sweetelderlypeople.it', 'sweetelderlypeople', 'sweetelderlypeople'),
-('iFitness', 'mark', 'mark@ifitness.it', 'ifitness', 'ifitness');
+('vivipadova', 'davide', 'davide@vivipadova.it', ' vivipadova', 'vivipadova');
 
 -- --------------------------------------------------------
 
@@ -74,15 +75,15 @@ CREATE TABLE `eventi` (
 INSERT INTO `eventi` (`ID`, `Titolo`, `Descrizione`, `Luogo`, `Citta`, `Data`, `Categoria`, `Azienda`) VALUES
 (1, 'Scopri Giotto', 'Padova &egrave; nota per gli affreschi di Giotto della Cappella degli Scrovegni', 'via Roma 33', 'Padova', '2020-02-20', 'Cultura', 'vivipadova'),
 (2, 'Mercoled&igrave; universitario', 'il Mercoled&igrave; universitario &egrave; il giorno preferito dagli studenti di Padova, in quanto possono pensare al divertimento.', 'via Jappelli 9', 'Padova', '2020-03-30', 'Giovani', 'amici'),
-(3, 'Hotel&Conoscenza', 'Danieli Hotel &egrave; lieto di presentare "Soggiorni Autore", quattro imperdibili appuntamenti con la storia di grandi personaggi che vi hanno alloggiato.', 'Via Enrico degli Scrovegni 30', 'Venezia', '2020-03-19', 'Cultura', 'HotelDanieli'),
-(4, 'MotorShow', 'Evento espositivo sui nuovi motori elettrici', 'via Ippolito Nievo 98', 'Verona', '2020-03-15', 'Giovani', 'MotorShow'),
-(5, 'Auto&Moto Epoca', 'Evento espositivo su tutte le oldtimers che hanno fatto la storia automobilistica', 'via Pertini 94', 'Treviso', '2020-03-18', 'Spettacolo', 'MotorShow'),
-(6, 'Manutenzione Auto', 'Consigli pratici su come fare una corretta manutenzione della propria auto', 'Piazza Vittoria 26', 'Treviso','2020-03-22', 'Famiglie', 'Garzanti'),
-(7, 'Presentazione Il Giorgione', 'Presentazione della biografia del Giorgione, celebre pittore di Castelfranco Veneto', 'via Einaudi 44', 'Treviso', '2020-04-01', 'Cultura', 'Garzanti'),
-(8, 'Zumba', 'Presentazione corso di Zumba per persone della terza età', 'via Cantele 1A', 'Venezia', '2020-04-02', 'Famiglie', 'iFitness'),
-(9, 'Bingo', 'Serata Bingo offerta dalla casa di riposo Sweet Elderly People', 'via Locatelli 656', 'Verona', '2020-04-10', 'Famiglie', 'Sweet Elderly People'),
-(10, 'Alfa Romeo motorshow', 'Evento dedicato a tutti gli appassionati del celebre Marchio automobilistico', 'via Monte Napoleone 6', 'Belluno', '2020-04-10', 'Spettacolo', 'MotorShow'),
-(11, 'AperyShow', 'Evento benefico per la raccolta fondi contro la SLA', 'Piazza Mantovani 55', 'Rovigo', '2020-04-11', 'Famiglie', 'AperyShow');
+(3, 'Hotel&Conoscenza', 'Danieli Hotel &egrave; lieto di presentare \"Soggiorni Autore\", quattro imperdibili appuntamenti con la storia di grandi personaggi che vi hanno alloggiato.', 'Via Enrico degli Scrovegni 30', 'Venezia', '2020-03-19', 'Cultura', 'danieli'),
+(4, 'MotorShow', 'Evento espositivo sui nuovi motori elettrici', 'via Ippolito Nievo 98', 'Verona', '2020-03-15', 'Giovani', 'azienda'),
+(5, 'Auto&Moto Epoca', 'Evento espositivo su tutte le oldtimers che hanno fatto la storia automobilistica', 'via Pertini 94', 'Treviso', '2020-03-18', 'Spettacolo', 'azienda'),
+(6, 'Manutenzione Auto', 'Consigli pratici su come fare una corretta manutenzione della propria auto', 'Piazza Vittoria 26', 'Treviso', '2020-03-22', 'Famiglie', 'garzanti'),
+(7, 'Presentazione Il Giorgione', 'Presentazione della biografia del Giorgione, celebre pittore di Castelfranco Veneto', 'via Einaudi 44', 'Treviso', '2020-04-01', 'Cultura', 'garzanti'),
+(8, 'Zumba', 'Presentazione corso di Zumba per persone della terza età', 'via Cantele 1A', 'Venezia', '2020-04-02', 'Famiglie', 'ifitness'),
+(9, 'Bingo', 'Serata Bingo offerta dalla casa di riposo Sweet Elderly People', 'via Locatelli 656', 'Verona', '2020-04-10', 'Famiglie', 'sweetelderlypeople'),
+(10, 'Alfa Romeo motorshow', 'Evento dedicato a tutti gli appassionati del celebre Marchio automobilistico', 'via Monte Napoleone 6', 'Belluno', '2020-04-10', 'Spettacolo', 'motorshow'),
+(11, 'AperyShow', 'Evento benefico per la raccolta fondi contro la SLA', 'Piazza Mantovani 55', 'Rovigo', '2020-04-11', 'Famiglie', 'aperyshow');
 
 -- --------------------------------------------------------
 
@@ -100,21 +101,21 @@ CREATE TABLE `log` (
 -- Dump dei dati per la tabella `log`
 --
 
-
 INSERT INTO `log` (`Username`, `Password`, `Tipo`) VALUES
-('vivipadova', 'vivipadova', 'azienda'),
-('blended', 'blended', 'azienda'),
 ('amici', 'amici', 'azienda'),
-('danieli', 'danieli', 'azienda'),
-('azienda', 'azienda', 'azienda'),
-('motorshow', 'motorshow', 'azienda'),
-('sweetelderlypeople', 'sweetelderlypeople', 'azienda'),
-('ifitness', 'ifitness', 'azienda'),
 ('asalviato', 'asalviato', 'user'),
+('azienda', 'azienda', 'azienda'),
+('blended', 'blended', 'azienda'),
+('danieli', 'danieli', 'azienda'),
+('ifitness', 'ifitness', 'azienda'),
 ('irizzo', 'irizzo', 'user'),
+('motorshow', 'motorshow', 'azienda'),
 ('sromito', 'sromito', 'user'),
-('vtusa', 'vtusa', 'user'),
-('user', 'user', 'user');
+('sweetelderlypeople', 'sweetelderlypeople', 'azienda'),
+('user', 'user', 'user'),
+('vivipadova', 'vivipadova', 'azienda'),
+('vtusa', 'vtusa', 'user');
+
 -- --------------------------------------------------------
 
 --
@@ -231,7 +232,7 @@ ALTER TABLE `utenti`
 -- AUTO_INCREMENT per la tabella `eventi`
 --
 ALTER TABLE `eventi`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Limiti per le tabelle scaricate
