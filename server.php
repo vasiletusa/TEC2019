@@ -71,13 +71,13 @@ if (isset($_POST['registrazione_utente'])) {
                   $errors['esistente']="Username non disponibile";
               }
               elseif($password==$password_2){
-                      $query = "INSERT INTO utenti ( nome, cognome, username, email, password, ruolo) 
+                      $query = "INSERT INTO `utenti` ( nome, cognome, username, email, password, ruolo) 
                               VALUES('$nome','$cognome','$username', '$email', '$password', 'user')";
                         mysqli_query($db, $query);
                         $_SESSION['usernameU']=$username;
                         $_SESSION['isLoggedU']=true;
                         $tipo="utente";
-                        $query2 = "INSERT INTO log (username, password, tipo)VALUES('$username','$password', '$tipo')";
+                        $query2 = "INSERT INTO `log` (username, password, tipo)VALUES('$username','$password', '$tipo')";
                         mysqli_query($db, $query2);
                         //reindirizzamento
                         header("Location: area_riservata_utente.php");
