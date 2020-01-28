@@ -10,7 +10,7 @@ $tuoitour=array();
 $isOrganize=false;
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', 'root', 'irizzo');
+$db = mysqli_connect('localhost', 'root', '', 'irizzo');
 // Check connection
 if (mysqli_connect_errno())
   {
@@ -72,7 +72,7 @@ if (isset($_POST['registrazione_utente'])) {
               }
               elseif($password==$password_2){
                       $query = "INSERT INTO utenti ( nome, cognome, username, email, password, ruolo) 
-                              VALUES('$nome','$cognome','$username', '$email', '$password', 'User')";
+                              VALUES('$nome','$cognome','$username', '$email', '$password', 'user')";
                         mysqli_query($db, $query);
                         $_SESSION['usernameU']=$username;
                         $_SESSION['isLoggedU']=true;
@@ -182,16 +182,20 @@ if (isset($_POST['Login'])){
               if($rows==1){
                 
                 $_SESSION['isLogged']= true;
-                      //Reindirizzamento 
+                      $_SESSION['pw']=$password;
               
                  
                     if($tipo=='azienda'){
                       
                         $_SESSION['usernameA']=$username;
-                       
-                        header("Location: area_riservata_azienda.php");}
+                        
+
+
+                       header("Location: area_riservata_azienda.php");
+                     }
                       else {
                         $_SESSION['usernameU']=$username;
+
                         header("Location: area_riservata_utente.php");
                       }
                       
@@ -208,7 +212,7 @@ if (isset($_POST['Login'])){
     $usernameU=$_SESSION['usernameU'];
     $query = "UPDATE `utenti` SET Nome = '$nome', Cognome = '$cognome', Email = '$email' WHERE Username = '$usernameU' ";
     mysqli_query($db, $query);
-    echo $query;
+  
     header("Location: area_riservata_utente.php");
   }
 
@@ -228,17 +232,23 @@ if (isset($_POST['Login'])){
   //modifica password
   if(isset($_POST['modifica_pw'])){
 
+
     $pwV = mysqli_real_escape_string($db, $_POST['pwV']);
     $pwN = mysqli_real_escape_string($db, $_POST['pwN']);
     $pwC = mysqli_real_escape_string($db, $_POST['pwC']);
-    
-    $usernameU=$_SESSION['usernameU'];
-    $query = "UPDATE `utenti` SET Password = '$pwN' WHERE Username = '$usernameU' ";
-    mysqli_query($db, $query);
-    $query = "UPDATE `log` SET Password = '$pwN' WHERE Username = '$usernameU' ";
-    mysqli_query($db, $query);
+    $pw=$_SESSION['pw'];
+    if($pwN!=$pwC){$errors['password2']="Le password non coincidono";}
+      elseif($pwV==$pw){
+      
+          $usernameU=$_SESSION['usernameU'];
+          $query = "UPDATE `utenti` SET Password = '$pwN' WHERE Username = '$usernameU' ";
+          mysqli_query($db, $query);
+          $query = "UPDATE `log` SET Password = '$pwN' WHERE Username = '$usernameU' ";
+          mysqli_query($db, $query);
+          $_SESSION['pw']=$pwN;
+          header("Location: area_riservata_utente.php");
+      }else $errors['passwordE']="Password errata";
 
-    header("Location: area_riservata_utente.php");
 
   }
 
@@ -248,16 +258,18 @@ if (isset($_POST['Login'])){
     $pwV = mysqli_real_escape_string($db, $_POST['pwV']);
     $pwN = mysqli_real_escape_string($db, $_POST['pwN']);
     $pwC = mysqli_real_escape_string($db, $_POST['pwC']);
-    
-    $usernameA=$_SESSION['usernameA'];
-    $query = "UPDATE `aziende` SET Password = '$pwN' WHERE Username = '$usernameA' ";
+    if($pwN!=$pwc){$errors['password2']="Le password non coincidono";}
+      elseif($pwV==$_SESSION['pw']){
+          $usernameA=$_SESSION['usernameA'];
 
-    mysqli_query($db, $query);
-    $query = "UPDATE `log` SET Password = '$pwN' WHERE Username = '$usernameA' ";
-    mysqli_query($db, $query);
+          $query = "UPDATE `aziende` SET Password = '$pwN' WHERE Username = '$usernameA' ";
 
-    header("Location: area_riservata_azienda.php");
+          mysqli_query($db, $query);
+          $query = "UPDATE `log` SET Password = '$pwN' WHERE Username = '$usernameA' ";
+          mysqli_query($db, $query);
 
+          header("Location: area_riservata_azienda.php");
+      }else $errors['passwordE']="Password errata";
   }
 
 //nuovo evento
@@ -409,6 +421,11 @@ function getPasswordError($errors) {
   if(isset($errors['password'])){
       echo $errors['password'];
     }
+}
+function getPasswordE($errors){
+  if(isset($errors['passwordE'])){
+    echo $errors['passwordE'];
+  }
 }
 function getPassword2Error($errors) { 
   if(isset($errors['password2'])){

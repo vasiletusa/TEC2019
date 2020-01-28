@@ -45,7 +45,7 @@ INSERT INTO `aziende` (`Nome`, `NomeReferente`, `EmailReferente`, `Password`, `U
 ('blended', 'matteo', 'matteo@blended.it', 'blended', 'blended'),
 ('amici', 'laura', 'laura@amici.it', 'amici', 'amici'),
 ('HotelDanieli', 'danieli', 'danieli@hoteldanieli.it', 'danieli', 'danieli'),
-('Garzanti', 'mario', 'mario@garzanti.it', 'garzanti', 'garzanti'),
+('Garzanti', 'mario', 'mario@garzanti.it', 'azienda', 'azienda'),
 ('MotorShow', 'james', 'james@motorshow.it', 'motorshow', 'motorshow'),
 ('Sweet Elderly People', 'orietta', 'orietta@sweetelderlypeople.it', 'sweetelderlypeople', 'sweetelderlypeople'),
 ('iFitness', 'mark', 'mark@ifitness.it', 'ifitness', 'ifitness');
@@ -72,17 +72,17 @@ CREATE TABLE `eventi` (
 --
 
 INSERT INTO `eventi` (`ID`, `Titolo`, `Descrizione`, `Luogo`, `Citta`, `Data`, `Categoria`, `Azienda`) VALUES
-(1, 'Scopri Giotto', 'Padova è nota per gli affreschi di Giotto della Cappella degli Scrovegni', 'Padova', 'Padova', '2020-02-20', 'Cultura', 'vivipadova'),
-(2, 'Mercoledi universitario', 'il Mercoledi universitario e il giorno preferito dagli studenti di Padova, in quanto dimenticano lo studio e pensano al divertimento.', 'Padova', 'Padova', '2020-03-30', 'Giovani', 'amici'),
-(3, 'Hotel&Conoscenza', 'Danieli Hotel e lieto di presentare "Soggiorni Autore", quattro imperdibili appuntamenti con la storia di grandi personaggi che vi hanno alloggiato.', 'Venezia', 'Venezia', '2020-03-19', 'Cultura', 'HotelDanieli'),
-(4, 'MotorShow', 'Evento espositivo sui nuovi motori elettrici', 'Verona', 'Verona', '2020-03-15', 'Giovani', 'MotorShow'),
-(5, 'Auto&Moto Epoca', 'Evento espositivo su tutte le oldtimers che hanno fatto la storia automobilistica', 'Treviso', 'Treviso', '2020-03-18', 'Spettacolo', 'MotorShow'),
-(6, 'Manutenzione Auto', 'Presentazione Libro Manutenzione della propria auto', 'Treviso', 'Treviso','2020-03-22', 'Famiglie', 'Garzanti'),
-(7, 'Presentazione Il Giorgione', 'Presentazione della biografia del Giorgione, celebre pittore di Castelfranco Veneto', 'Treviso', 'Treviso', '2020-04-01', 'Cultura', 'Garzanti'),
-(8, 'Zumba', 'Presentazione corso di Zumba per persone della terza età', 'Venezia', 'Venezia', '2020-04-02', 'Famiglie', 'iFitness'),
-(9, 'Bingo', 'Serata Bingo offerta dalla casa di riposo Sweet Elderly People', 'Verona', 'Verona', '2020-04-10', 'Famiglie', 'Sweet Elderly People'),
-(10, 'Alfa Romeo motorshow', 'Evento dedicato a tutti gli appassionati del celebre Marchio automobilistico', 'Belluno', 'Belluno', '2020-04-10', 'Spettacolo', 'MotorShow'),
-(11, 'AperyShow', 'Evento benefico per la raccolta fondi contro la SLA', 'Rovigo', 'Rovigo', '2020-04-11', 'Famiglie', 'AperyShow');
+(1, 'Scopri Giotto', 'Padova &egrave; nota per gli affreschi di Giotto della Cappella degli Scrovegni', 'via Roma 33', 'Padova', '2020-02-20', 'Cultura', 'vivipadova'),
+(2, 'Mercoled&igrave; universitario', 'il Mercoled&igrave; universitario &egrave; il giorno preferito dagli studenti di Padova, in quanto possono pensare al divertimento.', 'via Jappelli 9', 'Padova', '2020-03-30', 'Giovani', 'amici'),
+(3, 'Hotel&Conoscenza', 'Danieli Hotel &egrave; lieto di presentare "Soggiorni Autore", quattro imperdibili appuntamenti con la storia di grandi personaggi che vi hanno alloggiato.', 'Via Enrico degli Scrovegni 30', 'Venezia', '2020-03-19', 'Cultura', 'HotelDanieli'),
+(4, 'MotorShow', 'Evento espositivo sui nuovi motori elettrici', 'via Ippolito Nievo 98', 'Verona', '2020-03-15', 'Giovani', 'MotorShow'),
+(5, 'Auto&Moto Epoca', 'Evento espositivo su tutte le oldtimers che hanno fatto la storia automobilistica', 'via Pertini 94', 'Treviso', '2020-03-18', 'Spettacolo', 'MotorShow'),
+(6, 'Manutenzione Auto', 'Consigli pratici su come fare una corretta manutenzione della propria auto', 'Piazza Vittoria 26', 'Treviso','2020-03-22', 'Famiglie', 'Garzanti'),
+(7, 'Presentazione Il Giorgione', 'Presentazione della biografia del Giorgione, celebre pittore di Castelfranco Veneto', 'via Einaudi 44', 'Treviso', '2020-04-01', 'Cultura', 'Garzanti'),
+(8, 'Zumba', 'Presentazione corso di Zumba per persone della terza età', 'via Cantele 1A', 'Venezia', '2020-04-02', 'Famiglie', 'iFitness'),
+(9, 'Bingo', 'Serata Bingo offerta dalla casa di riposo Sweet Elderly People', 'via Locatelli 656', 'Verona', '2020-04-10', 'Famiglie', 'Sweet Elderly People'),
+(10, 'Alfa Romeo motorshow', 'Evento dedicato a tutti gli appassionati del celebre Marchio automobilistico', 'via Monte Napoleone 6', 'Belluno', '2020-04-10', 'Spettacolo', 'MotorShow'),
+(11, 'AperyShow', 'Evento benefico per la raccolta fondi contro la SLA', 'Piazza Mantovani 55', 'Rovigo', '2020-04-11', 'Famiglie', 'AperyShow');
 
 -- --------------------------------------------------------
 
@@ -106,7 +106,7 @@ INSERT INTO `log` (`Username`, `Password`, `Tipo`) VALUES
 ('blended', 'blended', 'azienda'),
 ('amici', 'amici', 'azienda'),
 ('danieli', 'danieli', 'azienda'),
-('garzanti', 'garzanti', 'azienda'),
+('azienda', 'azienda', 'azienda'),
 ('motorshow', 'motorshow', 'azienda'),
 ('sweetelderlypeople', 'sweetelderlypeople', 'azienda'),
 ('ifitness', 'ifitness', 'azienda'),
@@ -114,7 +114,6 @@ INSERT INTO `log` (`Username`, `Password`, `Tipo`) VALUES
 ('irizzo', 'irizzo', 'user'),
 ('sromito', 'sromito', 'user'),
 ('vtusa', 'vtusa', 'user'),
-('admin', 'admin', 'admin'),
 ('user', 'user', 'user');
 -- --------------------------------------------------------
 
@@ -176,7 +175,6 @@ CREATE TABLE `utenti` (
 --
 
 INSERT INTO `utenti` (`Nome`, `Cognome`, `Username`, `Password`, `Email`) VALUES
-('Admin', 'Admin', 'admin', 'admin', 'admin@admin'),
 ('Alberto', 'Salviato', 'asalviato', 'asalviato', 'alberto.salviato@studenti.unipd.it'),
 ('ilaria', 'Rizzo', 'irizzo', 'irizzo', 'ilaria.rizzo.5@studenti.unipd.it'),
 ('Sara', 'Romito', 'sromito', 'sromito', 'sara.romito@studenti.unipd.it'),

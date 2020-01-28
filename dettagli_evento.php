@@ -25,7 +25,7 @@
                                 
          echo   " <div class=' dettagli-evento '>
                                         <div class='box-img img-dettagli'>
-                                            <img class='img-detevento' src='img/eventi.jpg' alt='immagine evento'>
+                                            <img class='img-detevento' src='".getImg($evento['ID'])."' alt='immagine evento'>
                                         </div>
                                         <div class='box-evento-indettagli '>
                                             <div class='box-titolo titolo-dettagli'>

@@ -16,9 +16,8 @@
 						<h1 class="titolo mod-password"> Modifica Password </h1>
 						<div >
 									<label for="passwordV" class="label passwordV">Vecchia password</label>
-									<input id="passwordV" type="text" name="pwV" class="input insertBox" placeholder="Vecchia Password" tabindex="10">
-									<p class="error"><?php getPasswordError($errors); ?></p>
-									<p class="error"><?php getPasswordError($errors); ?></p>
+									<input id="passwordV" type="password" name="pwV" class="input insertBox" placeholder="Vecchia Password" tabindex="10">
+									<p class="error"><?php getPasswordE($errors); ?></p>
 
 									
 								</div>
@@ -26,7 +25,7 @@
 						<div>
 							<label for="password" class="label password">Nuova password</label>
 							<input id="password" type="password" name="pwN" class="input insertBox" placeholder="********" tabindex="11">
-							<p class="error"><?php getPasswordError($errors); ?></p>
+							<p class="error"><?php getPassword2Error($errors); ?></p>
 
 					
 							
@@ -34,8 +33,7 @@
 						<div >
 							<label for="passwordR" class="label passwordR">Conferma Password</label>
 							<input id="passwordR" type="password" name="pwC" class="input insertBox" placeholder="********" tabindex="12">
-							<p class="error"><?php getPasswordError($errors); ?></p>
-							<p class="error"><?php getPasswordError($errors); ?></p>
+							<p class="error"><?php getPassword2Error($errors); ?></p>
 
 
 							
