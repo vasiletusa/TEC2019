@@ -75,9 +75,9 @@ CREATE TABLE `eventi` (
 INSERT INTO `eventi` (`ID`, `Titolo`, `Descrizione`, `Luogo`, `Citta`, `Data`, `Categoria`, `Azienda`) VALUES
 (1, 'Scopri Giotto', 'Padova &egrave; nota per gli affreschi di Giotto della Cappella degli Scrovegni', 'via Roma 33', 'Padova', '2020-02-20', 'Cultura', 'vivipadova'),
 (2, 'Mercoled&igrave; universitario', 'il Mercoled&igrave; universitario &egrave; il giorno preferito dagli studenti di Padova, in quanto possono pensare al divertimento.', 'via Jappelli 9', 'Padova', '2020-03-30', 'Giovani', 'amici'),
-(3, 'Hotel&Conoscenza', 'Danieli Hotel &egrave; lieto di presentare \"Soggiorni Autore\", quattro imperdibili appuntamenti con la storia di grandi personaggi che vi hanno alloggiato.', 'Via Enrico degli Scrovegni 30', 'Venezia', '2020-03-19', 'Cultura', 'danieli'),
+(3, 'Hotel&Conoscenza', 'Danieli Hotel &egrave; lieto di presentare \"Soggiorni Autore\", quattro imperdibili appuntamenti con la storia di grandi personaggi.', 'Via Scrovegni 30', 'Venezia', '2020-03-19', 'Cultura', 'danieli'),
 (4, 'MotorShow', 'Evento espositivo sui nuovi motori elettrici', 'via Ippolito Nievo 98', 'Verona', '2020-03-15', 'Giovani', 'azienda'),
-(5, 'Auto&Moto Epoca', 'Evento espositivo su tutte le oldtimers che hanno fatto la storia automobilistica', 'via Pertini 94', 'Treviso', '2020-03-18', 'Spettacolo', 'azienda'),
+(5, 'Auto&Moto Epoca', 'Evento espositivo su tutte le oldtimers che hanno fatto la storia automobilistica', 'via Pertini 94', 'Vicenza', '2020-03-18', 'Spettacolo', 'azienda'),
 (6, 'Manutenzione Auto', 'Consigli pratici su come fare una corretta manutenzione della propria auto', 'Piazza Vittoria 26', 'Treviso', '2020-03-22', 'Famiglie', 'garzanti'),
 (7, 'Presentazione Il Giorgione', 'Presentazione della biografia del Giorgione, celebre pittore di Castelfranco Veneto', 'via Einaudi 44', 'Treviso', '2020-04-01', 'Cultura', 'garzanti'),
 (8, 'Zumba', 'Presentazione corso di Zumba per persone della terza età', 'via Cantele 1A', 'Venezia', '2020-04-02', 'Famiglie', 'ifitness'),

@@ -15,13 +15,13 @@
 	<form method="post" action="server.php" enctype="multipart/form-data">						
 		<div >
 			<label for="TitoloEvento" class="label TitoloEvento">Titolo Evento</label>
-			<input id="TitoloEvento" type="text" name="TitoloEvento" class="input insertBox" placeholder="Inserire titolo Evento"  tabindex="10">
+			<input id="TitoloEvento" type="text" required name="TitoloEvento" class="input insertBox" placeholder="Inserire titolo Evento"  tabindex="10">
 			<p class="error"><?php getTitoloError($errors); ?></p>
 			
 		</div>
 		<div >
 			<label for="Descrizione" class="label Descrizione">Descrizione</label>
-			<textarea rows="50" cols="100" id="Descrizione" type="text" name="Descrizione" class="input input-descrizione insertBox" placeholder="Inserire Descrizione"tabindex="11">
+			<textarea rows="50" cols="100" id="Descrizione" type="text" required name="Descrizione" class="input input-descrizione insertBox" placeholder="Inserire Descrizione"tabindex="11"></textarea>
 			<p class="error"><?php getDescrError($errors); ?></p>
 			
 
@@ -36,7 +36,7 @@
 		</div>
 		<div>
 			<label for="Data" class="label Data">Data</label>
-			<input id="Data" type="data" name="Data" class="input insertBox" placeholder="Inserire data: YYYY-MM-DD" tabindex="13">
+			<input id="Data" type="data" required name="Data" class="input insertBox" placeholder="Inserire data: YYYY-MM-DD" tabindex="13">
 			<p class="error"><?php getDataError($errors); ?></p>
 			
 
@@ -44,7 +44,7 @@
 		</div>
 		<div class="select-categoria" >
 			<label for="Categoria" class="label Categoria">Categoria</label>
-			<select name="selectCategoria" tabindex="14">
+			<select required name="selectCategoria" tabindex="14">
 			<option name="Seleziona" value="Seleziona">Seleziona categoria</option>
 
 			  <option name="Concerto" value="Concerto">Concerto

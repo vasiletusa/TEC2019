@@ -418,6 +418,11 @@ function getCittaError($errors){
       echo $errors['Citta'];
     }
 }
+function getDataError($errors){
+  if(isset($errors['Data'])){
+      echo $errors['Data'];
+    }
+}
 
 
 
@@ -467,34 +472,7 @@ function getNoPasswordError($errors) {
     }
 }
 
-function getDataError($errors) { 
-  if(isset($errors['Data'])){
-      echo $errors['Data'];
-    }
-}
 
-function getCittaError($errors) { 
-  if(isset($errors['Citta'])){
-      echo $errors['Citta'];
-    }
-}
-
-function getTitoloError($errors) { 
-  if(isset($errors['TitoloEvento'])){
-      echo $errors['TitoloEvento'];
-    }
-}
-
-function getDescrizioneError($errors) { 
-  if(isset($errors['Descrizione'])){
-      echo $errors['Descrizione'];
-    }
-}
-function getCategoriaError($errors) { 
-  if(isset($errors['Categoria'])){
-      echo $errors['Categoria'];
-    }
-}
 
 
  
